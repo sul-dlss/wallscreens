@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  font-size: 1vw;
+  height: 100vh;
+  margin: 0;
+  padding: 8px;
+}
+
+pre {
+  font-family: system-ui, sans-serif;
+  font-size: 1.125rem;
+  text-transform: lowercase;
+}
+
+.wallscreen {
+  /* For testing purposes, enable the "wallscreen" to be any size,
+     but keep the height and width proportional */
+  --wallscreen-width: calc(100vw - 8px);
+  --wallscreen-height: calc(var(--wallscreen-width) * 0.5625);
+  height: var(--wallscreen-height);
+  width: var(--wallscreen-width);
+
+  padding-right: 5px;
+
+  display: grid;
+  grid-template-columns: 66.67% 33.33%;
+  grid-template-rows: min-content 1fr min-content;
+}
+
+.title-area,
+.content-area,
+.card-area,
+.interaction-area {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.title-area {
+  background: #d5d5d4;
+  grid-column: 1 / -1;
+  height: calc(var(--wallscreen-height) * 0.1);
+}
+
+.content-area {
+  background: #eaeaea;
+  grid-column: 1 / 2;
+  height: calc(var(--wallscreen-height) * 0.8);
+}
+
+.card-area {
+  background: #f4f4f4;
+  grid-column: 2 / 3;
+}
+
+.interaction-area {
+  background: #d5d5d4;
+  grid-column: 1 / -1;
+  height: calc(var(--wallscreen-height) * 0.1);
+}

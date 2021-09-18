@@ -1,0 +1,39 @@
+.wallscreen {
+  --wallscreen-width: 1280px;
+  --wallscreen-height: calc(var(--wallscreen-width) * 0.5625);
+  height: var(--wallscreen-height);
+  width: var(--wallscreen-width);
+  margin: 0 auto;
+  padding-right: 0;
+}
+
+.title-area h1 {
+  font-size: 38.4px;
+}
+
+.interaction-area {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.experience-buttons {
+  text-align: center;
+  width: 853px;
+}
+
+.secondary-buttons {
+  padding-right: 20px;
+  text-align: right;
+  width: 427px;
+}
+
+button {
+  border-radius: 4px;
+  height: 40px;
+  margin-right: 20px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+button:last-of-type {
+  margin-right: 0;
+}
