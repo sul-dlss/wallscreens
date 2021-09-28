@@ -27,6 +27,9 @@ pre {
   padding-right: 5px;
 
   display: grid;
+  grid-template-areas: "title title"
+                       "content card"
+                       "interaction interaction";
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 8fr 1fr;
 }
@@ -43,20 +46,20 @@ pre {
 
 .title-area {
   background: #d5d5d4;
-  grid-column: 1 / -1;
+  grid-area: title;
 }
 
 .content-area {
   background: #eaeaea;
-  grid-column: 1 / 2;
+  grid-area: content;
 }
 
 .card-area {
   background: #f4f4f4;
-  grid-column: 2 / 3;
+  grid-area: card;
 }
 
 .interaction-area {
   background: #d5d5d4;
-  grid-column: 1 / -1;
+  grid-area: interaction;
 }
