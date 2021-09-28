@@ -27,11 +27,9 @@ pre {
   padding-right: 5px;
 
   display: grid;
-  grid-template-areas: "title title"
-                       "content card"
-                       "interaction interaction";
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 1fr 8fr 1fr;
+  grid-template: "title title" 1fr
+                 "content card" 8fr
+                 "interaction interaction" 1fr / 2fr 1fr;
 }
 
 .title-area,
