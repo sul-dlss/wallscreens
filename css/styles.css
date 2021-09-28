@@ -27,8 +27,8 @@ pre {
   padding-right: 5px;
 
   display: grid;
-  grid-template-columns: 66.67% 33.33%;
-  grid-template-rows: min-content 1fr min-content;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 8fr 1fr;
 }
 
 .title-area,
@@ -44,13 +44,11 @@ pre {
 .title-area {
   background: #d5d5d4;
   grid-column: 1 / -1;
-  height: calc(var(--wallscreen-height) * 0.1);
 }
 
 .content-area {
   background: #eaeaea;
   grid-column: 1 / 2;
-  height: calc(var(--wallscreen-height) * 0.8);
 }
 
 .card-area {
@@ -61,5 +59,4 @@ pre {
 .interaction-area {
   background: #d5d5d4;
   grid-column: 1 / -1;
-  height: calc(var(--wallscreen-height) * 0.1);
 }
