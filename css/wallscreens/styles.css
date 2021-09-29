@@ -4,10 +4,17 @@
 
 body {
   background-color: #000;
-  font-size: 1vw;
+  font-size: clamp(1rem, 1vw, 32px);
+  line-height: 1.6em;
   height: 100vh;
   margin: 0;
   padding: 8px;
+
+  --color-primary: #8C1515;
+  --color-primary-dark: #820000;
+  --color-secondary: #dad7cb;
+
+  --color-archway-dark: #2F2424;
 }
 
 pre {
@@ -42,8 +49,7 @@ pre {
 }
 
 .title-area,
-.content-area,
-.card-area {
+.content-area {
   align-items: center;
   display: flex;
   justify-content: center;
@@ -60,8 +66,59 @@ pre {
 }
 
 .card-area {
+  justify-content: space-between;
   background: #f4f4f4;
+  display: flex;
+  flex-direction: column;
   grid-area: card;
+  padding: 1rem;
+}
+
+.experience-index {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+
+.card-area h2 {
+  color: var(--color-primary-dark);
+  font-weight: 700;
+  text-align: center;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #ddd;
+}
+
+.card-area h3 {
+  color: var(--color-archway-dark);
+  font-weight: 700;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.separator {
+  margin-left: 0.7rem;
+  margin-right: 0.7rem;
+}
+
+.item-note {
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+.experience-summary {
+  padding-top: 1em;
+  border-top: 1px solid #ddd;
+}
+
+.card-area h2 + .experience-summary {
+  border-top: none;
+}
+
+.card-nav {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
 }
 
 .interaction-area {
