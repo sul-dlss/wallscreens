@@ -16,15 +16,13 @@ pre {
   text-transform: lowercase;
 }
 
+
+
 .wallscreen {
   /* For testing purposes, enable the "wallscreen" to be any size,
      but keep the height and width proportional */
-  --aspect-ratio: 9/16;
-  --wallscreen-width: calc(100vw - 8px);
-  --wallscreen-height: calc(var(--wallscreen-width) * var(--aspect-ratio));
-
-  height: var(--wallscreen-height);
-  width: var(--wallscreen-width);
+ --aspect-ratio: 16/9;
+  aspect-ratio: var(--aspect-ratio);
 
   padding-right: 5px;
 
@@ -32,6 +30,15 @@ pre {
   grid-template: "title title" 1fr
                  "content card" 8fr
                  "interaction interaction" 1fr / 2fr 1fr;
+}
+
+@supports (not (aspect-ratio: 1 / 1)) {
+  .wallscreen {
+    --wallscreen-width: calc(100vw - 8px);
+    --wallscreen-height: calc(var(--wallscreen-width) * (1 / (var(--aspect-ratio))));
+    height: var(--wallscreen-height);
+    width: var(--wallscreen-width);
+  }
 }
 
 .title-area,
