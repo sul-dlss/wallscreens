@@ -3,7 +3,7 @@ index: true
 layout: home
 title: Wallscreen design
 description: Testing pages
-collection: Testing
+wallscreen: Testing
 ---
 <header>
   <h1>Wallscreen design</h1>
@@ -11,7 +11,7 @@ collection: Testing
 </header>
 
 <main>
-  {% assign wallscreens_by_category = site.wallscreens | where: "collection", page.collection | where_exp: "x", "x.url != page.url" | group_by: "category" %}
+  {% assign wallscreens_by_category = site.wallscreens | where: "wallscreen", page.wallscreen | where_exp: "x", "x.url != page.url" | group_by: "category" %}
   {% for wallscreens_category in wallscreens_by_category %}
     {% assign meta = wallscreens_category.items | where: "meta", true | first %}
     {{ meta.content }}
