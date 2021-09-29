@@ -16,50 +16,78 @@ pre {
   text-transform: lowercase;
 }
 
+
+
 .wallscreen {
   /* For testing purposes, enable the "wallscreen" to be any size,
      but keep the height and width proportional */
-  --wallscreen-width: calc(100vw - 8px);
-  --wallscreen-height: calc(var(--wallscreen-width) * 0.5625);
-  height: var(--wallscreen-height);
-  width: var(--wallscreen-width);
+ --aspect-ratio: 16/9;
+  aspect-ratio: var(--aspect-ratio);
 
   padding-right: 5px;
 
   display: grid;
-  grid-template-columns: 66.67% 33.33%;
-  grid-template-rows: min-content 1fr min-content;
+  grid-template: "title title" 1fr
+                 "content card" 8fr
+                 "interaction interaction" 1fr / 2fr 1fr;
+}
+
+@supports (not (aspect-ratio: 1 / 1)) {
+  .wallscreen {
+    --wallscreen-width: calc(100vw - 8px);
+    --wallscreen-height: calc(var(--wallscreen-width) * (1 / (var(--aspect-ratio))));
+    height: var(--wallscreen-height);
+    width: var(--wallscreen-width);
+  }
 }
 
 .title-area,
 .content-area,
-.card-area,
-.interaction-area {
+.card-area {
   align-items: center;
   display: flex;
   justify-content: center;
-  width: 100%;
 }
 
 .title-area {
   background: #d5d5d4;
-  grid-column: 1 / -1;
-  height: calc(var(--wallscreen-height) * 0.1);
+  grid-area: title;
 }
 
 .content-area {
   background: #eaeaea;
-  grid-column: 1 / 2;
-  height: calc(var(--wallscreen-height) * 0.8);
+  grid-area: content;
 }
 
 .card-area {
   background: #f4f4f4;
-  grid-column: 2 / 3;
+  grid-area: card;
 }
 
 .interaction-area {
   background: #d5d5d4;
-  grid-column: 1 / -1;
-  height: calc(var(--wallscreen-height) * 0.1);
+  grid-area: interaction;
+
+  display: grid;
+  grid-template: "experience secondary" 1fr / 2fr 1fr;
+}
+
+.experience-buttons {
+  display: flex;
+  grid-area: experience;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.secondary-buttons {
+  display: flex;
+  grid-area: secondary;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
