@@ -10,7 +10,9 @@ layout: home
 
 <main>
   {% assign experiences = site.wallscreens | where: "index", true %}
+  <ul>
   {% for experience in experiences %}
-    <a href="{{ experience.url }}">{{ experience.description}}</a>
+    <li><a href="{{ experience.url }}">{{ experience.description}}</a></li>
   {% endfor %}
+  </ul>
 </main>
