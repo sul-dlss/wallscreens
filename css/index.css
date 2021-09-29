@@ -1,9 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+
+pre {
+  font-family: system-ui, sans-serif;
+  font-size: 1.125rem;
+  text-transform: lowercase;
+}
+
 body {
   background-color: #f8f8f8;
   color: #2e2d29;
   font-family: system-ui, sans-serif;
   font-size: 16px;
   padding: 0;
+  margin: 0;
 }
 
 header {

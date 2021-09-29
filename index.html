@@ -1,120 +1,16 @@
-<!doctype html>
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+layout: home
+---
+<header>
+  <h1>Wallscreen design</h1>
+</header>
 
-  <title>DLSS Access Team - Wallscreen layout testing</title>
-  <meta name="description" content="DLSS Access Team - Wallscreen layout testing">
-  <meta name="author" content="Gary Geisler">
-
-  <link rel="icon" href="images/favicon.ico">
-
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
-  <link rel="stylesheet" href="css/index.css?v=1.0">
-</head>
-
-<body>
-
-  <header>
-    <h1>Wallscreen design</h1>
-    <h2>Testing pages</h2>
-  </header>
-
-  <main>
-    <h3>General layout</h3>
-    <dl>
-      <dt><a href="main-areas.html">Wallscreen layout - main areas</a></dt>
-      <dd>Resizeable (maintaining proportions), foundation for other pages</dd>
-
-      <dt><a href="sul-colors.html">Layout using SUL colors</a></dt>
-      <dd>For testing color palette</dd>
-
-      <dt>Button styling</dt>
-      <dd>Styling the interaction area buttons</dd>
-
-      <dt><a href="oral-history-title-card.html">Title card for oral history experience</a></dt>
-      <dd>For testing title card font styling to encode in video</dd>
-    </dl>
-
-    <h3>Physical screen examples</h3>
-    <p>
-      These examples are sized to match the physical wallscreen dimensions.
-    </p>
-    <dl>
-      <dt><a href="silicon-genesis-physical-local.html">Silicon Genesis test - served locally</a></dt>
-      <dd>Full Silicon Genesis video served locally, to replicate the intended Hohbach Hall setup where the physical wallscreen experience is driven by locally-served files on a dedicated PC</dd>
-
-      <dt><a href="silicon-genesis-physical.html">Silicon Genesis test</a></dt>
-      <dd>Full Silicon Genesis video, with chapter title cards</dd>
-
-      <dt><a href="video-4x3-to-2700x1800-physical.html">Video: 4:3 to 3:2</a></dt>
-      <dd>Example of a 4:3 video source encoded to a 2700x1800 (3:2) size</dd>
-
-      <dt><a href="video-4x3-to-2700x1800-physical.html">Video: 4:3 to 3:2</a></dt>
-      <dd>Example of a 4:3 video source encoded to a 2700x1800 (3:2) size</dd>
-
-      <dt><a href="video-16x9-to-2700x1800-physical.html">Video: 16:9 to 3:2</a></dt>
-      <dd>Example of a 16:9 video source encoded to a 2700x1800 (3:2) size</dd>
-
-      <dt><a href="oral-history-title-card-physical.html">Title card for oral history experience</a></dt>
-      <dd>For testing title card font styling to encode in video</dd>
-    </dl>
-
-    <h3>Video</h3>
-    <p>
-      These are examples of video &mdash; intended for the <strong>physical</strong> wallscreen &mdash; that Michael digitized so we can figure out the best way to fit source video that could be in either a 16:9 or a 4:3 aspect ratio in the content area of the wallscreen.
-    </p>
-    <p>
-      These were encoded at <samp>H264@~25 mbps/320 kbps AAC audio, mp4.</samp>
-    </p>
-    <dl>
-      <dt><a href="video-4x3-to-uhd.html">Video: 4:3 to UHD</a></dt>
-      <dd>Example of a 4:3 video source encoded as upscaled, full UHD-sized video</dd>
-
-      <dt><a href="video-4x3-to-2700x1800.html">Video: 4:3 to 3:2</a></dt>
-      <dd>Example of a 4:3 video source encoded to a 2700x1800 (3:2) size</dd>
-
-      <dt><a href="video-16x9-to-uhd.html">Video: 16:9 to UHD</a></dt>
-      <dd>Example of a 16:9 video source encoded as upscaled, full UHD-sized video</dd>
-
-      <dt><a href="video-16x9-to-2700x1800.html">Video: 16:9 to 3:2</a></dt>
-      <dd>Example of a 16:9 video source encoded to a 2700x1800 (3:2) size</dd>
-    </dl>
-
-    <p class="section">
-      These are examples of video intended for the <strong>Web versions</strong> of the wallscreen.
-    </p>
-    <p>
-      These were encoded at <samp>H264@3400kbps/128 kbps AAC audio, mp4.</samp>
-    </p>
-    <dl>
-      <dt><a href="silicon-genesis-web.html">Silicon Genesis test</a></dt>
-      <dd>Full Silicon Genesis video, with chapter title cards</dd>
-
-      <dt><a href="video-4x3-to-web.html">Video: 4:3 for Web</a></dt>
-      <dd>Example of a 4:3 video source exported as 1350x900</dd>
-
-      <dt><a href="video-16x9-to-web.html">Video: 16:9 for Web</a></dt>
-      <dd>Example of a 16:9 video source exported as 1350x900</dd>
-    </dl>
-
-    <p class="section">These are simple examples of 16:9 and 4:3 test video placed in the content area of the wallscreen using different parameters.</p>
-    <dl>
-      <dt><a href="video-4x3.html">Video: 4:3</a></dt>
-      <dd>Example of a source video with a 4:3 aspect ratio</dd>
-
-      <dt><a href="video-16x9.html">Video: 16:9</a></dt>
-      <dd>Example of a source video with a 16:9 aspect ratio</dd>
-
-      <dt><a href="video-4x3-full.html">Video: 4:3, full height</a></dt>
-      <dd>Example of a source video with a 4:3 aspect ratio &#8212; embedded to use the full height of the content area</dd>
-
-      <dt><a href="video-16x9-full.html">Video: 16:9, full-width</a></dt>
-      <dd>Example of a source video with a 16:9 aspect ratio &#8212; embedded to use the full width of the content area</dd>
-    </dl>
-  </main>
-
-</body>
-</html>
+<main>
+  {% assign experiences = site.wallscreens | where: "index", true %}
+  {% for experience in experiences %}
+    <a href="{{ experience.url }}">{{ experience.description}}</a>
+  {% endfor %}
+</main>
