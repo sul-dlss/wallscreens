@@ -3,6 +3,7 @@ button, .button {
   background-color: var(--color-secondary);
   border: none;
   border-radius: 4px;
+  box-shadow: 0px 4px 5px rgba(0,0,0,0.25);
   font-family: "Source Sans Pro", sans-sans-serif;;
   font-size: 1em;
   color: #000;
@@ -14,11 +15,13 @@ button, .button {
 }
 
 .button.active {
+  box-shadow: none;
   background-color: var(--color-primary);
   color: #fff;
 }
 
 .disabled {
+  box-shadow: none;
   cursor: not-allowed;
   opacity: 0.8;
 }
