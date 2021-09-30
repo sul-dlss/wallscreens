@@ -62,6 +62,10 @@ pre {
    .card-nav {
      order: -1;
    }
+
+   .content-area {
+     height: 60vw;
+   }
 }
 
 .title-area,
