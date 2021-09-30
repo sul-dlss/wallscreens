@@ -87,7 +87,7 @@ pre {
   display: flex;
   flex-direction: column;
   grid-area: card;
-  padding: 1rem;
+  padding: 2vw;
 }
 
 .experience-index {
