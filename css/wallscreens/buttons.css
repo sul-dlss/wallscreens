@@ -1,16 +1,19 @@
 button, .button {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: var(--color-secondary);
   border: none;
   border-radius: 4px;
   box-shadow: 0px 4px 5px rgba(0,0,0,0.25);
   font-family: "Source Sans Pro", sans-sans-serif;;
-  font-size: 1em;
+  font-size: clamp(14px, 1.25vw, 1.25vw);
+  line-height: 1.5em;
   color: #000;
-  height: 40px;
-  line-height: 40px;
-  padding-left: 12px;
-  padding-right: 12px;
+  min-height:2vh;
+
+  padding-left: 2vw;
+  padding-right: 2vw;
   text-decoration: none;
 }
 
