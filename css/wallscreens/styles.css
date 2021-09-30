@@ -122,6 +122,18 @@ pre {
   margin-top: 0.5rem;
 }
 
+.item-url {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.qrcode {
+  margin-left: -6px;
+}
+
 .experience-summary {
   padding-top: 1em;
   border-top: 1px solid #ddd;

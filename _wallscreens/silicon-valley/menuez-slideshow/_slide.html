@@ -1,0 +1,45 @@
+{% assign wallscreen = site.data.wallscreens[include.wallscreen] %}
+{% assign experience = site.data.experiences[include.experience] %}
+{% assign item = experience.items[include.item] %}
+<header class="title-area">
+  <h1>{{ wallscreen.title }}</h1>
+</header>
+
+<main class="content-area">
+  <pre>content-area</pre>
+</main>
+
+<aside class="card-area">
+  <div class="card-content">
+    <h2 class="experience-title">{{ experience.title}}</h2>
+
+    <h3 class="item-title">{{ item.title }}</h3>
+    <p class="item-note">{{ item.note }}</p>
+    <div class="item-attribution"><span class="item-date">{{ item.date}}</span><span class="separator">•</span><span class="item-creator">{{ item.creator}}</span></div>
+    <div class="item-collection"><i>From</i> {{ item.collection }}</div>
+
+    <p class="experience-summary">{{ experience.summary }}</p>
+
+    {% if item.url %}
+    <a href="{{ item.url }}" data-qr class="item-url">View catalog record</a>
+    {% endif %}
+  </div>
+
+  <nav class="card-nav">
+    {% if item.previous %}
+      <a href="{% link _wallscreens/{{include.wallscreen}}/{{include.experience}}/{{ item.previous }} %}" class="button">Previous</a>
+    {% else %}
+      <a href="#" class="button disabled">Previous</a>
+    {% endif %}
+
+    {% if item.next %}
+      <a href="{% link _wallscreens/{{include.wallscreen}}/{{include.experience}}/{{ item.next }} %}" class="button">Next</a>
+    {% else %}
+      <a href="#" class="button disabled">Next</a>
+    {% endif %}
+  </nav>
+</aside>
+
+<footer class="interaction-area">
+  {% include {{include.wallscreen}}/_interaction_area.html %}
+</footer>
