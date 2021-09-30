@@ -48,6 +48,22 @@ pre {
   }
 }
 
+@media only screen and (max-width: 768px) {
+  .wallscreen {
+    height: auto;
+    width: 100%;
+
+    grid-template: "title title" auto
+                   "content content" auto
+                   "card card" auto
+                   "interaction interaction" auto / 2fr 1fr !important;
+   }
+
+   .card-nav {
+     order: -1;
+   }
+}
+
 .title-area,
 .content-area {
   align-items: center;
