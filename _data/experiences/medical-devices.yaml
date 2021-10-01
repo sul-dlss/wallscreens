@@ -1,0 +1,29 @@
+title: Silicon Valley Inventor Group Portraits
+subtitle: Medical Devices
+date: 2011
+creator: Terry Guyer
+summary: Harold Hohbach commissioned artist Terry Guyer to create eight museum-quality portraits, by time period and industry, portraying Silicon Valley inventors and pioneers. The goal of the commission was to inspire the next generation of young people to follow in the footsteps of the pioneers portrayed in the portraits.
+short_summary: “Medical Devices” was the sixth painting in the Silicon Valley Inventor Group Portrait series and captures five inventors that changed the face of medicine. Thoms S. Fogarty, Rodney Perkins, John Simpson, Paul Yock, and Mir Imran stand together in an operating room holding the devices they created.
+image: https://stacks.stanford.edu/image/iiif/xh842zs4872%2Fxh842zs4872_0001/info.json
+viewport:
+  zoom: 1
+
+items:
+  full:
+    caption: The medical device industry is one of the pillars of Silicon Valley. The individuals depicted in this artwork shaped the world we now live in by creating medical devices that positively impacted patient outcomes.
+  fogarty:
+    bio:
+      title: Thomas S. Fogarty
+    caption: Thomas S. Fogarty invented the embolectomy catheter and helped create more than 30 companies. Fogarty developed the embolectomy catheter in his attic using techniques he learned while fishing as a child and, in doing so, greatly reduced patient risk due to complications when treating blood clots. The embolectomy catheter remains one of the most common catheter used to remove blood clots.
+    viewport:
+      zoom: 4.25
+      x: 1819
+      y: 2712
+  perkins:
+    bio:
+      title: Rodney Perkins
+    caption: Rodney Perkins developed a love for science and technology when he was eight years old after purchasing a pet alligator from an advertisement in a comic book. Dr. Perkins, while attending medical school at Indiana University, created the disc oxygenator and, from there became a serial entrepreneur and medical device innovator. Over the course of his career, Dr. Perkins launched over 30 successful companies including medical device titans Collagen, Laserscope, and ReSound.
+    viewport:
+      zoom: 4.25
+      x: 4249
+      y: 2634

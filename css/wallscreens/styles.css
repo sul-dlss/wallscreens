@@ -79,6 +79,7 @@ pre {
 .content-area {
   background: #eaeaea;
   grid-area: content;
+  position: relative;
 }
 
 .card-area {
@@ -88,6 +89,13 @@ pre {
   flex-direction: column;
   grid-area: card;
   padding: 1rem;
+}
+
+.card-thing {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .experience-index {
@@ -103,6 +111,15 @@ pre {
   text-align: center;
   padding-bottom: 1em;
   border-bottom: 1px solid #ddd;
+}
+
+.card-area h2.border-none {
+  padding-bottom: 0em;
+  margin-bottom: 0.5em;
+}
+
+.experience-subtitle, .experience-attribution {
+  text-align: center;
 }
 
 .card-area h3 {
@@ -134,9 +151,9 @@ pre {
   margin-left: -6px;
 }
 
-.experience-summary {
-  padding-top: 1em;
-  border-top: 1px solid #ddd;
+.experience-attribution {
+  padding-bottom: 1em;
+  border-bottom: 1px solid #ddd;
 }
 
 .card-area h2 + .experience-summary {
@@ -175,4 +192,38 @@ pre {
   gap: 20px;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+.bio-card-area {
+  padding-top: 1em;
+  border-top: 1px solid #ddd;
+}
+
+.bio-card {
+  padding: 0.5vw;
+  background-color: var(--color-secondary);
+}
+
+.bio-card h4 {
+  margin: 0;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.border-none {
+  border: none !important;
+}
+
+.caption {
+  position: absolute;
+  bottom: 2vw;
+  max-height: 10vw;
+  max-width: 80%;
+
+  background-color: rgba(255, 255, 255, 0.85);
+  box-shadow: 0px 4px 5px rgba(0,0,0,0.25);
+  color: black;
+  padding: 1vw;
 }

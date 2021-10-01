@@ -1,0 +1,80 @@
+---
+title: Silicon Valley Inventor Group Portraits
+description: ""
+wallscreen: silicon-valley
+experience: medical-devices
+section: tour
+controller: guided-tour
+---
+{% assign wallscreen = site.data.wallscreens[page.wallscreen] %}
+{% assign experience = site.data.experiences[page.experience] %}
+<header class="title-area">
+  <h1>{{ wallscreen.title }}</h1>
+</header>
+
+<main class="content-area">
+  <div id="openseadragon" style="width: 100%; height: 100%"></div>
+  <script type="text/javascript">
+    var viewer = OpenSeadragon({
+        id: "openseadragon",
+        showNavigationControl: false,
+        animationTime: 2.5,
+        panHorizontal: false,
+        panVertical: false,
+        minZoomLevel: 1,
+        maxZoomLevel: 1,
+        tileSources: "{{ experience.image }}"
+    });
+</script>
+  <div class="caption d-none" data-guided-tour-target="caption"></div>
+</main>
+
+<aside class="card-area">
+  <div class="card-thing" data-guided-tour-target="initialScreen">
+    <div class="card-content experience-index">
+      <h2 class="experience-title border-none">{{ experience.title}}</h2>
+      <h3 class="experience-subtitle">{{ experience.subtitle }}</h3>
+      <div class="experience-attribution"><span class="experience-date">{{ experience.date}}</span><span class="separator">•</span><span class="experience-creator">{{ experience.creator }}</span></div>
+
+      <p class="experience-summary">{{ experience.summary }}</p>
+    </div>
+
+    <nav class="card-nav" data-guided-tour-target="nav">
+      <button class="button" data-action="guided-tour#start"><span>Begin guided tour</span> <i class="fas fa-arrow-right"></i></button>
+    </nav>
+  </div>
+
+  <div class="card-thing d-none" data-guided-tour-target="slides">
+    <div class="card-content">
+      <h2 class="experience-title border-none">{{ experience.title}}</h2>
+      <h3 class="experience-subtitle">{{ experience.subtitle }}</h3>
+      <div class="experience-attribution"><span class="experience-date">{{ experience.date}}</span><span class="separator">•</span><span class="experience-creator">{{ experience.creator }}</span></div>
+      <p class="experience-summary">{{ experience.short_summary }}</p>
+
+      <div class="bio-card-area"><div class="bio-card" data-guided-tour-target="bio"></div></div>
+    </div>
+
+    <nav class="card-nav" data-guided-tour-target="nav">
+      <button class="button" data-action="guided-tour#previous"><i class="fas fa-arrow-alt-circle-left"></i> <span>Previous</span></button>
+      <button class="button" data-action="guided-tour#next"><span>Next</span> <i class="fas fa-arrow-alt-circle-right"></i></button>
+    </nav>
+  </div>
+
+  <div class="card-thing d-none" data-guided-tour-target="endScreen">
+    <div class="card-content">
+      <h2 class="experience-title border-none">{{ experience.title}}</h2>
+      <h3 class="experience-subtitle">{{ experience.subtitle }}</h3>
+      <div class="experience-attribution"><span class="experience-date">{{ experience.date}}</span><span class="separator">•</span><span class="experience-creator">{{ experience.creator }}</span></div>
+
+      <h3>Dig deeper</h3>
+    </div>
+  </div>
+
+  <script type="application/json" id="guided-tour-json" data-guided-tour-target="data">
+    {{ experience.items | jsonify }}
+  </script>
+</aside>
+
+<footer class="interaction-area">
+  {% include silicon-valley/_interaction_area.html %}
+</footer>
