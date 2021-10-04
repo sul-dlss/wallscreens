@@ -25,3 +25,11 @@ button, .button {
   cursor: not-allowed;
   opacity: 0.8;
 }
+
+button .fas:first-child, .button .fas:first-child {
+  margin-right: 0.25rem;
+}
+
+button .fas:last-child, .button .fas:last-child {
+  margin-left: 0.25rem;
+}

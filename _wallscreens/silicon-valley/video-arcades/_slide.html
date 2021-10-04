@@ -27,15 +27,15 @@
 
   <nav class="card-nav">
     {% if item.previous %}
-      <a href="{% link _wallscreens/{{include.wallscreen}}/{{include.experience}}/{{ item.previous }} %}" class="button">Previous</a>
+      <a href="{% link _wallscreens/{{include.wallscreen}}/{{include.experience}}/{{ item.previous }} %}" class="button"><i class="fas fa-arrow-alt-circle-left"></i> <span>Previous</span></a>
     {% else %}
-      <a href="#" class="button disabled">Previous</a>
+      <a href="#" class="button disabled"><i class="fas fa-arrow-alt-circle-left"></i> <span>Previous</span></a>
     {% endif %}
 
     {% if item.next %}
-      <a href="{% link _wallscreens/{{include.wallscreen}}/{{include.experience}}/{{ item.next }} %}" class="button">Next</a>
+      <a href="{% link _wallscreens/{{include.wallscreen}}/{{include.experience}}/{{ item.next }} %}" class="button"><span>Next</span> <i class="fas fa-arrow-alt-circle-right"></i></a>
     {% else %}
-      <a href="#" class="button disabled">Next</a>
+      <a href="#" class="button disabled"><span>Next</span> <i class="fas fa-arrow-alt-circle-right"></i></a>
     {% endif %}
   </nav>
 </aside>
