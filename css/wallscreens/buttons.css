@@ -26,6 +26,11 @@ button, .button {
   opacity: 0.8;
 }
 
+button .fas,
+.button .fas {
+  color: var(--color-stone-dark);
+}
+
 button .fas:first-child, .button .fas:first-child {
   margin-right: 0.25rem;
 }
