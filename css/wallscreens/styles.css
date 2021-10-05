@@ -15,6 +15,7 @@ body {
   --color-secondary: #dad7cb;
 
   --color-archway-dark: #2F2424;
+  --color-stone-dark: #544948;
 }
 
 pre {
@@ -22,7 +23,6 @@ pre {
   font-size: 1.125rem;
   text-transform: lowercase;
 }
-
 
 
 .wallscreen {
