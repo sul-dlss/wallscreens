@@ -1,4 +1,3 @@
-key: menuez-slideshow
 key: adobe-and-apple
 title: Adobe and Apple
 summary: Douglas Menuez has documented progress in Silicon Valley during a period stretching from the early 1980s through the Internet boom.  With an eye for capturing illustrative moments in the histories of companies such as Adobe, Apple, NeXT, Intel, Sun Microsystems, IBM, and several startups, he has worked behind the scenes in a range of settings from boardrooms to design meetings to launch events.
@@ -13,7 +12,7 @@ items:
     note: Apple and Adobe are both among the Valley’s most visible success stories in the area of desktop computing. The histories of these two companies were closely linked during the 1980s, beginning with Steve Jobs attempt to acquire Adobe in the early 1980s, which resulted in his acquisition of a significant portion of the stock issued by the company. After Jobs left Apple, the launch of Adobe Illustrator for the Apple Macintosh in early 1987, followed in 1990 by the release of Adobe Photoshop, also for the Macintosh, proved beneficial for both companies.
     link:
     image: https://stacks.stanford.edu/image/iiif/kq505ns0185%2F8478_03_PM/full/max/0/default.jpg
-  adobe-2:
+  warnock-geschke:
     url: https://purl.stanford.edu/hf643vn5802
     title: Warnock and Geschke
     caption: Adobe co-founders John Warnock (left) and Chuck Geschke.
@@ -23,7 +22,7 @@ items:
     note: John Warnock and Chuck Geschke co-founded Adobe in 1982 after leaving Xerox PARC to develop PostScript, a page description language that could be applied to desktop printing and publication. Adobe, which like other Silicon Valley started in a garage (Warnock’s), derives its name from the creek behind Warnock’s home in Los Altos, California
     link:
     image: https://stacks.stanford.edu/image/iiif/hf643vn5802%2F11577_29_PM/full/max/0/default.jpg
-  adobe-annual:
+  desktop-publishing:
     url: https://purl.stanford.edu/sv835qx0345
     title: Desktop Publishing
     caption: Adobe co-founder Check Geschke (right) and Adobe Vice-President Dave Pratt (left).
@@ -33,7 +32,7 @@ items:
     note: PostScript enabled computers to print a file exactly as it appeared on screen on a piece of paper, a feat that revolutionized desktop publishing. It featured specifications and algorithms for producing fonts that corresponded accurately to letter-form type in many languages and character sets.
     link:
     image: https://stacks.stanford.edu/image/iiif/sv835qx0345%2F9047_14A_PM/full/max/0/default.jpg
-  adobe-3:
+  business-partnership:
     url: https://purl.stanford.edu/bw777mm8533
     title: A Business Parnership
     caption: Adobe co-founder John Warnock in conversation with Christina Liberman, Apple Computer account manager for Adobe's Systems Products Division.
@@ -43,7 +42,7 @@ items:
     note: Photoshop was released exclusively by Adobe for Macintosh machines, so that the business relationship between the two companies was especially close through the early 1990s.
     link:
     image: https://stacks.stanford.edu/image/iiif/bw777mm8533%2F04159_18A_PM/full/max/0/default.jpg
-  adobe-4:
+  adobe-design:
     url: https://purl.stanford.edu/dx152sc4352
     title: Adobe Design
     caption: Adobe's 1990 Photoshop Invitational, which included painter David Hockney (with dachshund in lap).
@@ -53,7 +52,7 @@ items:
     note: Photoshop’s features enabled photo editors to easily edit images. It remains the industry standard for photo editing. Like Apple, Adobe occasionally involved artists and other celebrities in the design process, such as David Hockney (seated second from left in this image).
     link:
     image: https://stacks.stanford.edu/image/iiif/dx152sc4352%2F8553_04_PM/full/max/0/default.jpg
-  adobe-5:
+  adobe-photoshop-invitational:
     url: https://purl.stanford.edu/zp922sr8114
     title: Adobe Photoshop Invitational
     caption: Participants in the 1990 Adobe Photoshop Invitational.
@@ -63,7 +62,7 @@ items:
     note: Before Photoshop was launched as a product, it was difficult to predict how large the market would be for it. Events such as the Adobe Photoshop Invitational in 1990 created energy around the product and may have increased its popularity by connecting Adobe’s creative team with potential users such as artists and photographers.
     link:
     image: https://stacks.stanford.edu/image/iiif/zp922sr8114%2F8554_21_PM/full/max/0/default.jpg
-  adobe-6:
+  kanji-printer:
     url: https://purl.stanford.edu/cg433qx8415
     title: Kanji Printer Products
     caption: Adobe added Kanji printer products in 1988, making PostScript the first truly international standard for computer printing.
@@ -73,7 +72,7 @@ items:
     note: Adobe added Kanji printer products in 1988, making PostScript the first widely available international standard for desktop publishing.
     link:
     image: https://stacks.stanford.edu/image/iiif/cg433qx8415%2F08980_19A_PM/full/max/0/default.jpg
-  adobe-7:
+  adobe-pdf:
     url: https://purl.stanford.edu/vy314cc6845
     title: Acrobat and PDF
     caption: The acrobats outside of Adobe's Mountain View, California, offices.
@@ -83,7 +82,7 @@ items:
     note: Adobe released its Portable Document Format (PDF) in 1992, followed one year later by Adobe Acrobat, software based on the format that gave its users the ability to interact with Portable Digital Files, also commonly known as PDFs. This proprietary document format became the industry standard for digital documents, such that in 2008 the International Organization for Standardization released an open PDF standard.
     link:
     image: https://stacks.stanford.edu/image/iiif/vy314cc6845%2F78424_07_PM/full/max/0/default.jpg
-  next:
+  apple-in-transition:
     url: https://purl.stanford.edu/px635rk0516
     title: Apple in Transition
     caption: Apple co-founder Steve Jobs, then co-founder and CEO of NeXT, Inc.
@@ -93,7 +92,7 @@ items:
     note: In 1985, Steve Jobs founded NeXT after leaving Apple. NeXT was based in Redwood City, California, and focused on the development of high-end personal computers for creative work in the arts, higher education, and business.
     link:
     image: https://stacks.stanford.edu/image/iiif/px635rk0516%2FB32-F11-S4-5_PM/full/max/0/default.jpg
-  silicon-valley-selects:
+  sculley:
     url: https://purl.stanford.edu/vh334wh6717
     title: John Sculley
     caption: John Sculley, who joined Apple in 1983 as president and CEO.
@@ -103,7 +102,7 @@ items:
     note: John Sculley became President and CEO of Apple Computers in 1983. He headed the company until 1993 and thus oversaw the launch of the Macintosh as well as the relationship with Adobe.
     link:
     image: https://purl.stanford.edu/vh334wh6717/iiif/manifest
-  apple:
+  newton:
     url: https://purl.stanford.edu/vf970zx4855
     title: The Newton
     caption: Apple Computer co-founder Steve Wozniak (left) and John Sculley (right), who joined Apple in 1983 as president and CEO.
@@ -113,7 +112,7 @@ items:
     note: While the Macintosh and Apple II were the flagship Apple products, Sculley also encouraged the development of new technologies. The initiative most closely associated with his leadership is the Apple Newton, a handheld computing device. In this image, he is showing the device to Apple co-founder Steve Wozniak.
     link:
     image: https://stacks.stanford.edu/image/iiif/vf970zx4855%2F8842_33A_PM/full/max/0/default.jpg
-  apple-2:
+  apple-marketing:
     url: https://purl.stanford.edu/pr017df3980
     title: Marketing
     caption: A presentation during the unveiling of Apple's long-awaited, low-cost Macintosh computers.
@@ -123,7 +122,7 @@ items:
     note: Sculley brought his marketing experience from previous positions at Pepsi to Apple. One of the priorities of Apple’s advertising under Sculley was to market lower-cost machines to families, with the goal of building Apple’s consumer base among educators, artists and other professionals more interested in higher-end personal computers.
     link:
     image: https://stacks.stanford.edu/image/iiif/pr017df3980%2F8855_9A_PM/full/max/0/default.jpg
-  newton-selects:
+  launching-newton:
     url: https://purl.stanford.edu/gc920nn4783
     title: Launching the Newton
     caption: Newton product design meeting.
@@ -134,7 +133,7 @@ items:
       The Newton was a device conceived of by Michael Tchao in 1991 and released in August of 1993, shortly before Sculley would leave Apple. While not commercially successful, the Newton pointed the way forward to a new kind of computing device: the personal digital assistant, or PDA.
     link:
     image: https://stacks.stanford.edu/image/iiif/gc920nn4783%2F70153_8A_PM/full/max/0/default.jpg
-  newton-launch:
+  boston-launch:
     url: https://purl.stanford.edu/bf618my8546
     title: The Boston Launch
     caption: Preparing for a product launch. Newton support staff work late at Boston Symphony Hall sorting and making badges for the 500 international journalists, analysts and consumer electronics and computer industry insiders expected at the Newton introduction the following morning.
@@ -144,7 +143,7 @@ items:
     note: The launch of the Newton in 1993 at the Boston Symphony Hall continued the Apple tradition of splashy product introductions established by Jobs and Sculley with the Macintosh in 1984. Doug Menuez’ images capture the last-minute preparations and stress of event marketing."
     link:
     image: https://stacks.stanford.edu/image/iiif/bf618my8546%2F82354_11_PM/full/max/0/default.jpg
-  newton-launch-2:
+  all-hands-on-deck:
     url: https://purl.stanford.edu/yf756bz3174
     title: All Hands on Deck
     caption: Ray Riley (right) watches Scott Petry (left).
@@ -154,7 +153,7 @@ items:
     note: Ray Riley watches while Scott Petry takes sandpaper to the rough edge of a Newton he just sawed down to fit in a display case. They were preparing a selection of prototypes for future Newton products to be shown during the next morning’s Newton. Menuez’ photographs remind us of the teamwork, coordination, and skill required to pull off such an event.
     link:
     image: https://stacks.stanford.edu/image/iiif/yf756bz3174%2F82369_18A_PM/full/max/0/default.jpg
-  newton-launch-3:
+  sculley-era:
     url: https://purl.stanford.edu/zv574mp4610
     title: The End of the Sculley Era
     caption: The Newton product launch in Boston.  John Sculley (left) and unidentified colleague.
@@ -164,7 +163,7 @@ items:
     note: With the commercial failure of a Newton Steve Jobs terminated it as an Apple product in 1998, shortly after he returned to head the company.
     link:
     image: https://stacks.stanford.edu/image/iiif/zv574mp4610%2F82350_17_PM/full/max/0/default.jpg
-  apple-3:
+  desktop-computing-stanford:
     url: https://purl.stanford.edu/nf291dn9902
     title: Desktop Computing at Stanford
     caption: The Macintosh on the Stanford campus, Durand Engineering Building.
