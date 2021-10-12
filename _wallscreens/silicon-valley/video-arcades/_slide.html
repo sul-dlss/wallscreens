@@ -14,11 +14,11 @@
     <h2 class="experience-title">{{ experience.title}}</h2>
 
     <h3 class="item-title">{{ item.title }}</h3>
-    <p class="item-note">{{ item.note }}</p>
+    <p class="item-caption">{{ item.caption }}</p>
     <div class="item-attribution"><span class="item-date">{{ item.date}}</span><span class="separator">•</span><span class="item-creator">{{ item.creator}}</span></div>
     <div class="item-collection"><i>From</i> {{ item.collection }}</div>
 
-    <p class="experience-summary">{{ experience.summary }}</p>
+    <p class="item-note">{{ item.note }}</p>
 
     {% if item.url %}
     <a href="{{ item.url }}" data-qr class="item-url">View catalog record</a>
