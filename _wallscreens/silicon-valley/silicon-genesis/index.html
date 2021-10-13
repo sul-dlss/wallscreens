@@ -3,6 +3,7 @@ title: Silicon Genesis
 description: ""
 wallscreen: silicon-valley
 experience: silicon-genesis
+controller: oral-history
 ---
 {% assign wallscreen = site.data.wallscreens[page.wallscreen] %}
 {% assign experience = site.data.experiences[page.experience] %}
@@ -13,13 +14,55 @@ experience: silicon-genesis
 </header>
 
 <main class="content-area">
-  <video controls muted="true" width="853">
+  <video data-oral-history-target="video" controls muted="true" width="853">
     <source src="https://stanford.box.com/shared/static/e58t96yp5dvhhbhtwsowqtecc6vso8zi.mp4" type="video/mp4">
   </video>
 </main>
 
 <aside class="card-area">
-  <pre>card-area</pre>
+  <div class="card" data-oral-history-target="initialScreen">
+    <div class="card-content experience-index">
+      <h2 class="experience-title">{{ experience.title}}</h2>
+
+      <p class="experience-summary">{{ experience.summary}}</p>
+    </div>
+
+    <nav class="card-nav" data-oral-history-target="nav">
+      <button class="button" data-action="oral-history#start"><span>Begin video</span> <i class="fas fa-arrow-right"></i></button>
+    </nav>
+  </div>
+
+  <div class="card d-none" data-oral-history-target="chapterContainer">
+    <div class="card-content">
+      <h2 class="experience-title">{{ experience.title}}</h2>
+
+      {% for key_item in experience.items %}
+        {% assign key = key_item.first %}
+        {% assign item = key_item.last %}
+        <div data-timestamp="{{item.timestamp}}" data-oral-history-target="chapters">
+          <img src="{{item.thumbnail}}" />
+          <h3 class="item-title">{{ item.title }}</h3>
+        </div>
+      {% endfor %}
+    </div>
+
+    <nav class="card-nav" data-oral-history-target="nav">
+      <button class="button" data-action="oral-history#previous"><i class="fas fa-arrow-alt-circle-left"></i> <span>Previous</span></button>
+      <button class="button" data-action="oral-history#next"><span>Next</span> <i class="fas fa-arrow-alt-circle-right"></i></button>
+    </nav>
+  </div>
+
+  <div class="card d-none" data-oral-history-target="endScreen">
+    <div class="card-content">
+      <h2 class="experience-title border-none">{{ experience.title}}</h2>
+
+      <h3>Dig deeper</h3>
+    </div>
+
+    <h3>Explore other oral-historys</h3>
+    <nav class="card-nav">
+    </nav>
+  </div>
 </aside>
 
 <footer class="interaction-area">
