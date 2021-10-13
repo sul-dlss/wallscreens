@@ -1,0 +1,26 @@
+---
+title: Silicon Genesis
+description: ""
+wallscreen: silicon-valley
+experience: silicon-genesis
+---
+{% assign wallscreen = site.data.wallscreens[page.wallscreen] %}
+{% assign experience = site.data.experiences[page.experience] %}
+
+<header class="title-area">
+  <h1>{{ wallscreen.title }}</h1>
+</header>
+
+<main class="content-area">
+  <video controls muted="true" width="853">
+    <source src="https://stanford.box.com/shared/static/e58t96yp5dvhhbhtwsowqtecc6vso8zi.mp4" type="video/mp4">
+  </video>
+</main>
+
+<aside class="card-area">
+  <pre>card-area</pre>
+</aside>
+
+<footer class="interaction-area">
+  {% include silicon-valley/_interaction_area.html %}
+</footer>

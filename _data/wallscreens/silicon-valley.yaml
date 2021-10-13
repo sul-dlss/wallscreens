@@ -2,3 +2,10 @@ key: silicon-valley
 title: Silicon Valley Archives
 experiences:
   - key: adobe-and-apple
+  - key: video-arcades
+  - key: medical-devices
+nav:
+  defaults:
+    slideshow: video-arcades
+    tour: medical-devices
+    video: silicon-genesis
