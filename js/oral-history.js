@@ -5,11 +5,22 @@ Stimulus.register("oral-history", class extends Controller {
   static targets = [ "initialScreen", "chapterContainer", "endScreen",  "chapters", "video" ]
 
   connect() {
-    this.index = -1;
+    this.setIndex(-1);
+
+    const timestamps = this.chaptersTargets.map((item, index, arr) => ({'start': parseInt(item.dataset.timestamp,10), 'end': parseInt(arr[index+1]?.dataset?.timestamp, 10) || Infinity
+    }))
+
+    console.log(timestamps)
+    this.videoTarget.ontimeupdate = (event) => {
+      const index = timestamps.findIndex((timestamp)=>(timestamp.start < event.target.currentTime && timestamp.end > event.target.currentTime));
+      console.log(index);
+      this.setIndex(index);
+      // console.log(event.target.currentTime);
+    };
   }
 
   start() {
-    this.index = 0;
+    this.setIndex(0);
     this.videoTarget.play();
     this.initialScreenTarget.classList.add('d-none');
     this.chapterContainerTarget.classList.remove('d-none');
@@ -19,7 +30,7 @@ Stimulus.register("oral-history", class extends Controller {
   }
 
   reset() {
-    this.index = -1;
+    this.setIndex(-1);
     this.videoTarget.pause();
     this.videoTarget.currentTime = 0;
     this.initialScreenTarget.classList.remove('d-none');
@@ -39,7 +50,7 @@ Stimulus.register("oral-history", class extends Controller {
       return this.end();
     }
 
-    this.index++;
+    this.setIndex(this.index+1);
     this.showCurrentItem();
   }
 
@@ -48,7 +59,7 @@ Stimulus.register("oral-history", class extends Controller {
       return this.reset();
     }
 
-    this.index--;
+    this.setIndex(this.index-1);
     this.showCurrentItem();
   }
 
@@ -60,5 +71,13 @@ Stimulus.register("oral-history", class extends Controller {
     const item = this.getItem(this.index);
     this.videoTarget.currentTime = item.dataset.timestamp
     this.videoTarget.play()
+  }
+
+  setIndex(index) {
+    this.index = index;
+    this.chaptersTargets.forEach(x => x.classList.remove('current'));
+    if (this.index >= 0) {
+      this.getItem(this.index).classList.add('current');
+    }
   }
 })
