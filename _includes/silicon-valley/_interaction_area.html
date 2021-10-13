@@ -3,21 +3,21 @@
 
 <div class="experience-buttons">
   {% if experience.type == "slideshow" %}
-    <a href="{% link _wallscreens/{{ page.wallscreen }}/{{ page.experience }}/index.html %}" class="button active">{{ experience.title }}</a>
+    <a href="{% link _wallscreens/{{ page.wallscreen }}/{{ page.experience }}/index.html %}" class="button active">{{ experience.button_label }}</a>
   {% else %}
-    <a href="{% link _wallscreens/{{ page.wallscreen }}/{{ wallscreen.nav.defaults.slideshow }}/index.html %}" class="button">{{ site.data.experiences[wallscreen.nav.defaults.slideshow].title }}</a>
+    <a href="{% link _wallscreens/{{ page.wallscreen }}/{{ wallscreen.nav.defaults.slideshow }}/index.html %}" class="button">{{ site.data.experiences[wallscreen.nav.defaults.slideshow].button_label }}</a>
   {% endif %}
 
   {% if experience.type == "tour" %}
-    <a href="{% link _wallscreens/{{ page.wallscreen }}/{{ page.experience }}/index.html %}" class="button active">{{ experience.title }}</a>
+    <a href="{% link _wallscreens/{{ page.wallscreen }}/{{ page.experience }}/index.html %}" class="button active">{{ experience.button_label }}</a>
   {% else %}
-    <a href="{% link _wallscreens/{{ page.wallscreen }}/{{ wallscreen.nav.defaults.tour }}/index.html %}" class="button">{{ site.data.experiences[wallscreen.nav.defaults.tour].title }}</a>
+    <a href="{% link _wallscreens/{{ page.wallscreen }}/{{ wallscreen.nav.defaults.tour }}/index.html %}" class="button">{{ site.data.experiences[wallscreen.nav.defaults.tour].button_label }}</a>
   {% endif %}
 
   {% if experience.type == "video" %}
-    <a href="{% link _wallscreens/{{ page.wallscreen }}/{{ page.experience }}/index.html %}" class="button active">{{ experience.title }}</a>
+    <a href="{% link _wallscreens/{{ page.wallscreen }}/{{ page.experience }}/index.html %}" class="button active">{{ experience.button_label }}</a>
   {% else %}
-    <a href="{% link _wallscreens/{{ page.wallscreen }}/{{ wallscreen.nav.defaults.video }}/index.html %}" class="button">{{ site.data.experiences[wallscreen.nav.defaults.video].title }}</a>
+    <a href="{% link _wallscreens/{{ page.wallscreen }}/{{ wallscreen.nav.defaults.video }}/index.html %}" class="button">{{ site.data.experiences[wallscreen.nav.defaults.video].button_label }}</a>
   {% endif %}
 </div>
 

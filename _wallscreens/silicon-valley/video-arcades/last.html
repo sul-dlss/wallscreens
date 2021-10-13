@@ -4,6 +4,8 @@ description: ""
 wallscreen: silicon-valley
 experience: video-arcades
 ---
+{% assign wallscreen = site.data.wallscreens[page.wallscreen] %}
+{% assign experience = site.data.experiences[page.experience] %}
 <header class="title-area">
   <h1>Silicon Valley Archives</h1>
 </header>
@@ -21,7 +23,12 @@ experience: video-arcades
 
   <h3>Explore other slideshows</h3>
   <nav class="card-nav">
-    <a href="{% link _wallscreens/silicon-valley/adobe-and-apple/index.html %}" class="button">Adobe and Apple</a>
+    {% for wallscreen_experience in wallscreen.experiences %}
+      {% assign other_experience = site.data.experiences[wallscreen_experience.key] %}
+      {% if other_experience.type == experience.type and other_experience.key != page.experience %}
+        <a href="{% link _wallscreens/{{ page.wallscreen }}/{{ other_experience.key }}/index.html %}" class="button">{{ other_experience.button_label}}</a>
+      {% endif %}
+    {% endfor %}
   </nav>
 </aside>
 
