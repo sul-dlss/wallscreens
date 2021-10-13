@@ -14,3 +14,7 @@ body {
   margin: 0 36px;
   text-align: center;
 }
+
+.current {
+  background-color: palevioletred;
+}
