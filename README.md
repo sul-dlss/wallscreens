@@ -1,4 +1,5 @@
 # wallscreens
+[![Netlify Status](https://api.netlify.com/api/v1/badges/692ef43d-2785-4975-a5c4-9db57a66b315/deploy-status)](https://app.netlify.com/sites/sul-wallscreens/deploys)
 [![Current release](https://img.shields.io/github/v/release/sul-dlss/wallscreens)](https://github.com/sul-dlss/wallscreens/releases)
 [![Jekyll](https://img.shields.io/badge/powered_by-jekyll-blue.svg)](http://jekyllrb.com/)
 [![License](https://img.shields.io/badge/license-apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
@@ -28,7 +29,7 @@ this will generate HTML in a directory called `_site/`.
 each wallscreen can host several experiences, and experiences can be shared across multiple wallscreens. an experience is a set of curated content, which can take the form of:
 - a slideshow of many images with captions
 - a guided tour that zooms in on locations in a single high-resolution image
-- a collection of video clips arranged into subsets
+- a video with multiple themed sections, each containing several clips
 
 the content used in the wallscreens and experiences is stored as YAML files in the `_data/` directory. text content and media links supplied by curators are defined for each experience.
 
