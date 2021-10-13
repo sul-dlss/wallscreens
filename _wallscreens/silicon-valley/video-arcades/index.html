@@ -2,10 +2,13 @@
 title: Bay Area Video Arcades
 description: ""
 wallscreen: silicon-valley
+experience: video-arcades
 section: slideshow
 ---
+{% assign wallscreen = site.data.wallscreens[page.wallscreen] %}
+{% assign experience = site.data.experiences[page.experience] %}
 <header class="title-area">
-  <h1>Silicon Valley Archives</h1>
+  <h1>{{ wallscreen.title }}</h1>
 </header>
 
 <main class="content-area">
@@ -14,9 +17,9 @@ section: slideshow
 
 <aside class="card-area">
   <div class="card-content experience-index">
-    <h2 class="experience-title">Bay Area Video Arcades: Photographs by Ira Nowinski</h2>
+    <h2 class="experience-title">{{ experience.title }}</h2>
 
-    <p class="experience-summary">The Bay Area video arcade photographs were taken in 1980 and 1981 at several locations in the San Francisco Bay Area. The locations include the Santa Cruz Boardwalk, the Exploratorium (site of the 1981 Atari Asteroids competition), and other arcades in Oakland and San Francisco.</p>
+    <p class="experience-summary">{{ experience.summary }}</p>
   </div>
 
   <nav class="card-nav">
