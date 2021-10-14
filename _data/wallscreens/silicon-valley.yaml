@@ -4,6 +4,7 @@ experiences:
   - key: adobe-and-apple
   - key: video-arcades
   - key: medical-devices
+  - key: networking
 nav:
   defaults:
     slideshow: video-arcades
