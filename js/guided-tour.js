@@ -59,7 +59,7 @@ Stimulus.register("guided-tour", class extends Controller {
     if (data.viewport) {
       window.viewer.viewport.panTo(window.viewer.viewport.imageToViewportCoordinates(data.viewport.x, data.viewport.y));
       window.viewer.viewport.zoomTo(data.viewport.zoom);
-    } else if (this.index == 0 || (this.index + 1) == this.slidesTargets.length) {
+    } else {
       window.viewer.viewport.goHome();
     }
 
