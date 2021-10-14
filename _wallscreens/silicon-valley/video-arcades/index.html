@@ -63,6 +63,12 @@ controller: slideshow
       <h2 class="experience-title border-none">{{ experience.title}}</h2>
 
       <h3>Dig deeper</h3>
+
+      {% for item in experience.more_info %}
+        <div class="dig-deeper-card">
+          <a href="{{ item.url }}" data-qr class="item-url">{{ item.type }}</a><span>{{ item.text }}
+        </div>
+      {% endfor %}
     </div>
 
     <h3>Explore other slideshows</h3>

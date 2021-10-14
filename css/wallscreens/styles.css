@@ -235,3 +235,15 @@ pre {
   color: black;
   padding: 1vw;
 }
+
+.dig-deeper-card {
+  display: flex;
+  gap: 1rem;
+}
+
+.dig-deeper-card .item-url {
+  align-items: flex-start;
+  gap: 1rem;
+  width: 18ch;
+  flex-shrink: 0;
+}
