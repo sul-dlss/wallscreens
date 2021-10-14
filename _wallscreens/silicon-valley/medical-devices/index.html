@@ -29,7 +29,7 @@ controller: guided-tour
 </main>
 
 <aside class="card-area">
-  <div class="card-thing" data-guided-tour-target="initialScreen">
+  <div class="card" data-guided-tour-target="slides">
     <div class="card-content experience-index">
       <h2 class="experience-title border-none">{{ experience.title}}</h2>
       <h3 class="experience-subtitle">{{ experience.subtitle }}</h3>
@@ -39,39 +39,67 @@ controller: guided-tour
     </div>
 
     <nav class="card-nav" data-guided-tour-target="nav">
-      <button class="button" data-action="guided-tour#start"><span>Begin guided tour</span> <i class="fas fa-arrow-right"></i></button>
+      <button class="button" data-action="guided-tour#next"><span>Begin guided tour</span> <i class="fas fa-arrow-right"></i></button>
     </nav>
   </div>
 
-  <div class="card-thing d-none" data-guided-tour-target="slides">
+  <div class="card d-none" data-guided-tour-target="slideContainer">
     <div class="card-content">
-      <h2 class="experience-title border-none">{{ experience.title}}</h2>
+      <h2 class="experience-title border-none">{{ experience.title }}</h2>
       <h3 class="experience-subtitle">{{ experience.subtitle }}</h3>
-      <div class="experience-attribution"><span class="experience-date">{{ experience.date}}</span><span class="separator">•</span><span class="experience-creator">{{ experience.creator }}</span></div>
+      <div class="experience-attribution"><span class="experience-date">{{ experience.date }}</span><span class="separator">•</span><span class="experience-creator">{{ experience.creator }}</span></div>
       <p class="experience-summary">{{ experience.short_summary }}</p>
 
-      <div class="bio-card-area"><div class="bio-card" data-guided-tour-target="bio"></div></div>
+      <div class="bio-card-area">
+        {% for key_item in experience.items %}
+          {% assign key = key_item.first %}
+          {% assign item = key_item.last %}
+          <div data-guided-tour-target="slides">
+            {% if item.bio %}
+              <div class="bio-card">
+                <h4>{{ item.bio.title }}</h4>
+                {{ item.bio.description }}
+              </div>
+            {% endif %}
+            <script type="application/json">
+              {{ item | jsonify }}
+            </script>
+          </div>
+        {% endfor %}
+      </div>
     </div>
 
-    <nav class="card-nav" data-guided-tour-target="nav">
+    <nav class="card-nav">
       <button class="button" data-action="guided-tour#previous"><i class="fas fa-arrow-alt-circle-left"></i> <span>Previous</span></button>
       <button class="button" data-action="guided-tour#next"><span>Next</span> <i class="fas fa-arrow-alt-circle-right"></i></button>
     </nav>
   </div>
 
-  <div class="card-thing d-none" data-guided-tour-target="endScreen">
+  <div class="card d-none" data-guided-tour-target="slides">
     <div class="card-content">
       <h2 class="experience-title border-none">{{ experience.title}}</h2>
       <h3 class="experience-subtitle">{{ experience.subtitle }}</h3>
       <div class="experience-attribution"><span class="experience-date">{{ experience.date}}</span><span class="separator">•</span><span class="experience-creator">{{ experience.creator }}</span></div>
 
       <h3>Dig deeper</h3>
-    </div>
-  </div>
 
-  <script type="application/json" id="guided-tour-json" data-guided-tour-target="data">
-    {{ experience.items | jsonify }}
-  </script>
+      {% for item in experience.more_info %}
+        <div class="dig-deeper-card">
+          <a href="{{ item.url }}" data-qr class="item-url">{{ item.type }}</a><span>{{ item.text }}
+        </div>
+      {% endfor %}
+    </div>
+
+    <h3>Explore other guided tours</h3>
+    <nav class="card-nav">
+      {% for wallscreen_experience in wallscreen.experiences %}
+        {% assign other_experience = site.data.experiences[wallscreen_experience.key] %}
+        {% if other_experience.type == experience.type and other_experience.key != page.experience %}
+          <a href="{% link _wallscreens/{{ page.wallscreen }}/{{ other_experience.key }}/index.html %}" class="button">{{ other_experience.button_label}}</a>
+        {% endif %}
+      {% endfor %}
+    </nav>
+  </div>
 </aside>
 
 <footer class="interaction-area">

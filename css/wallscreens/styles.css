@@ -227,7 +227,7 @@ pre {
 .caption {
   position: absolute;
   bottom: 2vw;
-  max-height: 10vw;
+  max-height: 20vw;
   max-width: 80%;
 
   background-color: rgba(255, 255, 255, 0.85);
