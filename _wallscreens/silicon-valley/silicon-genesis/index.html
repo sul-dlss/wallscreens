@@ -20,7 +20,7 @@ controller: oral-history
 </main>
 
 <aside class="card-area">
-  <div class="card" data-oral-history-target="initialScreen">
+  <div class="card" data-oral-history-target="steps">
     <div class="card-content experience-index">
       <h2 class="experience-title">{{ experience.title}}</h2>
 
@@ -35,13 +35,18 @@ controller: oral-history
   <div class="card d-none" data-oral-history-target="chapterContainer">
     <div class="card-content">
       <h2 class="experience-title">{{ experience.title}}</h2>
-
-      {% for key_item in experience.items %}
-        {% assign key = key_item.first %}
-        {% assign item = key_item.last %}
-        <div data-timestamp="{{item.timestamp}}" data-oral-history-target="chapters">
-          <img src="{{item.thumbnail}}" />
-          <h3 class="item-title">{{ item.title }}</h3>
+      {% assign themes = experience.items | group_by:"theme" %}
+      {% for theme in themes %}
+        <div class="theme d-none" data-oral-history-target="chapterContainer">
+          <h3>{{theme.name}}</h3>
+          <ul class="theme-chapter-list">
+            {% for item in theme.items %}
+              <li class="chapter" data-timestamp="{{item.timestamp}}" data-oral-history-target="steps">
+                <img src="{{item.thumbnail}}" />
+                <h4 class="item-title">{{ item.title }}</h4>
+              </li>
+            {% endfor %}
+          </ul>
         </div>
       {% endfor %}
     </div>
@@ -52,7 +57,7 @@ controller: oral-history
     </nav>
   </div>
 
-  <div class="card d-none" data-oral-history-target="endScreen">
+  <div class="card d-none" data-oral-history-target="steps">
     <div class="card-content">
       <h2 class="experience-title border-none">{{ experience.title}}</h2>
 
