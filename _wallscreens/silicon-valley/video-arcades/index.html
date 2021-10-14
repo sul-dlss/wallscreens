@@ -36,7 +36,7 @@ controller: slideshow
         {% assign key = key_item.first %}
         {% assign item = key_item.last %}
         <link rel="preload" href="{{ item.image }}" as="image">
-        <div data-image-url="{{ item.image }}" data-slideshow-target="slides">
+        <div id="{{ key }}" data-image-url="{{ item.image }}" data-slideshow-target="slides">
 
           <h3 class="item-title">{{ item.title }}</h3>
           <p class="item-caption">{{ item.caption }}</p>
@@ -58,7 +58,7 @@ controller: slideshow
     </nav>
   </div>
 
-  <div class="card d-none" data-slideshow-target="slides">
+  <div id="last" class="card d-none" data-slideshow-target="slides">
     <div class="card-content">
       <h2 class="experience-title border-none">{{ experience.title}}</h2>
 
