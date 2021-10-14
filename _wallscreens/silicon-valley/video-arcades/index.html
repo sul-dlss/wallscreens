@@ -16,7 +16,7 @@ controller: slideshow
 </main>
 
 <aside class="card-area">
-  <div class="card" data-slideshow-target="initialScreen">
+  <div class="card" data-slideshow-target="slides">
     <div class="card-content experience-index">
       <h2 class="experience-title">{{ experience.title }}</h2>
 
@@ -24,7 +24,7 @@ controller: slideshow
     </div>
 
     <nav class="card-nav" data-slideshow-target="nav">
-      <button class="button" data-action="slideshow#start"><span>Begin slideshow</span> <i class="fas fa-arrow-right"></i></button>
+      <button class="button" data-action="slideshow#next"><span>Begin slideshow</span> <i class="fas fa-arrow-right"></i></button>
     </nav>
   </div>
 
@@ -58,7 +58,7 @@ controller: slideshow
     </nav>
   </div>
 
-  <div class="card d-none" data-slideshow-target="endScreen">
+  <div class="card d-none" data-slideshow-target="slides">
     <div class="card-content">
       <h2 class="experience-title border-none">{{ experience.title}}</h2>
 

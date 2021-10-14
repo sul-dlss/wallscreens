@@ -2,58 +2,31 @@ import { Application, Controller } from "/js/stimulus.js"
 window.Stimulus = Application.start()
 
 Stimulus.register("slideshow", class extends Controller {
-  static targets = [ "data", "slides", "initialScreen", "slideArea", "slideContainer", "endScreen" ]
+  static targets = ["slides", "slideArea", "slideContainer" ]
 
   connect() {
-    this.index = -1;
-  }
-
-  // start the slideshow
-  start() {
     this.index = 0;
-    this.initialScreenTarget.classList.add('d-none');
-    this.slideContainerTarget.classList.remove('d-none');
-    this.slidesTargets.forEach(x => x.classList.add('d-none'));
-    this.endScreenTarget.classList.add('d-none');
-
-    this.showCurrentItem();
+    this.render();
   }
 
   // reset the slideshow back to the intro card
   reset() {
-    this.index = -1;
-    this.initialScreenTarget.classList.remove('d-none');
-    this.slideContainerTarget.classList.add('d-none');
-    this.slidesTargets.forEach(x => x.classList.add('d-none'));
-    this.endScreenTarget.classList.add('d-none');
-  }
-
-  // conclude the slideshow the end card
-  end() {
-    this.initialScreenTarget.classList.add('d-none');
-    this.slideContainerTarget.classList.add('d-none');
-    this.slidesTargets.forEach(x => x.classList.add('d-none'));
-    this.endScreenTarget.classList.remove('d-none');
+    this.setIndex(0);
   }
 
   // paginate to the next slide, or the end card
   next() {
-    if ((this.index + 1) >= this.slidesTargets.length) {
-      return this.end();
-    }
-
-    this.index++;
-    this.showCurrentItem();
+    this.setIndex(this.index + 1);
   }
 
   // paginate to the previous slide, or the intro card
   previous() {
-    if (this.index <= 0) {
-      return this.reset();
-    }
+    this.setIndex(this.index - 1);
+  }
 
-    this.index--;
-    this.showCurrentItem();
+  setIndex(index) {
+    this.index = Math.max(0, Math.min(index, this.slidesTargets.length));
+    this.render();
   }
 
   // @private
@@ -63,10 +36,19 @@ Stimulus.register("slideshow", class extends Controller {
   }
 
   // make the current item visible
-  showCurrentItem() {
+  render() {
     const item = this.getItem(this.index);
+
     this.slidesTargets.forEach(x => x.classList.add('d-none'));
     this.slideAreaTarget.style['background-image'] = "url(" + item.dataset.imageUrl + ")";
     item.classList.remove('d-none');
+
+    this.slideContainerTargets.forEach(container => {
+      if (container.contains(item)) {
+        container.classList.remove('d-none');
+      } else {
+        container.classList.add('d-none');
+      }
+    });
   }
 })
