@@ -25,10 +25,8 @@ viewport:
   zoom: 1
 
 items:
-  full:
-    caption: The medical device industry is one of the pillars of Silicon Valley. The individuals depicted in this artwork shaped the world we now live in by creating medical devices that positively impacted patient outcomes.
-  fogarty:
-    bio:
+  - caption: The medical device industry is one of the pillars of Silicon Valley. The individuals depicted in this artwork shaped the world we now live in by creating medical devices that positively impacted patient outcomes.
+  - bio:
       title: Thomas S. Fogarty
       description: Inventor of the embolectomy catheter.
       url: https://en.wikipedia.org/wiki/Thomas_J._Fogarty
@@ -37,8 +35,7 @@ items:
       zoom: 4.25
       x: 1819
       y: 2712
-  perkins:
-    bio:
+  - bio:
       title: Rodney Perkins
       description: Stanford professor and founder of over thirty medical device companies.
       url: https://en.wikipedia.org/wiki/Rodney_Perkins
@@ -47,8 +44,7 @@ items:
       zoom: 4.25
       x: 4249
       y: 2634
-  simpson:
-    bio:
+  - bio:
       title: John Simpson
       description: Inventor of the over-the-wire (OTW) balloon catheter.
       url: https://www.massdevice.com/endurance-criticism-legendary-career-dr-john-simpson/
@@ -57,8 +53,7 @@ items:
       zoom: 4.25
       x: 6040
       y: 2598
-  yock:
-    bio:
+  - bio:
       title: Paul Yock
       description: Inventor of Rapid Exchange angioplasty and intravascular ultrasound imaging.
       url: https://biox.sites.stanford.edu/highlight/paul-yock-wins-national-academy-engineerings-gordon-prize
@@ -67,8 +62,7 @@ items:
       zoom: 4.25
       x: 9005
       y: 2704
-  imran:
-    bio:
+  - bio:
       title: Mir Imran
       description: Inventor of the implantable cardioverter-defibrillator.
       url: https://en.wikipedia.org/wiki/Mir_Imran

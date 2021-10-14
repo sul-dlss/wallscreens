@@ -26,10 +26,8 @@ viewport:
   zoom: 1
 
 items:
-  full:
-    caption: Networking pioneers created the technologies that made office connectivity and the World Wide Web possible.  The individuals depicted in "Computer Networking and Internet Connectivity Pioneers of Silicon Valley" all invented devices or created protocols that have had a significant impact on all forms of computing in our homes and offices.
-  nielsen:
-    bio:
+  - caption: Networking pioneers created the technologies that made office connectivity and the World Wide Web possible.  The individuals depicted in "Computer Networking and Internet Connectivity Pioneers of Silicon Valley" all invented devices or created protocols that have had a significant impact on all forms of computing in our homes and offices.
+  - bio:
       title: Don Nielsen
       description: Led the Stanford Research International project to develop the first packet-switched radio network for the Advanced Research Projects Administration (ARPA).
       url: https://www.sri.com/bios/donald-nielson/
@@ -38,8 +36,7 @@ items:
       zoom: 4.25
       x: 1874
       y: 2383
-  cerf:
-    bio:
+  - bio:
       title: Vint Cerf
       description: Co-designer of the TCP-IP protocols
       url: https://en.wikipedia.org/wiki/Vint_Cerf
@@ -48,8 +45,7 @@ items:
       zoom: 4.25
       x: 3650
       y: 3128
-  lerner:
-    bio:
+  - bio:
       title: Sandy Lerner
       description: Co-founder of Cisco Systems
       url: https://en.wikipedia.org/wiki/Sandy_Lerner
@@ -58,8 +54,7 @@ items:
       zoom: 4.25
       x: 5368
       y: 3516
-  metcalfe:
-    bio:
+  - bio:
       title: Robert Metcalfe
       description: Co-inventor of Ethernet
       url: https://en.wikipedia.org/wiki/Robert_Metcalfe
@@ -68,8 +63,7 @@ items:
       zoom: 4.25
       x: 8159
       y: 3099
-  roberts:
-    bio:
+  - bio:
       title: Larry Roberts
       description: Developer of the ARPANET
       url: https://en.wikipedia.org/wiki/Lawrence_Roberts_(scientist)

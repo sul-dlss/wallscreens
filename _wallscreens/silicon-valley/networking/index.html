@@ -52,9 +52,7 @@ controller: guided-tour
       <p class="experience-summary">{{ experience.short_summary }}</p>
 
       <div class="bio-card-area">
-        {% for key_item in experience.items %}
-          {% assign key = key_item.first %}
-          {% assign item = key_item.last %}
+        {% for item in experience.items %}
           <div data-guided-tour-target="slides">
             {% if item.bio %}
               <div class="bio-card">
