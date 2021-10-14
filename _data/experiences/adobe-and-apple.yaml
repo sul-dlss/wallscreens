@@ -3,6 +3,16 @@ type: slideshow
 button_label: Adobe and Apple
 title: Adobe and Apple
 summary: Douglas Menuez has documented progress in Silicon Valley during a period stretching from the early 1980s through the Internet boom.  With an eye for capturing illustrative moments in the histories of companies such as Adobe, Apple, NeXT, Intel, Sun Microsystems, IBM, and several startups, he has worked behind the scenes in a range of settings from boardrooms to design meetings to launch events.
+more_info:
+  - type: Website
+    text: Silicon Valley Archives
+    url: https://library.stanford.edu/projects/silicon-valley-archives
+  - type: Collection
+    text: Douglas Menuez photography collection, circa 1985 - 2008
+    url: https://searchworks.stanford.edu/view/5628133
+  - type: Digital Exhibit
+    text: Douglas Menuez Photography Collection
+    url: https://exhibits.stanford.edu/menuez
 items:
   adobe:
     url: https://purl.stanford.edu/kq505ns0185
