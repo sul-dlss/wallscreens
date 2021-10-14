@@ -6,6 +6,11 @@ Stimulus.register("slideshow", class extends Controller {
 
   connect() {
     this.index = 0;
+
+    if (window.location.hash && this.slidesTargets.findIndex(x => x.id == window.location.hash.substring(1)) > 0) {
+      this.index = this.slidesTargets.findIndex(x => x.id == window.location.hash.substring(1));
+    }
+
     this.render();
   }
 
