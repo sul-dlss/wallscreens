@@ -54,7 +54,7 @@ Stimulus.register("guided-tour", class extends Controller {
       }
     });
 
-    const data = JSON.parse(item.querySelector("script[type='application/json']")?.innerHTML || null) ?? {};
+    const data = JSON.parse(item.querySelector("script[type='application/json']")?.textContent || null) ?? {};
 
     if (data.viewport) {
       window.viewer.viewport.panTo(window.viewer.viewport.imageToViewportCoordinates(data.viewport.x, data.viewport.y));
