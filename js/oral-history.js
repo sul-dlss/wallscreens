@@ -2,82 +2,81 @@ import { Application, Controller } from "/js/stimulus.js"
 window.Stimulus = Application.start()
 
 Stimulus.register("oral-history", class extends Controller {
-  static targets = [ "initialScreen", "chapterContainer", "endScreen",  "chapters", "video" ]
+  static targets = [ "chapterContainer", "steps", "video" ]
 
   connect() {
-    this.setIndex(-1);
+    this.index = 0;
 
-    const timestamps = this.chaptersTargets.map((item, index, arr) => ({'start': parseInt(item.dataset.timestamp,10), 'end': parseInt(arr[index+1]?.dataset?.timestamp, 10) || Infinity
+    const timestamps = this.stepsTargets.map((item, index, arr) => ({'start': parseInt(item.dataset.timestamp,10), 'end': parseInt(arr[index+1]?.dataset?.timestamp, 10) || Infinity
     }))
 
-    console.log(timestamps)
     this.videoTarget.ontimeupdate = (event) => {
-      const index = timestamps.findIndex((timestamp)=>(timestamp.start < event.target.currentTime && timestamp.end > event.target.currentTime));
+      if (this.videoTarget.paused) return
+
+      const index = timestamps.findIndex((timestamp)=>(Number.isFinite(timestamp.start) && timestamp.start < event.target.currentTime && timestamp.end > event.target.currentTime));
       console.log(index);
       this.setIndex(index);
-      // console.log(event.target.currentTime);
     };
+
+    this.render();
   }
 
   start() {
-    this.setIndex(0);
+    this.setIndex(1);
     this.videoTarget.play();
-    this.initialScreenTarget.classList.add('d-none');
-    this.chapterContainerTarget.classList.remove('d-none');
-    this.endScreenTarget.classList.add('d-none');
-
-    this.showCurrentItem();
-  }
-
-  reset() {
-    this.setIndex(-1);
-    this.videoTarget.pause();
-    this.videoTarget.currentTime = 0;
-    this.initialScreenTarget.classList.remove('d-none');
-    this.chapterContainerTarget.classList.add('d-none');
-    this.endScreenTarget.classList.add('d-none');
-  }
-
-  end() {
-    this.videoTarget.pause();
-    this.initialScreenTarget.classList.add('d-none');
-    this.chapterContainerTarget.classList.add('d-none');
-    this.endScreenTarget.classList.remove('d-none');
+    this.render();
   }
 
   next() {
-    if ((this.index + 1) >= this.chaptersTargets.length) {
-      return this.end();
-    }
-
     this.setIndex(this.index+1);
-    this.showCurrentItem();
+    if (this.getItem().dataset?.timestamp) {
+      this.videoTarget.currentTime = this.getItem().dataset?.timestamp;
+    } else {
+      this.videoTarget.pause();
+      this.videoTarget.currentTime = this.videoTarget.duration;
+    }
   }
 
   previous() {
-    if (this.index <= 0) {
-      return this.reset();
-    }
-
     this.setIndex(this.index-1);
-    this.showCurrentItem();
+    if (this.getItem().dataset?.timestamp) {
+      this.videoTarget.currentTime = this.getItem().dataset?.timestamp;
+    } else {
+      this.videoTarget.pause();
+      this.videoTarget.currentTime = 0;
+    }
   }
 
   getItem() {
-    return this.chaptersTargets[this.index];
-  }
-
-  showCurrentItem() {
-    const item = this.getItem(this.index);
-    this.videoTarget.currentTime = item.dataset.timestamp
-    this.videoTarget.play()
+    return this.stepsTargets[this.index];
   }
 
   setIndex(index) {
-    this.index = index;
-    this.chaptersTargets.forEach(x => x.classList.remove('current'));
-    if (this.index >= 0) {
-      this.getItem(this.index).classList.add('current');
+    this.index = Math.max(0, Math.min(index, this.stepsTargets.length));
+    this.render();
+  }
+
+  render() {
+    const item = this.getItem(this.index);
+    this.stepsTargets.forEach(x => {
+      if (x.classList.contains('chapter'))  {
+        x.classList.remove('current')
+      } else {
+        x.classList.add('d-none');
+      }
+    })
+    if (item.classList.contains('chapter')){
+      item.classList.add('current')
+    } else {
+      item.classList.remove('d-none');
     }
+
+    this.chapterContainerTargets.forEach(container => {
+      if (container.contains(item)) {
+        container.classList.remove('d-none');
+      } else {
+        container.classList.add('d-none');
+      }
+    });
   }
 })

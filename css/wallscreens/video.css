@@ -18,3 +18,8 @@ body {
 .current {
   background-color: palevioletred;
 }
+
+.theme-chapter-list {
+  list-style: none;
+  padding-left: 0;
+}
