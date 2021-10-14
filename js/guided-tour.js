@@ -57,10 +57,10 @@ Stimulus.register("guided-tour", class extends Controller {
     const data = JSON.parse(item.querySelector("script[type='application/json']")?.innerHTML || null) ?? {};
 
     if (data.viewport) {
-      viewer.viewport.panTo(viewer.viewport.imageToViewportCoordinates(data.viewport.x, data.viewport.y));
-      viewer.viewport.zoomTo(data.viewport.zoom);
+      window.viewer.viewport.panTo(window.viewer.viewport.imageToViewportCoordinates(data.viewport.x, data.viewport.y));
+      window.viewer.viewport.zoomTo(data.viewport.zoom);
     } else if (this.index == 0 || (this.index + 1) == this.slidesTargets.length) {
-      viewer.viewport.goHome();
+      window.viewer.viewport.goHome();
     }
 
     if (data.caption) {
