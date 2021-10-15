@@ -1,7 +1,6 @@
-import { Application, Controller } from "/js/stimulus.js"
-window.Stimulus = Application.start()
+import { Controller } from "/js/stimulus.js"
 
-Stimulus.register("oral-history", class extends Controller {
+export default class extends Controller {
   static targets = [ "chapterContainer", "steps", "video" ]
 
   connect() {
@@ -100,4 +99,4 @@ Stimulus.register("oral-history", class extends Controller {
       }
     });
   }
-})
+}
