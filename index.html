@@ -5,14 +5,24 @@
 layout: home
 ---
 <header>
-  <h1>Wallscreen design</h1>
+  <h1>Wallscreens</h1>
+  <h2>At the Stanford Libraries</h2>
 </header>
 
 <main>
-  {% assign experiences = site.wallscreens | where: "index", true %}
-  <ul>
-  {% for experience in experiences %}
-    <li><a href="{{ experience.url }}">{{ experience.description}}</a></li>
+  {% for location in site.data.home.locations %}
+    <h3>{{ location.title }}</h3>
+    <p>{{ location.description }}</p>
+
+    {% assign wallscreens = site.data.wallscreens | where: "location", location.title %}
+    <ul class="wallscreens-list">
+      {% for wallscreen in wallscreens %}
+        <li>
+          <a aria-hidden="true" href="{% link _wallscreens/{{ wallscreen.key }}/{{ wallscreen.nav.defaults.slideshow }}/index.html %}"><img src="{% link images/wallscreens/{{ wallscreen.key }}.png %}" /></a>
+          <h4><a href="{% link _wallscreens/{{ wallscreen.key }}/{{ wallscreen.nav.defaults.slideshow }}/index.html %}">{{ wallscreen.title }}</a></h4>
+          <span>{{ wallscreen.subtitle }}</span>
+        </li>
+      {% endfor %}
+    </ul>
   {% endfor %}
-  </ul>
 </main>
