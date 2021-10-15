@@ -7,6 +7,10 @@ export default class extends Controller {
   connect() {
     if (window.location.hash && this.slidesTargets.findIndex(x => x.id == window.location.hash.substring(1)) > 0) {
       this.indexValue = this.slidesTargets.findIndex(x => x.id == window.location.hash.substring(1));
+
+      window.viewer.addOnceHandler('open', () => {
+        this.indexValueChanged();
+      });
     }
   }
 
@@ -33,6 +37,7 @@ export default class extends Controller {
 
   indexValueChanged() {
     const item = this.getItem();
+    if (item.id) history.replaceState({}, '', '#' + item.id);
 
     this.slidesTargets.forEach(x => x.classList.add('d-none'));
     item.classList.remove('d-none');

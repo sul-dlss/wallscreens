@@ -53,7 +53,7 @@ controller: guided-tour
 
       <div class="bio-card-area">
         {% for item in experience.items %}
-          <div data-guided-tour-target="slides">
+          <div {% if item.bio %}id="{{ item.bio.title | slugify }}"{% endif %} data-guided-tour-target="slides">
             {% if item.bio %}
               <div class="bio-card">
                 <h4>{{ item.bio.title }}</h4>
@@ -74,7 +74,7 @@ controller: guided-tour
     </nav>
   </div>
 
-  <div class="card d-none" data-guided-tour-target="slides">
+  <div id="last" class="card d-none" data-guided-tour-target="slides">
     <div class="card-content">
       <h2 class="experience-title border-none">{{ experience.title}}</h2>
       <h3 class="experience-subtitle">{{ experience.subtitle }}</h3>

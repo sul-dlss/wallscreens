@@ -1,10 +1,15 @@
 import { Controller } from "/js/stimulus.js"
 
 export default class extends Controller {
-  static values = { index: { type: Number, default: 0 } }
+  static values = { index: { type: Number, default: 0 }, start: { type: Number, default: 0} }
   static targets = [ "chapterContainer", "steps", "video" ]
 
   connect() {
+    if (window.location.hash && this.stepsTargets.findIndex(x => x.id == window.location.hash.substring(1)) > 0) {
+      this.indexValue = this.stepsTargets.findIndex(x => x.id == window.location.hash.substring(1));
+      this.startValue = this.getItem().dataset?.timestamp;
+    }
+
     this.registerPlayerHooks();
   }
 
@@ -19,6 +24,8 @@ export default class extends Controller {
       const index = timestamps.findIndex((timestamp)=>(Number.isFinite(timestamp.start) && timestamp.start < event.target.currentTime && timestamp.end > event.target.currentTime));
       if (index >= 0 && this.indexValue != index) this.indexValue = index;
     };
+
+    this.videoTarget.addEventListener('loadedmetadata', () => { if (this.startValue > 0) this.videoTarget.currentTime = this.startValue }, false)
   }
 
   // start playing the video from the first chapter
@@ -59,6 +66,7 @@ export default class extends Controller {
   // update the HTML to match the current chapter/step state
   indexValueChanged() {
     const item = this.getItem();
+    if (item.id) history.replaceState({}, '', '#' + item.id);
 
     // hide/dehighlight all the other steps/chapters
     this.stepsTargets.forEach(x => {

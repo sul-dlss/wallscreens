@@ -34,6 +34,7 @@ export default class extends Controller {
   // make the current item visible
   indexValueChanged() {
     const item = this.getItem();
+    if (item.id) history.replaceState({}, '', '#' + item.id);
 
     this.slidesTargets.forEach(x => x.classList.add('d-none'));
     this.slideAreaTarget.style['background-image'] = "url(" + item.dataset.imageUrl + ")";
