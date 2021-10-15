@@ -14,7 +14,6 @@ Stimulus.register("oral-history", class extends Controller {
       if (this.videoTarget.paused) return
 
       const index = timestamps.findIndex((timestamp)=>(Number.isFinite(timestamp.start) && timestamp.start < event.target.currentTime && timestamp.end > event.target.currentTime));
-      console.log(index);
       this.setIndex(index);
     };
 
