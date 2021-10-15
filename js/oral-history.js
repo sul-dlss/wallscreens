@@ -20,14 +20,16 @@ Stimulus.register("oral-history", class extends Controller {
     this.render();
   }
 
+  // start playing the video from the first chapter
   start() {
     this.setIndex(1);
     this.videoTarget.play();
-    this.render();
   }
 
+  // navigate to the next chapter, advancing the video as needed
   next() {
-    this.setIndex(this.index+1);
+    this.setIndex(this.index + 1);
+
     if (this.getItem().dataset?.timestamp) {
       this.videoTarget.currentTime = this.getItem().dataset?.timestamp;
     } else {
@@ -36,8 +38,10 @@ Stimulus.register("oral-history", class extends Controller {
     }
   }
 
+  // navigate to the previous chapter, rewinding the video as needed
   previous() {
-    this.setIndex(this.index-1);
+    this.setIndex(this.index - 1);
+
     if (this.getItem().dataset?.timestamp) {
       this.videoTarget.currentTime = this.getItem().dataset?.timestamp;
     } else {
@@ -46,30 +50,40 @@ Stimulus.register("oral-history", class extends Controller {
     }
   }
 
+  // get the current chapter / step
   getItem() {
     return this.stepsTargets[this.index];
   }
 
+  // set the current chapter / step and update the display
   setIndex(index) {
     this.index = Math.max(0, Math.min(index, this.stepsTargets.length));
     this.render();
   }
 
+  // update the HTML to match the current chapter/step state
   render() {
     const item = this.getItem(this.index);
+
+    // hide/dehighlight all the other steps/chapters
     this.stepsTargets.forEach(x => {
+      if (x == item) return;
+
       if (x.classList.contains('chapter'))  {
         x.classList.remove('current')
       } else {
         x.classList.add('d-none');
       }
     })
+
+    // reveal/highlight the current step/chapter
     if (item.classList.contains('chapter')){
       item.classList.add('current')
     } else {
       item.classList.remove('d-none');
     }
 
+    // reveal the containers (e.g. themes) in this item's hierarchy
     this.chapterContainerTargets.forEach(container => {
       if (container.contains(item)) {
         container.classList.remove('d-none');
