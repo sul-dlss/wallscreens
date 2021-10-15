@@ -7,6 +7,13 @@ Stimulus.register("oral-history", class extends Controller {
   connect() {
     this.index = 0;
 
+    this.registerPlayerHooks();
+
+    this.render();
+  }
+
+  // listen to ontimeupdate to update the current index as needed
+  registerPlayerHooks() {
     const timestamps = this.stepsTargets.map((item, index, arr) => ({'start': parseInt(item.dataset.timestamp,10), 'end': parseInt(arr[index+1]?.dataset?.timestamp, 10) || Infinity
     }))
 
@@ -16,8 +23,6 @@ Stimulus.register("oral-history", class extends Controller {
       const index = timestamps.findIndex((timestamp)=>(Number.isFinite(timestamp.start) && timestamp.start < event.target.currentTime && timestamp.end > event.target.currentTime));
       if (index >= 0) this.setIndex(index);
     };
-
-    this.render();
   }
 
   // start playing the video from the first chapter
