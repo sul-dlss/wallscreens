@@ -1,14 +1,11 @@
 import { Controller } from "/js/stimulus.js"
 
 export default class extends Controller {
+  static values = { index: { type: Number, default: 0 } }
   static targets = [ "chapterContainer", "steps", "video" ]
 
   connect() {
-    this.index = 0;
-
     this.registerPlayerHooks();
-
-    this.render();
   }
 
   // listen to ontimeupdate to update the current index as needed
@@ -20,19 +17,19 @@ export default class extends Controller {
       if (this.videoTarget.paused) return
 
       const index = timestamps.findIndex((timestamp)=>(Number.isFinite(timestamp.start) && timestamp.start < event.target.currentTime && timestamp.end > event.target.currentTime));
-      if (index >= 0) this.setIndex(index);
+      if (index >= 0 && this.indexValue != index) this.indexValue = index;
     };
   }
 
   // start playing the video from the first chapter
   start() {
-    this.setIndex(1);
+    this.indexValue = 1;
     this.videoTarget.play();
   }
 
   // navigate to the next chapter, advancing the video as needed
   next() {
-    this.setIndex(this.index + 1);
+    this.indexValue = Math.min(this.indexValue + 1, this.stepsTargets.length);
 
     if (this.getItem().dataset?.timestamp) {
       this.videoTarget.currentTime = this.getItem().dataset?.timestamp;
@@ -44,7 +41,7 @@ export default class extends Controller {
 
   // navigate to the previous chapter, rewinding the video as needed
   previous() {
-    this.setIndex(this.index - 1);
+    this.indexValue = Math.max(this.indexValue - 1, 0);
 
     if (this.getItem().dataset?.timestamp) {
       this.videoTarget.currentTime = this.getItem().dataset?.timestamp;
@@ -56,21 +53,12 @@ export default class extends Controller {
 
   // get the current chapter / step
   getItem() {
-    return this.stepsTargets[this.index];
-  }
-
-  // set the current chapter / step and update the display
-  setIndex(index) {
-    const previousIndex = this.index;
-    this.index = Math.max(0, Math.min(index, this.stepsTargets.length));
-    this.render(previousIndex);
+    return this.stepsTargets[this.indexValue];
   }
 
   // update the HTML to match the current chapter/step state
-  render(previousIndex = undefined) {
-    if (previousIndex == this.index) return;
-
-    const item = this.getItem(this.index);
+  indexValueChanged() {
+    const item = this.getItem();
 
     // hide/dehighlight all the other steps/chapters
     this.stepsTargets.forEach(x => {
