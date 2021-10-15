@@ -247,3 +247,11 @@ pre {
   width: 18ch;
   flex-shrink: 0;
 }
+
+/* More Info Modal */
+.more-info-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #f4f4f4;
+}
