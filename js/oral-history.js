@@ -57,12 +57,15 @@ Stimulus.register("oral-history", class extends Controller {
 
   // set the current chapter / step and update the display
   setIndex(index) {
+    const previousIndex = this.index;
     this.index = Math.max(0, Math.min(index, this.stepsTargets.length));
-    this.render();
+    this.render(previousIndex);
   }
 
   // update the HTML to match the current chapter/step state
-  render() {
+  render(previousIndex = undefined) {
+    if (previousIndex == this.index) return;
+
     const item = this.getItem(this.index);
 
     // hide/dehighlight all the other steps/chapters
