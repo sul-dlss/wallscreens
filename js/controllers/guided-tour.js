@@ -1,46 +1,38 @@
 import { Controller } from "/js/stimulus.js"
 
 export default class extends Controller {
+  static values = { index: { type: Number, default: 0 } }
   static targets = [ "slides", "caption", "slideContainer" ]
 
   connect() {
-    this.index = 0;
-
     if (window.location.hash && this.slidesTargets.findIndex(x => x.id == window.location.hash.substring(1)) > 0) {
-      this.index = this.slidesTargets.findIndex(x => x.id == window.location.hash.substring(1));
+      this.indexValue = this.slidesTargets.findIndex(x => x.id == window.location.hash.substring(1));
     }
-
-    this.render();
   }
 
   // reset the slideshow back to the intro card
   reset() {
-    this.setIndex(0);
+    this.indexValue = 0;
   }
 
   // paginate to the next slide, or the end card
   next() {
-    this.setIndex(this.index + 1);
+    this.indexValue = Math.min(this.indexValue + 1, this.slidesTargets.length);
   }
 
   // paginate to the previous slide, or the intro card
   previous() {
-    this.setIndex(this.index - 1);
-  }
-
-  setIndex(index) {
-    this.index = Math.max(0, Math.min(index, this.slidesTargets.length));
-    this.render();
+    this.indexValue = Math.max(this.indexValue - 1, 0);
   }
 
   // @private
   // get the currently displayed item
   getItem() {
-    return this.slidesTargets[this.index];
+    return this.slidesTargets[this.indexValue];
   }
 
-  render() {
-    const item = this.getItem(this.index);
+  indexValueChanged() {
+    const item = this.getItem();
 
     this.slidesTargets.forEach(x => x.classList.add('d-none'));
     item.classList.remove('d-none');
