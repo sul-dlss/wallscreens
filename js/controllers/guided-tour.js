@@ -1,7 +1,6 @@
-import { Application, Controller } from "/js/stimulus.js"
-window.Stimulus = Application.start()
+import { Controller } from "/js/stimulus.js"
 
-Stimulus.register("guided-tour", class extends Controller {
+export default class extends Controller {
   static targets = [ "slides", "caption", "slideContainer" ]
 
   connect() {
@@ -70,4 +69,4 @@ Stimulus.register("guided-tour", class extends Controller {
       this.captionTarget.classList.add('d-none');
     }
   }
-})
+}
