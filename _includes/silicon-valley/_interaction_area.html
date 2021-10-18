@@ -27,5 +27,26 @@
   {% else %}
   <button><i class="fas fa-redo"></i> <span>Start over</span></button>
   {% endif %}
-  <button><i class="fas fa-info-circle"></i> <span>More info</span></button>
+  <button class="more-info"><i class="fas fa-info-circle"></i> <span>More info</span></button>
+</div>
+
+<div class="more-info-modal d-none">
+  <div class="inner">
+    <h2 class="title">{{ wallscreen.more_info.title }}</h2>
+    <div class="content">
+      {{ wallscreen.more_info.content }}
+    </div>
+    <hr/>
+    <h4>For more information</h4>
+    <ul class="links">
+    {% for link in wallscreen.more_info.links %}
+      <li>
+        <span class="link-title">{{ link.title }}</span>
+        <span class="link-text">{{ link.text }}</span>
+        <a class="link-url" href="{{ link.url }}" data-qr>{{ link.url }}</a>
+      </li>
+    {% endfor %}
+    </ul>
+    <button class="close">Close</button>
+  </div>
 </div>

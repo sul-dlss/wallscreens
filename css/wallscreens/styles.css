@@ -247,3 +247,81 @@ pre {
   width: 18ch;
   flex-shrink: 0;
 }
+
+/* More Info Modal */
+.more-info-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.more-info-modal > .inner {
+  padding: 45px 140px;
+  background-color: #f4f4f4;
+  max-width: 75vw;
+  color: #2E2D29;
+}
+
+.more-info-modal .title {
+  color: var(--color-primary);
+}
+
+.more-info-modal .content {
+  columns: 2;
+  column-gap: 140px;
+}
+
+.more-info-modal .content p {
+  display: inline-block;
+}
+
+.more-info-modal hr {
+  border: none;
+  background-color: #ABABA9;
+  height: 1px;
+}
+
+.more-info-modal h4 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 38px;
+}
+
+.more-info-modal .links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 140px;
+  row-gap: 20px;
+}
+
+.more-info-modal .links li {
+  position: relative;
+  padding-left: 95px;
+}
+
+.more-info-modal .link-title {
+  font-weight: bold;
+}
+
+.more-info-modal .qrcode {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.more-info-modal .close {
+  display: block;
+  margin: 0 auto;
+  background-color: var(--color-primary-dark);
+  color: white;
+}
