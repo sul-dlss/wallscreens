@@ -27,7 +27,7 @@
   {% else %}
   <button><i class="fas fa-redo"></i> <span>Start over</span></button>
   {% endif %}
-  <button class="more-info"><i class="fas fa-info-circle"></i> <span>More info</span></button>
+  <button class="more-info" data-action="oral-history#pause"><i class="fas fa-info-circle"></i> <span>More info</span></button>
 </div>
 
 <div class="more-info-modal d-none">
@@ -47,6 +47,6 @@
       </li>
     {% endfor %}
     </ul>
-    <button class="close">Close</button>
+    <button class="close" data-action="oral-history#unpause">Close</button>
   </div>
 </div>

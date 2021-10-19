@@ -34,6 +34,16 @@ export default class extends Controller {
     this.videoTarget.play();
   }
 
+  // pause the video
+  pause() {
+    this.videoTarget.pause();
+  }
+
+  // resume playing the video from wherever it was paused
+  unpause() {
+    this.videoTarget.play();
+  }
+
   // navigate to the next chapter, advancing the video as needed
   next() {
     this.indexValue = Math.min(this.indexValue + 1, this.stepsTargets.length);
