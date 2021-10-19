@@ -1,11 +1,21 @@
 title: Silicon Genesis
 subtitle: "Excerpts from <i>Silicon Genesis : An Oral History of Semiconductor Technology</i>"
 date: 1995 - 2018
-author: Henry Lowood & Rob Walker
+creator: Henry Lowood & Rob Walker
 extent: 103 interviews
 type: video
 button_label: Silicon Genesis
 summary: The Silicon Genesis collection gathers together oral histories and interviews with the people who conceived, built and worked in the semiconductor industry centered in Silicon Valley since the 1950s.This project took shape in 1995 through the inspiration of Rob Walker (1935-2016), a Silicon Valley native and Silicon Valley educated electrical engineer, who was involved with semiconductors since the 1960s at Fairchild, Intel and as a founder of LSI Logic. Walker, followed  by industry veteran Rob Blair, have conducted these interviews, supplemented by a series produced by Craig Addision for SEMI (Semiconductor Equipment and Materials International) that were donated to the Silicon Valley Archives.
+more_info:
+  - type: Digital exhibit
+    text: "Silicon Genesis: Oral Histories of Semiconductor Technology"
+    url: https://exhibits.stanford.edu/silicongenesis
+  - type: Online catalog
+    text: "Silicon Genesis : oral history interviews of Silicon Valley scientists, 1995-2018"
+    url: https://searchworks.stanford.edu/?f%5Bcollection%5D%5B%5D=4084160&view=list
+  - type: Finding aid
+    text: Silicon Genesis oral history interviews
+    url: https://oac.cdlib.org/findaid/ark:/13030/c8f76kbr/
 items:
   - title: From Interview with Don Valentine, April 21, 2004.
     theme: What drew you to Silicon Valley?
