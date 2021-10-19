@@ -59,13 +59,32 @@ controller: oral-history
 
   <div id="last" class="card d-none" data-oral-history-target="steps">
     <div class="card-content">
-      <h2 class="experience-title border-none">{{ experience.title}}</h2>
+      <h2 class="experience-title border-none">{{ experience.title }}</h2>
+      <h3 class="experience-subtitle">{{ experience.subtitle }}</h3>
+      <div class="experience-attribution">
+        <span class="experience-date">{{ experience.date }}</span>
+        <span class="separator">•</span>
+        <span class="experience-creator">{{ experience.creator }}</span>
+        <span class="separator">•</span>
+        <span class="experience-extent">{{ experience.extent }}</span>
+      </div>
 
       <h3>Dig deeper</h3>
+      {% for item in experience.more_info %}
+        <div class="dig-deeper-card">
+          <a href="{{ item.url }}" data-qr class="item-url">{{ item.type }}</a><span>{{ item.text }}
+        </div>
+      {% endfor %}
     </div>
 
-    <h3>Explore other oral-historys</h3>
+    <h3>Explore other oral history collections</h3>
     <nav class="card-nav">
+      {% for wallscreen_experience in wallscreen.experiences %}
+        {% assign other_experience = site.data.experiences[wallscreen_experience.key] %}
+        {% if other_experience.type == experience.type and other_experience.key != page.experience %}
+          <a href="{% link _wallscreens/{{ page.wallscreen }}/{{ other_experience.key }}/index.html %}" class="button">{{ other_experience.button_label }}</a>
+        {% endif %}
+      {% endfor %}
     </nav>
   </div>
 </aside>
