@@ -53,12 +53,12 @@ controller: oral-history
       {% assign themes = experience.items | group_by:"theme" %}
       {% for theme in themes %}
         <div class="theme d-none" data-oral-history-target="chapterContainer">
-          <h3>{{theme.name}}</h3>
+          <h3 class="theme-name">{{ theme.name }}</h3>
           <ul class="theme-chapter-list">
             {% for item in theme.items %}
               <li id="{{ item.title | slugify }}" class="chapter" data-timestamp="{{item.timestamp}}" data-oral-history-target="steps">
-                <img src="{{item.thumbnail}}" />
-                <h4 class="item-title">{{ item.title }}</h4>
+                <img class="chapter-thumbnail" src="{{ item.thumbnail }}" />
+                <h4 class="chapter-title">{{ item.title }}</h4>
               </li>
             {% endfor %}
           </ul>
