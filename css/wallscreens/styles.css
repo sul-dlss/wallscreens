@@ -130,6 +130,14 @@ pre {
   text-align: center;
 }
 
+/* paragraph-style subtitle for oral histories */
+p.experience-subtitle {
+  margin: 0 auto 10px;
+  line-height: 25px;
+  max-width: 85%;
+  text-align: left;
+}
+
 .card-area h3 {
   color: var(--color-archway-dark);
   font-weight: 600;

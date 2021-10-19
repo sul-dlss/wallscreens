@@ -22,8 +22,15 @@ controller: oral-history
 <aside class="card-area">
   <div class="card" data-oral-history-target="steps">
     <div class="card-content experience-index">
-      <h2 class="experience-title">{{ experience.title}}</h2>
-
+      <h2 class="experience-title border-none">{{ experience.title}}</h2>
+      <p class="experience-subtitle">{{ experience.subtitle }} </p>
+      <div class="experience-attribution">
+        <span class="experience-date">{{ experience.date }}</span>
+        <span class="separator">•</span>
+        <span class="experience-creator">{{ experience.creator }}</span>
+        <span class="separator">•</span>
+        <span class="experience-extent">{{ experience.extent }}</span>
+      </div>
       <p class="experience-summary">{{ experience.summary}}</p>
     </div>
 
@@ -34,7 +41,15 @@ controller: oral-history
 
   <div class="card d-none" data-oral-history-target="chapterContainer">
     <div class="card-content">
-      <h2 class="experience-title">{{ experience.title}}</h2>
+      <h2 class="experience-title border-none">{{ experience.title}}</h2>
+      <p class="experience-subtitle">{{ experience.subtitle }} </p>
+      <div class="experience-attribution">
+        <span class="experience-date">{{ experience.date }}</span>
+        <span class="separator">•</span>
+        <span class="experience-creator">{{ experience.creator }}</span>
+        <span class="separator">•</span>
+        <span class="experience-extent">{{ experience.extent }}</span>
+      </div>
       {% assign themes = experience.items | group_by:"theme" %}
       {% for theme in themes %}
         <div class="theme d-none" data-oral-history-target="chapterContainer">
@@ -59,8 +74,8 @@ controller: oral-history
 
   <div id="last" class="card d-none" data-oral-history-target="steps">
     <div class="card-content">
-      <h2 class="experience-title border-none">{{ experience.title }}</h2>
-      <h3 class="experience-subtitle">{{ experience.subtitle }}</h3>
+      <h2 class="experience-title border-none">{{ experience.title}}</h2>
+      <p class="experience-subtitle">{{ experience.subtitle }} </p>
       <div class="experience-attribution">
         <span class="experience-date">{{ experience.date }}</span>
         <span class="separator">•</span>
@@ -68,7 +83,6 @@ controller: oral-history
         <span class="separator">•</span>
         <span class="experience-extent">{{ experience.extent }}</span>
       </div>
-
       <h3>Dig deeper</h3>
       {% for item in experience.more_info %}
         <div class="dig-deeper-card">
@@ -76,7 +90,6 @@ controller: oral-history
         </div>
       {% endfor %}
     </div>
-
     <h3>Explore other oral history collections</h3>
     <nav class="card-nav">
       {% for wallscreen_experience in wallscreen.experiences %}
