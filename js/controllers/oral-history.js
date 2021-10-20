@@ -27,8 +27,7 @@ export default class extends Controller {
 
     this.videoTarget.addEventListener('loadedmetadata', () => { if (this.startValue > 0) this.videoTarget.currentTime = this.startValue }, false)
 
-    // if the video finishes playing, advance to the end slide
-    this.videoTarget.addEventListener('ended', () => this.next())
+    this.videoTarget.addEventListener('ended', () => this.end());
   }
 
   // start playing the video from the first chapter
@@ -47,9 +46,14 @@ export default class extends Controller {
     this.videoTarget.play();
   }
 
+  // when the video finishes playing, advance to the end slide
+  end() {
+    this.indexValue = this.stepsTargets.length - 1;
+  }
+
   // navigate to the next chapter, advancing the video as needed
   next() {
-    this.indexValue = Math.min(this.indexValue + 1, this.stepsTargets.length);
+    this.indexValue = Math.min(this.indexValue + 1, this.stepsTargets.length - 1);
 
     if (this.indexValue == this.stepsTargets.length) return
 
@@ -81,7 +85,6 @@ export default class extends Controller {
   // update the HTML to match the current chapter/step state
   indexValueChanged() {
     const item = this.getItem();
-    if (!item) return;
 
     if (item.id) history.replaceState({}, '', '#' + item.id);
 

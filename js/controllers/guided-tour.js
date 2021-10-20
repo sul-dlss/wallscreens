@@ -21,7 +21,7 @@ export default class extends Controller {
 
   // paginate to the next slide, or the end card
   next() {
-    this.indexValue = Math.min(this.indexValue + 1, this.slidesTargets.length);
+    this.indexValue = Math.min(this.indexValue + 1, this.slidesTargets.length - 1);
   }
 
   // paginate to the previous slide, or the intro card
