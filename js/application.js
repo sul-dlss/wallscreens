@@ -7,10 +7,4 @@ window.addEventListener('load', function() {
       e.prepend(img);
     })
   });
-
-  // More Info Modal
-  var more_info_modal = document.querySelector('.more-info-modal');
-  var close_button = document.querySelector('button.close');
-  document.querySelector('button.more-info').onclick = function(e) { more_info_modal.classList.remove('d-none') }
-  close_button.onclick = function(e) { more_info_modal.classList.add('d-none') }
 });
