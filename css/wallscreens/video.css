@@ -1,3 +1,4 @@
+/* styles for oral history/video experiences */
 
 .title-area h1 {
   font-size: 38.4px;
@@ -17,7 +18,6 @@ main video {
   max-width: 100%;
 }
 
-/* themes & chapters for oral histories */
 h3.theme-name {
   margin: 20px 0;
 }
@@ -37,7 +37,7 @@ h3.theme-name {
 }
 
 .chapter.current {
-  background-color: #DAD7CB;
+  background-color: var(--color-secondary);
 }
 
 .chapter-thumbnail {
