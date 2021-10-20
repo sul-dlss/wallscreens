@@ -27,8 +27,7 @@ export default class extends Controller {
 
     this.videoTarget.addEventListener('loadedmetadata', () => { if (this.startValue > 0) this.videoTarget.currentTime = this.startValue }, false)
 
-    // if the video finishes playing, advance to the end slide
-    this.videoTarget.addEventListener('ended', () => this.next())
+    this.videoTarget.addEventListener('ended', () => this.end());
   }
 
   // start playing the video from the first chapter
@@ -45,6 +44,11 @@ export default class extends Controller {
   // resume playing the video from wherever it was paused
   unpause() {
     this.videoTarget.play();
+  }
+
+  // when the video finishes playing, advance to the end slide
+  end() {
+    this.indexValue = this.stepsTargets.length - 1;
   }
 
   // navigate to the next chapter, advancing the video as needed
