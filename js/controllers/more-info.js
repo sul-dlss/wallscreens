@@ -7,10 +7,12 @@ export default class extends Controller {
   }
 
   show() {
+    this.dispatch("show");
     this.modalTarget.classList.remove('d-none');
   }
 
   hide() {
+    this.dispatch("hide");
     this.modalTarget.classList.add('d-none');
   }
 }
