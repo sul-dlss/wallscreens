@@ -120,9 +120,7 @@ export default class extends Controller {
     if (item.id) history.replaceState({}, '', '#' + item.id);
 
     // if we just reached the final slide, set the restart timer
-    if (this.indexValue == this.stepsTargets.length - 1) {
-      this.resetRestartTimer();
-    }
+    if (this.ended) this.resetRestartTimer();
 
     // hide/dehighlight all the other steps/chapters
     this.stepsTargets.forEach(x => {
