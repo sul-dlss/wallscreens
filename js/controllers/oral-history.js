@@ -53,7 +53,7 @@ export default class extends Controller {
 
   // navigate to the next chapter, advancing the video as needed
   next() {
-    this.indexValue = Math.min(this.indexValue + 1, this.stepsTargets.length);
+    this.indexValue = Math.min(this.indexValue + 1, this.stepsTargets.length - 1);
 
     if (this.indexValue == this.stepsTargets.length) return
 
@@ -85,7 +85,6 @@ export default class extends Controller {
   // update the HTML to match the current chapter/step state
   indexValueChanged() {
     const item = this.getItem();
-    if (!item) return;
 
     if (item.id) history.replaceState({}, '', '#' + item.id);
 
