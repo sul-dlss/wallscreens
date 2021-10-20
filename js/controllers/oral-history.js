@@ -3,6 +3,7 @@ import { Controller } from "/js/stimulus.js"
 export default class extends Controller {
   static values = { index: { type: Number, default: 0 }, start: { type: Number, default: 0} }
   static targets = [ "chapterContainer", "steps", "video" ]
+  static timeout = 20*60*1000; // 20 minutes
 
   connect() {
     if (window.location.hash && this.stepsTargets.findIndex(x => x.id == window.location.hash.substring(1)) > 0) {
@@ -11,6 +12,11 @@ export default class extends Controller {
     }
 
     this.registerPlayerHooks();
+  }
+
+  // ensure we clean up the restart timer
+  disconnect() {
+    if (this.restartCallback) window.clearTimeout(this.restartCallback);
   }
 
   // listen to ontimeupdate to update the current index as needed
@@ -36,14 +42,17 @@ export default class extends Controller {
     this.videoTarget.play();
   }
 
-  // pause the video
+  // pause the video and set a timer to restart the video if it remains paused too long
   pause() {
     this.videoTarget.pause();
+    if (this.restartCallback) window.clearTimeout(this.restartCallback);
+    this.restartCallback = window.setTimeout(() => this.start(), this.constructor.timeout);
   }
 
-  // resume playing the video from wherever it was paused
+  // resume playing the video and cancel the restart timer
   unpause() {
     this.videoTarget.play();
+    if (this.restartCallback) window.clearTimeout(this.restartCallback);
   }
 
   // when the video finishes playing, advance to the end slide
@@ -54,8 +63,6 @@ export default class extends Controller {
   // navigate to the next chapter, advancing the video as needed
   next() {
     this.indexValue = Math.min(this.indexValue + 1, this.stepsTargets.length - 1);
-
-    if (this.indexValue == this.stepsTargets.length) return
 
     if (this.getItem().dataset?.timestamp) {
       this.videoTarget.currentTime = this.getItem().dataset?.timestamp;
@@ -87,6 +94,12 @@ export default class extends Controller {
     const item = this.getItem();
 
     if (item.id) history.replaceState({}, '', '#' + item.id);
+
+    // if we just reached the final slide, set the restart timer
+    if (this.indexValue == this.stepsTargets.length - 1) {
+      if (this.restartCallback) window.clearTimeout(this.restartCallback);
+      this.restartCallback = window.setTimeout(() => this.start(), this.constructor.timeout);
+    }
 
     // hide/dehighlight all the other steps/chapters
     this.stepsTargets.forEach(x => {
