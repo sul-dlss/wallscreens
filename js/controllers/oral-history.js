@@ -36,28 +36,52 @@ export default class extends Controller {
     this.videoTarget.addEventListener('ended', () => this.end());
   }
 
+  // return to the initial slide with "start" button
+  restart() {
+    this.indexValue = 0;
+  }
+
   // start playing the video from the first chapter
   start() {
     this.indexValue = 1;
     this.videoTarget.play();
   }
 
-  // pause the video and set a timer to restart the video if it remains paused too long
+  // pause the video
   pause() {
-    this.videoTarget.pause();
-    if (this.restartCallback) window.clearTimeout(this.restartCallback);
-    this.restartCallback = window.setTimeout(() => this.start(), this.constructor.timeout);
+    if (!this.ended) this.videoTarget.pause();
+
+    // if this is called when the video is already over (i.e. by the modal), 
+    // reset the interaction timer to prevent the experience from restarting
+    // while the modal is still open
+    else this.resetRestartTimer();
   }
 
-  // resume playing the video and cancel the restart timer
+  // resume playing the video
   unpause() {
-    this.videoTarget.play();
-    if (this.restartCallback) window.clearTimeout(this.restartCallback);
+    if (!this.ended) this.videoTarget.play();
+
+    // if this is called when the video is already over (i.e. by the modal), 
+    // reset the interaction timer because the user pressed a button
+    else this.resetRestartTimer();
   }
 
   // when the video finishes playing, advance to the end slide
   end() {
     this.indexValue = this.stepsTargets.length - 1;
+  }
+
+  // check if we're on the final slide. this is necessary because occasionally
+  // this.videoTarget.ended may be false even though the experience is over, 
+  // possibly because the video is still buffering
+  get ended() {
+    return this.indexValue == this.stepsTargets.length - 1;
+  }
+
+  // clear and reset the timer that will restart the experience
+  resetRestartTimer() {
+    if (this.restartCallback) window.clearTimeout(this.restartCallback);
+    this.restartCallback = window.setTimeout(() => this.restart(), this.constructor.timeout);
   }
 
   // navigate to the next chapter, advancing the video as needed
@@ -97,8 +121,7 @@ export default class extends Controller {
 
     // if we just reached the final slide, set the restart timer
     if (this.indexValue == this.stepsTargets.length - 1) {
-      if (this.restartCallback) window.clearTimeout(this.restartCallback);
-      this.restartCallback = window.setTimeout(() => this.start(), this.constructor.timeout);
+      this.resetRestartTimer();
     }
 
     // hide/dehighlight all the other steps/chapters
