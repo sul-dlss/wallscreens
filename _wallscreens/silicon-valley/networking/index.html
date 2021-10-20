@@ -56,8 +56,11 @@ controller: guided-tour
           <div {% if item.bio %}id="{{ item.bio.title | slugify }}"{% endif %} data-guided-tour-target="slides">
             {% if item.bio %}
               <div class="bio-card">
-                <h4>{{ item.bio.title }}</h4>
-                {{ item.bio.description }}
+                <img class="bio-card-thumbnail" src="{{ item.bio.thumbnail }}">
+                <div class="bio-card-info">
+                  <h4 class="bio-card-title">{{ item.bio.title }}</h4>
+                  <p class="bio-card-description">{{ item.bio.description }}</p>
+                </div>
               </div>
             {% endif %}
             <script type="application/json">

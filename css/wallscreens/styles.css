@@ -210,20 +210,6 @@ p.experience-subtitle {
   padding-right: 20px;
 }
 
-.bio-card-area {
-  padding-top: 1em;
-  border-top: 1px solid #ddd;
-}
-
-.bio-card {
-  padding: 0.5vw;
-  background-color: var(--color-secondary);
-}
-
-.bio-card h4 {
-  margin: 0;
-}
-
 .d-none {
   display: none !important;
 }
