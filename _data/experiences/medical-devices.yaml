@@ -30,6 +30,7 @@ items:
       title: Thomas S. Fogarty
       description: Inventor of the embolectomy catheter.
       url: https://en.wikipedia.org/wiki/Thomas_J._Fogarty
+      thumbnail: https://via.placeholder.com/70
     caption: Thomas S. Fogarty invented the embolectomy catheter and helped create more than 30 companies. Fogarty developed the embolectomy catheter in his attic using techniques he learned while fishing as a child and, in doing so, greatly reduced patient risk due to complications when treating blood clots. The embolectomy catheter remains one of the most common catheter used to remove blood clots.
     viewport:
       zoom: 4.25
@@ -39,6 +40,7 @@ items:
       title: Rodney Perkins
       description: Stanford professor and founder of over thirty medical device companies.
       url: https://en.wikipedia.org/wiki/Rodney_Perkins
+      thumbnail: https://via.placeholder.com/70
     caption: Rodney Perkins developed a love for science and technology when he was eight years old after purchasing a pet alligator from an advertisement in a comic book. Dr. Perkins, while attending medical school at Indiana University, created the disc oxygenator and, from there became a serial entrepreneur and medical device innovator. Over the course of his career, Dr. Perkins launched over 30 successful companies including medical device titans Collagen, Laserscope, and ReSound.
     viewport:
       zoom: 4.25
@@ -48,6 +50,7 @@ items:
       title: John Simpson
       description: Inventor of the over-the-wire (OTW) balloon catheter.
       url: https://www.massdevice.com/endurance-criticism-legendary-career-dr-john-simpson/
+      thumbnail: https://via.placeholder.com/70
     caption: After visiting the inventor of coronary angioplasty, Andreas Gruentzig, in Switzerland, John Simpson received a box of balloon catheters. Parts were missing from his order and so, in his Menlo Park kitchen, Dr. Simpson jerry-rigged a new device that he called “the over-the-wire balloon catheter.” This device changed the practice of cardiology. He also founded numerous companies including Advanced Cardiovascular Instruments and Devices for Vascular Intervention.
     viewport:
       zoom: 4.25
@@ -57,6 +60,7 @@ items:
       title: Paul Yock
       description: Inventor of Rapid Exchange angioplasty and intravascular ultrasound imaging.
       url: https://biox.sites.stanford.edu/highlight/paul-yock-wins-national-academy-engineerings-gordon-prize
+      thumbnail: https://via.placeholder.com/70
     caption: Paul Yock began his career as a cardiologist at the University of California, San Francisco before coming to Stanford in 1994. Dr. Yock is best known for his work in inventing, developing, and testing new devices, which has led to techniques such as Rapid Exchange angioplasty and stenting, as well as intravascular ultrasound imaging. He established the Stanford Center for Research and in Cardiovascular Interventions as a laboratory for analysis of intravascular ultrasound clinical studies and was founding co-chair of Stanford's Department of Bioengineering, as well as founder and director of the Stanford Byers Center for Biodesign.
     viewport:
       zoom: 4.25
@@ -66,6 +70,7 @@ items:
       title: Mir Imran
       description: Inventor of the implantable cardioverter-defibrillator.
       url: https://en.wikipedia.org/wiki/Mir_Imran
+      thumbnail: https://via.placeholder.com/70
     caption: Mir Imran emigrated to the United States from India to attend Rutgers University, where obstained degrees in electrical engineering and biomedical engineering, followed by Medical School. While a student, he took a summer job that led to developing a device for children with cerebral palsy that enabled them to speak using the muscles in their neck. He followed this experience with work at Intec Systems that led to the invention of the implantable cardioverter-defibrillator (ICD).  As an entrepreneur, he particpated in the founding of 23 companies out of his incubator, InCube.
     viewport:
       zoom: 4.25

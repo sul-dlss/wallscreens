@@ -1,0 +1,35 @@
+/* styles for guided tour experiences */
+
+.bio-card-area {
+  padding-top: 1em;
+  border-top: 1px solid #ddd;
+}
+
+.bio-card {
+  display: flex;
+  gap: 25px;
+  padding: 15px 10px;
+  border-radius: 3px;
+  background-color: var(--color-secondary);
+}
+
+.bio-card-thumbnail {
+  width: 70px;
+  height: 70px;
+  border: 1px solid #979694;
+  filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.5));
+}
+
+.bio-card-info > * {
+  font-size: 20px;
+  line-height: 30px;
+  margin: 0;
+}
+
+.bio-card-title {
+  font-weight: normal;
+}
+
+.bio-card-description {
+  font-style: italic;
+}
