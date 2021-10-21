@@ -77,7 +77,7 @@ controller: guided-tour
     </nav>
   </div>
 
-  <div id="last" class="card d-none" data-guided-tour-target="slides">
+  <div id="last" class="card last-card d-none" data-guided-tour-target="slides">
     <div class="card-content">
       <h2 class="experience-title border-none">{{ experience.title}}</h2>
       <h3 class="experience-subtitle">{{ experience.subtitle }}</h3>
@@ -92,15 +92,17 @@ controller: guided-tour
       {% endfor %}
     </div>
 
-    <h3>Explore other guided tours</h3>
-    <nav class="card-nav">
-      {% for wallscreen_experience in wallscreen.experiences %}
-        {% assign other_experience = site.data.experiences[wallscreen_experience.key] %}
-        {% if other_experience.type == experience.type and other_experience.key != page.experience %}
-          <a href="{% link _wallscreens/{{ page.wallscreen }}/{{ other_experience.key }}/index.html %}" class="button">{{ other_experience.button_label}}</a>
-        {% endif %}
-      {% endfor %}
-    </nav>
+    <div class="card-footer">
+      <h3>Explore other guided tours</h3>
+      <nav class="card-nav">
+        {% for wallscreen_experience in wallscreen.experiences %}
+          {% assign other_experience = site.data.experiences[wallscreen_experience.key] %}
+          {% if other_experience.type == experience.type and other_experience.key != page.experience %}
+            <a href="{% link _wallscreens/{{ page.wallscreen }}/{{ other_experience.key }}/index.html %}" class="button">{{ other_experience.button_label}}</a>
+          {% endif %}
+        {% endfor %}
+      </nav>
+    </div>
   </div>
 </aside>
 
