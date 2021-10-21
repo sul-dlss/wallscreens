@@ -256,9 +256,9 @@ p.experience-subtitle {
 }
 
 .more-info-modal > .inner {
-  padding: 45px 140px;
+  padding: 45px 100px;
   background-color: #f4f4f4;
-  max-width: 80vw;
+  max-width: 90vw;
   max-height: 95vw;
   color: #2E2D29;
   border-radius: 8px;
