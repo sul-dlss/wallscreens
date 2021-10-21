@@ -96,7 +96,7 @@ pre {
   display: flex;
   flex-direction: column;
   grid-area: card;
-  padding: 1rem;
+  padding: 3rem;
 }
 
 .card {
@@ -318,4 +318,48 @@ p.experience-subtitle {
   margin: 0 auto;
   background-color: var(--color-primary-dark);
   color: white;
+}
+
+/* Last Card */
+
+.last-card h3 {
+  margin-top: 30px;
+  text-transform: uppercase;
+}
+
+.last-card .experience-attribution {
+  padding-bottom: 35px;
+  padding-top: 10px;
+}
+
+.last-card .dig-deeper-card {
+  padding-top: 25px;
+}
+
+.card-footer h3 {
+  margin-bottom: 30px;
+  overflow: hidden;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.card-footer h3:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+.card-footer h3:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+
+.card-footer h3:before,
+.card-footer h3:after {
+  background-color: #ddd;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
 }
