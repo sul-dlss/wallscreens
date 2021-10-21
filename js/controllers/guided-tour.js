@@ -1,7 +1,7 @@
 import { Controller } from "/js/stimulus.js"
 
 export default class extends Controller {
-  static values = { index: { type: Number, default: 0 } }
+  static values = { index: { type: Number, default: 0 }, next: { type: String, default: '' } }
   static targets = [ "slides", "caption", "slideContainer" ]
   static autoplayTimeout = 5 * 60 * 1000; // 5 minutes
   static autoplayIntervalTime = 1 * 60 * 1000; // 1 minute per slide in autoplay mode
@@ -29,7 +29,7 @@ export default class extends Controller {
     if (this.autoplayInterval) window.clearInterval(this.autoplayInterval);
 
     this.autoplayInterval = window.setInterval(() => {
-      if (this.indexValue == 0) return this.resetAutoplayTimer();
+      if (this.indexValue == 0) return this.nextValue && (window.location = this.nextValue);
       if (this.ended) return this.indexValue = 0;
       this.indexValue = this.indexValue + 1
     }, this.constructor.autoplayIntervalTime);
@@ -39,7 +39,8 @@ export default class extends Controller {
   resetAutoplayTimer() {
     if (this.autoplayInterval) window.clearInterval(this.autoplayInterval);
     if (this.autoplayTimer) window.clearTimeout(this.autoplayTimer);
-    if (this.indexValue == 0) return;
+
+    if (this.indexValue == 0 && !this.nextValue) return;
 
     this.autoplayTimer = window.setTimeout(() => this.autoplay(), this.constructor.autoplayTimeout);
   }

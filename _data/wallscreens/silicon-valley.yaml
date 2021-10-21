@@ -3,10 +3,21 @@ title: Silicon Valley Archives
 subtitle: Winter/Spring 2022
 location: Hohbach Hall
 experiences:
-  - key: adobe-and-apple
   - key: video-arcades
+    next: medical-devices
   - key: medical-devices
+    next: silicon-genesis
+  - key: silicon-genesis
+    next: adobe-and-apple
+  - key: adobe-and-apple
+    next: networking
   - key: networking
+    # next: african-american-histories
+    next: video-arcades
+  # - key: african-american-histories
+  #   next: medicine-and-innovation
+  # - key: medicine-and-innovation
+  #   next: video-arcades
 nav:
   defaults:
     slideshow: video-arcades
