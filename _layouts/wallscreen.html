@@ -22,7 +22,7 @@
   </head>
 
   <body>
-    <div class="wallscreen" {% if page.controller %} data-controller="{{ page.controller }} more-info" data-action="more-info:show->oral-history#pause more-info:hide->oral-history#unpause"{% endif %}>
+    <div class="wallscreen" {% if page.controller %} data-controller="{{ page.controller }} more-info" data-action="more-info:show->oral-history#pause more-info:hide->oral-history#unpause more-info:show->oral-history#resetRestartTimer more-info:hide->oral-history#resetRestartTimer"{% endif %}>
       {{ content }}
     </div>
   </body>

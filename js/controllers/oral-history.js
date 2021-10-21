@@ -38,6 +38,8 @@ export default class extends Controller {
 
   // return to the initial slide with "start" button
   restart() {
+    if (!this.ended) return;
+
     this.indexValue = 0;
   }
 
@@ -49,21 +51,14 @@ export default class extends Controller {
 
   // pause the video
   pause() {
-    if (!this.ended) this.videoTarget.pause();
-
-    // if this is called when the video is already over (i.e. by the modal), 
-    // reset the interaction timer to prevent the experience from restarting
-    // while the modal is still open
-    else this.resetRestartTimer();
+    this.videoTarget.pause();
   }
 
   // resume playing the video
   unpause() {
-    if (!this.ended) this.videoTarget.play();
+    if (this.ended) return;
 
-    // if this is called when the video is already over (i.e. by the modal), 
-    // reset the interaction timer because the user pressed a button
-    else this.resetRestartTimer();
+    this.videoTarget.play();
   }
 
   // when the video finishes playing, advance to the end slide
