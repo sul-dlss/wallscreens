@@ -29,7 +29,7 @@
         {% when 'oral-history' %}
         data-action="more-info:show->oral-history#pause more-info:hide->oral-history#unpause more-info:show->oral-history#resetRestartTimer more-info:hide->oral-history#resetRestartTimer"
         {% else %}
-        data-action="more-info:show->{{ page.controller }}#resetAutoplayTimer more-info:hide->{{ page.controller }}#resetAutoplayTimer"
+        data-action="click@document->{{ page.controller }}#resetAutoplayTimer"
       {% endcase %}
       {% endif %}>
       {{ content }}
