@@ -56,7 +56,7 @@ controller: oral-history
           <h3 class="theme-name">{{ theme.name }}</h3>
           <ul class="theme-chapter-list">
             {% for item in theme.items %}
-              <li id="{{ item.title | slugify }}" class="chapter {{ item.class }}" data-timestamp="{{item.timestamp}}" data-oral-history-target="steps">
+              <li id="{{ item.key }}" class="chapter {{ item.class }}" data-timestamp="{{ item.timestamp }}" data-oral-history-target="steps">
                 <img class="chapter-thumbnail" src="{{ item.thumbnail }}" />
                 <h4 class="chapter-title">{{ item.title }}</h4>
               </li>
