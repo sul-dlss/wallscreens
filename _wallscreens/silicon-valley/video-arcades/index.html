@@ -8,7 +8,7 @@ controller: slideshow
 {% assign wallscreen = site.data.wallscreens[page.wallscreen] %}
 {% assign experience = site.data.experiences[page.experience] %}
 <header class="title-area">
-  <img class="header-logo" src="/images/SUL-logo-whitetext.svg" />
+  <img class="header-logo" src="{% link /images/SUL-logo-whitetext.svg %}" />
   <h1>{{ wallscreen.title }}</h1>
 </header>
 
