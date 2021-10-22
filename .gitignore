@@ -3,3 +3,6 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
+
+# non-public content from google drive, etc.
+local-media
