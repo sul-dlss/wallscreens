@@ -27,51 +27,51 @@ viewport:
 
 items:
   - caption: Networking pioneers created the technologies that made office connectivity and the World Wide Web possible.  The individuals depicted in "Computer Networking and Internet Connectivity Pioneers of Silicon Valley" all invented devices or created protocols that have had a significant impact on all forms of computing in our homes and offices.
-  - bio:
+  - key: don-nielsen
+    bio:
       title: Don Nielsen
       description: Led the Stanford Research International project to develop the first packet-switched radio network for the Advanced Research Projects Administration (ARPA).
       url: https://www.sri.com/bios/donald-nielson/
-      thumbnail: https://via.placeholder.com/70
     caption: Don Nielson, pictured here, joined SRI in 1959 as a research engineer and earned his Ph.D. from Stanford in 1969. One of the most important projects in high-speed networking was the Packet Radio project, sponsored by ARPA to provide reliable data communications. Nielson led the program and built the first ARPA packet.
     viewport:
       zoom: 4.25
       x: 1874
       y: 2383
-  - bio:
+  - key: vint-cerf
+    bio:
       title: Vint Cerf
       description: Co-designer of the TCP-IP protocols
       url: https://en.wikipedia.org/wiki/Vint_Cerf
-      thumbnail: https://via.placeholder.com/70
     caption: Vint Cerf is the co-designer with Bob Kahn of  the TCP/IP (Transmission Control Protocol/Internet Protocol) protocols that fundamentally control how data is exchanged over the internet. This specification defines the technical architecture underlying Wi-Fi, Ethernet, LANs, the World Wide Web, e-mail, and the many other applications built in turn on these systems. As a result of the fundamental nature of his work, he has often been called one of the "founders" of the Internet.
     viewport:
       zoom: 4.25
       x: 3650
       y: 3128
-  - bio:
+  - key: sandy-lerner
+    bio:
       title: Sandy Lerner
       description: Co-founder of Cisco Systems
       url: https://en.wikipedia.org/wiki/Sandy_Lerner
-      thumbnail: https://via.placeholder.com/70
     caption: Sandy Lerner co-founded Cisco Systems in 1984 with then-husband Leonard Bosack while she was director of computer facilities for the Stanford University Graduate School of Business.  She worked with Stanford students and staff to develop a system for interconnecting the School's computers, then adapted that software into Cisco's network infrastructure software, Cisco IOS.  Lerner and Bosack built Cisco's first routers in their home, financing the company on credit cards. Their company grew into the leading source for networking hardware, telecommunications equipment, and related services.
     viewport:
       zoom: 4.25
       x: 5368
       y: 3516
-  - bio:
+  - key: robert-metcalfe
+    bio:
       title: Robert Metcalfe
       description: Co-inventor of Ethernet
       url: https://en.wikipedia.org/wiki/Robert_Metcalfe
-      thumbnail: https://via.placeholder.com/70
     caption: Like Vint Cerf, Robert Metcalfe is often called a "founder" of the Internet. With David Boggs, Metcalfe developed the idea for Ethernet on May 22, 1973, while working at Xerox PARC.  Metcalfe and Boggs described Ethernet as a system for "Distributed Packet Switching for Local Computer Networks." It provided the technical solution for connecting remote computers via wires, whether in office settings or over longer distances. A network utilizing this technology was functional in November of that year. In 1979, Metcalfe left PARC and founded 3Com, a computer networking company in Palo Alto.
     viewport:
       zoom: 4.25
       x: 8159
       y: 3099
-  - bio:
+  - key: larry-roberts
+    bio:
       title: Larry Roberts
       description: Developer of the ARPANET
       url: https://en.wikipedia.org/wiki/Lawrence_Roberts_(scientist)
-      thumbnail: https://via.placeholder.com/70
     caption: Larry Roberts joined the Advanced Research Project Agency in 1967. He became the program manager for the ARPANET, the predecessor of the Internet. The idea that guided his development of the ARPANET was packet-switching, a concept developed by Donald Davies and Paul Baran.  This method of grouping data "packets" became the basis for wide area networks with distributed control.  In 1973, Roberts left ARPA to join Telenet and enjoyed a successful career developing technology companies focused on improving network communications and speed.
     viewport:
       zoom: 4.25
