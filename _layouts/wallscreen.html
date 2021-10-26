@@ -16,9 +16,9 @@
     <script src="{% link js/openseadragon.js %}"></script>
     <script src="{% link js/application.js %}"></script>
 
-    <link rel="stylesheet" href="{% link css/wallscreen.css %}">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/wallscreen.css">
     {% if page.extra_css %}
-      <link rel="stylesheet" href="{% link css/{{ page.extra_css }}.css %}">
+      <link rel="stylesheet" href="{{ site.baseurl }}/css/{{ page.extra_css }}.css">
     {% endif %}
   </head>
 
