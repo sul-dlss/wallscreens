@@ -4,3 +4,6 @@ _site
 .jekyll-metadata
 .byebug_history
 vendor
+
+# non-public content from google drive, etc.
+local-media

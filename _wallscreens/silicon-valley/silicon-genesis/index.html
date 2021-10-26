@@ -9,13 +9,13 @@ controller: oral-history
 {% assign experience = site.data.experiences[page.experience] %}
 
 <header class="title-area">
-  <img class="header-logo" src="/images/SUL-logo-whitetext.svg" />
+  <img class="header-logo" src="{% link images/SUL-logo-whitetext.svg %}" />
   <h1>{{ wallscreen.title }}</h1>
 </header>
 
 <main class="content-area">
-  <video data-oral-history-target="video" controls muted="true">
-    <source src="https://stanford.box.com/shared/static/e58t96yp5dvhhbhtwsowqtecc6vso8zi.mp4" type="video/mp4">
+  <video data-oral-history-target="video" muted="true">
+    <source src="{% file_or_link {{experience.local_file}} {{experience.file}} %}" type="video/mp4">
   </video>
 </main>
 
@@ -56,7 +56,7 @@ controller: oral-history
           <h3 class="theme-name">{{ theme.name }}</h3>
           <ul class="theme-chapter-list">
             {% for item in theme.items %}
-              <li id="{{ item.title | slugify }}" class="chapter {{ item.class }}" data-timestamp="{{item.timestamp}}" data-oral-history-target="steps">
+              <li id="{{ item.key }}" class="chapter {{ item.class }}" data-timestamp="{{ item.timestamp }}" data-oral-history-target="steps">
                 <img class="chapter-thumbnail" src="{{ item.thumbnail }}" />
                 <h4 class="chapter-title">{{ item.title }}</h4>
               </li>

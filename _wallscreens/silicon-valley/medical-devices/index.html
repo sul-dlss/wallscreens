@@ -8,7 +8,7 @@ controller: guided-tour
 {% assign wallscreen = site.data.wallscreens[page.wallscreen] %}
 {% assign experience = site.data.experiences[page.experience] %}
 <header class="title-area">
-  <img class="header-logo" src="/images/SUL-logo-whitetext.svg" />
+  <img class="header-logo" src="{% link images/SUL-logo-whitetext.svg %}" />
   <h1>{{ wallscreen.title }}</h1>
 </header>
 
@@ -53,10 +53,10 @@ controller: guided-tour
 
       <div class="bio-card-area">
         {% for item in experience.items %}
-          <div {% if item.bio %}id="{{ item.bio.title | slugify }}"{% endif %} data-guided-tour-target="slides">
+          <div {% if item.bio %}id="{{ item.key }}"{% endif %} data-guided-tour-target="slides">
             {% if item.bio %}
               <div class="bio-card">
-                <img class="bio-card-thumbnail" src="{{ item.bio.thumbnail }}">
+                <img class="bio-card-thumbnail" src="{% link images/wallscreens/{{ page.wallscreen }}/{{ page.experience }}/{{ item.key }}.png %}">
                 <div class="bio-card-info">
                   <h4 class="bio-card-title">{{ item.bio.title }}</h4>
                   <p class="bio-card-description">{{ item.bio.description }}</p>

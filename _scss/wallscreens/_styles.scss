@@ -163,6 +163,11 @@ p.experience-subtitle {
   font-weight: 600;
 }
 
+/* prevent clicking any links marked as QR codes */
+a[data-qr] {
+  pointer-events: none;
+}
+
 .qrcode {
   margin-left: -6px;
 }
@@ -304,6 +309,11 @@ p.experience-subtitle {
 .more-info-modal .links li {
   position: relative;
   padding-left: 95px;
+}
+
+.more-info-modal .links a {
+  color: inherit;
+  text-decoration: none;
 }
 
 .more-info-modal .link-title {
