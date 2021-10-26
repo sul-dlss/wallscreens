@@ -19,13 +19,14 @@ export default class extends Controller {
     if (this.autoplayTimer) window.clearTimeout(this.autoplayTimer);
   }
 
-  // if we've finished the experience and returned to the initial slide,
-  // set a timer to enter autoplay so we move to other experiences
+  // enter the auto-play mode where we go back to the intro slide, and then
+  // move to the initial slide of other experiences
   autoplay() {
     if (this.autoplayTimer) window.clearTimeout(this.autoplayTimer);
 
     this.autoplayTimer = window.setTimeout(() => {
       if (this.indexValue == 0) return this.nextValue && (window.location = this.nextValue);
+      if (this.ended) return this.indexValue = 0;
     }, this.constructor.autoplayTimeout);
   }
 
@@ -44,13 +45,6 @@ export default class extends Controller {
     this.videoTarget.addEventListener('loadedmetadata', () => { if (this.startValue > 0) this.videoTarget.currentTime = this.startValue }, false)
 
     this.videoTarget.addEventListener('ended', () => this.end());
-  }
-
-  // return to the initial slide with "start" button
-  restart() {
-    if (!this.ended) return;
-
-    this.indexValue = 0;
   }
 
   // start playing the video from the first chapter
@@ -83,14 +77,13 @@ export default class extends Controller {
     return this.indexValue == this.stepsTargets.length - 1;
   }
 
-  // reset the timer that will restart experience and enter autoplay mode
+  // (re)set a timer for entering the autoplay after an idle timeout
   resetAutoplayTimer() {
     if (this.autoplayTimer) window.clearTimeout(this.autoplayTimer);
 
-    this.autoplayTimer = window.setTimeout(() => {
-      this.restart();
-      this.autoplay();
-    }, this.constructor.timeout);
+    if (this.indexValue == 0 && !this.nextValue) return;
+
+    this.autoplayTimer = window.setTimeout(() => this.autoplay(), this.constructor.autoplayTimeout);
   }
 
   // navigate to the next chapter, advancing the video as needed
@@ -128,8 +121,8 @@ export default class extends Controller {
 
     if (item.id) history.replaceState({}, '', '#' + item.id);
 
-    // if we just reached the final slide, set the autoplay timer
-    if (this.ended) this.resetAutoplayTimer();
+    // reset the autoplay timer
+    this.resetAutoplayTimer();
 
     // hide/dehighlight all the other steps/chapters
     this.stepsTargets.forEach(x => {
