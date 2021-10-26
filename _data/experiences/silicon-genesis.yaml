@@ -18,10 +18,14 @@ more_info:
     text: Silicon Genesis oral history interviews
     url: https://oac.cdlib.org/findaid/ark:/13030/c8f76kbr/
 items:
+  - title: What drew you to Silicon Valley?
+    theme: What drew you to Silicon Valley?
+    timestamp: 0
+    class: hidden-theme-title
   - title: From Interview with Don Valentine, April 21, 2004.
     theme: What drew you to Silicon Valley?
     thumbnail: https://via.placeholder.com/100x55
-    timestamp: 0
+    timestamp: 5
   - title: From Interview with Jerry Sanders, October 18, 2002.
     theme: What drew you to Silicon Valley?
     thumbnail: https://via.placeholder.com/100x55
@@ -30,10 +34,14 @@ items:
     theme: What drew you to Silicon Valley?
     thumbnail: https://via.placeholder.com/100x55
     timestamp: 194
+  - title: Why has Silicon Valley been a great place to start a company?
+    theme: Why has Silicon Valley been a great place to start a company?
+    timestamp: 246
+    class: hidden-theme-title
   - title: From interview with Albert Yu, September 15, 2005.
     theme: Why has Silicon Valley been a great place to start a company?
     thumbnail: https://via.placeholder.com/100x55
-    timestamp: 247
+    timestamp: 252
   - title: From interview with Jen-Hsun Huang, August 7, 2010.
     theme: Why has Silicon Valley been a great place to start a company?
     thumbnail: https://via.placeholder.com/100x55
@@ -42,10 +50,14 @@ items:
     theme: Why has Silicon Valley been a great place to start a company?
     thumbnail: https://via.placeholder.com/100x55
     timestamp: 408
+  - title: What does it take to succeed in Silicon Valley?
+    theme: What does it take to succeed in Silicon Valley?
+    timestamp: 497
+    class: hidden-theme-title
   - title: From interview with Frederico Faggin, March 3, 1995.
     theme: What does it take to succeed in Silicon Valley?
     thumbnail: https://via.placeholder.com/100x55
-    timestamp: 497
+    timestamp: 502
   - title: From Interview with Geri Hadley, October 22, 2019.
     theme: What does it take to succeed in Silicon Valley?
     thumbnail: https://via.placeholder.com/100x55
