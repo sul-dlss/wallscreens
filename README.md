@@ -35,5 +35,12 @@ the content used in the wallscreens and experiences is stored as YAML files in t
 
 the layout of experience pages is defined by the HTML templates in the `_wallscreens/` directory. these templates have access to the "global" data in the `_data/` folder via `site.wallscreens`.
 
+### local media
 media referenced in wallscreens can be checked-in to the git repository if rights statements permit it. otherwise, files should be downloaded and stored in the `local-media/` directory so that they can be referenced during the jekyll build process.
+
+when adding media to an experience, you can use the custom `file_or_link` liquid tag to insert a file from `local-media/`, falling back to a supplied URL if the file isn't present locally:
+```html
+<img src="{% file_or_link {{local_file}} {{image_url}} %}">
+```
+note the lack of whitespace around interpolated values (`{{local_file}}`); this is necessary for the tag to parse correctly. when the path pointed to by `local_file` can't be found or wasn't supplied, jekyll will issue a warning when building and use the value of `image_url` instead.
 
