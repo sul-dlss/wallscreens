@@ -34,8 +34,8 @@ controller: slideshow
       <h2 class="experience-title">{{ experience.title}}</h2>
 
       {% for item in experience.items %}
-        <link rel="preload" href="{{ item.image }}" as="image">
-        <div id="{{ item.title | slugify }}" data-image-url="{{ item.image }}" data-slideshow-target="slides">
+        <link rel="preload" href="{% file_or_link {{item.local_image}} {{item.image}} %}" as="image">
+        <div id="{{ item.title | slugify }}" data-image-url="{% file_or_link {{item.local_image}} {{item.image}} %}" data-slideshow-target="slides">
 
           <h3 class="item-title">{{ item.title }}</h3>
           <p class="item-caption">{{ item.caption }}</p>
