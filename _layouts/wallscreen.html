@@ -37,7 +37,7 @@
       {% if next_experience.key %}data-{{page.controller}}-next-value="{% link _wallscreens/{{ page.wallscreen }}/{{ next_experience.key }}/index.html %}" {% endif %}
       {% case page.controller %}
         {% when 'oral-history' %}
-        data-action="more-info:show->oral-history#pause more-info:hide->oral-history#unpause more-info:show->oral-history#resetRestartTimer more-info:hide->oral-history#resetRestartTimer"
+        data-action="more-info:show->oral-history#pause more-info:hide->oral-history#unpause more-info:show->oral-history#resetAutoplayTimer more-info:hide->oral-history#resetAutoplayTimer"
         {% else %}
         data-action="click@document->{{ page.controller }}#resetAutoplayTimer"
       {% endcase %}

@@ -1,9 +1,9 @@
 import { Controller } from "/js/stimulus.js"
 
 export default class extends Controller {
-  static values = { index: { type: Number, default: 0 }, start: { type: Number, default: 0} }
+  static values = { index: { type: Number, default: 0 }, start: { type: Number, default: 0}, next: { type: String, default: '' } }
   static targets = [ "chapterContainer", "steps", "video" ]
-  static timeout = 20*60*1000; // 20 minutes
+  static autoplayTimeout = 5 * 60 * 1000; // 5 minutes
 
   connect() {
     if (window.location.hash && this.stepsTargets.findIndex(x => x.id == window.location.hash.substring(1)) > 0) {
@@ -14,9 +14,20 @@ export default class extends Controller {
     this.registerPlayerHooks();
   }
 
-  // ensure we clean up the restart timer
+  // ensure we clean up the autoplay timer
   disconnect() {
-    if (this.restartCallback) window.clearTimeout(this.restartCallback);
+    if (this.autoplayTimer) window.clearTimeout(this.autoplayTimer);
+  }
+
+  // enter the auto-play mode where we go back to the intro slide, and then
+  // move to the initial slide of other experiences
+  autoplay() {
+    if (this.autoplayTimer) window.clearTimeout(this.autoplayTimer);
+
+    this.autoplayTimer = window.setTimeout(() => {
+      if (this.indexValue == 0) return this.nextValue && (window.location = this.nextValue);
+      if (this.ended) return this.indexValue = 0;
+    }, this.constructor.autoplayTimeout);
   }
 
   // listen to ontimeupdate to update the current index as needed
@@ -34,13 +45,6 @@ export default class extends Controller {
     this.videoTarget.addEventListener('loadedmetadata', () => { if (this.startValue > 0) this.videoTarget.currentTime = this.startValue }, false)
 
     this.videoTarget.addEventListener('ended', () => this.end());
-  }
-
-  // return to the initial slide with "start" button
-  restart() {
-    if (!this.ended) return;
-
-    this.indexValue = 0;
   }
 
   // start playing the video from the first chapter
@@ -73,10 +77,13 @@ export default class extends Controller {
     return this.indexValue == this.stepsTargets.length - 1;
   }
 
-  // clear and reset the timer that will restart the experience
-  resetRestartTimer() {
-    if (this.restartCallback) window.clearTimeout(this.restartCallback);
-    this.restartCallback = window.setTimeout(() => this.restart(), this.constructor.timeout);
+  // (re)set a timer for entering the autoplay after an idle timeout
+  resetAutoplayTimer() {
+    if (this.autoplayTimer) window.clearTimeout(this.autoplayTimer);
+
+    if (this.indexValue == 0 && !this.nextValue) return;
+
+    this.autoplayTimer = window.setTimeout(() => this.autoplay(), this.constructor.autoplayTimeout);
   }
 
   // navigate to the next chapter, advancing the video as needed
@@ -114,8 +121,8 @@ export default class extends Controller {
 
     if (item.id) history.replaceState({}, '', '#' + item.id);
 
-    // if we just reached the final slide, set the restart timer
-    if (this.ended) this.resetRestartTimer();
+    // reset the autoplay timer
+    this.resetAutoplayTimer();
 
     // hide/dehighlight all the other steps/chapters
     this.stepsTargets.forEach(x => {
