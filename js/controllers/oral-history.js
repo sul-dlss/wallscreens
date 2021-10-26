@@ -71,7 +71,7 @@ export default class extends Controller {
   }
 
   // check if we're on the final slide. this is necessary because occasionally
-  // this.videoTarget.ended may be false even though the experience is over, 
+  // this.videoTarget.ended may be false even though the experience is over,
   // possibly because the video is still buffering
   get ended() {
     return this.indexValue == this.stepsTargets.length - 1;
@@ -90,6 +90,13 @@ export default class extends Controller {
   next() {
     this.indexValue = Math.min(this.indexValue + 1, this.stepsTargets.length - 1);
 
+    ga('send', {
+      hitType: 'event',
+      eventCategory: 'next',
+      eventAction: 'previous',
+      eventValue: this.indexValue
+    });
+
     if (this.getItem().dataset?.timestamp) {
       this.videoTarget.currentTime = this.getItem().dataset?.timestamp;
     } else {
@@ -101,6 +108,13 @@ export default class extends Controller {
   // navigate to the previous chapter, rewinding the video as needed
   previous() {
     this.indexValue = Math.max(this.indexValue - 1, 0);
+
+    ga('send', {
+      hitType: 'event',
+      eventCategory: 'click',
+      eventAction: 'previous',
+      eventValue: this.indexValue
+    });
 
     if (this.getItem().dataset?.timestamp) {
       this.videoTarget.currentTime = this.getItem().dataset?.timestamp;
