@@ -1,0 +1,153 @@
+body {
+  background-color: #999;
+  font-size: clamp(1rem, 1vw, 32px);
+  line-height: 1.6em;
+  height: 100vh;
+  margin: 0;
+  padding: 8px;
+
+  --color-primary: #{$su-color-cardinal-red};
+  --color-primary-dark: #{$su-color-cardinal-red-dark};
+  --color-secondary: #{$su-color-foggy};
+}
+
+pre {
+  font-family: system-ui, sans-serif;
+  font-size: 1.125rem;
+  text-transform: lowercase;
+}
+
+.wallscreen {
+  color: #2e2d29;
+  font-family: 'Source Sans Pro', sans-serif;
+
+  /* For testing purposes, enable the "wallscreen" to be any size,
+     but keep the height and width proportional */
+ --aspect-ratio: 16/9;
+  aspect-ratio: var(--aspect-ratio);
+
+  padding-right: 5px;
+
+  display: grid;
+  grid-template: "title title" 1fr
+                 "content card" 8fr
+                 "interaction interaction" 1fr / 2fr 1fr;
+}
+
+@supports (not (aspect-ratio: 1 / 1)) {
+  .wallscreen {
+    --wallscreen-width: calc(100vw - 8px);
+    --wallscreen-height: calc(var(--wallscreen-width) * (1 / (var(--aspect-ratio))));
+    height: var(--wallscreen-height);
+    width: var(--wallscreen-width);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .wallscreen {
+    height: auto;
+    width: 100%;
+
+    grid-template: "title title" auto
+                   "content content" auto
+                   "card card" auto
+                   "interaction interaction" auto / 2fr 1fr !important;
+   }
+
+   .card-nav {
+     order: -1;
+   }
+}
+
+.title-area,
+.content-area {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.title-area {
+  background-color: #2e2d29;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  grid-area: title;
+}
+
+.header-logo {
+  min-height: 35px;
+  height: 3vw;
+  position: absolute;
+  left: 50px;
+}
+
+.title-area h1 {
+  color: #fff;
+  font-size: 3vw;
+  font-weight: 400;
+}
+
+.content-area {
+  background-color: #000;
+  color: #fff;
+  grid-area: content;
+  position: relative;
+}
+
+.slide-area {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.card-area {
+  justify-content: space-between;
+  background: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  grid-area: card;
+  padding: 3rem;
+}
+
+.card {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.experience-index {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+
+.interaction-area {
+  background-color: #2e2d29;
+  color: #fff;
+  grid-area: interaction;
+
+  display: grid;
+  grid-template: "experience secondary" 1fr / 2fr 1fr;
+}
+
+.experience-buttons {
+  display: flex;
+  grid-area: experience;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.secondary-buttons {
+  display: flex;
+  grid-area: secondary;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
