@@ -57,7 +57,7 @@ controller: oral-history
           <ul class="theme-chapter-list">
             {% for item in theme.items %}
               <li id="{{ item.key }}" class="chapter {{ item.class }}" data-timestamp="{{ item.timestamp }}" data-oral-history-target="steps">
-                <img class="chapter-thumbnail" src="{{ item.thumbnail }}" />
+                <img class="chapter-thumbnail" src="{% link images/wallscreens/{{ page.wallscreen }}/{{ page.experience }}/{{ item.key }}.png %}" />
                 <h4 class="chapter-title">{{ item.title }}</h4>
               </li>
             {% endfor %}
