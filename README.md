@@ -4,7 +4,7 @@
 [![Jekyll](https://img.shields.io/badge/powered_by-jekyll-blue.svg)](http://jekyllrb.com/)
 [![License](https://img.shields.io/badge/license-apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-curated experiences for touch-screen installations on the stanford campus.  wallscreens.stanford.edu
+curated experiences for touch-screen installations on the stanford campus. <wallscreens.stanford.edu>
 
 ## local development
 wallscreens uses the [jekyll](http://jekyllrb.com/) static site generator, which [requires ruby](http://jekyllrb.com/docs/#prerequisites).
@@ -59,3 +59,22 @@ when adding media to an experience, you can use the custom `file_or_link` liquid
 <img src="{% file_or_link {{local_file}} {{image_url}} %}">
 ```
 note the lack of whitespace around interpolated values (`{{local_file}}`); this is necessary for the tag to parse correctly. when the path pointed to by `local_file` can't be found or wasn't supplied, jekyll will issue a warning when building and use the value of `image_url` instead.
+
+## interactivity
+wallscreens are designed to rotate through content continuously, in order to prevent screen burn-in and showcase the available experiences.
+
+### autoplay
+the oral history experience plays through its entire video if left alone; the guided tour and slideshow experiences will begin automatically cycling through content after an interval elapses where the user has not interacted with the wallscreen.
+
+for testing and local development, this value can be edited (in, for example, `js/controllers/slideshow.js`):
+```js
+  static autoplayTimeout = 5 * 60 * 1000; // 5 minutes before entering autoplay mode
+```
+after autoplay takes effect, the experience will spend some time on each slide before moving to the next. this value can also be edited:
+```js
+  static autoplayIntervalTime = 1 * 60 * 1000; // 1 minute per slide in autoplay mode
+```
+### demo mode
+if an experience remains unattended for `autoplayTimeout` after it has completed, it will eventually return to its initial state. once it remains in this state for the duration of another `autoplayTimeout`, it will enter "demo mode", which cycles between a preview of each experience on the wallscreen.
+
+this behavior is incorporated into the `autoplay()` method of each experience controller.
