@@ -12,33 +12,32 @@ button, .button {
   padding-left: 12px;
   padding-right: 12px;
   text-decoration: none;
-}
 
-.button:hover {
-  color: #000;
-}
+  &:hover {
+    color: #000;
+  }
 
-.button.active {
-  box-shadow: none;
-  background-color: var(--color-primary);
-  color: #fff;
-}
+  &.active {
+    box-shadow: none;
+    background-color: var(--color-primary);
+    color: #fff;
+  }
 
-.disabled {
-  box-shadow: none;
-  cursor: not-allowed;
-  opacity: 0.8;
-}
+  &.disabled {
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 0.8;
+  }
 
-button .fas,
-.button .fas {
-  color: $su-color-stone-dark;
-}
+  .fas {
+    color: $su-color-stone-dark;
 
-button .fas:first-child, .button .fas:first-child {
-  margin-right: 0.25rem;
-}
+    &:first-child {
+      margin-right: 0.25rem;
+    }
 
-button .fas:last-child, .button .fas:last-child {
-  margin-left: 0.25rem;
+    &:last-child {
+      margin-left: 0.25rem;
+    }
+  }
 }

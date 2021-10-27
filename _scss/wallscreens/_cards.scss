@@ -1,14 +1,27 @@
-.card-area h2 {
-  color: var(--color-primary-dark);
-  font-weight: 600;
-  text-align: center;
-  padding-bottom: 1em;
-  border-bottom: 1px solid #ddd;
-}
+.card-area {
+  h2 {
+    color: var(--color-primary-dark);
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #ddd;
 
-.card-area h2.border-none {
-  padding-bottom: 0em;
-  margin-bottom: 0.5em;
+    &.border-none {
+      padding-bottom: 0em;
+      margin-bottom: 0.5em;
+    }
+
+    & + .experience-summary {
+      border-top: none;
+    }
+  }
+
+  h3 {
+    color: $su-color-archway-dark;
+    font-weight: 600;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
 }
 
 .experience-subtitle, .experience-attribution {
@@ -23,11 +36,9 @@ p.experience-subtitle {
   text-align: left;
 }
 
-.card-area h3 {
-  color: $su-color-archway-dark;
-  font-weight: 600;
-  margin-bottom: 0;
-  margin-top: 0;
+.experience-attribution {
+  padding-bottom: 1em;
+  border-bottom: 1px solid #ddd;
 }
 
 .separator {
@@ -48,83 +59,62 @@ p.experience-subtitle {
   font-weight: 600;
 }
 
-.experience-attribution {
-  padding-bottom: 1em;
-  border-bottom: 1px solid #ddd;
-}
-
-.card-area h2 + .experience-summary {
-  border-top: none;
-}
-
+/* Start, previous, and next buttons */
 .card-nav {
   display: flex;
   justify-content: center;
   gap: 2em;
 }
 
-.caption {
-  position: absolute;
-  bottom: 2vw;
-  max-height: 20vw;
-  max-width: 80%;
+/* Last Card */
 
-  background-color: rgba(255, 255, 255, 0.85);
-  box-shadow: 0px 4px 5px rgba(0,0,0,0.25);
-  color: black;
-  padding: 1vw;
+.last-card {
+  h3 {
+    margin-top: 30px;
+    text-transform: uppercase;
+  }
+
+  .experience-subtitle {
+    text-transform: none;
+  }
 }
 
 .dig-deeper-card {
+  padding-top: 25px;
   display: flex;
   gap: 1rem;
-}
 
-.dig-deeper-card .item-url {
-  align-items: flex-start;
-  gap: 1rem;
-  width: 18ch;
-  flex-shrink: 0;
-}
-
-/* Last Card */
-
-.last-card h3 {
-  margin-top: 30px;
-  text-transform: uppercase;
-}
-
-.last-card .experience-subtitle {
-  text-transform: none;
-}
-
-.last-card .dig-deeper-card {
-  padding-top: 25px;
+  .item-url {
+    align-items: flex-start;
+    gap: 1rem;
+    width: 18ch;
+    flex-shrink: 0;
+  }
 }
 
 .card-footer h3 {
   margin-bottom: 30px;
   overflow: hidden;
   text-align: center;
-}
 
-.card-footer h3:before {
-  right: 0.5em;
-  margin-left: -50%;
-}
+  &:before {
+    right: 0.5em;
+    margin-left: -50%;
+  }
 
-.card-footer h3:after {
-  left: 0.5em;
-  margin-right: -50%;
-}
+  &:after {
+    left: 0.5em;
+    margin-right: -50%;
+  }
 
-.card-footer h3:before,
-.card-footer h3:after {
-  background-color: #ddd;
-  content: "";
-  display: inline-block;
-  height: 1px;
-  position: relative;
-  vertical-align: middle;
-  width: 50%;
+  &:before,
+  &:after {
+    background-color: #ddd;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+  }
 }
