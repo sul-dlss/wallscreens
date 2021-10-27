@@ -66,7 +66,7 @@ note the lack of whitespace around interpolated values (`{{local_file}}`); this 
 wallscreens are designed to rotate through content continuously, in order to prevent screen burn-in and showcase the available experiences.
 
 ### autoplay
-the oral history experience plays through its entire video if left alone; the guided tour and slideshow experiences will begin automatically cycling through content after an interval elapses where the user has not interacted with the wallscreen.
+the oral history experience plays through its entire video if left alone; the guided tour and slideshow experiences will begin automatically cycling through content after an interval elapses where the user has not touched the wallscreen.
 
 for testing and local development, this value can be edited (in, for example, `js/controllers/slideshow.js`):
 ```js
