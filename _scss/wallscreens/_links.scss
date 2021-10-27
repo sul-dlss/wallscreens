@@ -1,0 +1,8 @@
+/* prevent clicking any links marked as QR codes */
+a[data-qr] {
+  pointer-events: none;
+}
+
+.qrcode {
+  margin-left: -6px;
+}
