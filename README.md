@@ -4,7 +4,9 @@
 [![Jekyll](https://img.shields.io/badge/powered_by-jekyll-blue.svg)](http://jekyllrb.com/)
 [![License](https://img.shields.io/badge/license-apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-curated experiences for touch-screen installations on the stanford campus. <wallscreens.stanford.edu>
+[wallscreens.stanford.edu](https://wallscreens.stanford.edu)
+
+curated experiences for touch-screen installations on the stanford campus.
 
 ## local development
 wallscreens uses the [jekyll](http://jekyllrb.com/) static site generator, which [requires ruby](http://jekyllrb.com/docs/#prerequisites).
