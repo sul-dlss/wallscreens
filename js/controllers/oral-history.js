@@ -92,7 +92,7 @@ export default class extends Controller {
 
     ga('send', {
       hitType: 'event',
-      eventCategory: 'next',
+      eventCategory: 'click',
       eventAction: 'previous',
       eventValue: this.indexValue
     });
