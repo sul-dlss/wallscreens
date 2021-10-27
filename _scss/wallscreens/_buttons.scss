@@ -14,6 +14,10 @@ button, .button {
   text-decoration: none;
 }
 
+.button:hover {
+  color: #000;
+}
+
 .button.active {
   box-shadow: none;
   background-color: var(--color-primary);
