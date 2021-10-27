@@ -9,7 +9,9 @@ $btn-padding-x-lg: .8rem;
 $btn-font-family: "Source Sans Pro", sans-sans-serif;
 
 button, .button {
-  display: inline-block;
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
   background-color: var(--color-secondary);
   border: none;
   border-radius: $btn-border-radius;
@@ -48,13 +50,5 @@ button, .button {
 
   .fas {
     color: $su-color-stone-dark;
-
-    &:first-child {
-      margin-right: 0.25rem;
-    }
-
-    &:last-child {
-      margin-left: 0.25rem;
-    }
   }
 }
