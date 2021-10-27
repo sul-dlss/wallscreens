@@ -25,6 +25,22 @@ $ bundle exec jekyll build
 ```
 this will generate HTML in a directory called `_site/`.
 
+### wallscreen specifications
+- Pixels: 3840 x 2160
+- Display Area: 56.2" x 31.6" (1428.5mm x 803.5mm)
+- Aspect Ratio: 16:9
+
+### browser device emulation
+For local development it may be useful to emulate the dimensions of the wallscreens in your browser. Chrome and FireFox provide tools and documentation for developing sites for various size screens.
+
+#### Chrome
+- [Devise Mode](https://developer.chrome.com/docs/devtools/device-mode/)
+- [Adding Custom Devices](https://developer.chrome.com/docs/devtools/device-mode/#custom)
+
+#### FireFox
+- [Responsive Design Mode](https://developer.mozilla.org/en-US/docs/Tools/Responsive_Design_Mode)
+- [Adding Custom Devices](https://developer.mozilla.org/en-US/docs/Tools/Responsive_Design_Mode#device_selection)
+
 ## wallscreen content
 each wallscreen can host several experiences, and experiences can be shared across multiple wallscreens. an experience is a set of curated content, which can take the form of:
 - a slideshow of many images with captions
@@ -35,5 +51,11 @@ the content used in the wallscreens and experiences is stored as YAML files in t
 
 the layout of experience pages is defined by the HTML templates in the `_wallscreens/` directory. these templates have access to the "global" data in the `_data/` folder via `site.wallscreens`.
 
+### local media
 media referenced in wallscreens can be checked-in to the git repository if rights statements permit it. otherwise, files should be downloaded and stored in the `local-media/` directory so that they can be referenced during the jekyll build process.
 
+when adding media to an experience, you can use the custom `file_or_link` liquid tag to insert a file from `local-media/`, falling back to a supplied URL if the file isn't present locally:
+```html
+<img src="{% file_or_link {{local_file}} {{image_url}} %}">
+```
+note the lack of whitespace around interpolated values (`{{local_file}}`); this is necessary for the tag to parse correctly. when the path pointed to by `local_file` can't be found or wasn't supplied, jekyll will issue a warning when building and use the value of `image_url` instead.
