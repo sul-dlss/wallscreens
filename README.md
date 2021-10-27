@@ -76,7 +76,7 @@ after autoplay takes effect, the experience will spend some time on each slide b
 ```js
   static autoplayIntervalTime = 1 * 60 * 1000; // 1 minute per slide in autoplay mode
 ```
-### demo mode
-if an experience remains unattended for `autoplayTimeout` after it has completed, it will eventually return to its initial state. once it remains in this state for the duration of another `autoplayTimeout`, it will enter "demo mode", which cycles between a preview of each experience on the wallscreen.
+### attract mode
+if an experience remains unattended for `autoplayTimeout` after it has completed, it will eventually return to its initial state. once it remains in this state for the duration of another `autoplayTimeout`, it will enter ["attract mode"](https://en.wiktionary.org/wiki/attract_mode), which cycles between a preview of each experience on the wallscreen.
 
 this behavior is incorporated into the `autoplay()` method of each experience controller.
