@@ -1,3 +1,5 @@
+@import 'decanter/colors';
+
 * {
   box-sizing: border-box;
 }
@@ -10,12 +12,9 @@ body {
   margin: 0;
   padding: 8px;
 
-  --color-primary: #8C1515;
-  --color-primary-dark: #820000;
-  --color-secondary: #dad7cb;
-
-  --color-archway-dark: #2F2424;
-  --color-stone-dark: #544948;
+  --color-primary: #{$su-color-cardinal-red};
+  --color-primary-dark: #{$su-color-cardinal-red-dark};
+  --color-secondary: #{$su-color-foggy};
 }
 
 pre {
@@ -139,7 +138,7 @@ p.experience-subtitle {
 }
 
 .card-area h3 {
-  color: var(--color-archway-dark);
+  color: $su-color-archway-dark;
   font-weight: 600;
   margin-bottom: 0;
   margin-top: 0;
