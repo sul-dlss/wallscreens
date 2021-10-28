@@ -50,6 +50,7 @@ export default class extends Controller {
   // start playing the video from the first chapter
   start() {
     this.indexValue = 1;
+    gtag('event', 'start-video');
     this.videoTarget.play();
   }
 
@@ -90,12 +91,7 @@ export default class extends Controller {
   next() {
     this.indexValue = Math.min(this.indexValue + 1, this.stepsTargets.length - 1);
 
-    ga('send', {
-      hitType: 'event',
-      eventCategory: 'click',
-      eventAction: 'previous',
-      eventValue: this.indexValue
-    });
+    gtag('event', 'next', { index: this.indexValue });
 
     if (this.getItem().dataset?.timestamp) {
       this.videoTarget.currentTime = this.getItem().dataset?.timestamp;
@@ -109,12 +105,7 @@ export default class extends Controller {
   previous() {
     this.indexValue = Math.max(this.indexValue - 1, 0);
 
-    ga('send', {
-      hitType: 'event',
-      eventCategory: 'click',
-      eventAction: 'previous',
-      eventValue: this.indexValue
-    });
+    gtag('event', 'previous', { index: this.indexValue });
 
     if (this.getItem().dataset?.timestamp) {
       this.videoTarget.currentTime = this.getItem().dataset?.timestamp;
