@@ -28,10 +28,8 @@ export default class extends Controller {
   autoplay() {
     if (this.autoplayInterval) window.clearInterval(this.autoplayInterval);
 
-    ga('send', {
-      hitType: 'event',
-      eventCategory: 'idle',
-      eventValue: this.indexValue
+    gtag('event', 'idle', {
+      index: this.indexValue
     });
 
     this.autoplayInterval = window.setInterval(() => {
@@ -59,24 +57,14 @@ export default class extends Controller {
   // paginate to the next slide, or the end card
   next() {
     this.indexValue = Math.min(this.indexValue + 1, this.slidesTargets.length - 1);
-    ga('send', {
-      hitType: 'event',
-      eventCategory: 'click',
-      eventAction: 'next',
-      eventValue: this.indexValue
-    });
+    gtag('event', 'next', { index: this.indexValue });
     this.resetAutoplayTimer();
   }
 
   // paginate to the previous slide, or the intro card
   previous() {
     this.indexValue = Math.max(this.indexValue - 1, 0);
-    ga('send', {
-      hitType: 'event',
-      eventCategory: 'click',
-      eventAction: 'previous',
-      eventValue: this.indexValue
-    });
+    gtag('event', 'previous', { index: this.indexValue });
     this.resetAutoplayTimer();
   }
 
