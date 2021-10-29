@@ -1,0 +1,14 @@
+$wallscreen-width: 3840px;
+
+/*
+ add a media query for rules specific to physical wallscreens.
+
+    color: blue;
+    @wallscreen { color: red; }
+
+ */
+@mixin wallscreen {
+    @media (min-width: #{$wallscreen-width}) {
+        @content;
+    }
+}

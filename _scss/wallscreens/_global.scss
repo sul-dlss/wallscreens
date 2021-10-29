@@ -1,0 +1,16 @@
+// -----------------------------------------------------------------------------
+// Global styles & overrides for basic HTML elements.
+// -----------------------------------------------------------------------------
+
+// Globally apply font-smoothing to improve rendering.
+html {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+// Scale UI elements up 2x when displayed on physical wallscreen.
+@include wallscreen {
+    html {
+        font-size: 2rem;
+    }
+}
