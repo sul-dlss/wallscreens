@@ -1,4 +1,7 @@
-/* More Info Modal */
+// -----------------------------------------------------------------------------
+// "More info" modal available on all experiences
+// -----------------------------------------------------------------------------
+
 .more-info-modal {
   position: absolute;
   top: 0;
@@ -9,19 +12,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 1.25rem;
+  line-height: 1.5;
 
   > .inner {
-    padding: 45px 100px;
+    padding: 2.75rem 8.75rem;
     background-color: #f4f4f4;
     max-width: 90vw;
     max-height: 95vw;
     color: #2E2D29;
     border-radius: 8px;
+    box-sizing: border-box;
   }
 
   .title {
     color: var(--color-primary);
-    margin: 0;
+    font-size: 2rem;
+    font-weight: 600;
   }
 
   .content {
@@ -33,17 +40,15 @@
     display: inline-block;
   }
 
-  .more-info-modal hr {
+  hr {
     border: none;
     background-color: #ABABA9;
     height: 1px;
   }
 
-  .more-info-modal h4 {
+  h4 {
     text-transform: uppercase;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 38px;
+    font-weight: 600;
   }
 
   .links {
@@ -67,7 +72,7 @@
   }
 
   .link-title {
-    font-weight: bold;
+    font-weight: 600;
   }
 
   .qrcode {
