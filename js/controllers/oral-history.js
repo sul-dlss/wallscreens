@@ -2,7 +2,7 @@ import { Controller } from "/js/stimulus.js"
 
 export default class extends Controller {
   static values = { index: { type: Number, default: 0 }, start: { type: Number, default: 0}, next: { type: String, default: '' } }
-  static targets = [ "chapterContainer", "steps", "video" ]
+  static targets = [ "chapterContainer", "steps", "video", "videoContainer", "attractGridContainer" ]
   static autoplayTimeout = 5 * 60 * 1000; // 5 minutes
 
   connect() {
@@ -115,6 +115,16 @@ export default class extends Controller {
     }
   }
 
+  showVideoContainer() {
+    this.videoContainerTarget.classList.remove('d-none');
+    this.attractGridContainerTarget.classList.add('d-none');
+  }
+
+  showAttractGridContainer() {
+    this.attractGridContainerTarget.classList.remove('d-none');
+    this.videoContainerTarget.classList.add('d-none');
+  }
+
   // get the current chapter / step
   getItem() {
     return this.stepsTargets[this.indexValue];
@@ -128,6 +138,16 @@ export default class extends Controller {
 
     // reset the autoplay timer
     this.resetAutoplayTimer();
+
+    // check if we're on the initial or final step.
+    // in either case show the attractor grid container
+    // and hide the video container. otherwise,
+    // ensure the video container is visible
+    if (this.indexValue == 0 || this.ended ) {
+      this.showAttractGridContainer();
+    } else {
+      this.showVideoContainer();
+    }
 
     // hide/dehighlight all the other steps/chapters
     this.stepsTargets.forEach(x => {

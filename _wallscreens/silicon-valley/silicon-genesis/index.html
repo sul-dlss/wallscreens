@@ -14,9 +14,16 @@ controller: oral-history
 </header>
 
 <main class="content-area">
-  <video data-oral-history-target="video" muted="true">
-    <source src="{% file_or_link {{experience.local_file}} {{experience.file}} %}" type="video/mp4">
-  </video>
+  <div class="d-none" data-oral-history-target="videoContainer">
+    <video data-oral-history-target="video" muted="true">
+      <source src="{% file_or_link {{experience.local_file}} {{experience.file}} %}" type="video/mp4">
+    </video>
+  </div>
+  <div class="attract-mode-grid" data-oral-history-target="attractGridContainer">
+    {% for image in experience.attract_images limit: 9 %}
+      <div class="attract-image" style="background-image: url({% link {{image}} %})"></div>
+    {% endfor %}
+  </div>
 </main>
 
 <aside class="card-area">
