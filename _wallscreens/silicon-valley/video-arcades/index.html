@@ -46,9 +46,9 @@ controller: slideshow
         <div id="{{ item.title | slugify }}" data-image-url="{% file_or_link {{item.local_image}} {{item.image}} %}" data-slideshow-target="slides">
 
           <h3 class="item-title">{{ item.title }}</h3>
-          <p class="item-caption">{{ item.caption }}</p>
-          <div class="item-attribution"><span class="item-date">{{ item.date}}</span><span class="separator">•</span><span class="item-creator">{{ item.creator}}</span></div>
-          <div class="item-collection"><i>From</i> {{ item.collection }}</div>
+          {% if item.caption %}<p class="item-caption">{{ item.caption }}</p>{% endif %}
+          <div class="item-attribution"><span class="item-date">{{ item.date }}</span><span class="separator">•</span><span class="item-creator">{{ item.creator }}</span></div>
+          <div class="item-collection">{{ item.collection }}</div>
 
           <p class="item-note">{{ item.note }}</p>
 

@@ -1,21 +1,32 @@
 // -----------------------------------------------------------------------------
-// Global styles & overrides for basic HTML elements.
+// Global styles & overrides for basic HTML elements
 // -----------------------------------------------------------------------------
 
-// Globally apply font-smoothing to improve rendering.
+// Globally apply font-smoothing to improve rendering of text
 html {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
 }
 
-// Scale UI elements up 2x when displayed on physical wallscreen.
-@include wallscreen {
-    html {
+// Scale UI elements up 2x when displayed on physical wallscreen
+html {
+    font-size: 1rem;
+
+    @include wallscreen {
         font-size: 2rem;
     }
 }
 
-// Default line-height for headings
-h1, h2, h3, h4, h5, h6 {
+// Default line-height for text content
+body {
     line-height: 1.25;
+}
+
+// Styles for preformatted italics/bold in curator descriptions
+i {
+    font-style: italic;
+}
+
+b {
+    font-weight: bold;
 }
