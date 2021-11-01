@@ -11,6 +11,7 @@
   padding: 15px 10px;
   border-radius: 3px;
   background-color: var(--color-secondary);
+  font-size: 1.25rem;
 }
 
 .bio-card-thumbnail {
@@ -18,12 +19,6 @@
   height: 70px;
   border: 1px solid #979694;
   filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.5));
-}
-
-.bio-card-info > * {
-  font-size: 20px;
-  line-height: 30px;
-  margin: 0;
 }
 
 .bio-card-title {
@@ -39,7 +34,8 @@
   bottom: 2vw;
   max-height: 20vw;
   max-width: 70ch;
-
+  font-size: 1.25rem;
+  line-height: 1.5;
   background-color: rgba(255, 255, 255, 0.85);
   box-shadow: 0px 4px 5px rgba(0,0,0,0.25);
   color: black;

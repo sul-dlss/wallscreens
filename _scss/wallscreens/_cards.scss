@@ -28,6 +28,19 @@
   text-align: center;
 }
 
+.experience-title {
+  font-size: 2rem;
+}
+
+.experience-subtitle {
+  font-size: 1.75rem;
+}
+
+.experience-summary {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
 /* paragraph-style subtitle for oral histories */
 p.experience-subtitle {
   margin: 0 auto 10px;
@@ -37,6 +50,7 @@ p.experience-subtitle {
 }
 
 .experience-attribution {
+  font-size: 1.25rem;
   padding-bottom: 1em;
   border-bottom: 1px solid #ddd;
 }
