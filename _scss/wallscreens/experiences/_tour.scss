@@ -2,16 +2,48 @@
 // Styles for guided tour experiences
 // -----------------------------------------------------------------------------
 
-.wallscreen .guided-tour {
+.wallscreen.guided-tour {
+  .experience-subtitle {
+    margin-top: 0.2em;
+  }
+
+  .experience-attribution {
+    margin-top: 0.5em;
+  }
+
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+  }
+
+  // half-width horizontal rule/border that appears after summary when on any
+  // slide except the first
+  &[data-guided-tour-index-value] {
+    .experience-summary::after {
+      display: block;
+      margin: 2em auto 0;
+      width: 50%;
+      content: "";
+      border-bottom: 1px solid #ddd;    
+    }
+  }
+  &[data-guided-tour-index-value="0"],
+  &[data-guided-tour-index-value="1"] {
+    .experience-summary::after {
+      display: none;
+    }
+  }
+
   .bio-card-area {
-    padding-top: 1em;
-    border-top: 1px solid #ddd;
+    margin-top: 2em;
   }
   
   .bio-card {
     display: flex;
     gap: 25px;
-    padding: 15px 10px;
+    padding: .75em .6em;
     border-radius: 3px;
     background-color: var(--color-secondary);
     font-size: 1.25rem;
@@ -26,6 +58,7 @@
   
   .bio-card-title {
     font-weight: normal;
+    line-height: 1.5;
   }
   
   .bio-card-description {
@@ -42,6 +75,7 @@
     background-color: rgba(255, 255, 255, 0.85);
     box-shadow: 0px 4px 5px rgba(0,0,0,0.25);
     color: black;
-    padding: 1.5rem;
+    padding: 1em;
+    overflow: hidden;
   }
 }

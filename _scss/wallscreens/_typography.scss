@@ -2,6 +2,11 @@
 // Styles for text elements
 // -----------------------------------------------------------------------------
 
+// Looser spacing for paragraphs
+p {
+    line-height: 1.5;
+}
+
 // Restore bold/italic formatting from curators
 i, em {
     font-style: italic;
