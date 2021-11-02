@@ -1,42 +1,44 @@
-.card-area {
-  h2 {
-    color: var(--color-primary-dark);
-    font-weight: 600;
-    text-align: center;
-    padding-bottom: 1em;
-    border-bottom: 1px solid #ddd;
+// -----------------------------------------------------------------------------
+// Informational panels/cards on the right side of wallscreen experiences
+// -----------------------------------------------------------------------------
 
-    &.border-none {
-      padding-bottom: 0em;
-      margin-bottom: 0.5em;
-    }
-
-    & + .experience-summary {
-      border-top: none;
-    }
-  }
-
-  h3 {
-    color: $su-color-archway-dark;
-    font-weight: 600;
-    margin-bottom: 0;
-    margin-top: 0;
-  }
-}
-
-.experience-subtitle, .experience-attribution {
+/* Card */
+.experience-title, 
+.experience-subtitle,
+.experience-attribution {
   text-align: center;
 }
 
-/* paragraph-style subtitle for oral histories */
-p.experience-subtitle {
-  margin: 0 auto 10px;
-  line-height: 25px;
-  max-width: 85%;
-  text-align: left;
+.experience-title {
+  font-size: 2rem;
+  color: var(--color-primary-dark);
+  font-weight: 600;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #ddd;
+
+  &.border-none {
+    padding-bottom: 0em;
+    margin-bottom: 0.5em;
+  }
+
+  & + .experience-summary {
+    border-top: none;
+  }
+}
+
+.experience-subtitle {
+  font-size: 1.75rem;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.experience-summary {
+  font-size: 1.25rem;
+  line-height: 1.5;
 }
 
 .experience-attribution {
+  font-size: 1.25rem;
   padding-bottom: 1em;
   border-bottom: 1px solid #ddd;
 }
@@ -44,19 +46,6 @@ p.experience-subtitle {
 .separator {
   margin-left: 0.7rem;
   margin-right: 0.7rem;
-}
-
-.item-caption {
-  font-style: italic;
-  margin-top: 0.5rem;
-}
-
-.item-url {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: var(--color-primary);
-  font-weight: 600;
 }
 
 /* Start, previous, and next buttons */
@@ -67,9 +56,13 @@ p.experience-subtitle {
 }
 
 /* Last Card */
-
 .last-card {
+  
+  // "dig deeper" and "explore other..." text
   h3 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 1.5;
     margin-top: 30px;
     text-transform: uppercase;
   }
@@ -83,11 +76,13 @@ p.experience-subtitle {
   padding-top: 25px;
   display: flex;
   gap: 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
 
   .item-url {
     align-items: flex-start;
     gap: 1rem;
-    width: 18ch;
+    width: 20ch;
     flex-shrink: 0;
   }
 }

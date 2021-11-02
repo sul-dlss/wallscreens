@@ -1,7 +1,5 @@
 body {
-  background-color: #999;
-  font-size: clamp(1rem, 1vw, 32px);
-  line-height: 1.6em;
+  background-color: #000;
   height: 100vh;
   margin: 0;
   padding: 8px;
@@ -73,16 +71,15 @@ pre {
 }
 
 .header-logo {
-  min-height: 35px;
-  height: 3vw;
+  height: 2.5rem;
   position: absolute;
-  left: 50px;
+  left: 3rem;
 }
 
 .title-area h1 {
   color: #fff;
-  font-size: 3vw;
-  font-weight: 400;
+  font-size: 4rem;
+  line-height: 1.25;
 }
 
 .content-area {
