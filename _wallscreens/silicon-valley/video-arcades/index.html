@@ -76,14 +76,6 @@ controller: slideshow
           <a href="{{ item.url }}" data-qr class="item-url">{{ item.type }}</a><span>{{ item.text }}
         </div>
       {% endfor %}
-
-      <template>
-        <div class="attract-mode-grid">
-          {% for item in experience.items limit: 9 %}
-            <div class="attract-image" style="background-image: url({% file_or_link {{item.local_image}} {{item.image}} %})"></div>
-          {% endfor %}
-        </div>
-      </template>
     </div>
 
     <div class="card-footer">
@@ -97,6 +89,14 @@ controller: slideshow
         {% endfor %}
       </nav>
     </div>
+
+    <template>
+      <div class="attract-mode-grid">
+        {% for item in experience.items limit: 9 %}
+          <div class="attract-image" style="background-image: url({% file_or_link {{item.local_image}} {{item.image}} %})"></div>
+        {% endfor %}
+      </div>
+    </template>
   </div>
 </aside>
 
