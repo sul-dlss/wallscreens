@@ -60,17 +60,13 @@
 /* Last Card */
 .last-card {
   
-  // "dig deeper" and "explore other..." text
+  // "dig deeper" text
   h3 {
     font-weight: 600;
     font-size: 1.5rem;
     line-height: 1.5;
-    margin-top: 30px;
+    margin-top: 1.75em;
     text-transform: uppercase;
-  }
-
-  .experience-title {
-    border: none;
   }
 
   .experience-subtitle {
@@ -78,8 +74,8 @@
   }
 }
 
-.dig-deeper-card {
-  padding-top: 25px;
+.dig-deeper-link {
+  margin-top: 1.5em;
   display: flex;
   gap: 1rem;
   font-size: 1.25rem;
@@ -93,10 +89,13 @@
   }
 }
 
+// "explore other..." text
 .card-footer h3 {
-  margin-bottom: 30px;
+  margin-bottom: 1.5em;
   overflow: hidden;
   text-align: center;
+  font-size: 1.25rem;
+  margin-top: 0;
 
   &:before {
     right: 0.5em;
