@@ -17,6 +17,13 @@ html {
     }
 }
 
+// Use more intuitive box-sizing for all elements
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 // Default line-height for text content
 body {
     line-height: 1.25;
