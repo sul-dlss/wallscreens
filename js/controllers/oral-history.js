@@ -140,7 +140,7 @@ export default class extends Controller {
     this.resetAutoplayTimer();
 
     // check if we're on the initial or final step.
-    // in either case show the attractor grid container
+    // in either case show the atrract grid container
     // and hide the video container. otherwise,
     // ensure the video container is visible
     if (this.indexValue == 0 || this.ended ) {
