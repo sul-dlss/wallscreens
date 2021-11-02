@@ -24,6 +24,7 @@
 .experience-summary {
   font-size: 1.25rem;
   line-height: 1.5;
+  margin-top: 1.5em;
 }
 
 .experience-attribution {
@@ -35,6 +36,18 @@
 .separator {
   margin-left: 0.7rem;
   margin-right: 0.7rem;
+}
+
+.item-url {
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--color-primary);
+  font-weight: 600;
+  gap: 1rem;
+  line-height: 1.5;
+  margin-top: 1.25em;
 }
 
 /* Start, previous, and next buttons */
@@ -74,9 +87,9 @@
 
   .item-url {
     align-items: flex-start;
-    gap: 1rem;
     width: 20ch;
     flex-shrink: 0;
+    margin: 0;
   }
 }
 
