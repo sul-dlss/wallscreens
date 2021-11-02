@@ -1,0 +1,11 @@
+// -----------------------------------------------------------------------------
+// Styles for text elements
+// -----------------------------------------------------------------------------
+
+// Restore bold/italic formatting from curators
+i, em {
+    font-style: italic;
+}
+b, strong {
+    font-weight: bold;
+}

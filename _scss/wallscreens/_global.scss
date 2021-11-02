@@ -1,32 +1,48 @@
 // -----------------------------------------------------------------------------
-// Global styles & overrides for basic HTML elements
+// Global styles & overrides for document, root, body, etc.
 // -----------------------------------------------------------------------------
 
-// Globally apply font-smoothing to improve rendering of text
-html {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
+// Document
+*,
+*::before,
+*::after {
+
+    // Use more intuitive box-sizing for all elements
+    box-sizing: border-box;
 }
 
-// Scale UI elements up 2x when displayed on physical wallscreen
-html {
+// Always hide elements with the HTML5 hidden attribute
+[hidden] {
+    display: none !important;
+}
+
+// Root
+:root {
     font-size: 1rem;
 
+    // Globally apply font-smoothing to improve rendering of text
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+
+    // Scale UI elements up 2x when displayed on physical wallscreen
     @include wallscreen {
         font-size: 2rem;
     }
+
+    // Enable smooth scrolling if user prefs permit it
+    @media (prefers-reduced-motion: no-preference) {
+        scroll-behavior: smooth;
+    }
 }
 
-// Default line-height for text content
+// Body
 body {
+    // Default line-height for text content
     line-height: 1.25;
-}
 
-// Styles for preformatted italics/bold in curator descriptions
-i {
-    font-style: italic;
-}
+    // Prevent adjustments of font size after orientation changes in iOS
+    -webkit-text-size-adjust: 100%;
 
-b {
-    font-weight: bold;
+    // Change the default tap highlight to be completely transparent in iOS
+    -webkit-tap-highlight-color: rgba(black, 0);
 }
