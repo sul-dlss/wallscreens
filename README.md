@@ -53,6 +53,12 @@ the content used in the wallscreens and experiences is stored as YAML files in t
 
 the layout of experience pages is defined by the HTML templates in the `_wallscreens/` directory. these templates have access to the "global" data in the `_data/` folder via `site.wallscreens`.
 
+### thumbnails
+thumbnails are displayed in the card/slide area of guided tour and oral history experiences. these images should be included in the code repository for the project and meet the following naming conventions and specifications:
+
+- thumbnail location: `images/wallscreens/{WALLSCREEN NAME}/{EXPERIENCE_NAME}/{SLIDE_KEY OR CLIP_KEY}.png`
+- square aspect ratio, 200x200
+
 ### local media
 media referenced in wallscreens can be checked-in to the git repository if rights statements permit it. otherwise, files should be downloaded and stored in the `local-media/` directory so that they can be referenced during the jekyll build process.
 
