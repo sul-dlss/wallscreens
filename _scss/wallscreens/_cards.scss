@@ -13,17 +13,6 @@
   font-size: 2rem;
   color: var(--color-primary-dark);
   font-weight: 600;
-  padding-bottom: 1em;
-  border-bottom: 1px solid #ddd;
-
-  &.border-none {
-    padding-bottom: 0em;
-    margin-bottom: 0.5em;
-  }
-
-  & + .experience-summary {
-    border-top: none;
-  }
 }
 
 .experience-subtitle {
@@ -65,6 +54,10 @@
     line-height: 1.5;
     margin-top: 30px;
     text-transform: uppercase;
+  }
+
+  .experience-title {
+    border: none;
   }
 
   .experience-subtitle {

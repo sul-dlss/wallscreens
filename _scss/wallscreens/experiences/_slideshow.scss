@@ -2,44 +2,51 @@
 // Styles for slideshow experiences
 // -----------------------------------------------------------------------------
 
-.item-title {
-  font-size: 1.5rem;
-  line-height: 1.5;
-  color: $su-color-archway-dark;
-  font-weight: 600;
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-.item-attribution,
-.item-collection,
-.item-note,
-.item-url,
-.item-caption {
-  font-size: 1.25rem;
-}
-
-.item-collection {
-  &::before {
-    content: "From ";
-    font-style: italic;
+.wallscreen.slideshow {
+  .experience-title {
+    padding-bottom: 1em;
+    border-bottom: 1px solid #ddd;
   }
-}
-
-.item-caption {
-  font-style: italic;
-  margin-top: 0.5rem;
-}
-
-.item-note,
-.item-url {
-  line-height: 1.5;
-}
-
-.item-url {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: var(--color-primary);
-  font-weight: 600;
+  
+  .item-title {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: $su-color-archway-dark;
+    font-weight: 600;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  
+  .item-attribution,
+  .item-collection,
+  .item-note,
+  .item-url,
+  .item-caption {
+    font-size: 1.25rem;
+  }
+  
+  .item-collection {
+    &::before {
+      content: "From ";
+      font-style: italic;
+    }
+  }
+  
+  .item-caption {
+    font-style: italic;
+    margin-top: 0.5rem;
+  }
+  
+  .item-note,
+  .item-url {
+    line-height: 1.5;
+  }
+  
+  .item-url {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--color-primary);
+    font-weight: 600;
+  }
 }
