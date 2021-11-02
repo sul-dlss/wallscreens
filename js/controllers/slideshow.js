@@ -2,7 +2,7 @@ import { Controller } from "/js/stimulus.js"
 
 export default class extends Controller {
   static values = { index: { type: Number, default: 0 }, next: { type: String, default: '' } }
-  static targets = ["slides", "slideArea", "slideContainer", "attractGridContainer" ]
+  static targets = ["slides", "slideArea", "slideContainer" ]
   static autoplayTimeout = 5 * 60 * 1000; // 5 minutes
   static autoplayIntervalTime = 1 * 60 * 1000; // 1 minute per slide in autoplay mode
 
@@ -66,16 +66,6 @@ export default class extends Controller {
     return this.indexValue == this.slidesTargets.length - 1;
   }
 
-  showSlideArea() {
-    this.slideAreaTarget.classList.remove('d-none');
-    this.attractGridContainerTarget.classList.add('d-none');
-  }
-
-  showAttractGridContainer() {
-    this.attractGridContainerTarget.classList.remove('d-none');
-    this.slideAreaTarget.classList.add('d-none');
-  }
-
   // @private
   // get the currently displayed item
   getItem() {
@@ -88,19 +78,10 @@ export default class extends Controller {
     if (item.id) history.replaceState({}, '', '#' + item.id);
 
     this.slidesTargets.forEach(x => x.classList.add('d-none'));
+    this.slideAreaTarget.innerHTML = "";
+    if (item.querySelector('template')) this.slideAreaTarget.appendChild(item.querySelector('template').content.cloneNode(true));
+    if (item.dataset.imageUrl) this.slideAreaTarget.style['background-image'] = "url(" + item.dataset.imageUrl + ")";
     item.classList.remove('d-none');
-
-    // check if we're on the initial or final step.
-    // in either case show the attract grid container
-    // and hide the slide container. otherwise,
-    // ensure the slide container is visible
-    if (this.indexValue == 0 || this.ended ) {
-      this.slideAreaTarget.style = '';
-      this.showAttractGridContainer();
-    } else {
-      this.slideAreaTarget.style['background-image'] = "url(" + item.dataset.imageUrl + ")";
-      this.showSlideArea();
-    }
 
     this.slideContainerTargets.forEach(container => {
       if (container.contains(item)) {

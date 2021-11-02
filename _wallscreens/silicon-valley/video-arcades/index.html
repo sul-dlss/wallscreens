@@ -13,12 +13,7 @@ controller: slideshow
 </header>
 
 <main class="content-area">
-  <div class="slide-area d-none" data-slideshow-target="slideArea"></div>
-  <div class="attract-mode-grid" data-slideshow-target="attractGridContainer">
-    {% for item in experience.items limit: 9 %}
-      <div class="attract-image" style="background-image: url({% file_or_link {{item.local_image}} {{item.image}} %})"></div>
-    {% endfor %}
-  </div>
+  <div class="slide-area" data-slideshow-target="slideArea"></div>
 </main>
 
 <aside class="card-area">
@@ -32,6 +27,14 @@ controller: slideshow
     <nav class="card-nav" data-slideshow-target="nav">
       <button class="button" data-action="slideshow#next"><span>Begin slideshow</span> <i class="fa-solid fas fa-arrow-circle-right"></i></button>
     </nav>
+
+    <template>
+      <div class="attract-mode-grid">
+        {% for item in experience.items limit: 9 %}
+          <div class="attract-image" style="background-image: url({% file_or_link {{item.local_image}} {{item.image}} %})"></div>
+        {% endfor %}
+      </div>
+    </template>
   </div>
 
   <div class="card d-none" data-slideshow-target="slideContainer">
@@ -73,6 +76,14 @@ controller: slideshow
           <a href="{{ item.url }}" data-qr class="item-url">{{ item.type }}</a><span>{{ item.text }}
         </div>
       {% endfor %}
+
+      <template>
+        <div class="attract-mode-grid">
+          {% for item in experience.items limit: 9 %}
+            <div class="attract-image" style="background-image: url({% file_or_link {{item.local_image}} {{item.image}} %})"></div>
+          {% endfor %}
+        </div>
+      </template>
     </div>
 
     <div class="card-footer">
