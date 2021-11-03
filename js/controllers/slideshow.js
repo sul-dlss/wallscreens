@@ -80,7 +80,13 @@ export default class extends Controller {
     this.slidesTargets.forEach(x => x.classList.add('d-none'));
     this.slideAreaTarget.innerHTML = "";
     if (item.querySelector('template')) this.slideAreaTarget.appendChild(item.querySelector('template').content.cloneNode(true));
-    if (item.dataset.imageUrl) this.slideAreaTarget.style['background-image'] = "url(" + item.dataset.imageUrl + ")";
+
+    if (item.dataset.imageUrl) {
+      this.slideAreaTarget.style['background-image'] = "url(" + item.dataset.imageUrl + ")";
+    } else {
+      this.slideAreaTarget.style['background-image'] = null;
+    }
+
     item.classList.remove('d-none');
 
     this.slideContainerTargets.forEach(container => {
