@@ -1,0 +1,20 @@
+key: perspectives
+title: Perspectives from the Valley
+subtitle: Winter/Spring 2022
+location: Hohbach Hall
+experiences:
+  - key: labor
+nav:
+  defaults:
+    slideshow: labor
+    # next: richard-weiland
+nav:
+  defaults:
+    slideshow: labor
+# more_info:
+#   title:
+#   content:
+#   links:
+#     - title:
+#       text:
+#       url:
