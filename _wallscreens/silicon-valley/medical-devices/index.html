@@ -40,7 +40,7 @@ controller: guided-tour
 <aside class="card-area">
   <div class="card" data-guided-tour-target="slides">
     <div class="card-content experience-index">
-      <h2 class="experience-title border-none">{{ experience.title}}</h2>
+      <h2 class="experience-title">{{ experience.title}}</h2>
       <h3 class="experience-subtitle">{{ experience.subtitle }}</h3>
       <div class="experience-attribution"><span class="experience-date">{{ experience.date}}</span><span class="separator">•</span><span class="experience-creator">{{ experience.creator }}</span></div>
 
@@ -54,7 +54,7 @@ controller: guided-tour
 
   <div class="card d-none" data-guided-tour-target="slideContainer">
     <div class="card-content">
-      <h2 class="experience-title border-none">{{ experience.title }}</h2>
+      <h2 class="experience-title">{{ experience.title }}</h2>
       <h3 class="experience-subtitle">{{ experience.subtitle }}</h3>
       <div class="experience-attribution"><span class="experience-date">{{ experience.date }}</span><span class="separator">•</span><span class="experience-creator">{{ experience.creator }}</span></div>
       <p class="experience-summary">{{ experience.short_summary }}</p>
@@ -87,14 +87,14 @@ controller: guided-tour
 
   <div id="last" class="card last-card d-none" data-guided-tour-target="slides">
     <div class="card-content">
-      <h2 class="experience-title border-none">{{ experience.title}}</h2>
+      <h2 class="experience-title">{{ experience.title}}</h2>
       <h3 class="experience-subtitle">{{ experience.subtitle }}</h3>
       <div class="experience-attribution"><span class="experience-date">{{ experience.date}}</span><span class="separator">•</span><span class="experience-creator">{{ experience.creator }}</span></div>
 
       <h3>Dig deeper</h3>
 
       {% for item in experience.more_info %}
-        <div class="dig-deeper-card">
+        <div class="dig-deeper-link">
           <a href="{{ item.url }}" data-qr class="item-url">{{ item.type }}</a><span>{{ item.text }}
         </div>
       {% endfor %}
