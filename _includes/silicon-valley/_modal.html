@@ -4,14 +4,16 @@
     <div class="content">
       {{ wallscreen.more_info.content }}
     </div>
-    <hr/>
     <h4>For more information</h4>
     <ul class="links">
     {% for link in wallscreen.more_info.links %}
       <li>
         <span class="link-title">{{ link.title }}</span>
+        {% if link.email %}<span class="link-email">{{ link.email }}</span>{% endif %}
         <span class="link-text">{{ link.text }}</span>
-        <a class="link-url" href="{{ link.url }}" data-qr>{{ link.url }}</a>
+        <a class="link-url" href="{{ link.url }}" data-qr>
+          <span>{{ link.url }}</span>
+        </a>
       </li>
     {% endfor %}
     </ul>
