@@ -1,0 +1,26 @@
+---
+index: true
+layout: home
+title: Wallscreen design
+description: "Wallscreen #11"
+wallscreen: perspectives
+---
+<header>
+  <h1>Wallscreen design</h1>
+  <h2>Wallscreen #11</h2>
+</header>
+
+<main>
+  {% assign wallscreens_by_category = site.wallscreens | where: "wallscreen", page.wallscreen | where_exp: "x", "x.url != page.url" | group_by: "category" %}
+  {% for wallscreens_category in wallscreens_by_category %}
+    {% assign meta = wallscreens_category.items | where: "meta", true | first %}
+    {{ meta.content }}
+    {% assign wallscreens = wallscreens_category.items | where: "meta", false %}
+    <dl>
+      {% for wallscreen in wallscreens %}
+        <dt><a href="{{wallscreen.url}}">{{ wallscreen.title }}</a></dt>
+        <dd>{{ wallscreen.description }}</dd>
+      {% endfor %}
+    </dl>
+  {% endfor %}
+</main>

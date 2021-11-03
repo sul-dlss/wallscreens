@@ -1,0 +1,107 @@
+---
+title: Labor
+description: ""
+wallscreen: perspectives
+experience: labor
+controller: slideshow
+---
+{% assign wallscreen = site.data.wallscreens[page.wallscreen] %}
+{% assign experience = site.data.experiences[page.experience] %}
+<header class="title-area">
+  <img class="header-logo" src="{% link images/SUL-logo-whitetext.svg %}" />
+  <h1>{{ wallscreen.title }}</h1>
+</header>
+
+<main class="content-area">
+  <div class="slide-area" data-slideshow-target="slideArea"></div>
+</main>
+
+<aside class="card-area">
+  <div class="card" data-slideshow-target="slides">
+    <div class="card-content experience-index">
+      <h2 class="experience-title">{{ experience.title }}</h2>
+
+      <p class="experience-summary">{{ experience.summary }}</p>
+    </div>
+
+    <nav class="card-nav" data-slideshow-target="nav">
+      <button class="button" data-action="slideshow#next"><span>Begin slideshow</span> <i class="fa-solid fas fa-arrow-circle-right"></i></button>
+    </nav>
+
+    <template>
+      <div class="attract-mode-grid">
+        {% for item in experience.items limit: 9 %}
+          <div class="attract-image" style="background-image: url({% file_or_link {{item.local_image}} {{item.image}} %})"></div>
+        {% endfor %}
+      </div>
+    </template>
+  </div>
+
+  <div class="card d-none" data-slideshow-target="slideContainer">
+    <div class="card-content">
+      <h2 class="experience-title">{{ experience.title}}</h2>
+
+      {% for item in experience.items %}
+        <link rel="preload" href="{% file_or_link {{item.local_image}} {{item.image}} %}" as="image">
+        <div id="{{ item.title | slugify }}" data-image-url="{% file_or_link {{item.local_image}} {{item.image}} %}" data-slideshow-target="slides">
+
+          <h3 class="item-title">{{ item.title }}</h3>
+          <p class="item-caption">{{ item.caption }}</p>
+          <div class="item-attribution"><span class="item-date">{{ item.date}}</span><span class="separator">•</span><span class="item-creator">{{ item.creator}}</span></div>
+          <div class="item-collection">{{ item.collection }}</div>
+
+          <p class="item-note">{{ item.note }}</p>
+
+          {% if item.url %}
+          <a href="{{ item.url }}" data-qr class="item-url">View catalog record</a>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+
+    <nav class="card-nav" data-slideshow-target="nav">
+      <button class="button" data-action="slideshow#previous"><i class="fas fa-arrow-alt-circle-left"></i> <span>Previous</span></button>
+      <button class="button" data-action="slideshow#next"><span>Next</span> <i class="fas fa-arrow-alt-circle-right"></i></button>
+    </nav>
+  </div>
+
+  <div id="last" class="card last-card d-none" data-slideshow-target="slides">
+    <div class="card-content">
+      <h2 class="experience-title">{{ experience.title}}</h2>
+
+      <h3>Dig deeper</h3>
+
+      {% for item in experience.more_info %}
+        <div class="dig-deeper-link">
+          <a href="{{ item.url }}" data-qr class="item-url">{{ item.type }}</a><span>{{ item.text }}
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="card-footer">
+      <h3>Explore other slideshows</h3>
+      <nav class="card-nav">
+        {% for wallscreen_experience in wallscreen.experiences %}
+          {% assign other_experience = site.data.experiences[wallscreen_experience.key] %}
+          {% if other_experience.type == experience.type and other_experience.key != page.experience %}
+            <a href="{% link _wallscreens/{{ page.wallscreen }}/{{ other_experience.key }}/index.html %}" class="button">{{ other_experience.button_label}}</a>
+          {% endif %}
+        {% endfor %}
+      </nav>
+    </div>
+
+    <template>
+      <div class="attract-mode-grid">
+        {% for item in experience.items limit: 9 %}
+          <div class="attract-image" style="background-image: url({% file_or_link {{item.local_image}} {{item.image}} %})"></div>
+        {% endfor %}
+      </div>
+    </template>
+  </div>
+</aside>
+
+<footer class="interaction-area">
+  {% include perspectives/_interaction_area.html %}
+</footer>
+
+{% include perspectives/_modal.html %}
