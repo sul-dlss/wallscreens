@@ -5,6 +5,8 @@ location: Hohbach Hall
 experiences:
   - key: labor
     next: richard-weiland
+  - key: richard-weiland
+    next: labor
   - key: ai-yamamoto-album
 nav:
   defaults:
