@@ -1,0 +1,60 @@
+key: ai-yamamoto-album
+type: tour
+button_label: Ai Yamamoto's Album
+title: Ai Yamamoto’s album, 1902-1925
+subtitle:
+date: 1902-1925
+creator: Ai Yamamoto
+summary:
+short_summary:
+
+more_info:
+  - type: Online catalog
+    text: Ai Yamamoto’s Album
+    url: https://searchworks.stanford.edu/view/vg318sh2718
+  - type: Online catalog
+    text: Takeo Shikamura surveying, c. 1910
+    url: https://searchworks.stanford.edu/view/ft074yg0371
+  - type: Online catalog
+    text: Archive of Takeo Shikamura and Hatsu Shikamura
+    url: https://searchworks.stanford.edu/view/12317034
+
+# stitched image needs to be available on stacks
+image:
+local_image: local-media/Content/Image-Derivatives/Guided-Tour-1-Screen-11-Ai-Yamamoto/vg318sh2718_full.jpg
+
+viewport:
+  zoom: 1
+
+items:
+  - caption: First overview caption
+  - key: slide-1
+    bio:
+      title:
+      description:
+      url:
+    caption: Ai
+    viewport:
+      zoom: 4.25
+      x: 800
+      y: 1000
+  - key: slide-2
+    bio:
+      title:
+      description:
+      url:
+    caption: Mt. Hamilton - Lick Observatory
+    viewport:
+      zoom: 4.25
+      x: 6000
+      y: 1100
+  - key: slide-3
+    bio:
+      title:
+      description:
+      url:
+    caption: "Farmettes"
+    viewport:
+      zoom: 4.25
+      x: 6000
+      y: 2300
