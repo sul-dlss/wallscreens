@@ -24,7 +24,7 @@ items:
     note: Apple and Adobe are both among the Valley’s most visible success stories in the area of desktop computing. The histories of these two companies were closely linked during the 1980s, beginning with Steve Jobs attempt to acquire Adobe in the early 1980s, which resulted in his acquisition of a significant portion of the stock issued by the company. After Jobs left Apple, the launch of Adobe Illustrator for the Apple Macintosh in early 1987, followed in 1990 by the release of Adobe Photoshop, also for the Macintosh, proved beneficial for both companies.
     link:
     image: https://stacks.stanford.edu/image/iiif/kq505ns0185%2F8478_03_PM/full/max/0/default.jpg
-    local_image: local-media/Content/Image-Derivatives/Slideshow-2-Apple-Adobe/bf618my8546_82354_11_SM.jpg
+    local_image: local-media/Content/Image-Derivatives/Slideshow-2-Apple-Adobe/kq505ns0185_8478_03_SM.jpg
   - key: warnock-and-geschke
     url: https://purl.stanford.edu/hf643vn5802
     title: Warnock and Geschke
@@ -35,7 +35,7 @@ items:
     note: John Warnock and Chuck Geschke co-founded Adobe in 1982 after leaving Xerox PARC to develop PostScript, a page description language that could be applied to desktop printing and publication. Adobe, which like other Silicon Valley started in a garage (Warnock’s), derives its name from the creek behind Warnock’s home in Los Altos, California
     link:
     image: https://stacks.stanford.edu/image/iiif/hf643vn5802%2F11577_29_PM/full/max/0/default.jpg
-    local_image: local-media/Content/Image-Derivatives/Slideshow-2-Apple-Adobe/dx152sc4352_8553_04_SM.jpg
+    local_image: local-media/Content/Image-Derivatives/Slideshow-2-Apple-Adobe/hf643vn5802_11577_29_SM.jpg
   - key: desktop-publishing
     url: https://purl.stanford.edu/sv835qx0345
     title: Desktop Publishing
@@ -46,7 +46,7 @@ items:
     note: PostScript enabled computers to print a file exactly as it appeared on screen on a piece of paper, a feat that revolutionized desktop publishing. It featured specifications and algorithms for producing fonts that corresponded accurately to letter-form type in many languages and character sets.
     link:
     image: https://stacks.stanford.edu/image/iiif/sv835qx0345%2F9047_14A_PM/full/max/0/default.jpg
-    local_image: local-media/Content/Image-Derivatives/Slideshow-2-Apple-Adobe/dx152sc4352_8553_04_SM.jpg
+    local_image: local-media/Content/Image-Derivatives/Slideshow-2-Apple-Adobe/sv835qx0345_9047_14A_SM.jpg
   - key: a-business-partnership
     url: https://purl.stanford.edu/bw777mm8533
     title: A Business Parnership
@@ -57,7 +57,7 @@ items:
     note: Photoshop was released exclusively by Adobe for Macintosh machines, so that the business relationship between the two companies was especially close through the early 1990s.
     link:
     image: https://stacks.stanford.edu/image/iiif/bw777mm8533%2F04159_18A_PM/full/max/0/default.jpg
-    local_image: local-media/Content/Image-Derivatives/Slideshow-2-Apple-Adobe/dx152sc4352_8553_04_SM.jpg
+    local_image: local-media/Content/Image-Derivatives/Slideshow-2-Apple-Adobe/bw777mm8533_04159_18A_SM.jpg
   - key: adobe-design
     url: https://purl.stanford.edu/dx152sc4352
     title: Adobe Design
@@ -145,7 +145,7 @@ items:
     note: Sculley brought his marketing experience from previous positions at Pepsi to Apple. One of the priorities of Apple’s advertising under Sculley was to market lower-cost machines to families, with the goal of building Apple’s consumer base among educators, artists and other professionals more interested in higher-end personal computers.
     link:
     image: https://stacks.stanford.edu/image/iiif/pr017df3980%2F8855_9A_PM/full/max/0/default.jpg
-    local_image: local-media/Content/Image-Derivatives/Slideshow-2-Apple-Adobe/pr017df3980_8855_9A_SM.jpg
+    local_image: local-media/Content/Image-Derivatives/Slideshow-2-Apple-Ado0be/pr017df3980_8855_9A_SM.jpg
   - key: lauching-the-newton
     url: https://purl.stanford.edu/gc920nn4783
     title: Launching the Newton
