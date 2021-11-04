@@ -4,14 +4,12 @@ subtitle: Winter/Spring 2022
 location: Hohbach Hall
 experiences:
   - key: labor
-  # next: richard-weiland
+    next: richard-weiland
   - key: ai-yamamoto-album
 nav:
   defaults:
     slideshow: labor
     tour: ai-yamamoto-album
-
-
 # more_info:
 #   title:
 #   content:
