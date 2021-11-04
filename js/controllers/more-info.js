@@ -14,14 +14,14 @@ export default class extends Controller {
   show() {
     this.dispatch("show");
     gtag('event', 'more-info:show');
-    this.modalTarget.classList.remove('d-none');
+    this.modalTarget.hidden = false;
     this.autohideCallback = window.setTimeout(() => this.hide(), this.constructor.timeout);
   }
 
   hide() {
     this.dispatch("hide");
     gtag('event', 'more-info:hide');
-    this.modalTarget.classList.add('d-none');
+    this.modalTarget.hidden = true;
     if (this.autohideCallback) window.clearTimeout(this.autohideCallback);
   }
 }

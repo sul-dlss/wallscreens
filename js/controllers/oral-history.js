@@ -116,13 +116,13 @@ export default class extends Controller {
   }
 
   showVideoContainer() {
-    this.videoContainerTarget.classList.remove('d-none');
-    this.attractGridContainerTarget.classList.add('d-none');
+    this.videoContainerTarget.hidden = false;
+    this.attractGridContainerTarget.hidden = true;
   }
 
   showAttractGridContainer() {
-    this.attractGridContainerTarget.classList.remove('d-none');
-    this.videoContainerTarget.classList.add('d-none');
+    this.attractGridContainerTarget.hidden = false;
+    this.videoContainerTarget.hidden = true;
   }
 
   // get the current chapter / step
@@ -156,7 +156,7 @@ export default class extends Controller {
       if (x.classList.contains('chapter'))  {
         x.classList.remove('current')
       } else {
-        x.classList.add('d-none');
+        x.hidden = true;
       }
     })
 
@@ -164,15 +164,15 @@ export default class extends Controller {
     if (item.classList.contains('chapter')){
       item.classList.add('current')
     } else {
-      item.classList.remove('d-none');
+      item.hidden = false;
     }
 
     // reveal the containers (e.g. themes) in this item's hierarchy
     this.chapterContainerTargets.forEach(container => {
       if (container.contains(item)) {
-        container.classList.remove('d-none');
+        container.hidden = false;
       } else {
-        container.classList.add('d-none');
+        container.hidden = true;
       }
     });
   }

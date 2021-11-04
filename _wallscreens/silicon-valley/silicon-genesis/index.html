@@ -14,7 +14,7 @@ controller: oral-history
 </header>
 
 <main class="content-area">
-  <div class="d-none" data-oral-history-target="videoContainer">
+  <div data-oral-history-target="videoContainer" hidden>
     <video data-oral-history-target="video" muted="true">
       <source src="{% file_or_link {{experience.local_file}} {{experience.file}} %}" type="video/mp4">
     </video>
@@ -46,7 +46,7 @@ controller: oral-history
     </nav>
   </div>
 
-  <div class="card d-none" data-oral-history-target="chapterContainer">
+  <div class="card" data-oral-history-target="chapterContainer" hidden>
     <div class="card-content">
       <h2 class="experience-title">{{ experience.title}}</h2>
       <p class="experience-subtitle">{{ experience.subtitle }} </p>
@@ -59,7 +59,7 @@ controller: oral-history
       </div>
       {% assign themes = experience.items | group_by:"theme" %}
       {% for theme in themes %}
-        <div class="theme d-none" data-oral-history-target="chapterContainer">
+        <div class="theme" data-oral-history-target="chapterContainer" hidden>
           <h3 class="theme-name">{{ theme.name }}</h3>
           <ul class="theme-chapter-list">
             {% for item in theme.items %}
@@ -79,7 +79,7 @@ controller: oral-history
     </nav>
   </div>
 
-  <div id="last" class="card last-card d-none" data-oral-history-target="steps">
+  <div id="last" class="card last-card" data-oral-history-target="steps" hidden>
     <div class="card-content">
       <h2 class="experience-title">{{ experience.title}}</h2>
       <p class="experience-subtitle">{{ experience.subtitle }} </p>
