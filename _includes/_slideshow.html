@@ -20,6 +20,7 @@
   <div class="card" data-slideshow-target="slideContainer" hidden>
     <div class="card-content">
       <h2 class="experience-title">{{ experience.title}}</h2>
+      <h3 class="experience-subtitle">{{ experience.subtitle }}</h3>
 
       {% for item in experience.items %}
         <link rel="preload" href="{% file_or_link {{item.local_image}} {{item.image}} %}" as="image">
