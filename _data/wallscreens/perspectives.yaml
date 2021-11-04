@@ -4,10 +4,9 @@ subtitle: Winter/Spring 2022
 location: Hohbach Hall
 experiences:
   - key: labor
-nav:
-  defaults:
-    slideshow: labor
-    # next: richard-weiland
+    next: richard-weiland
+  - key: richard-weiland
+    next: labor
 nav:
   defaults:
     slideshow: labor
