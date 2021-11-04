@@ -7,7 +7,7 @@
   top: 0;
   left: 0;
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   align-items: center;
@@ -19,11 +19,11 @@
     padding: 2.75rem 8.75rem;
     background-color: #f4f4f4;
     max-width: 90vw;
-    max-height: 95vw;
+    max-height: 95vh;
+    overflow: scroll;
     color: #2E2D29;
     border-radius: 8px;
     box-sizing: border-box;
-    overflow: scroll;
   }
 
   .title {
@@ -38,10 +38,6 @@
     margin-top: 0.9em;
     padding-bottom: 1.5em;
     border-bottom: 1px solid #ABABA9;
-  }
-
-  .content p {
-    display: inline-block;
   }
 
   h4 {

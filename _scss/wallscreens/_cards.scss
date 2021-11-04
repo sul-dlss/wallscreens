@@ -2,7 +2,13 @@
 // Informational panels/cards on the right side of wallscreen experiences
 // -----------------------------------------------------------------------------
 
+/* Card area */
+.card-area {
+  overflow: scroll;
+}
+
 /* Card */
+
 .experience-title, 
 .experience-subtitle,
 .experience-attribution {
