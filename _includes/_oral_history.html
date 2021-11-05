@@ -1,0 +1,78 @@
+{% assign wallscreen = site.data.wallscreens[page.wallscreen] %}
+{% assign experience = site.data.experiences[page.experience] %}
+
+{% include _header.html %}
+
+<main class="content-area">
+  <div data-oral-history-target="videoContainer" hidden>
+    <video data-oral-history-target="video" muted="true">
+      <source src="{% file_or_link {{experience.local_file}} {{experience.file}} %}" type="video/mp4">
+    </video>
+  </div>
+  <div class="attract-mode-grid" data-oral-history-target="attractGridContainer">
+    {% for image in experience.attract_images limit: 9 %}
+      <div class="attract-image" style="background-image: url({% link {{image}} %})"></div>
+    {% endfor %}
+  </div>
+</main>
+
+<aside class="card-area">
+  <div class="card" data-oral-history-target="steps">
+    <div class="card-content experience-index">
+      <h2 class="experience-title">{{ experience.title}}</h2>
+      <p class="experience-subtitle">{{ experience.subtitle }} </p>
+      {% include _experience_attribution.html %}
+      <p class="experience-summary">{{ experience.summary}}</p>
+    </div>
+
+    <nav class="card-nav" data-oral-history-target="nav">
+      <button class="button" data-action="oral-history#start"><span>Begin video</span> <i class="fa-solid fas fa-arrow-circle-right"></i></button>
+    </nav>
+  </div>
+
+  <div class="card" data-oral-history-target="chapterContainer" hidden>
+    <div class="card-content">
+      <h2 class="experience-title">{{ experience.title}}</h2>
+      <p class="experience-subtitle">{{ experience.subtitle }} </p>
+      {% include _experience_attribution.html %}
+      {% assign themes = experience.items | group_by:"theme" %}
+      {% for theme in themes %}
+        <div class="theme" data-oral-history-target="chapterContainer" hidden>
+          <h3 class="theme-name">{{ theme.name }}</h3>
+          <ul class="theme-chapter-list">
+            {% for item in theme.items %}
+              <li id="{{ item.key }}" class="chapter {{ item.class }}" data-timestamp="{{ item.timestamp }}" data-oral-history-target="steps">
+                <img class="chapter-thumbnail" src="{% link images/wallscreens/{{ page.wallscreen }}/{{ page.experience }}/{{ item.key }}.png %}" />
+                <h4 class="chapter-title">{{ item.title }}</h4>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endfor %}
+    </div>
+
+    <nav class="card-nav" data-oral-history-target="nav">
+      <button class="button" data-action="oral-history#previous"><i class="fas fa-arrow-alt-circle-left"></i> <span>Previous</span></button>
+      <button class="button" data-action="oral-history#next"><span>Next</span> <i class="fas fa-arrow-alt-circle-right"></i></button>
+    </nav>
+  </div>
+
+  <div id="last" class="card last-card" data-oral-history-target="steps" hidden>
+    <div class="card-content">
+      <h2 class="experience-title">{{ experience.title}}</h2>
+      <p class="experience-subtitle">{{ experience.subtitle }} </p>
+      {% include _experience_attribution.html %}
+      {% include _dig_deeper.html %}
+    </div>
+    <div class="card-footer">
+      <h3>Explore other oral history collections</h3>
+      {% include _nav_last_card.html %}
+    </div>
+  </div>
+</aside>
+
+<footer class="interaction-area">
+  {% include _interaction_area.html %}
+</footer>
+
+{% include _modal.html %}

@@ -1,0 +1,17 @@
+<div class="experience-attribution">
+  {% if experience.date %}
+    <span class="experience-date">{{ experience.date }}</span>
+  {% endif %}
+  {% if experience.creator and experience.date %}
+    <span class="separator">•</span>
+  {% endif %}
+  {% if experience.creator %}
+    <span class="experience-creator">{{ experience.creator }}</span>
+  {% endif %}
+  {% if experience.extent and (experience.creator or experience.date) %}
+    <span class="separator">•</span>
+  {% endif %}
+  {% if experience.extent %}
+    <span class="experience-extent">{{ experience.extent }}</span>
+  {% endif %}
+</div>

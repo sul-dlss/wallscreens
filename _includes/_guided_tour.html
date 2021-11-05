@@ -1,0 +1,99 @@
+{% assign wallscreen = site.data.wallscreens[page.wallscreen] %}
+{% assign experience = site.data.experiences[page.experience] %}
+
+{% include _header.html %}
+
+<main class="content-area">
+  <div id="openseadragon" style="width: 100%; height: 100%"></div>
+  <script type="text/javascript">
+    image_url = "{% file_or_link {{experience.local_image}} {{experience.image}} %}";
+    if (image_url.endsWith('.json')) {
+      tile_sources = image_url;
+    } else {
+      tile_sources = `{ "type": "image", "url": "${image_url}" }`;
+    }
+
+    window.viewer = OpenSeadragon({
+        id: "openseadragon",
+        showNavigationControl: false,
+        animationTime: 2.5,
+        panHorizontal: false,
+        panVertical: false,
+        minZoomLevel: 1,
+        maxZoomLevel: 1,
+        defaultZoomLevel: 1.08,
+        tileSources: tile_sources
+    });
+  </script>
+  <div class="caption" data-guided-tour-target="caption" hidden></div>
+</main>
+
+<aside class="card-area">
+  <div class="card" data-guided-tour-target="slides">
+    <div class="card-content experience-index">
+      <h2 class="experience-title">{{ experience.title}}</h2>
+      <h3 class="experience-subtitle">{{ experience.subtitle }}</h3>
+      {% include _experience_attribution.html %}
+
+      <p class="experience-summary">{{ experience.summary }}</p>
+    </div>
+
+    <nav class="card-nav" data-guided-tour-target="nav">
+      <button class="button" data-action="guided-tour#next"><span>Begin guided tour</span> <i class="fa-solid fas fa-arrow-circle-right"></i></button>
+    </nav>
+  </div>
+
+  <div class="card" data-guided-tour-target="slideContainer" hidden>
+    <div class="card-content">
+      <h2 class="experience-title">{{ experience.title }}</h2>
+      <h3 class="experience-subtitle">{{ experience.subtitle }}</h3>
+      {% include _experience_attribution.html %}
+
+      <p class="experience-summary">{{ experience.short_summary }}</p>
+
+      <div class="bio-card-area">
+        {% for item in experience.items %}
+          <div {% if item.bio %}id="{{ item.key }}"{% endif %} data-guided-tour-target="slides">
+            {% if item.bio %}
+              <div class="bio-card">
+                <img class="bio-card-thumbnail" src="{% link images/wallscreens/{{ page.wallscreen }}/{{ page.experience }}/{{ item.key }}.png %}">
+                <div class="bio-card-info">
+                  <h4 class="bio-card-title">{{ item.bio.title }}</h4>
+                  <p class="bio-card-description">{{ item.bio.description }}</p>
+                </div>
+              </div>
+            {% endif %}
+            <script type="application/json">
+              {{ item | jsonify }}
+            </script>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <nav class="card-nav" data-guided-tour-target="nav">
+      <button class="button" data-action="guided-tour#previous"><i class="fas fa-arrow-alt-circle-left"></i> <span>Previous</span></button>
+      <button class="button" data-action="guided-tour#next"><span>Next</span> <i class="fas fa-arrow-alt-circle-right"></i></button>
+    </nav>
+  </div>
+
+  <div id="last" class="card last-card" data-guided-tour-target="slides" hidden>
+    <div class="card-content">
+      <h2 class="experience-title">{{ experience.title}}</h2>
+      <h3 class="experience-subtitle">{{ experience.subtitle }}</h3>
+      {% include _experience_attribution.html %}
+      {% include _dig_deeper.html %}
+    </div>
+
+    <div class="card-footer">
+      <h3>Explore other guided tours</h3>
+      {% include _nav_last_card.html %}
+    </div>
+  </div>
+</aside>
+
+<footer class="interaction-area">
+  {% include _interaction_area.html %}
+</footer>
+
+{% include _modal.html %}
