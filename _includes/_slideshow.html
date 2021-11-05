@@ -13,11 +13,7 @@
       <h2 class="experience-title">{{ experience.title }}</h2>
       <p class="experience-summary">{{ experience.summary }}</p>
     </div>
-
-    <nav class="card-nav" data-slideshow-target="nav">
-      <button class="button" data-action="slideshow#next"><span>Begin slideshow</span> <i class="fa-solid fas fa-arrow-circle-right"></i></button>
-    </nav>
-
+    {% include _nav_first_card.html %}
     {% include _attract_grid.html %}
   </div>
 

@@ -37,10 +37,7 @@
 
       <p class="experience-summary">{{ experience.summary }}</p>
     </div>
-
-    <nav class="card-nav" data-guided-tour-target="nav">
-      <button class="button" data-action="guided-tour#next"><span>Begin guided tour</span> <i class="fa-solid fas fa-arrow-circle-right"></i></button>
-    </nav>
+    {% include _nav_first_card.html %}
   </div>
 
   <div class="card" data-guided-tour-target="slideContainer" hidden>
