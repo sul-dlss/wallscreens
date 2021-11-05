@@ -24,10 +24,7 @@
       {% include _experience_attribution.html %}
       <p class="experience-summary">{{ experience.summary}}</p>
     </div>
-
-    <nav class="card-nav" data-oral-history-target="nav">
-      <button class="button" data-action="oral-history#start"><span>Begin video</span> <i class="fa-solid fas fa-arrow-circle-right"></i></button>
-    </nav>
+    {% include _nav_first_card.html %}
   </div>
 
   <div class="card" data-oral-history-target="chapterContainer" hidden>
