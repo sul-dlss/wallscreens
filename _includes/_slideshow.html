@@ -1,0 +1,76 @@
+{% assign wallscreen = site.data.wallscreens[page.wallscreen] %}
+{% assign experience = site.data.experiences[page.experience] %}
+
+{% include _header.html %}
+
+<main class="content-area">
+  <div class="slide-area" data-slideshow-target="slideArea"></div>
+</main>
+
+<aside class="card-area">
+  <div class="card" data-slideshow-target="slides">
+    <div class="card-content experience-index">
+      <h2 class="experience-title">{{ experience.title }}</h2>
+      <p class="experience-summary">{{ experience.summary }}</p>
+    </div>
+
+    <nav class="card-nav" data-slideshow-target="nav">
+      <button class="button" data-action="slideshow#next"><span>Begin slideshow</span> <i class="fa-solid fas fa-arrow-circle-right"></i></button>
+    </nav>
+
+    {% include _attract_grid.html %}
+  </div>
+
+  <div class="card" data-slideshow-target="slideContainer" hidden>
+    <div class="card-content">
+      <h2 class="experience-title">{{ experience.title}}</h2>
+
+      {% for item in experience.items %}
+        <link rel="preload" href="{% file_or_link {{item.local_image}} {{item.image}} %}" as="image">
+        <div id="{{ item.title | slugify }}" data-image-url="{% file_or_link {{item.local_image}} {{item.image}} %}" data-slideshow-target="slides">
+
+          <h3 class="item-title">{{ item.title }}</h3>
+          <p class="item-caption">{{ item.caption }}</p>
+          <div class="item-attribution">
+            <span class="item-date">{{ item.date }}</span>
+            <span class="separator">•</span>
+            <span class="item-creator">{{ item.creator }}</span>
+          </div>
+          <div class="item-collection">{{ item.collection }}</div>
+
+          <p class="item-note">{{ item.note }}</p>
+
+          {% if item.url %}
+          <a href="{{ item.url }}" data-qr class="item-url">View catalog record</a>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+
+    <nav class="card-nav" data-slideshow-target="nav">
+      <button class="button" data-action="slideshow#previous"><i class="fas fa-arrow-alt-circle-left"></i> <span>Previous</span></button>
+      <button class="button" data-action="slideshow#next"><span>Next</span> <i class="fas fa-arrow-alt-circle-right"></i></button>
+    </nav>
+  </div>
+
+  <div id="last" class="card last-card" data-slideshow-target="slides" hidden>
+    <div class="card-content">
+      <h2 class="experience-title">{{ experience.title}}</h2>
+
+      {% include _dig_deeper.html %}
+    </div>
+
+    <div class="card-footer">
+      <h3>Explore other slideshows</h3>
+      {% include _nav_last_card.html %}
+    </div>
+
+    {% include _attract_grid.html %}
+  </div>
+</aside>
+
+<footer class="interaction-area">
+  {% include _interaction_area.html %}
+</footer>
+
+{% include _modal.html %}
