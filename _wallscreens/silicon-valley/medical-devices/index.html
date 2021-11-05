@@ -34,7 +34,7 @@ controller: guided-tour
         tileSources: tile_sources
     });
 </script>
-  <div class="caption d-none" data-guided-tour-target="caption"></div>
+  <div class="caption" data-guided-tour-target="caption" hidden></div>
 </main>
 
 <aside class="card-area">
@@ -52,7 +52,7 @@ controller: guided-tour
     </nav>
   </div>
 
-  <div class="card d-none" data-guided-tour-target="slideContainer">
+  <div class="card" data-guided-tour-target="slideContainer" hidden>
     <div class="card-content">
       <h2 class="experience-title">{{ experience.title }}</h2>
       <h3 class="experience-subtitle">{{ experience.subtitle }}</h3>
@@ -85,7 +85,7 @@ controller: guided-tour
     </nav>
   </div>
 
-  <div id="last" class="card last-card d-none" data-guided-tour-target="slides">
+  <div id="last" class="card last-card" data-guided-tour-target="slides" hidden>
     <div class="card-content">
       <h2 class="experience-title">{{ experience.title}}</h2>
       <h3 class="experience-subtitle">{{ experience.subtitle }}</h3>

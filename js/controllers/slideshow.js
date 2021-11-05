@@ -77,7 +77,7 @@ export default class extends Controller {
     const item = this.getItem();
     if (item.id) history.replaceState({}, '', '#' + item.id);
 
-    this.slidesTargets.forEach(x => x.classList.add('d-none'));
+    this.slidesTargets.forEach(x => x.hidden = true);
     this.slideAreaTarget.innerHTML = "";
     if (item.querySelector('template')) this.slideAreaTarget.appendChild(item.querySelector('template').content.cloneNode(true));
 
@@ -87,13 +87,13 @@ export default class extends Controller {
       this.slideAreaTarget.style['background-image'] = null;
     }
 
-    item.classList.remove('d-none');
+    item.hidden = false;
 
     this.slideContainerTargets.forEach(container => {
       if (container.contains(item)) {
-        container.classList.remove('d-none');
+        container.hidden = false;
       } else {
-        container.classList.add('d-none');
+        container.hidden = true;
       }
     });
   }

@@ -82,14 +82,14 @@ export default class extends Controller {
     const item = this.getItem();
     if (item.id) history.replaceState({}, '', '#' + item.id);
 
-    this.slidesTargets.forEach(x => x.classList.add('d-none'));
-    item.classList.remove('d-none');
+    this.slidesTargets.forEach(x => x.hidden = true);
+    item.hidden = false;
 
     this.slideContainerTargets.forEach(container => {
       if (container.contains(item)) {
-        container.classList.remove('d-none');
+        container.hidden = false;
       } else {
-        container.classList.add('d-none');
+        container.hidden = true;
       }
     });
 
@@ -104,9 +104,9 @@ export default class extends Controller {
 
     if (data.caption) {
       this.captionTarget.innerHTML = data.caption;
-      this.captionTarget.classList.remove('d-none');
+      this.captionTarget.hidden = false;
     } else {
-      this.captionTarget.classList.add('d-none');
+      this.captionTarget.hidden = true;
     }
   }
 }

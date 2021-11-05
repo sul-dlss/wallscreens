@@ -37,7 +37,7 @@ controller: slideshow
     </template>
   </div>
 
-  <div class="card d-none" data-slideshow-target="slideContainer">
+  <div class="card" data-slideshow-target="slideContainer" hidden>
     <div class="card-content">
       <h2 class="experience-title">{{ experience.title}}</h2>
 
@@ -65,7 +65,7 @@ controller: slideshow
     </nav>
   </div>
 
-  <div id="last" class="card last-card d-none" data-slideshow-target="slides">
+  <div id="last" class="card last-card" data-slideshow-target="slides" hidden>
     <div class="card-content">
       <h2 class="experience-title">{{ experience.title}}</h2>
 
