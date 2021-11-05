@@ -38,16 +38,16 @@ items:
     timestamp: 0
     class: hidden-theme-title
   - key: don-valentine
-    title: From Interview with Don Valentine, April 21, 2004.
+    title: From Interview with Don Valentine, April 21, 2004
     theme: What drew you to Silicon Valley?
     thumbnail: https://via.placeholder.com/100x55
     timestamp: 5
   - key: jerry-sanders
-    title: From Interview with Jerry Sanders, October 18, 2002.
+    title: From Interview with Jerry Sanders, October 18, 2002
     theme: What drew you to Silicon Valley?
     timestamp: 129
   - key: geri-hadley
-    title: From Interview with Geri Hadley, October 22, 2019.
+    title: From Interview with Geri Hadley, October 22, 2019
     theme: What drew you to Silicon Valley?
     timestamp: 194
   - key: title-2
