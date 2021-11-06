@@ -58,4 +58,11 @@
     margin-top: 1.5em;
     line-height: 1.5;
   }
+
+  .last-card .card-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+  }
 }

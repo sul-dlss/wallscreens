@@ -9,7 +9,7 @@
 
 /* Card */
 
-.experience-title, 
+.experience-title,
 .experience-subtitle,
 .experience-attribution {
   text-align: center;
@@ -65,7 +65,7 @@
 
 /* Last Card */
 .last-card {
-  
+
   // "dig deeper" text
   h3 {
     font-weight: 600;
@@ -82,6 +82,7 @@
 
 .dig-deeper-link {
   margin-top: 1.5em;
+  margin-bottom: 3rem;
   display: flex;
   gap: 1rem;
   font-size: 1.25rem;
