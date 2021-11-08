@@ -4,6 +4,9 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
+  {% if jekyll.environment == 'production' %}
   gtag('config', 'G-0VWS29BZ43');
+  {% else %}
+  gtag('config', 'G-0VWS29BZ43', {'debug_mode': true});
+  {% endif %}
 </script>
