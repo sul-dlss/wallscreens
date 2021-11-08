@@ -12,7 +12,9 @@
     <link rel="icon" href="{% link images/favicon.ico %}">
 
     <link rel="stylesheet" href="{% link css/index.scss %}">
-    {% include _analytics.html %}
+    {% if jekyll.environment != "development" %}
+      {% include _analytics.html %}
+    {% endif %}
   </head>
   <body>
     <div id="topnav">

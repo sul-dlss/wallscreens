@@ -20,7 +20,9 @@
     {% if page.extra_css %}
       <link rel="stylesheet" href="{% link css/{{ page.extra_css }}.scss %}">
     {% endif %}
-    {% include _analytics.html %}
+    {% if jekyll.environment != "development" %}
+      {% include _analytics.html %}
+    {% endif %}
   </head>
 
   <body>
