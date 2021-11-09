@@ -14,3 +14,17 @@ i, em {
 b, strong {
     font-weight: bold;
 }
+
+// Horizontal rules
+hr {
+    width: 100%;
+    height: 1px;
+    background-color: $su-color-black-20;
+    border: none;
+    margin: 2rem auto;
+
+    // Half-width version
+    &.small {
+        width: 50%;
+    }
+}
