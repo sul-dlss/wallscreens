@@ -4,12 +4,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  
-  gtag('config', 'G-0VWS29BZ43', {
-    'custom_map': {
-      'dimension1': 'environment'
-    }
-  });
-
-  gtag('set', 'dimension1', '{{ jekyll.environment }}');
+  gtag('set', {'custom_map': {'dimension1': 'environment'}});
+  gtag('config', 'G-0VWS29BZ43', {'environment': '{{ jekyll.environment }}'});
 </script>
