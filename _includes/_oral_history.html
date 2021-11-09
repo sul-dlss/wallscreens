@@ -22,6 +22,8 @@
       <h2 class="experience-title">{{ experience.title}}</h2>
       {% if experience.subtitle %}<h3 class="experience-subtitle">{{ experience.subtitle }}</h3>{% endif %}
       {% include _experience_attribution.html %}
+      <hr/>
+
       <p class="experience-summary">{{ experience.summary}}</p>
     </div>
     {% include _nav_first_card.html %}
@@ -32,6 +34,7 @@
       <h2 class="experience-title">{{ experience.title}}</h2>
       {% if experience.subtitle %}<h3 class="experience-subtitle">{{ experience.subtitle }}</h3>{% endif %}
       {% include _experience_attribution.html %}
+      <hr/>
       {% assign themes = experience.items | group_by:"theme" %}
       {% for theme in themes %}
         <div class="theme" data-oral-history-target="chapterContainer" hidden>
@@ -59,6 +62,7 @@
       <h2 class="experience-title">{{ experience.title}}</h2>
       {% if experience.subtitle %}<h3 class="experience-subtitle">{{ experience.subtitle }}</h3>{% endif %}
       {% include _experience_attribution.html %}
+      <hr/>
       {% include _dig_deeper.html %}
     </div>
     {% include _nav_last_card.html %}
