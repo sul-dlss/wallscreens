@@ -10,8 +10,7 @@
 <aside class="card-area">
   <div class="card" data-slideshow-target="slides">
     <div class="card-content experience-index">
-      <h2 class="experience-title">{{ experience.title }}</h2>
-      {% if experience.subtitle %}<h3 class="experience-subtitle">{{ experience.subtitle }}</h3>{% endif %}
+      {% include _experience_title.html %}
       <hr/>
       <p class="experience-summary">{{ experience.summary }}</p>
     </div>
@@ -21,8 +20,7 @@
 
   <div class="card" data-slideshow-target="slideContainer" hidden>
     <div class="card-content">
-      <h2 class="experience-title">{{ experience.title}}</h2>
-      {% if experience.subtitle %}<h3 class="experience-subtitle">{{ experience.subtitle }}</h3>{% endif %}
+      {% include _experience_title.html %}
       <hr/>
       {% for item in experience.items %}
         <link rel="preload" href="{% file_or_link {{item.local_image}} {{item.image}} %}" as="image">
@@ -47,16 +45,12 @@
       {% endfor %}
     </div>
 
-    <nav class="card-nav" data-slideshow-target="nav">
-      <button class="button" data-action="slideshow#previous"><i class="fas fa-arrow-alt-circle-left"></i> <span>Previous</span></button>
-      <button class="button" data-action="slideshow#next"><span>Next</span> <i class="fas fa-arrow-alt-circle-right"></i></button>
-    </nav>
+    {% include _nav_card.html %}
   </div>
 
   <div id="last" class="card last-card" data-slideshow-target="slides" hidden>
     <div class="card-content">
-      <h2 class="experience-title">{{ experience.title}}</h2>
-      {% if experience.subtitle %}<h3 class="experience-subtitle">{{ experience.subtitle }}</h3>{% endif %}
+      {% include _experience_title.html %}
       <hr/>
       {% include _dig_deeper.html %}
     </div>

@@ -31,8 +31,7 @@
 <aside class="card-area">
   <div class="card" data-guided-tour-target="slides">
     <div class="card-content experience-index">
-      <h2 class="experience-title">{{ experience.title}}</h2>
-      {% if experience.subtitle %}<h3 class="experience-subtitle">{{ experience.subtitle }}</h3>{% endif %}
+      {% include _experience_title.html %}
       {% include _experience_attribution.html %}
       <hr/>
       <p class="experience-summary">{{ experience.summary }}</p>
@@ -42,8 +41,7 @@
 
   <div class="card" data-guided-tour-target="slideContainer" hidden>
     <div class="card-content">
-      <h2 class="experience-title">{{ experience.title }}</h2>
-      {% if experience.subtitle %}<h3 class="experience-subtitle">{{ experience.subtitle }}</h3>{% endif %}
+      {% include _experience_title.html %}
       {% include _experience_attribution.html %}
       <hr/>
       <p class="experience-summary">{{ experience.short_summary }}</p>
@@ -68,16 +66,12 @@
       </div>
     </div>
 
-    <nav class="card-nav" data-guided-tour-target="nav">
-      <button class="button" data-action="guided-tour#previous"><i class="fas fa-arrow-alt-circle-left"></i> <span>Previous</span></button>
-      <button class="button" data-action="guided-tour#next"><span>Next</span> <i class="fas fa-arrow-alt-circle-right"></i></button>
-    </nav>
+    {% include _nav_card.html %}
   </div>
 
   <div id="last" class="card last-card" data-guided-tour-target="slides" hidden>
     <div class="card-content">
-      <h2 class="experience-title">{{ experience.title}}</h2>
-      {% if experience.subtitle %}<h3 class="experience-subtitle">{{ experience.subtitle }}</h3>{% endif %}
+      {% include _experience_title.html %}
       {% include _experience_attribution.html %}
       <hr/>
       {% include _dig_deeper.html %}
