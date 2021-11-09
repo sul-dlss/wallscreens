@@ -1,8 +1,17 @@
-<nav class="card-nav">
-  {% for wallscreen_experience in wallscreen.experiences %}
-    {% assign other_experience = site.data.experiences[wallscreen_experience.key] %}
-    {% if other_experience.type == experience.type and other_experience.key != page.experience %}
-      <a href="{% link _wallscreens/{{ page.wallscreen }}/{{ other_experience.key }}/index.html %}" class="button">{{ other_experience.button_label}}</a>
-    {% endif %}
-  {% endfor %}
-</nav>
+{%- capture other_experience_buttons %}
+  {%- for wallscreen_experience in wallscreen.experiences %}
+    {%- assign other_experience = site.data.experiences[wallscreen_experience.key] -%}
+    {%- if other_experience.type == experience.type and other_experience.key != page.experience %}
+        <a href="{% link _wallscreens/{{ page.wallscreen }}/{{ other_experience.key }}/index.html %}" class="button">{{ other_experience.button_label }}</a>
+    {% endif -%}
+  {% endfor -%}
+{% endcapture -%}
+
+{% unless other_experience_buttons == empty %}
+  <div class="card-footer">
+    <h3>Explore other {{ site.experience_types[experience.type].explore_label }}</h3>
+    <nav class="card-nav">
+      {{ other_experience_buttons }}
+    </nav>
+  </div>
+{% endunless %}
