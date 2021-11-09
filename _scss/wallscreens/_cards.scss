@@ -23,7 +23,6 @@
 
 .experience-subtitle {
   font-size: 1.75rem;
-  line-height: 1.5;
   font-weight: 600;
 }
 
@@ -66,8 +65,7 @@
 /* Last Card */
 .last-card {
 
-  // "dig deeper" text
-  h3 {
+  .dig-deeper {
     font-weight: 600;
     font-size: 1.5rem;
     line-height: 1.5;
