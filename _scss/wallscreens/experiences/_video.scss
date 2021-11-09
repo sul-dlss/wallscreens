@@ -45,10 +45,10 @@
 
   .chapter-thumbnail {
     flex: none;
-    width: 80px;
-    height: 80px;
+    width: 3.75em;
+    height: 3.75em;
     border: 1px solid #979694;
-    filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.5));
   }
 
   .chapter-title {
