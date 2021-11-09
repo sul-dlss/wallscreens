@@ -45,10 +45,13 @@ defaults:
 experience_types:
   tour:
     items_label: "stops"
+    explore_label: "guided tours"
   slideshow:
     items_label: "images"
+    explore_label: "slideshows"
   video:
     items_label: "clips"
+    explore_label: "oral histories"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
