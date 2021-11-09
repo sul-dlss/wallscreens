@@ -3,18 +3,10 @@
 // -----------------------------------------------------------------------------
 
 .wallscreen.slideshow {
-  .experience-subtitle {
-    padding-top: 0.5em;
-    padding-bottom: 0.75em;
-    border-bottom: 1px solid #ddd;
-  }
-  
   .item-title {
     font-size: 1.5rem;
-    line-height: 1.5;
     color: $su-color-archway-dark;
     font-weight: 600;
-    margin-top: 1.25em;
   }
   
   .item-attribution,
@@ -22,6 +14,7 @@
   .item-note,
   .item-caption {
     font-size: 1.25rem;
+    line-height: 1.5;
   }
   
   .item-collection {
@@ -33,30 +26,11 @@
   
   .item-caption {
     font-style: italic;
-    margin-top: 0.3em;
     line-height: 1.5;
-  }
-
-  .item-attribution {
-    margin-top: 2em;
-  }
-
-  .item-collection {
-    margin-top: 0.3em;
-  }
-
-  // half-width horizontal rule/border
-  .item-collection::after {
-    display: block;
-    margin: 2em auto 0;
-    width: 50%;
-    height: 100%;
-    content: "";
-    border-bottom: 1px solid #ddd;
+    margin-bottom: 1em;
   }
 
   .item-note {
-    margin-top: 1.5em;
     line-height: 1.5;
   }
 

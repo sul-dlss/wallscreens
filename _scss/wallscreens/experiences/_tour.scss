@@ -3,14 +3,6 @@
 // -----------------------------------------------------------------------------
 
 .wallscreen.guided-tour {
-  .experience-subtitle {
-    margin-top: 0.2em;
-  }
-
-  .experience-attribution {
-    margin-top: 0.5em;
-  }
-
   .card-content {
     display: flex;
     flex-direction: column;
@@ -18,26 +10,12 @@
     justify-content: center;
   }
 
-  // half-width horizontal rule/border that appears after summary when on any
-  // slide except the first
-  &[data-guided-tour-index-value] {
-    .experience-summary::after {
-      display: block;
-      margin: 2em auto 0;
-      width: 50%;
-      content: "";
-      border-bottom: 1px solid #ddd;    
-    }
-  }
+  // small hr only shows when on slides after the first
   &[data-guided-tour-index-value="0"],
   &[data-guided-tour-index-value="1"] {
-    .experience-summary::after {
+    hr.small {
       display: none;
     }
-  }
-
-  .bio-card-area {
-    margin-top: 2em;
   }
   
   .bio-card {
