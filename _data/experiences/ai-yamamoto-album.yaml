@@ -28,6 +28,11 @@ viewport:
 
 items:
   - caption: First overview caption
+  - key: first-page-overview
+    viewport:
+      zoom: 1.75
+      x: 2300
+      y: 1500
   - key: slide-1
     bio:
       title:
@@ -38,6 +43,16 @@ items:
       zoom: 4.25
       x: 800
       y: 1000
+  - key: full-overview
+    viewport:
+      zoom: 1
+      x: 4500
+      y: 1500
+  - key: second-page-overview
+    viewport:
+      zoom: 1.75
+      x: 6500
+      y: 1500
   - key: slide-2
     bio:
       title:
