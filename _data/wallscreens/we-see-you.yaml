@@ -1,0 +1,35 @@
+key: we-see-you
+title: We See You
+subtitle: Winter / Spring 2022
+location: Hohbach Hall
+experiences:
+  - key: labor
+    next: richard-weiland
+  - key: richard-weiland
+    next: labor
+  - key: ai-yamamoto-album
+nav:
+  defaults:
+    slideshow: labor
+    tour: ai-yamamoto-album
+more_info:
+  title: "We See You: Reflection, Recognition, Representation - A Silicon Valley Gallery"
+  content: "<p>Silicon Valley is synonymous with innovation and technology. Many of the people associated with creating Silicon Valley are the inventors of breakthrough devices or founders of major companies in the region. However, behind each figurehead or product were teams of individuals contributing to the rise of one of the most identifiable regions in the world. </p>
+
+  <p>We aim to document and share their stories, some known by the masses, but far too many not as well known. In doing so, our goal is to provide resources for research and teaching about all the people and communities who have contributed. It is important to acknowledge that all too often our dominant, well-resourced institutions have chosen not to acquire or display materials documenting these stories. It is a necessary and intentional corrective measure to collect and preserve them.</p>
+
+  <p>The exclusion of marginalized people and their work results in an imposed erasure, sometimes by neglect, but usually by the selections decisions made in collection development. Consequently, the Silicon Valley Archives is committed to amplifying the lives and work of important communities that have too often been systematically devalued when they are under-represented in research collections. As a result, important community achievements are negated. These achievements disappear from the historical narrative, leading to a distorted and deficient interpretation of the past.</p>
+
+  <p>Silicon Valley is a remarkable region that is made possible because of a diverse population.  One of the goals of the Silicon Valley Archives is to build on the work that has been accomplished so far by more inclusively creating, acquiring, and preserving collections that will represent the Valley as it is today and will be in the future.  </p>
+
+  <p>We invite you to explore the collections represented in this exhibit. If you know of stories, people or collections who can help us to document more such stories, or would like to know more about our projects, please let us know.  It is crucially important that the Stanford Libraries allow people whose voices were intentionally silenced – to be heard, and to make the unseen – seen.</p>"
+
+  links:
+    - title: Felicia Smith
+      email: felicias@stanford.edu
+      text: Racial Justice and Social Equity Librarian
+      url: https://library.stanford.edu/people/felicias
+    - title: Henry Lowood
+      email: lowood@stanford.edu
+      text: "Harold C. Hohbach Curator for History of Science & Technology; Film and Media Studies"
+      url: https://lowood.people.stanford.edu
