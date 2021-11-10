@@ -1,0 +1,28 @@
+// Set default panning attract mode styles.
+.attract-mode-pan .attract-image {
+  animation: panImage 12s ease-in-out infinite alternate-reverse both;
+  animation-delay: 4s;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 120%;
+  height: 732px;
+  opacity: 0.7;
+  overflow: hidden;
+  width: 1100px;
+}
+
+// Set override of height & width for Ai Yamamoto tour.
+.ai-yamamoto-album .attract-mode-pan .attract-image {
+  height: 347.5px;
+  width: 1000px;
+}
+
+@keyframes panImage {
+  0% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
