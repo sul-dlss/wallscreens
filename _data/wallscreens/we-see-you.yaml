@@ -8,6 +8,9 @@ experiences:
   - key: richard-weiland
     next: labor
   - key: ai-yamamoto-album
+    next: survival-conference
+  - key: survival-conference
+    next: ai-yamamoto-album
 nav:
   defaults:
     slideshow: labor
