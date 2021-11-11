@@ -4,7 +4,7 @@
 {% include _header.html %}
 
 <main class="content-area">
-  <div id="openseadragon" style="width: 100%; height: 100%"></div>
+  <div id="openseadragon" style="width: 100%; height: 100%" data-guided-tour-target="guidedTourContainer" hidden></div>
   <script type="text/javascript">
     image_url = "{% file_or_link {{experience.local_image}} {{experience.image}} %}";
     if (image_url.endsWith('.json')) {
@@ -26,6 +26,9 @@
     });
   </script>
   <div class="caption" data-guided-tour-target="caption" hidden></div>
+  <div class="attract-mode-pan" data-guided-tour-target="attractPanContainer">
+    <div class="attract-image" style="background-image: url({% file_or_link {{experience.local_image}} {{experience.stacks_image}} %})"></div>
+  </div>
 </main>
 
 <aside class="card-area">

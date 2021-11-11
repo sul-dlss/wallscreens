@@ -32,7 +32,7 @@
       {% endif %}
     {% endfor %}
 
-    <div class="wallscreen {{ page.controller }}"
+    <div class="wallscreen {{ page.controller }} {{ page.experience }}"
       {% if page.controller %}
       data-controller="{{ page.controller }} more-info"
       {% if next_experience.key %}data-{{page.controller}}-next-value="{% link _wallscreens/{{ page.wallscreen }}/{{ next_experience.key }}/index.html %}" {% endif %}

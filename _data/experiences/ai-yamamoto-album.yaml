@@ -22,6 +22,8 @@ more_info:
 # stitched image needs to be available on stacks
 image:
 local_image: local-media/Content/Image-Derivatives/Guided-Tour-1-Screen-11-Ai-Yamamoto/vg318sh2718_full.jpg
+# Needed so panning attract mode will work without a local image.
+stacks_image: 
 
 viewport:
   zoom: 1

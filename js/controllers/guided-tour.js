@@ -2,7 +2,7 @@ import { Controller } from "/js/stimulus.js"
 
 export default class extends Controller {
   static values = { index: { type: Number, default: 0 }, next: { type: String, default: '' } }
-  static targets = [ "slides", "caption", "slideContainer" ]
+  static targets = [ "slides", "caption", "slideContainer", "guidedTourContainer", "attractPanContainer" ]
   static autoplayTimeout = 5 * 60 * 1000; // 5 minutes
   static autoplayIntervalTime = 1 * 60 * 1000; // 1 minute per slide in autoplay mode
 
@@ -72,6 +72,16 @@ export default class extends Controller {
     return this.indexValue == this.slidesTargets.length - 1;
   }
 
+  showGuidedTourContainer() {
+    this.guidedTourContainerTarget.hidden = false;
+    this.attractPanContainerTarget.hidden = true;
+  }
+
+  showAttractPanContainer() {
+    this.attractPanContainerTarget.hidden = false;
+    this.guidedTourContainerTarget.hidden = true;
+  }
+
   // @private
   // get the currently displayed item
   getItem() {
@@ -92,6 +102,16 @@ export default class extends Controller {
         container.hidden = true;
       }
     });
+
+    // check if we're on the initial or final step.
+    // in either case show the atrract container
+    // and hide the video container. otherwise,
+    // ensure the video container is visible
+    if (this.indexValue == 0 || this.ended ) {
+      this.showAttractPanContainer();
+    } else {
+      this.showGuidedTourContainer();
+    }
 
     const data = JSON.parse(item.querySelector("script[type='application/json']")?.textContent || null) ?? {};
 
