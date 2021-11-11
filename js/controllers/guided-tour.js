@@ -49,6 +49,12 @@ export default class extends Controller {
     this.autoplayTimer = window.setTimeout(() => this.autoplay(), this.constructor.autoplayTimeout);
   }
 
+  // start the tour by going to the first stop
+  start() {
+    this.indexValue = 1;
+    gtag('event', 'start-tour');
+  }
+
   // reset the slideshow back to the intro card
   reset() {
     this.indexValue = 0;
