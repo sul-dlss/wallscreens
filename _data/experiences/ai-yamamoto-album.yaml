@@ -5,8 +5,8 @@ title: Ai Yamamoto’s album, 1902-1925
 subtitle:
 date: 1902-1925
 creator: Ai Yamamoto
-summary:
-short_summary:
+summary: The Archive of Takeo Shikamura (1884-1974) and Hatsu (Helen) Yamamoto Shikamura (1893-1983) in the Stanford Libraries was acquired from their daughter, Marion T. Shikamura Osborne (1929-2021). It includes Takeo Shikamura’s papers and photo albums, and Hatsu Yamamoto’s and her family’s papers, photo albums and journals, including this photo album kept by her sister, Ai Yamamoto. Takeo Shikamura, a mining engineer with a degree from Tokyo Imperial University, completed one year of graduate study in civil and mining engineering at Stanford.  He settled in Santa Clara County as a surveyor for contour irrigation projects, the first Asian to qualify as a California Licensed Surveyor. His family also cultivated apricots in Sunnyvale, long before the “Valley of Heart’s Delight” became known as “Silicon Valley.” Takeo and Hatsu Shikamura were incarcerated during World War II, mostly at Heart Mountain, Wyoming. They became U.S. citizens in 1953.  
+short_summary: The Archive of Takeo Shikamura (1884-1974) and Hatsu (Helen) Yamamoto Shikamura (1893-1983) in the Stanford Libraries was acquired from their daughter, Marion T. Shikamura Osborne (1929-2021). It includes Takeo Shikamura’s papers and photo albums, and Hatsu Yamamoto’s and her family’s papers, photo albums and journals, including this photo album kept by her sister, Ai Yamamoto.
 
 more_info:
   - type: Online catalog
@@ -27,22 +27,24 @@ viewport:
   zoom: 1
 
 items:
-  - caption: First overview caption
+  - caption:
   - key: first-page-overview
     viewport:
       zoom: 1.75
       x: 2300
       y: 1500
-  - key: slide-1
-    bio:
-      title:
-      description:
-      url:
-    caption: Ai
+  - key: ai
+    caption: Ai Yamamoto, c. 1924. Her photo albums capture the work and life of a California family over a period of more than forty years.
     viewport:
-      zoom: 4.25
-      x: 800
+      zoom: 4
+      x: 1200 
       y: 1000
+  - key: james
+    caption: James "Jimmy" Yamamoto was Ai's brother.  Like the Shikamuras, he was incarcerated at Heart Mountain during World War II, returning to Santa Clara Valley in 1945, where he would farm tomatoes, berries, and other crops. Due to California's Alien Land Law of 1913 and the forced sale of property often accompanying removal to the incarceration camps, it is unclear if and when the family owned the land where they lived and worked.
+    viewport:
+      zoom: 4
+      x: 3900
+      y: 2000 
   - key: full-overview
     viewport:
       zoom: 1
@@ -53,23 +55,15 @@ items:
       zoom: 1.75
       x: 6500
       y: 1500
-  - key: slide-2
-    bio:
-      title:
-      description:
-      url:
-    caption: Mt. Hamilton - Lick Observatory
+  - key: lick
+    caption: The Lick Observatory on top of Mt. Hamilton east of San Jose, California.  Constructed between 1876 and 1887 by James Lick, it has been a functioning observatory since 1888, as well as a landmark overlooking the Valley below.  Despite difficulties caused by light pollution from surrounding residential and industrial sources, it remains a functioning observatory today.  Ai Yamamoto's photographs document many family outings around the Bay Area, providing views of the Santa Clara Valley before its postwar industrial growth.
     viewport:
-      zoom: 4.25
+      zoom: 4
       x: 6000
       y: 1100
-  - key: slide-3
-    bio:
-      title:
-      description:
-      url:
-    caption: "Farmettes"
+  - key: farmerettes
+    caption: Here the “farmerettes,” relatives or family friends, pose in what may be the Shikamura’s family orchard, or perhaps an orchard belonging to another family in the area. At the time, Santa Clara County was an agricultural region, featuring fruit and nut orchards, along with the other flowering trees and plants that inspired residents to call it the “Valley of Heart’s Delight.” Did the Shikamuras own their land, despite the provisions of the Alien Land Law Act?  Was it taken away from them when they were moved to Heart Mountain? Additional documentation is needed to answer these questions. 
     viewport:
-      zoom: 4.25
+      zoom: 4
       x: 6000
-      y: 2300
+      y: 2500
