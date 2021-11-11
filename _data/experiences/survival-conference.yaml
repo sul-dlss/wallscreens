@@ -1,0 +1,58 @@
+key: survival-conference
+type: tour
+button_label: Survival Conference
+title: Black Community Survival Conference
+subtitle:
+date: March 1972
+creator: Bob Fitch
+summary: Trained to be a Protestant minister, Bob Fitch's career as a photojournalist began in 1965 when he joined Reverend Martin Luther King Jr.'s organization, The Southern Christian Leadership Conference. As Fitch notes, "I worked for two intense years as the volunteer photographer for Dr. King and the SCLC, crisscrossing "Black Belt" states to document his people-to-people speaking tours promoting get-out-the-vote campaigns."
+short_summary: Trained to be a Protestant minister, Bob Fitch's career as a photojournalist began in 1965 when he joined Reverend Martin Luther King Jr.'s organization, The Southern Christian Leadership Conference. Fitch is best known for his work that captured iconic images of major figures of movements for civil rights, peace and social justice.
+
+more_info:
+  - type: Online catalog
+    text: Bob Fitch photography archive, 1965 - 2013
+    url: https://searchworks.stanford.edu/view/10257777
+  - type: Online exhibit
+    text: "Bob Fitch Photography Archive: Movements for Change"
+    url: https://exhibits.stanford.edu/fitch
+
+image: https://stacks.stanford.edu/image/iiif/jg905yx8933%2F003_panther_00005_FX/info.json
+local_image: local-media/Content/Image-Derivatives/Guided-Tour-2-Screen-11-Black-Community-Survival-Conference/jg905yx8933_full.jpg
+# Needed so panning attract mode will work without a local image.
+stacks_image: https://stacks.stanford.edu/image/iiif/jg905yx8933%2F003_panther_00005_FX/full/max/0/default.jpg
+
+viewport:
+  zoom: 1
+
+items:
+  - caption:
+  - key: slide-1
+    caption: Huey Newton and Bobby Seale formed the Black Panther Party in Oakland, California, in 1966. The Black Panther Party was a revolutionary Black nationalist organization that instituted a variety of community social programs designed to alleviate poverty, combat police brutality, and improve health in Black communities. Bob Fitch captured the Black Panther Party's Black Community Survival Conference at Greenman Field in Oakland, California.
+    viewport:
+      zoom: 1.75
+      x: 950
+      y: 700
+  - key: slide-2
+    caption: In 1972, Black Panther Party leaders formally added free health care for "all Black and oppressed people" to the "Ten-Point Program," the BlackPanther Party’s doctrine written by Heuy Newton and Bobby Seale. That same year, in March, the Black Panther Party held the Black Community Survival Conference.
+    viewport:
+      zoom: 3
+      x: 1000
+      y: 1050
+  - key: slide-3
+    caption: One of the aims of the rally was to provide free sickle cell anemia screenings, a historically overlooked condition in the United States due to the fact that it primarily affected those of African descent, to Black communities around the nation.
+    viewport:
+      zoom: 2
+      x: 1400
+      y: 1700
+  - key: slide-4
+    caption: In addition to blood testing, the rally distributed food and held a voter registration drive. Beyond the conference, the Black Panther Party opened a total of 13 health clinics across the United States in an effort to provide free health care to communities of color.
+    viewport:
+      zoom: 1.5
+      x: 2200
+      y: 1100
+  - key: slide-5
+    caption: In 1982, the Black Panther Party disbanded. While the Black Panther Party no longer exists, some of the ideas that the organization championed have taken root in modern groups like Black Lives Matter.
+    viewport:
+      zoom: 2.5
+      x: 1900
+      y: 1400
