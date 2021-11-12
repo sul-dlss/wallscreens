@@ -43,6 +43,12 @@ export default class extends Controller {
     this.autoplayTimer = window.setTimeout(() => this.autoplay(), this.constructor.autoplayTimeout);
   }
 
+  // start the slideshow by going to the first slide
+  start() {
+    this.indexValue = 1;
+    gtag('event', 'start-slideshow');
+  }
+
   // reset the slideshow back to the intro card
   reset() {
     this.indexValue = 0;
