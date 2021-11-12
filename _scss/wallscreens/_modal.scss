@@ -16,7 +16,7 @@
   line-height: 1.5;
 
   > .inner {
-    padding: 2.75rem 8.75rem;
+    padding: 3rem 8.75rem 2rem;
     background-color: #f4f4f4;
     max-width: 90vw;
     max-height: 95vh;
@@ -36,6 +36,11 @@
     columns: 2;
     column-gap: 140px;
     margin-top: 0.9em;
+    orphans: 2;
+
+    p + p {
+      margin-top: 1rem;
+    }
   }
 
   h4 {
@@ -92,7 +97,7 @@
 
   .close {
     display: block;
-    margin: 1.5rem auto 0;
+    margin: 2.5rem auto 0;
     background-color: var(--color-primary-dark);
     color: white;
   }
