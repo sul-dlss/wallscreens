@@ -100,21 +100,23 @@
   overflow: hidden;
   text-align: center;
   font-size: 1.25rem;
+  font-weight: bold;
   margin-top: 0;
+  text-transform: uppercase;
 
   &:before {
-    right: 0.5em;
+    right: 1em;
     margin-left: -50%;
   }
 
   &:after {
-    left: 0.5em;
+    left: 1em;
     margin-right: -50%;
   }
 
   &:before,
   &:after {
-    background-color: #ddd;
+    background-color: $su-color-black-20;
     content: "";
     display: inline-block;
     height: 1px;
