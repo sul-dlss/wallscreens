@@ -28,9 +28,15 @@
 
           <h3 class="item-title">{{ item.title }}</h3>
           <div class="item-attribution">
-            <span class="item-date">{{ item.date }}</span>
-            <span class="separator">•</span>
-            <span class="item-creator">{{ item.creator }}</span>
+            {% if item.date %}
+              <span class="item-date">{{ item.date }}</span>
+            {% endif %}
+            {% if item.creator and item.date %}
+              <span class="separator">•</span>
+            {% endif %}
+            {% if item.creator %}
+              <span class="item-creator">{{ item.creator }}</span>
+            {% endif %}
           </div>
           <div class="item-collection">{{ item.collection }}</div>
           <hr class="small"/>
