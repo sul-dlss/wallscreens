@@ -41,9 +41,9 @@ items:
   - key: slide-3
     caption: One of the aims of the rally was to provide free sickle cell anemia screenings, a historically overlooked condition in the United States due to the fact that it primarily affected those of African descent, to Black communities around the nation.
     viewport:
-      zoom: 2
+      zoom: 2.3
       x: 1400
-      y: 1700
+      y: 1720
   - key: slide-4
     caption: In addition to blood testing, the rally distributed food and held a voter registration drive. Beyond the conference, the Black Panther Party opened a total of 13 health clinics across the United States in an effort to provide free health care to communities of color.
     viewport:
