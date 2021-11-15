@@ -49,11 +49,11 @@
       {% include _experience_attribution.html %}
       <hr/>
       <p class="experience-summary">{{ experience.short_summary }}</p>
-      <hr class="small"/>
       <div class="bio-card-area">
         {% for item in experience.items %}
-          <div {% if item.bio %}id="{{ item.key }}"{% endif %} data-guided-tour-target="slides">
-            {% if item.bio %}
+        <div {% if item.bio %}id="{{ item.key }}"{% endif %} data-guided-tour-target="slides">
+          {% if item.bio %}
+              <hr class="small"/>
               <div class="bio-card">
                 <img class="bio-card-thumbnail" src="{% link images/wallscreens/{{ page.wallscreen }}/{{ page.experience }}/{{ item.key }}.png %}">
                 <div class="bio-card-info">
