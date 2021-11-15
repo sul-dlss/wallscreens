@@ -89,7 +89,15 @@ pre {
   position: relative;
 }
 
-.slide-area {
+.program-content, .preview-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.slide {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
