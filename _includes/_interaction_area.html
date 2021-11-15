@@ -8,16 +8,16 @@
     <a href="{% link _wallscreens/{{ page.wallscreen }}/{{ wallscreen.nav.defaults.slideshow }}/index.html %}" class="tall button">{{ site.data.experiences[wallscreen.nav.defaults.slideshow].button_label }}</a>
   {% endif %}
 
-  {% if experience.type == "tour" %}
+  {% if experience.type == "guided_tour" %}
     <a href="{% link _wallscreens/{{ page.wallscreen }}/{{ page.experience }}/index.html %}" class="active tall button">{{ experience.button_label }}</a>
-  {% elsif wallscreen.nav.defaults.tour %}
-    <a href="{% link _wallscreens/{{ page.wallscreen }}/{{ wallscreen.nav.defaults.tour }}/index.html %}" class="tall button">{{ site.data.experiences[wallscreen.nav.defaults.tour].button_label }}</a>
+  {% elsif wallscreen.nav.defaults.guided_tour %}
+    <a href="{% link _wallscreens/{{ page.wallscreen }}/{{ wallscreen.nav.defaults.guided_tour }}/index.html %}" class="tall button">{{ site.data.experiences[wallscreen.nav.defaults.guided_tour].button_label }}</a>
   {% endif %}
 
-  {% if experience.type == "video" %}
+  {% if experience.type == "oral_history" %}
     <a href="{% link _wallscreens/{{ page.wallscreen }}/{{ page.experience }}/index.html %}" class="active tall button">{{ experience.button_label }}</a>
-  {% elsif wallscreen.nav.defaults.video %}
-    <a href="{% link _wallscreens/{{ page.wallscreen }}/{{ wallscreen.nav.defaults.video }}/index.html %}" class="tall button">{{ site.data.experiences[wallscreen.nav.defaults.video].button_label }}</a>
+  {% elsif wallscreen.nav.defaults.oral_history %}
+    <a href="{% link _wallscreens/{{ page.wallscreen }}/{{ wallscreen.nav.defaults.oral_history }}/index.html %}" class="tall button">{{ site.data.experiences[wallscreen.nav.defaults.oral_history].button_label }}</a>
   {% endif %}
 </div>
 
