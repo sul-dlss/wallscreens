@@ -9,14 +9,6 @@
     height: 100%;
     justify-content: center;
   }
-
-  // small hr only shows when on slides after the first
-  &[data-guided-tour-index-value="0"],
-  &[data-guided-tour-index-value="1"] {
-    hr.small {
-      display: none;
-    }
-  }
   
   .bio-card {
     display: flex;
