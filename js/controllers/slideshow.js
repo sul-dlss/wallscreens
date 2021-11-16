@@ -2,9 +2,10 @@ import { Controller } from "/js/stimulus.js"
 
 export default class extends Controller {
   static values = { index: { type: Number, default: 0 }, next: { type: String, default: '' } }
-  static targets = ["slides", "slideArea", "slideContainer" ]
+  static targets = ["slides", "programArea", "previewArea", "slideContainer" ]
   static autoplayTimeout = 5 * 60 * 1000; // 5 minutes
   static autoplayIntervalTime = 1 * 60 * 1000; // 1 minute per slide in autoplay mode
+  static crossFadeTime = 500; // 0.5 seconds
 
   connect() {
     if (window.location.hash && this.slidesTargets.findIndex(x => x.id == window.location.hash.substring(1)) > 0) {
@@ -78,21 +79,42 @@ export default class extends Controller {
     return this.slidesTargets[this.indexValue];
   }
 
+  getSlide(item) {
+    if (item.querySelector('template')) {
+      return item.querySelector('template').content.cloneNode(true);
+    } else {
+      const slide = document.createElement('div');
+      slide.classList.add('slide');
+      slide.style['background-image'] = "url(" + item.dataset.imageUrl + ")";
+      return slide;
+    }
+  }
+
   // make the current item visible
   indexValueChanged() {
     const item = this.getItem();
     if (item.id) history.replaceState({}, '', '#' + item.id);
 
+
+    this.previewAreaTarget.innerHTML = "";
+    this.previewAreaTarget.appendChild(this.getSlide(item));
+
+    this.previewAreaTarget.classList.add('fx-fade-in');
+    this.previewAreaTarget.hidden = false;
+
+    this.programAreaTarget.classList.add('fx-fade-out');
+
+    window.clearTimeout(this.previewToProgramTimer);
+    this.previewToProgramTimer = window.setTimeout(() => {
+      this.programAreaTarget.classList.remove('fx-fade-out');
+      this.programAreaTarget.innerHTML = this.previewAreaTarget.innerHTML;
+
+      this.previewAreaTarget.hidden = true;
+      this.previewAreaTarget.innerHTML = "";
+      this.previewAreaTarget.classList.remove('fx-fade-in');
+    }, this.constructor.crossFadeTime);
+
     this.slidesTargets.forEach(x => x.hidden = true);
-    this.slideAreaTarget.innerHTML = "";
-    if (item.querySelector('template')) this.slideAreaTarget.appendChild(item.querySelector('template').content.cloneNode(true));
-
-    if (item.dataset.imageUrl) {
-      this.slideAreaTarget.style['background-image'] = "url(" + item.dataset.imageUrl + ")";
-    } else {
-      this.slideAreaTarget.style['background-image'] = null;
-    }
-
     item.hidden = false;
 
     this.slideContainerTargets.forEach(container => {
