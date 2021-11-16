@@ -4,8 +4,6 @@
 [![Jekyll](https://img.shields.io/badge/powered_by-jekyll-blue.svg)](http://jekyllrb.com/)
 [![License](https://img.shields.io/badge/license-apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-[wallscreens.stanford.edu](https://wallscreens.stanford.edu)
-
 curated experiences for touch-screen installations on the stanford campus.
 
 ## local development
@@ -36,7 +34,7 @@ this will generate HTML in a directory called `_site/`.
 For local development it may be useful to emulate the dimensions of the wallscreens in your browser. Chrome and FireFox provide tools and documentation for developing sites for various size screens.
 
 #### Chrome
-- [Devise Mode](https://developer.chrome.com/docs/devtools/device-mode/)
+- [Device Mode](https://developer.chrome.com/docs/devtools/device-mode/)
 - [Adding Custom Devices](https://developer.chrome.com/docs/devtools/device-mode/#custom)
 
 #### FireFox
@@ -51,7 +49,7 @@ each wallscreen can host several experiences, and experiences can be shared acro
 
 the content used in the wallscreens and experiences is stored as YAML files in the `_data/` directory. text content and media links supplied by curators are defined for each experience.
 
-the layout of experience pages is defined by the HTML templates in the `_wallscreens/` directory. these templates have access to the "global" data in the `_data/` folder via `site.wallscreens`.
+the layout of experience pages is defined by the HTML templates in the `_includes/` directory. these templates have access to the "global" data in the `_data/` folder via `site.wallscreens`.
 
 ### thumbnails
 thumbnails are displayed in the card/slide area of guided tour and oral history experiences. these images should be included in the code repository for the project and meet the following naming conventions and specifications:
