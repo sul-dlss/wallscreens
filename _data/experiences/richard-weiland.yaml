@@ -16,7 +16,6 @@ more_info:
     url: https://www.ricweiland.com
 items:
   - key: ric-weiland
-    url: https://purl.stanford.edu/kf108mm0886
     title: Ric Weiland
     caption:
     date:
@@ -27,7 +26,6 @@ items:
     image: https://stacks.stanford.edu/image/iiif/kf108mm0886/kf108mm0886/full/max/0/default.jpg
     local_image: local-media/Content/Image-Derivatives/Slideshow-2-Screen-11-Richard-Weiland/kf108mm0886.jpg
   - key: commencement
-    url: https://purl.stanford.edu/bd223kc7749
     title: Commencement
     caption:
     date: 1976
@@ -38,7 +36,6 @@ items:
     image: https://stacks.stanford.edu/image/iiif/bd223kc7749/bd223kc7749/full/max/0/default.jpg
     local_image: local-media/Content/Image-Derivatives/Slideshow-2-Screen-11-Richard-Weiland/bd223kc7749.jpg
   - key: microsoft
-    url: https://purl.stanford.edu/mt146dz9437
     title: Microsoft
     caption:
     date: 1978
@@ -49,7 +46,6 @@ items:
     image: https://stacks.stanford.edu/image/iiif/mt146dz9437/mt146dz9437/full/max/0/default.jpg
     local_image: local-media/Content/Image-Derivatives/Slideshow-2-Screen-11-Richard-Weiland/mt146dz9437.jpg
   - key: weiland-gates
-    url: https://purl.stanford.edu/bv131vh0886
     title: Ric and Bill Gates NCC Conf NYC
     caption:
     date: 1976
@@ -60,7 +56,6 @@ items:
     image: https://stacks.stanford.edu/image/iiif/bv131vh0886/bv131vh0886/full/max/0/default.jpg
     local_image: local-media/Content/Image-Derivatives/Slideshow-2-Screen-11-Richard-Weiland/bv131vh0886.jpg
   - key: albuquerque
-    url: https://purl.stanford.edu/bt551dx3436
     title: Snow in Albuquerque
     caption:
     date: 1977
@@ -71,7 +66,6 @@ items:
     image: https://stacks.stanford.edu/image/iiif/bt551dx3436/bt551dx3436/full/max/0/default.jpg
     local_image: local-media/Content/Image-Derivatives/Slideshow-2-Screen-11-Richard-Weiland/bt551dx3436.jpg
   - key: license-plate
-    url: https://purl.stanford.edu/fj048vc8490
     title: Yes I Am License Plate
     caption:
     date: 1977
@@ -82,7 +76,6 @@ items:
     image: https://stacks.stanford.edu/image/iiif/fj048vc8490/fj048vc8490/full/max/0/default.jpg
     local_image: local-media/Content/Image-Derivatives/Slideshow-2-Screen-11-Richard-Weiland/fj048vc8490.jpg
   - key: harvard
-    url: https://purl.stanford.edu/ws327bs0317
     title: Harvard
     caption:
     date: 1980
@@ -93,7 +86,6 @@ items:
     image: https://stacks.stanford.edu/image/iiif/ws327bs0317/ws327bs0317/full/max/0/default.jpg
     local_image: local-media/Content/Image-Derivatives/Slideshow-2-Screen-11-Richard-Weiland/ws327bs0317.jpg
   - key: development
-    url: https://purl.stanford.edu/dw522jm4036
     title: Apps development
     caption:
     date: 1986
@@ -104,7 +96,6 @@ items:
     image: https://stacks.stanford.edu/image/iiif/dw522jm4036/dw522jm4036/full/max/0/default.jpg
     local_image: local-media/Content/Image-Derivatives/Slideshow-2-Screen-11-Richard-Weiland/dw522jm4036.jpg
   - key: diary
-    url: https://purl.stanford.edu/kd922rc3558 WRONG?
     title: Diary
     caption:
     date: 1980 - 1983
@@ -115,7 +106,6 @@ items:
     image: https://stacks.stanford.edu/image/iiif/kd922rc3558/kd922rc3558_0005/full/max/0/default.jpg
     local_image: local-media/Content/Image-Derivatives/Slideshow-2-Screen-11-Richard-Weiland/kd922rc3558_0005.jpg
   - key: diary-2
-    url: https://purl.stanford.edu/kk143vy6687
     title: Diary
     caption:
     date: 1982
@@ -126,7 +116,6 @@ items:
     image: https://stacks.stanford.edu/image/iiif/kk143vy6687/kk143vy6687_0013/full/max/0/default.jpg
     local_image: local-media/Content/Image-Derivatives/Slideshow-2-Screen-11-Richard-Weiland/kk143vy6687_0013.jpg
   - key: diary-3
-    url: https://purl.stanford.edu/wh770td9603
     title: Diary
     caption:
     date: 1985
@@ -137,7 +126,6 @@ items:
     image: https://stacks.stanford.edu/image/iiif/wh770td9603/wh770td9603_0001/full/max/0/default.jpg
     local_image: local-media/Content/Image-Derivatives/Slideshow-2-Screen-11-Richard-Weiland/wh770td9603_0001.jpg
   - key: personal-notes
-    url: https://purl.stanford.edu/bc911qv7911
     title: Personal Notes
     caption:
     date: 1987
@@ -148,7 +136,6 @@ items:
     image: https://stacks.stanford.edu/image/iiif/bc911qv7911%2Fbc911qv7911/full/max/0/default.jpg
     local_image: local-media/Content/Image-Derivatives/Slideshow-2-Screen-11-Richard-Weiland/bc911qv7911.jpg
   - key: personal-notes-2
-    url: https://purl.stanford.edu/qt587pg4848
     title:
     caption:
     date: 1996
@@ -159,7 +146,6 @@ items:
     image: https://stacks.stanford.edu/image/iiif/qt587pg4848%2Fqt587pg4848/full/max/0/default.jpg
     local_image: local-media/Content/Image-Derivatives/Slideshow-2-Screen-11-Richard-Weiland/qt587pg4848.jpg
   - key: mike-ric-dog
-    url: https://purl.stanford.edu/wn872cj1032
     title: Mike, Ric and Dog
     caption:
     date:
@@ -170,7 +156,6 @@ items:
     image: https://stacks.stanford.edu/image/iiif/wn872cj1032%2Fwn872cj1032/full/max/0/default.jpg
     local_image: local-media/Content/Image-Derivatives/Slideshow-2-Screen-11-Richard-Weiland/wn872cj1032.jpg
   - key: class-plate
-    url: https://purl.stanford.edu/xw446dt4526
     title: Weiland by class plate
     caption:
     date:
