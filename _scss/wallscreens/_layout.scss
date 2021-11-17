@@ -16,7 +16,7 @@ pre {
 }
 
 .wallscreen {
-  color: #2e2d29;
+  color: $su-color-black;
   font-family: 'Source Sans Pro', sans-serif;
 
   /* For testing purposes, enable the "wallscreen" to be any size,
@@ -65,7 +65,7 @@ pre {
 }
 
 .title-area {
-  background-color: #2e2d29;
+  background-color: $su-color-black;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   grid-area: title;
 }
@@ -77,14 +77,14 @@ pre {
 }
 
 .title-area h1 {
-  color: #fff;
+  color: $su-color-white;
   font-size: 4rem;
   line-height: 1.25;
 }
 
 .content-area {
-  background-color: #000;
-  color: #fff;
+  background-color: $su-color-black-true;
+  color: $su-color-white;
   grid-area: content;
   position: relative;
 }
@@ -107,7 +107,7 @@ pre {
 
 .card-area {
   justify-content: space-between;
-  background: #f4f4f4;
+  background: $su-color-foggy-light;
   display: flex;
   flex-direction: column;
   grid-area: card;
@@ -129,8 +129,8 @@ pre {
 }
 
 .interaction-area {
-  background-color: #2e2d29;
-  color: #fff;
+  background-color: $su-color-black;
+  color: $su-color-white;
   grid-area: interaction;
 
   display: grid;
@@ -155,4 +155,10 @@ pre {
   gap: 2.5rem;
   padding-left: 3rem;
   padding-right: 3rem;
+}
+
+.build-timestamp {
+  color: lighten($su-color-black, 3%);
+  font-size: .6rem;
+  padding: 0 0 5px 15px;
 }
