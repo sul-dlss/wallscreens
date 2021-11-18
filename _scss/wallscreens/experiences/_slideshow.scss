@@ -8,7 +8,7 @@
     color: $su-color-archway-dark;
     font-weight: 600;
   }
-  
+
   .item-attribution,
   .item-collection,
   .item-note,
@@ -16,14 +16,14 @@
     font-size: 1.25rem;
     line-height: 1.5;
   }
-  
+
   .item-collection {
     &::before {
       content: "From ";
       font-style: italic;
     }
   }
-  
+
   .item-caption {
     font-style: italic;
     line-height: 1.5;
@@ -39,41 +39,5 @@
     flex-direction: column;
     height: 100%;
     justify-content: center;
-  }
-}
-
-.fx-fade-in {
-  opacity: 1;
-  animation-name: fadeInOpacity;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in;
-  animation-duration: 0.5s;
-}
-
-@keyframes fadeInOpacity {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-.fx-fade-out {
-  opacity: 0;
-  animation-name: fadeOutOpacity;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in;
-  animation-duration: 0.5s;
-}
-
-@keyframes fadeOutOpacity {
-  0% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
   }
 }
