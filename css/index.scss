@@ -20,13 +20,20 @@ body {
   font-size: 16px;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-#topnav {
+#topnav,
+footer {
   background-color: #8c1515;
+  color: #dad7cb;
+  font-family: Source Sans Pro;
   height: 37px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding-left: 2rem;
   padding-right: 2rem;
 }
@@ -37,8 +44,9 @@ header {
   border-bottom: 1px solid #999;
 }
 
-main, footer {
+main {
   margin: 2rem;
+  flex: auto;
 }
 
 h1 {
@@ -95,36 +103,39 @@ dd {
   padding-top: 1rem;
 }
 
-.wallscreens-list {
+.wallscreens-list,
+.experiences-list {
   list-style: none;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
   font-family: Source Sans Pro;
-}
 
-.wallscreens-list li {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #333333;
-  font-size: 1.125rem;
-  font-weight: 300;
-  line-height: 1.5em;
-}
+  li {
+    max-width: 400px;
+    color: #333333;
+    font-size: 1.125rem;
+    font-weight: 300;
+    line-height: 1.5em;
+  }
 
-.wallscreens-list img {
-  max-width: 353px;
-  border: 1px solid #333;
-}
+  img {
+    border: 1px solid #333;
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    box-shadow: 2px 2px 5px #999;
+  }
 
-.wallscreens-list h4 {
-  margin: 0;
-  font-size: 1.375rem;
-  font-weight: 300;
-}
+  h4 {
+    margin: 0;
+    font-size: 1.375rem;
+    font-weight: 300;
+  }
 
-.wallscreens-list a:link, .wallscreens-list a:visited {
-  color: #8C1515;
-  text-decoration: none;
+  a:link, a:visited {
+    color: #8C1515;
+    text-decoration: none;
+  }
 }
