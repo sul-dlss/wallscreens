@@ -135,6 +135,8 @@ pre {
 
   display: grid;
   grid-template: "experience secondary" 1fr / 2fr 1fr;
+  
+  position: relative;
 }
 
 .experience-buttons {
@@ -161,4 +163,5 @@ pre {
   color: lighten($su-color-black, 3%);
   font-size: .6rem;
   padding: 0 0 5px 15px;
+  position: absolute;
 }
