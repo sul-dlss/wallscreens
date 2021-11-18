@@ -1,19 +1,33 @@
+{% assign wallscreen = site.data.wallscreens[page.wallscreen] %}
+
 <header>
-  <h1>{{ title }}</h1>
-  <h2>{{ description }}</h2>
+  <h1>{{ wallscreen.title }}</h1>
+  <h2>{{ wallscreen.subtitle }}</h2>
 </header>
 
 <main>
-  {% assign wallscreens_by_category = site.wallscreens | where: "wallscreen", page.wallscreen | where_exp: "x", "x.url != page.url" | group_by: "category" %}
-  {% for wallscreens_category in wallscreens_by_category %}
-    {% assign meta = wallscreens_category.items | where: "meta", true | first %}
-    {{ meta.content }}
-    {% assign wallscreens = wallscreens_category.items | where: "meta", false %}
-    <dl>
-      {% for wallscreen in wallscreens %}
-        <dt><a href="{{wallscreen.url}}">{{ wallscreen.title }}</a></dt>
-        <dd>{{ wallscreen.description }}</dd>
-      {% endfor %}
-    </dl>
-  {% endfor %}
+  <ul class="experiences-list">
+    {% for exp in wallscreen.experiences %}
+    {% assign experience = site.data.experiences[exp.key] %}
+    <li>
+        {% if experience.local_image %}
+        {% assign preview_img = experience.local_image %}
+        {% elsif experience.attract_images %}
+        {% assign preview_img = experience.attract_images.first %}
+        {% else %}
+        {% assign preview_img = experience.items.first.local_image %}
+        {% endif %}
+        <a href="{% link _wallscreens/{{ wallscreen.key }}/{{ experience.key }}/index.html %}">
+          <img src="{% file_or_link {{preview_img}} https://via.placeholder.com/400x225 %}"/></a>
+          <h4><a href="{% link _wallscreens/{{ wallscreen.key }}/{{ experience.key }}/index.html %}">{{ experience.title }}</a></h4>
+          <span>{{ experience.subtitle }}</span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
 </main>
+
+<footer>
+  <span class="version">{{ site.git_info }}</span>
+  <span class="build-date">{{ site.time | date: "%Y-%m-%d" }}</span>
+</footer>
