@@ -17,7 +17,7 @@ more_info:
     url: https://exhibits.stanford.edu/fitch
 
 image: https://stacks.stanford.edu/image/iiif/jg905yx8933%2F003_panther_00005_FX/info.json
-local_image: local-media/Content/Image-Derivatives/Guided-Tour-2-Screen-11-Black-Community-Survival-Conference/jg905yx8933_full.jpg
+local_image: _wallscreens/we-see-you/survival-conference/local-media/jg905yx8933_full.jpg
 # Needed so panning attract mode will work without a local image.
 stacks_image: https://stacks.stanford.edu/image/iiif/jg905yx8933%2F003_panther_00005_FX/full/max/0/default.jpg
 

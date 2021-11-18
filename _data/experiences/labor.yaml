@@ -22,7 +22,7 @@ items:
     collection: "Work & Social Justice: The David Bacon Photography Archive at Stanford"
     note: In 1999, Bacon photographed workers on the assembly line at the New United Motor Manufacturing, Inc. (NUMMI) plant in Fremont, California. Factory.
     image: https://stacks.stanford.edu/image/iiif/fy093zm7825/autoworkers%20061/full/max/0/default.jpg
-    local_image: local-media/Content/Image-Derivatives/Slideshow-1-Screen-11-Labor/fy093zm7825.jpg
+    local_image: _wallscreens/we-see-you/labor/local-media/fy093zm7825.jpg
   - key: workers-assemble-2
     title: Workers assemble Toyota Corollas at the New United Motor Manufacturing plant
     date: 1999
@@ -30,7 +30,7 @@ items:
     collection: "Work & Social Justice: The David Bacon Photography Archive at Stanford"
     note: The NUMMI plant was originally a General Motors plant between 1962 and 1982, which closed and then reopened in 1984 as a partnership between GM and Toyota.
     image: https://stacks.stanford.edu/image/iiif/gs668fd0148/autoworkers%20009/full/max/0/default.jpg
-    local_image: local-media/Content/Image-Derivatives/Slideshow-1-Screen-11-Labor/gs668fd0148.jpg
+    local_image: _wallscreens/we-see-you/labor/local-media/gs668fd0148.jpg
   - key: workers-assemble-3
     title: Workers assemble Toyota Corollas at the New United Motor Manufacturing plant
     date: 1999
@@ -38,7 +38,7 @@ items:
     collection: "Work & Social Justice: The David Bacon Photography Archive at Stanford"
     note: Photographs in this collection document work on the assembly line for the Toyota Corolla.
     image: https://stacks.stanford.edu/image/iiif/py915bg9181/autoworkers%20016/full/max/0/default.jpg
-    local_image: local-media/Content/Image-Derivatives/Slideshow-1-Screen-11-Labor/py915bg9181.jpg
+    local_image: _wallscreens/we-see-you/labor/local-media/py915bg9181.jpg
   - key: workers-assemble-4
     title: Workers assemble Toyota Corollas at the New United Motor Manufacturing plant
     date: 1999
@@ -46,7 +46,7 @@ items:
     collection: "Work & Social Justice: The David Bacon Photography Archive at Stanford"
     note: As is often the case with labor photography, these images do not identify individual workers by name. However, they do provide a composite picture of the diversity of the NUMMI workforce and document the mix of manual and automated production at the plant.
     image: https://stacks.stanford.edu/image/iiif/sy022jy9750/autoworkers%20024/full/max/0/default.jpg
-    local_image: local-media/Content/Image-Derivatives/Slideshow-1-Screen-11-Labor/sy022jy9750.jpg
+    local_image: _wallscreens/we-see-you/labor/local-media/sy022jy9750.jpg
   - key: workers-assemble-5
     title: Workers assemble Toyota Corollas at the New United Motor Manufacturing plant
     date: 1999
@@ -54,7 +54,7 @@ items:
     collection: "Work & Social Justice: The David Bacon Photography Archive at Stanford"
     note: At its peak of productivity in 2006, workers at the NUMMI plant produced more than 400,000 vehicles.
     image: https://stacks.stanford.edu/image/iiif/ks451yx7403/autoworkers%20039/full/max/0/default.jpg
-    local_image: local-media/Content/Image-Derivatives/Slideshow-1-Screen-11-Labor/ks451yx7403.jpg
+    local_image: _wallscreens/we-see-you/labor/local-media/ks451yx7403.jpg
   - key: workers-assemble-6
     title: Workers assemble Toyota Corollas at the New United Motor Manufacturing plant
     date: 1999
@@ -62,7 +62,7 @@ items:
     collection: "Work & Social Justice: The David Bacon Photography Archive at Stanford"
     note: After GM withdrew from the partnership, Toyota continued to operate this facility, manufacturing Toyota Corollas there until the plant closed in 2009, bringing NUMMI’s history to an end.
     image: https://stacks.stanford.edu/image/iiif/qz219sn3767/autoworkers%20025/full/max/0/default.jpg
-    local_image: local-media/Content/Image-Derivatives/Slideshow-1-Screen-11-Labor/qz219sn3767.jpg
+    local_image: _wallscreens/we-see-you/labor/local-media/qz219sn3767.jpg
   - key: workers-assemble-7
     title: Workers assemble Toyota Corollas at the New United Motor Manufacturing plant
     date: 1999
@@ -70,7 +70,7 @@ items:
     collection: "Work & Social Justice: The David Bacon Photography Archive at Stanford"
     note: However, after a partnership was announced between Toyota and Tesla to develop electric vehicles, the plant was acquired by Tesla in 2010 and renamed the Tesla Fremont Factory.
     image: https://stacks.stanford.edu/image/iiif/tq704xn6529/autoworkers%20035/full/max/0/default.jpg
-    local_image: local-media/Content/Image-Derivatives/Slideshow-1-Screen-11-Labor/tq704xn6529.jpg
+    local_image: _wallscreens/we-see-you/labor/local-media/tq704xn6529.jpg
   - key: farm-workers
     title: A crew of farm workers working behind a lettuce machine harvests head lettuce for D'Arrigo Brothers Produce
     date: 1999
@@ -78,7 +78,7 @@ items:
     collection: "Work & Social Justice: The David Bacon Photography Archive at Stanford"
     note: Another area of work that Bacon’s photographs extensively document is agricultural labor. In this 2018 photo taken in Salinas, California, to the south of Silicon Valley, a crew of farm workers working behind a lettuce machine harvests head lettuce for D'Arrigo Brothers Produce.
     image: https://stacks.stanford.edu/image/iiif/gk561db9119/231e/full/max/0/default.jpg
-    local_image: local-media/Content/Image-Derivatives/Slideshow-1-Screen-11-Labor/gk561db9119.jpg
+    local_image: _wallscreens/we-see-you/labor/local-media/gk561db9119.jpg
   - key: maria-teresa-castro
     title: Maria Teresa Castro works in a crew of farm workers harvesting head lettuce for D'Arrigo Brothers Produce
     date: 2018
@@ -86,7 +86,7 @@ items:
     collection: "Work & Social Justice: The David Bacon Photography Archive at Stanford"
     note: Maria Teresa Castro works in a crew of farm workers harvesting head lettuce for D'Arrigo Brothers Produce
     image: https://stacks.stanford.edu/image/iiif/zg167pf7521/231b/full/max/0/default.jpg
-    local_image: local-media/Content/Image-Derivatives/Slideshow-1-Screen-11-Labor/zg167pf7521.jpg
+    local_image: _wallscreens/we-see-you/labor/local-media/zg167pf7521.jpg
   - key: blanca
     title: Forewoman Blanca and Supervisor Sergio Flores check the quality of the lettuce harvested
     date: 2018
@@ -94,7 +94,7 @@ items:
     collection: "Work & Social Justice: The David Bacon Photography Archive at Stanford"
     note: Forewoman Blanca and Supervisor Sergio Flores check the quality of the lettuce harvested.
     image: https://stacks.stanford.edu/image/iiif/hp792tf8530/231g/full/max/0/default.jpg
-    local_image: local-media/Content/Image-Derivatives/Slideshow-1-Screen-11-Labor/hp792tf8530.jpg
+    local_image: _wallscreens/we-see-you/labor/local-media/hp792tf8530.jpg
   - key: gonzalez
     title: Hildseberto Hernandez Gonzalez works in a crew of farm workers harvesting nopal, or prickly pear cactus
     date: 2018
@@ -102,7 +102,7 @@ items:
     collection: "Work & Social Justice: The David Bacon Photography Archive at Stanford"
     note: Hildseberto Hernandez Gonzalez works in a crew of farm workers harvesting nopal, or prickly pear cactus, also in Salinas.
     image: https://stacks.stanford.edu/image/iiif/dn674vz6093/232a/full/max/0/default.jpg
-    local_image: local-media/Content/Image-Derivatives/Slideshow-1-Screen-11-Labor/dn674vz6093.jpg
+    local_image: _wallscreens/we-see-you/labor/local-media/dn674vz6093.jpg
   - key: agricultural-labor
     title: An organizer talks with a worker with a union button on her cap
     date: c. March - April, 1994
@@ -110,7 +110,7 @@ items:
     collection: "Work & Social Justice: The David Bacon Photography Archive at Stanford"
     note: Bacon’s images are not limited to work-related activities. He has been documenting labor activism for many years, particularly among farm workers. Here, in 1994, an organizer converses with a worker wearing a union button on her cap
     image: https://stacks.stanford.edu/image/iiif/cn849xt8757/10/full/max/0/default.jpg
-    local_image: local-media/Content/Image-Derivatives/Slideshow-1-Screen-11-Labor/cn849xt8757.jpg
+    local_image: _wallscreens/we-see-you/labor/local-media/cn849xt8757.jpg
   - key: broccoli-cutters
     title: An organizer talks with broccoli cutters on their lunch break
     date: c. March - April, 1994
@@ -118,7 +118,7 @@ items:
     collection: "Work & Social Justice: The David Bacon Photography Archive at Stanford"
     note: In this photograph, also taken in 1994, a labor organizer speaks with broccoli cutters on their lunch break.
     image: https://stacks.stanford.edu/image/iiif/kp033zt0331/09/full/max/0/default.jpg
-    local_image: local-media/Content/Image-Derivatives/Slideshow-1-Screen-11-Labor/kp033zt0331.jpg
+    local_image: _wallscreens/we-see-you/labor/local-media/kp033zt0331.jpg
   - key: united-farm-workers
     title: Farmworkers, members of the United Farm Workers, march through the streets of Salinas after going on strike, demanding a contract
     date: August 09, 1998
@@ -126,7 +126,7 @@ items:
     collection: "Work & Social Justice: The David Bacon Photography Archive at Stanford"
     note: In 1998, farmworkers belonging to the United Farm Workers, march through the streets of Salinas after going on strike, demanding a contract.
     image: https://stacks.stanford.edu/image/iiif/sg356zm3151/d_arrigo%20strike%2002/full/max/0/default.jpg
-    local_image: local-media/Content/Image-Derivatives/Slideshow-1-Screen-11-Labor/sg356zm3151.jpg
+    local_image: _wallscreens/we-see-you/labor/local-media/sg356zm3151.jpg
   - key: housekeeper
     title: The hands of a housekeeper at a Class A hotel
     date: 1998
@@ -134,7 +134,7 @@ items:
     collection: "Work & Social Justice: The David Bacon Photography Archive at Stanford"
     note: Taken in San Francisco in 1998, the hands of a hotel housekeeper. Bacon’s photographs also document the impact of work on people and their lives.
     image: https://stacks.stanford.edu/image/iiif/mv698qp6572/immigrant%20workers%20012/full/max/0/default.jpg
-    local_image: local-media/Content/Image-Derivatives/Slideshow-1-Screen-11-Labor/mv698qp6572.jpg
+    local_image: _wallscreens/we-see-you/labor/local-media/mv698qp6572.jpg
   - key: laundry-workers
     title: Laundry workers, American Linen Supply
     date: 2000
@@ -142,7 +142,7 @@ items:
     collection: "Work & Social Justice: The David Bacon Photography Archive at Stanford"
     note: A laundry worker at American Linen Supply, San Francisco.
     image: https://stacks.stanford.edu/image/iiif/jq025qx6944/2306-22/full/max/0/default.jpg
-    local_image: local-media/Content/Image-Derivatives/Slideshow-1-Screen-11-Labor/jq025qx6944.jpg
+    local_image: _wallscreens/we-see-you/labor/local-media/jq025qx6944.jpg
   - key: homeless-couple
     title: Homeless couple in Oakland live under the freeway
     date: February 11, 2014
@@ -150,7 +150,7 @@ items:
     collection: "Work & Social Justice: The David Bacon Photography Archive at Stanford"
     note: A homeless couple living under the freeway in Oakland.
     image: https://stacks.stanford.edu/image/iiif/rh924hh2647/dnb2014missionforhomeless65%20copy/full/max/0/default.jpg
-    local_image: local-media/Content/Image-Derivatives/Slideshow-1-Screen-11-Labor/rh924hh2647.jpg
+    local_image: _wallscreens/we-see-you/labor/local-media/rh924hh2647.jpg
   - key: building-trades
     title: Building trades workers in downtown Oakland celebrate May Day
     date: May 01, 2019
@@ -158,4 +158,4 @@ items:
     collection: "Work & Social Justice: The David Bacon Photography Archive at Stanford"
     note: Building trades workers in downtown Oakland celebrate May Day, 2019.
     image: https://stacks.stanford.edu/image/iiif/hr556dv4032/mayday2019-112/full/max/0/default.jpg
-    local_image: local-media/Content/Image-Derivatives/Slideshow-1-Screen-11-Labor/hr556dv4032.jpg
+    local_image: _wallscreens/we-see-you/labor/local-media/hr556dv4032.jpg

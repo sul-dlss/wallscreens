@@ -17,7 +17,7 @@ more_info:
     url: https://americanhistory.si.edu/collections/subjects/health-medicine
 
 image: https://stacks.stanford.edu/image/iiif/xh842zs4872%2Fxh842zs4872_0001/info.json
-local_image: local-media/Content/Image-Derivatives/Guided-Tour-1-Medical-Devices/xh842zs4872_full.jpg
+local_image: _wallscreens/silicon-valley/medical-devices/local-media/xh842zs4872_full.jpg
 # Needed so panning attract mode will work without a local image.
 stacks_image: https://stacks.stanford.edu/image/iiif/xh842zs4872%2Fxh842zs4872_0001/290,290,12000,8000/max/0/default.jpg
 
