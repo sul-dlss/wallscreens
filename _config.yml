@@ -42,17 +42,6 @@ defaults:
       layout: "wallscreen"
       meta: false
 
-experience_types:
-  guided_tour:
-    items_label: "stops"
-    explore_label: "guided tours"
-  oral_history:
-    items_label: "clips"
-    explore_label: "oral histories"
-  slideshow:
-    items_label: "images"
-    explore_label: "slideshows"
-
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

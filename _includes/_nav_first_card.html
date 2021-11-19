@@ -7,7 +7,7 @@
             {% if experience.duration %}
             <span class="experience-duration">{{ experience.duration }}</span>
             {% else %}
-            <span class="experience-duration">{{ experience.items|size }} {{ site.experience_types[experience.type].items_label }}</span>
+            <span class="experience-duration">{{ experience.items|size }} {{ layout.items_label }}</span>
             {% endif %}
           </div>
           <div class="button-icon">
