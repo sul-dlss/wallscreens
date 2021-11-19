@@ -1,0 +1,5 @@
+exclude:
+  - index.html
+  - _data/wallscreens/we-see-you.yaml
+  - _wallscreens/we-see-you
+  - _wallscreens/testing
