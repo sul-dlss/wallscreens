@@ -1,11 +1,10 @@
 key: ai-yamamoto-album
 type: guided_tour
 button_label: Ai Yamamoto's Album
-title: Ai Yamamoto’s album, 1902-1925
-subtitle:
+title: Ai Yamamoto’s Album
 date: 1902-1925
 creator: Ai Yamamoto
-summary: The Archive of Takeo Shikamura (1884-1974) and Hatsu (Helen) Yamamoto Shikamura (1893-1983) in the Stanford Libraries was acquired from their daughter, Marion T. Shikamura Osborne (1929-2021). It includes Takeo Shikamura’s papers and photo albums, and Hatsu Yamamoto’s and her family’s papers, photo albums and journals, including this photo album kept by her sister, Ai Yamamoto. Takeo Shikamura, a mining engineer with a degree from Tokyo Imperial University, completed one year of graduate study in civil and mining engineering at Stanford.  He settled in Santa Clara County as a surveyor for contour irrigation projects, the first Asian to qualify as a California Licensed Surveyor. His family also cultivated apricots in Sunnyvale, long before the “Valley of Heart’s Delight” became known as “Silicon Valley.” Takeo and Hatsu Shikamura were incarcerated during World War II, mostly at Heart Mountain, Wyoming. They became U.S. citizens in 1953.  
+summary: The Archive of Takeo Shikamura (1884-1974) and Hatsu (Helen) Yamamoto Shikamura (1893-1983) in the Stanford Libraries was acquired from their daughter, Marion T. Shikamura Osborne (1929-2021). It includes Takeo Shikamura’s papers and photo albums, and Hatsu Yamamoto’s and her family’s papers, photo albums and journals, including this photo album kept by her sister, Ai Yamamoto. Takeo Shikamura, a mining engineer with a degree from Tokyo Imperial University, completed one year of graduate study in civil and mining engineering at Stanford.  He settled in Santa Clara County as a surveyor for contour irrigation projects, the first Asian to qualify as a California Licensed Surveyor. His family also cultivated apricots in Sunnyvale, long before the “Valley of Heart’s Delight” became known as “Silicon Valley.” Takeo and Hatsu Shikamura were incarcerated during World War II, mostly at Heart Mountain, Wyoming. They became U.S. citizens in 1953.
 short_summary: The Archive of Takeo Shikamura (1884-1974) and Hatsu (Helen) Yamamoto Shikamura (1893-1983) in the Stanford Libraries was acquired from their daughter, Marion T. Shikamura Osborne (1929-2021). It includes Takeo Shikamura’s papers and photo albums, and Hatsu Yamamoto’s and her family’s papers, photo albums and journals, including this photo album kept by her sister, Ai Yamamoto.
 
 more_info:
@@ -23,7 +22,7 @@ more_info:
 image:
 local_image: local-media/Content/Image-Derivatives/Guided-Tour-1-Screen-11-Ai-Yamamoto/vg318sh2718_full.jpg
 # Needed so panning attract mode will work without a local image.
-stacks_image: 
+stacks_image:
 
 viewport:
   zoom: 1
@@ -39,14 +38,14 @@ items:
     caption: Ai Yamamoto, c. 1924. Her photo albums capture the work and life of a California family over a period of more than forty years.
     viewport:
       zoom: 4
-      x: 1200 
+      x: 1200
       y: 1000
   - key: james
     caption: James "Jimmy" Yamamoto was Ai's brother.  Like the Shikamuras, he was incarcerated at Heart Mountain during World War II, returning to Santa Clara Valley in 1945, where he would farm tomatoes, berries, and other crops. Due to California's Alien Land Law of 1913 and the forced sale of property often accompanying removal to the incarceration camps, it is unclear if and when the family owned the land where they lived and worked.
     viewport:
       zoom: 4
       x: 3900
-      y: 2000 
+      y: 2000
   - key: full-overview
     viewport:
       zoom: 1
@@ -64,7 +63,7 @@ items:
       x: 6000
       y: 1100
   - key: farmerettes
-    caption: Here the “farmerettes,” relatives or family friends, pose in what may be the Shikamura’s family orchard, or perhaps an orchard belonging to another family in the area. At the time, Santa Clara County was an agricultural region, featuring fruit and nut orchards, along with the other flowering trees and plants that inspired residents to call it the “Valley of Heart’s Delight.” Did the Shikamuras own their land, despite the provisions of the Alien Land Law Act?  Was it taken away from them when they were moved to Heart Mountain? Additional documentation is needed to answer these questions. 
+    caption: Here the “farmerettes,” relatives or family friends, pose in what may be the Shikamura’s family orchard, or perhaps an orchard belonging to another family in the area. At the time, Santa Clara County was an agricultural region, featuring fruit and nut orchards, along with the other flowering trees and plants that inspired residents to call it the “Valley of Heart’s Delight.” Did the Shikamuras own their land, despite the provisions of the Alien Land Law Act?  Was it taken away from them when they were moved to Heart Mountain? Additional documentation is needed to answer these questions.
     viewport:
       zoom: 4
       x: 6000

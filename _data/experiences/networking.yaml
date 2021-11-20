@@ -10,9 +10,6 @@ short_summary: |
   "Computer Networking and Internet Connectivity Pioneers of Silicon Valley," painted by Terry Guyer, is the seventh painting in the series. This group portrait captures five individuals whose work on network technologies made office connectivity and the Internet possible. Don Nielsen, Vint Cerf, Sandy Lerner, Robert Metcalfe stand together in an idealized scene that also depicts artifacts of network technology, as well as a sign for Rossotti's Alpine Inn in Portola Valley, California, a popular beer garden where the first internet transmission took place.
 
 more_info:
-  - type: Website
-    text: Silicon Valley Archives
-    url: https://library.stanford.edu/projects/silicon-valley-archives
   - type: Timeline
     text: "Timeline of Computer History: Networking & the Web"
     url: https://www.computerhistory.org/timeline/networking-the-web/
@@ -33,9 +30,9 @@ items:
   - key: don-nielsen
     bio:
       title: Don Nielsen
-      description: Led the Stanford Research International project to develop the first packet-switched radio network for the Advanced Research Projects Administration (ARPA).
+      description: Led the SRI project to develop the first packet-switched radio network for ARPA.
       url: https://www.sri.com/bios/donald-nielson/
-    caption: Don Nielson, pictured here, joined SRI in 1959 as a research engineer and earned his Ph.D. from Stanford in 1969. One of the most important projects in high-speed networking was the Packet Radio project, sponsored by ARPA to provide reliable data communications. Nielson led the program and built the first ARPA packet.
+    caption: Don Nielson, pictured here, joined Stanford Research International (SRI) in 1959 as a research engineer and earned his Ph.D. from Stanford in 1969. One of the most important projects in high-speed networking was the Packet Radio project, sponsored by Advanced Research Projects Administration (ARPA) to provide reliable data communications. Nielson led the program and built the first ARPA packet.
     viewport:
       zoom: 4.25
       x: 1674

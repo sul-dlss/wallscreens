@@ -1,6 +1,6 @@
 key: silicon-genesis
 title: Silicon Genesis
-subtitle: "Excerpts from <i>Silicon Genesis : An Oral History of Semiconductor Technology</i>"
+subtitle: "Excerpts from <i>Silicon Genesis: An Oral History of Semiconductor Technology</i>"
 date: 1995 - 2018
 creator: Henry Lowood & Rob Walker
 extent: 103 interviews
@@ -9,7 +9,7 @@ type: oral_history
 file: https://stanford.box.com/shared/static/e58t96yp5dvhhbhtwsowqtecc6vso8zi.mp4
 local_file: local-media/20210922_2700x1800_Silicon-Genesis_25mbps_final_v1.1_wallscreen.mp4
 button_label: Silicon Genesis
-summary: The Silicon Genesis collection gathers together oral histories and interviews with the people who conceived, built and worked in the semiconductor industry centered in Silicon Valley since the 1950s.This project took shape in 1995 through the inspiration of Rob Walker (1935-2016), a Silicon Valley native and Silicon Valley educated electrical engineer, who was involved with semiconductors since the 1960s at Fairchild, Intel and as a founder of LSI Logic. Walker, followed  by industry veteran Rob Blair, have conducted these interviews, supplemented by a series produced by Craig Addision for SEMI (Semiconductor Equipment and Materials International) that were donated to the Silicon Valley Archives.
+summary: The Silicon Genesis collection gathers together oral histories and interviews with the people who conceived, built and worked in the semiconductor industry centered in Silicon Valley since the 1950s. This project took shape in 1995 through the inspiration of Rob Walker (1935-2016), a Silicon Valley native and electrical engineer, who was involved with semiconductors since the 1960s at Fairchild, Intel and as a founder of LSI Logic. Walker, followed by industry veteran Rob Blair, have conducted these interviews, supplemented by a series produced by Craig Addision for SEMI (Semiconductor Equipment and Materials International) that were donated to the Silicon Valley Archives.
 more_info:
   - type: Digital exhibit
     text: "Silicon Genesis: Oral Histories of Semiconductor Technology"
@@ -56,16 +56,16 @@ items:
     timestamp: 246
     class: hidden-theme-title
   - key: albert-yu
-    title: From interview with Albert Yu, September 15, 2005.
+    title: From interview with Albert Yu, September 15, 2005
     theme: Why has Silicon Valley been a great place to start a company?
     thumbnail: https://via.placeholder.com/100x55
     timestamp: 252
   - key: jen-hsun-huang
-    title: From interview with Jen-Hsun Huang, August 7, 2010.
+    title: From interview with Jen-Hsun Huang, August 7, 2010
     theme: Why has Silicon Valley been a great place to start a company?
     timestamp: 319
   - key: don-valentine-2
-    title: From Interview with Don Valentine, April 21, 2004.
+    title: From Interview with Don Valentine, April 21, 2004
     theme: Why has Silicon Valley been a great place to start a company?
     timestamp: 408
   - key: title-3
@@ -74,15 +74,15 @@ items:
     timestamp: 497
     class: hidden-theme-title
   - key: frederico-faggin
-    title: From interview with Frederico Faggin, March 3, 1995.
+    title: From interview with Frederico Faggin, March 3, 1995
     theme: What does it take to succeed in Silicon Valley?
     thumbnail: https://via.placeholder.com/100x55
     timestamp: 502
   - key: geri-hadley-2
-    title: From Interview with Geri Hadley, October 22, 2019.
+    title: From Interview with Geri Hadley, October 22, 2019
     theme: What does it take to succeed in Silicon Valley?
     timestamp: 564
   - key: arthur-rock
-    title: From interview with Arthur Rock, November 12, 2002.
+    title: From interview with Arthur Rock, November 12, 2002
     theme: What does it take to succeed in Silicon Valley?
     timestamp: 623

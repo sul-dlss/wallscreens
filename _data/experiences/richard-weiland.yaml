@@ -3,7 +3,7 @@ type: slideshow
 button_label: Richard "Ric" Weiland
 title: Richard "Ric" Weiland
 subtitle: Images from the Richard William Weiland Papers
-summary: Richard Weiland, usually called “Ric,” earned his undergraduate degree in electrical engineering at Stanford in 1976. His first job after Stanford was with his former high school classmates Bill Gates and Paul Allen at Microsoft, where he managed the completion of the COBOL compiler and helped develop Microsoft’s BASIC interpreter. He left the company at the age of 35 in 1988 to pursue full-time philanthropy, where his interests included education; lesbian, gay, bisexual and transgender rights; health and human services; and the environment.  The Weiland papers in the Stanford Libraries document his work at Microsoft, as an activist for the LGBTQ movement (particularly in the Seattle area), and his extensive philanthropy, as well as his personal life.
+summary: Ric Weiland earned his undergraduate degree in electrical engineering at Stanford in 1976. His first job after Stanford was with his former high school classmates Bill Gates and Paul Allen at Microsoft, where he managed the completion of the COBOL compiler and helped develop Microsoft’s BASIC interpreter. He left the company at the age of 35 in 1988 to pursue full-time philanthropy, where his interests included education; lesbian, gay, bisexual and transgender rights; health and human services; and the environment.  The Weiland papers in the Stanford Libraries document his work at Microsoft, as an activist for the LGBTQ movement (particularly in the Seattle area), and his extensive philanthropy, as well as his personal life.
 more_info:
   - type: Catalog record
     text: Richard William Weiland papers, 1969 - 2006
@@ -18,7 +18,7 @@ items:
   - key: ric-weiland
     title: Ric Weiland
     caption:
-    date:
+    date: No date
     creator: Richard William Weiland
     collection: Richard William Weiland papers, 1969-2006
     note: Ric Weiland (1953-2006) attended Stanford University, completing his undergraduate studies with a degree in electrical engineering in 1976.  Before graduating, he had been hired as the second employee at a newly created software company then located in New Mexico. The company,  founded by his boyhood friends Paul Allen and Bill Gates, was Microsoft.  After leaving Microsoft in 1988, he became a philanthropist and activist for the LGBTQ movement, particularly in the Pacific Northwest.
@@ -98,7 +98,7 @@ items:
   - key: diary
     title: Diary
     caption:
-    date: 1980 - 1983
+    date: c. 1980 - 1983
     creator: Richard William Weiland
     collection: Richard William Weiland papers, 1969-2006
     note: Ric Weiland’s papers include personal notebooks that document his life and career. This notebook, covering three years from Autumn 1980 to Autumn 1983, covers his return to Seattle after Harvard and mostly deals with technical topics. Other notebooks reveal his personal thoughts and lifestyle decisions as an openly gay man in the Pacific Northwest.
@@ -148,7 +148,7 @@ items:
   - key: mike-ric-dog
     title: Mike, Ric and Dog
     caption:
-    date:
+    date: No date
     creator: Richard William Weiland
     collection: Richard William Weiland papers, 1969-2006
     note: Weiland and his partner Mike Schaefer, date unknown. After Weiland’s death in 2006, Schaefer gave his papers to Stanford University in 2007 and 2008.
@@ -158,7 +158,7 @@ items:
   - key: class-plate
     title: Weiland by class plate
     caption:
-    date:
+    date: No date
     creator: Richard William Weiland
     collection: Richard William Weiland papers, 1969-2006
     note: Weiland after Stanford Commencement, 1976. He is crouching behind his class plate on the Quad. After leaving Microsoft in 1988, he donated more than $20 million to a variety of non-profit organizations and universities, including Stanford University. In his will, he distributed an additional $68 million to a group of groups focused on LGBT activism. All told, his charitable and philanthropic donations totaled roughly $170 million over the course of his life.
