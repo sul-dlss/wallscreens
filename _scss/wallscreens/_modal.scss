@@ -16,6 +16,7 @@
   line-height: 1.5;
 
   > .inner {
+    position: relative;
     padding: 3rem 8.75rem 2rem;
     background-color: #f4f4f4;
     max-width: 90vw;
@@ -100,5 +101,18 @@
     margin: 2.5rem auto 0;
     background-color: var(--color-primary-dark);
     color: white;
+  }
+
+  .debug-info {
+    position: absolute;
+    bottom: 1em;
+    left: 1em;
+    font-size: 1rem;
+    line-height: 1;
+    color: $su-color-stone;
+  }
+
+  .build-date::before {
+    content: "• ";
   }
 }
