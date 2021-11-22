@@ -79,15 +79,17 @@
 }
 
 .dig-deeper-links {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
   margin: 2rem 0;
 }
 
 .dig-deeper-link {
-  display: flex;
-  gap: 2rem;
+  display: block;
+  // width: 50%;
+  // display: flex;
+  // gap: 2rem;
   font-size: 1.25rem;
   line-height: 1.5;
 
@@ -96,6 +98,11 @@
     width: 20ch;
     flex-shrink: 0;
     margin: 0;
+  }
+
+  span {
+    display: block;
+    margin-top: 1em;
   }
 }
 
