@@ -1,7 +1,4 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: home
 ---
 <header>
@@ -18,11 +15,16 @@ layout: home
     <ul class="wallscreens-list">
       {% for wallscreen in wallscreens %}
         <li>
-          <a aria-hidden="true" href="{% link _wallscreens/{{ wallscreen.key }}/{{ wallscreen.nav.defaults.slideshow }}/index.html %}"><img src="{% link images/wallscreens/{{ wallscreen.key }}.png %}" /></a>
-          <h4><a href="{% link _wallscreens/{{ wallscreen.key }}/{{ wallscreen.nav.defaults.slideshow }}/index.html %}">{{ wallscreen.title }}</a></h4>
+          <a aria-hidden="true" href="{% link _wallscreens/{{ wallscreen.key }}/index.html %}"><img src="{% link images/wallscreens/{{ wallscreen.key }}.png %}" /></a>
+          <h4><a href="{% link _wallscreens/{{ wallscreen.key }}/index.html %}">{{ wallscreen.title }}</a></h4>
           <span>{{ wallscreen.subtitle }}</span>
         </li>
       {% endfor %}
     </ul>
   {% endfor %}
 </main>
+
+<footer>
+  <span class="version">{{ site.git_info }}</span>
+  <span class="build-date">{{ site.time | date: "%Y-%m-%d" }}</span>
+</footer>
