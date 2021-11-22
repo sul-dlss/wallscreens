@@ -1,8 +1,9 @@
 <h3 class="dig-deeper">Dig deeper</h3>
-
+<div class="dig-deeper-links">
 {% for item in experience.more_info %}
   <div class="dig-deeper-link">
     <a href="{{ item.url }}" data-qr class="item-url">{{ item.type }}</a>
     <span>{{ item.text }}</span>
   </div>
 {% endfor %}
+</div>

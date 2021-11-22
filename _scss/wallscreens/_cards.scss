@@ -78,9 +78,14 @@
   }
 }
 
+.dig-deeper-links {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin: 2rem 0;
+}
+
 .dig-deeper-link {
-  margin-top: 1.5em;
-  margin-bottom: 3rem;
   display: flex;
   gap: 2rem;
   font-size: 1.25rem;
