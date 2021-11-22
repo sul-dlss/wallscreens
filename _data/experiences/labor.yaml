@@ -1,9 +1,9 @@
 key: labor
 type: slideshow
-button_label: Labor
-title: Labor
-subtitle: "Work & Social Justice: The David Bacon Photography Archive at Stanford"
-summary: David Bacon (born 1948) is a photojournalist, author, political activist, and union organizer who has focused on labor issues, particularly those related to immigrant labor. He has published several books, essays and articles on subjects including the history of the United Farm Workers; the working and living condition of farm workers in California; the work lives of workers; and many other topics. The images shown here have been selected from the David Bacon photography archive, circa 1985-2019, at Stanford.
+button_label: Labor and Social Justice
+title: Labor and Social Justice
+subtitle: "The David Bacon Photography Archive"
+summary: David Bacon (b. 1948) is a photojournalist, author, political activist, and union organizer who has focused on labor issues, particularly those related to immigrant labor. He has published several books, essays and articles on subjects including the history of the United Farm Workers; the working and living condition of farm workers in California; the work lives of workers; and many other topics. The images shown here have been selected from the David Bacon photography archive, circa 1985-2019, at Stanford.
 more_info:
   - type: Online Exhibit
     text: Online Exhibit – The David Bacon Photography Archive at Stanford
@@ -16,7 +16,7 @@ more_info:
     url: http://dbacon.igc.org/
 items:
   - key: workers-assemble
-    title: Workers assemble Toyota Corollas at the New United Motor Manufacturing plant.
+    title: Workers assemble Toyota Corollas at the New United Motor Manufacturing plant
     date: 1999
     creator: David Bacon
     collection: "Work & Social Justice: The David Bacon Photography Archive at Stanford"
@@ -24,7 +24,7 @@ items:
     image: https://stacks.stanford.edu/image/iiif/fy093zm7825/autoworkers%20061/full/max/0/default.jpg
     local_image: local-media/Content/Image-Derivatives/Slideshow-1-Screen-11-Labor/fy093zm7825.jpg
   - key: workers-assemble-2
-    title: Workers assemble Toyota Corollas at the New United Motor Manufacturing plant.
+    title: Workers assemble Toyota Corollas at the New United Motor Manufacturing plant
     date: 1999
     creator: David Bacon
     collection: "Work & Social Justice: The David Bacon Photography Archive at Stanford"
@@ -32,15 +32,15 @@ items:
     image: https://stacks.stanford.edu/image/iiif/gs668fd0148/autoworkers%20009/full/max/0/default.jpg
     local_image: local-media/Content/Image-Derivatives/Slideshow-1-Screen-11-Labor/gs668fd0148.jpg
   - key: workers-assemble-3
-    title: Workers assemble Toyota Corollas at the New United Motor Manufacturing plant.
+    title: Workers assemble Toyota Corollas at the New United Motor Manufacturing plant
     date: 1999
     creator: David Bacon
     collection: "Work & Social Justice: The David Bacon Photography Archive at Stanford"
-    note: These photographs document work on the assembly line for the Toyota Corolla.
+    note: Photographs in this collection document work on the assembly line for the Toyota Corolla.
     image: https://stacks.stanford.edu/image/iiif/py915bg9181/autoworkers%20016/full/max/0/default.jpg
     local_image: local-media/Content/Image-Derivatives/Slideshow-1-Screen-11-Labor/py915bg9181.jpg
   - key: workers-assemble-4
-    title: Workers assemble Toyota Corollas at the New United Motor Manufacturing plant.
+    title: Workers assemble Toyota Corollas at the New United Motor Manufacturing plant
     date: 1999
     creator: David Bacon
     collection: "Work & Social Justice: The David Bacon Photography Archive at Stanford"
@@ -48,7 +48,7 @@ items:
     image: https://stacks.stanford.edu/image/iiif/sy022jy9750/autoworkers%20024/full/max/0/default.jpg
     local_image: local-media/Content/Image-Derivatives/Slideshow-1-Screen-11-Labor/sy022jy9750.jpg
   - key: workers-assemble-5
-    title: Workers assemble Toyota Corollas at the New United Motor Manufacturing plant.
+    title: Workers assemble Toyota Corollas at the New United Motor Manufacturing plant
     date: 1999
     creator: David Bacon
     collection: "Work & Social Justice: The David Bacon Photography Archive at Stanford"
@@ -56,7 +56,7 @@ items:
     image: https://stacks.stanford.edu/image/iiif/ks451yx7403/autoworkers%20039/full/max/0/default.jpg
     local_image: local-media/Content/Image-Derivatives/Slideshow-1-Screen-11-Labor/ks451yx7403.jpg
   - key: workers-assemble-6
-    title: Workers assemble Toyota Corollas at the New United Motor Manufacturing plant.
+    title: Workers assemble Toyota Corollas at the New United Motor Manufacturing plant
     date: 1999
     creator: David Bacon
     collection: "Work & Social Justice: The David Bacon Photography Archive at Stanford"
@@ -64,7 +64,7 @@ items:
     image: https://stacks.stanford.edu/image/iiif/qz219sn3767/autoworkers%20025/full/max/0/default.jpg
     local_image: local-media/Content/Image-Derivatives/Slideshow-1-Screen-11-Labor/qz219sn3767.jpg
   - key: workers-assemble-7
-    title: Workers assemble Toyota Corollas at the New United Motor Manufacturing plant.
+    title: Workers assemble Toyota Corollas at the New United Motor Manufacturing plant
     date: 1999
     creator: David Bacon
     collection: "Work & Social Justice: The David Bacon Photography Archive at Stanford"
@@ -88,7 +88,7 @@ items:
     image: https://stacks.stanford.edu/image/iiif/zg167pf7521/231b/full/max/0/default.jpg
     local_image: local-media/Content/Image-Derivatives/Slideshow-1-Screen-11-Labor/zg167pf7521.jpg
   - key: blanca
-    title: Forewoman Blanca and Supervisor Sergio Flores check the quality of the lettuce harvested.
+    title: Forewoman Blanca and Supervisor Sergio Flores check the quality of the lettuce harvested
     date: 2018
     creator: David Bacon
     collection: "Work & Social Justice: The David Bacon Photography Archive at Stanford"
@@ -104,23 +104,23 @@ items:
     image: https://stacks.stanford.edu/image/iiif/dn674vz6093/232a/full/max/0/default.jpg
     local_image: local-media/Content/Image-Derivatives/Slideshow-1-Screen-11-Labor/dn674vz6093.jpg
   - key: agricultural-labor
-    title: Agricultural Labor An organizer talks with a worker with a union button on her cap.
-    date: March 1994-April 1994
+    title: An organizer talks with a worker with a union button on her cap
+    date: c. March - April, 1994
     creator: David Bacon
     collection: "Work & Social Justice: The David Bacon Photography Archive at Stanford"
     note: Bacon’s images are not limited to work-related activities. He has been documenting labor activism for many years, particularly among farm workers. Here, in 1994, an organizer converses with a worker wearing a union button on her cap
     image: https://stacks.stanford.edu/image/iiif/cn849xt8757/10/full/max/0/default.jpg
     local_image: local-media/Content/Image-Derivatives/Slideshow-1-Screen-11-Labor/cn849xt8757.jpg
   - key: broccoli-cutters
-    title: An organizer talks with broccoli cutters on their lunch break.
-    date: March 1994-April 1994
+    title: An organizer talks with broccoli cutters on their lunch break
+    date: c. March - April, 1994
     creator: David Bacon
     collection: "Work & Social Justice: The David Bacon Photography Archive at Stanford"
     note: In this photograph, also taken in 1994, a labor organizer speaks with broccoli cutters on their lunch break.
     image: https://stacks.stanford.edu/image/iiif/kp033zt0331/09/full/max/0/default.jpg
     local_image: local-media/Content/Image-Derivatives/Slideshow-1-Screen-11-Labor/kp033zt0331.jpg
   - key: united-farm-workers
-    title: Farmworkers, members of the United Farm Workers, march through the streets of Salinas after going on strike, demanding a contract.
+    title: Farmworkers, members of the United Farm Workers, march through the streets of Salinas after going on strike, demanding a contract
     date: August 09, 1998
     creator: David Bacon
     collection: "Work & Social Justice: The David Bacon Photography Archive at Stanford"
@@ -128,7 +128,7 @@ items:
     image: https://stacks.stanford.edu/image/iiif/sg356zm3151/d_arrigo%20strike%2002/full/max/0/default.jpg
     local_image: local-media/Content/Image-Derivatives/Slideshow-1-Screen-11-Labor/sg356zm3151.jpg
   - key: housekeeper
-    title: The hands of a housekeeper at a Class A hotel.
+    title: The hands of a housekeeper at a Class A hotel
     date: 1998
     creator: David Bacon
     collection: "Work & Social Justice: The David Bacon Photography Archive at Stanford"
@@ -136,7 +136,7 @@ items:
     image: https://stacks.stanford.edu/image/iiif/mv698qp6572/immigrant%20workers%20012/full/max/0/default.jpg
     local_image: local-media/Content/Image-Derivatives/Slideshow-1-Screen-11-Labor/mv698qp6572.jpg
   - key: laundry-workers
-    title: Laundry workers, American Linen Supply.
+    title: Laundry workers, American Linen Supply
     date: 2000
     creator: David Bacon
     collection: "Work & Social Justice: The David Bacon Photography Archive at Stanford"
@@ -144,7 +144,7 @@ items:
     image: https://stacks.stanford.edu/image/iiif/jq025qx6944/2306-22/full/max/0/default.jpg
     local_image: local-media/Content/Image-Derivatives/Slideshow-1-Screen-11-Labor/jq025qx6944.jpg
   - key: homeless-couple
-    title: Homeless couple in Oakland live under the freeway.
+    title: Homeless couple in Oakland live under the freeway
     date: February 11, 2014
     creator: David Bacon
     collection: "Work & Social Justice: The David Bacon Photography Archive at Stanford"
@@ -152,7 +152,7 @@ items:
     image: https://stacks.stanford.edu/image/iiif/rh924hh2647/dnb2014missionforhomeless65%20copy/full/max/0/default.jpg
     local_image: local-media/Content/Image-Derivatives/Slideshow-1-Screen-11-Labor/rh924hh2647.jpg
   - key: building-trades
-    title: Building trades workers in downtown Oakland celebrate May Day.
+    title: Building trades workers in downtown Oakland celebrate May Day
     date: May 01, 2019
     creator: David Bacon
     collection: "Work & Social Justice: The David Bacon Photography Archive at Stanford"

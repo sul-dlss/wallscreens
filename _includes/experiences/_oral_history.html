@@ -20,7 +20,7 @@
   <div class="card" data-oral-history-target="steps">
     <div class="card-content experience-index">
       {% include _experience_title.html %}
-      {% include _experience_attribution.html %}
+      <!-- {% include _experience_attribution.html %} -->
       <hr/>
 
       <p class="experience-summary">{{ experience.summary}}</p>
@@ -31,7 +31,7 @@
   <div class="card" data-oral-history-target="chapterContainer" hidden>
     <div class="card-content">
       {% include _experience_title.html %}
-      {% include _experience_attribution.html %}
+      <!-- {% include _experience_attribution.html %} -->
       <hr/>
       {% assign themes = experience.items | group_by:"theme" %}
       {% for theme in themes %}
@@ -55,7 +55,7 @@
   <div id="last" class="card last-card" data-oral-history-target="steps" hidden>
     <div class="card-content">
       {% include _experience_title.html %}
-      {% include _experience_attribution.html %}
+      <!-- {% include _experience_attribution.html %} -->
       <hr/>
       {% include _dig_deeper.html %}
     </div>

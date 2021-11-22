@@ -2,12 +2,9 @@ key: adobe-and-apple
 type: slideshow
 button_label: Adobe and Apple
 title: Adobe and Apple
-subtitle: Photographs from the Douglas Menuez Photography Collection
-summary: Douglas Menuez has documented progress in Silicon Valley during a period stretching from the early 1980s through the Internet boom.  With an eye for capturing illustrative moments in the histories of companies such as Adobe, Apple, NeXT, Intel, Sun Microsystems, IBM, and several startups, he has worked behind the scenes in a range of settings from boardrooms to design meetings to launch events.
+subtitle: Photographs by Douglas Menuez
+summary: Douglas Menuez (b. 1942) has documented progress in Silicon Valley during a period stretching from the early 1980s through the Internet boom.  With an eye for capturing illustrative moments in the histories of companies such as Adobe, Apple, NeXT, Intel, Sun Microsystems, IBM, and several startups, he has worked behind the scenes in a range of settings from boardrooms to design meetings to launch events.
 more_info:
-  - type: Website
-    text: Silicon Valley Archives
-    url: https://library.stanford.edu/projects/silicon-valley-archives
   - type: Collection
     text: Douglas Menuez photography collection, circa 1985 - 2008
     url: https://searchworks.stanford.edu/view/5628133
@@ -18,10 +15,9 @@ items:
   - key: adobe
     url: https://purl.stanford.edu/kq505ns0185
     title: Adobe
-    caption: Adobe co-founder Chuck Geschke (left), Apple co-founder and NeXT founder Steve Jobs (center) and Adobe co-founder John Warnock.
+    caption: Adobe co-founder Chuck Geschke (left), Apple co-founder and Steve Jobs (center) and Adobe co-founder John Warnock.
     date: July 1990
     creator: Douglas Menuez
-    collection: Douglas Menuez photography collection, 1986 - 2006
     note: Apple and Adobe are both among the Valley’s most visible success stories in the area of desktop computing. The histories of these two companies were closely linked during the 1980s, beginning with Steve Jobs attempt to acquire Adobe in the early 1980s, which resulted in his acquisition of a significant portion of the stock issued by the company. After Jobs left Apple, the launch of Adobe Illustrator for the Apple Macintosh in early 1987, followed in 1990 by the release of Adobe Photoshop, also for the Macintosh, proved beneficial for both companies.
     image: https://stacks.stanford.edu/image/iiif/kq505ns0185%2F8478_03_PM/full/max/0/default.jpg
     local_image: local-media/Content/Image-Derivatives/Slideshow-2-Apple-Adobe/kq505ns0185_8478_03_SM.jpg
@@ -31,7 +27,6 @@ items:
     caption: Adobe co-founders John Warnock (left) and Chuck Geschke.
     date: 1989
     creator: Douglas Menuez
-    collection: Douglas Menuez photography collection, 1986 - 2006
     note: John Warnock and Chuck Geschke co-founded Adobe in 1982 after leaving Xerox PARC to develop PostScript, a page description language that could be applied to desktop printing and publication. Adobe, which like other Silicon Valley started in a garage (Warnock’s), derives its name from the creek behind Warnock’s home in Los Altos, California
     image: https://stacks.stanford.edu/image/iiif/hf643vn5802%2F11577_29_PM/full/max/0/default.jpg
     local_image: local-media/Content/Image-Derivatives/Slideshow-2-Apple-Adobe/hf643vn5802_11577_29_SM.jpg
@@ -39,9 +34,8 @@ items:
     url: https://purl.stanford.edu/sv835qx0345
     title: Desktop Publishing
     caption: Adobe co-founder Check Geschke (right) and Adobe Vice-President Dave Pratt (left).
-    date: 1990 - 1992
+    date: c. 1990 - 1992
     creator: Douglas Menuez
-    collection: Douglas Menuez photography collection, 1986 - 2006
     note: PostScript enabled computers to print a file exactly as it appeared on screen on a piece of paper, a feat that revolutionized desktop publishing. It featured specifications and algorithms for producing fonts that corresponded accurately to letter-form type in many languages and character sets.
     image: https://stacks.stanford.edu/image/iiif/sv835qx0345%2F9047_14A_PM/full/max/0/default.jpg
     local_image: local-media/Content/Image-Derivatives/Slideshow-2-Apple-Adobe/sv835qx0345_9047_14A_SM.jpg
@@ -51,7 +45,6 @@ items:
     caption: Adobe co-founder John Warnock in conversation with Christina Liberman, Apple Computer account manager for Adobe's Systems Products Division.
     date: 1988
     creator: Douglas Menuez
-    collection: Douglas Menuez photography collection, 1986 - 2006
     note: Photoshop was released exclusively by Adobe for Macintosh machines, so that the business relationship between the two companies was especially close through the early 1990s.
     image: https://stacks.stanford.edu/image/iiif/bw777mm8533%2F04159_18A_PM/full/max/0/default.jpg
     local_image: local-media/Content/Image-Derivatives/Slideshow-2-Apple-Adobe/bw777mm8533_04159_18A_SM.jpg
@@ -61,7 +54,6 @@ items:
     caption: Adobe's 1990 Photoshop Invitational, which included painter David Hockney (with dachshund in lap).
     date: 1990
     creator: Douglas Menuez
-    collection: Douglas Menuez photography collection, 1986 - 2006
     note: Photoshop’s features enabled photo editors to easily edit images. It remains the industry standard for photo editing. Like Apple, Adobe occasionally involved artists and other celebrities in the design process, such as David Hockney (seated second from left in this image).
     image: https://stacks.stanford.edu/image/iiif/dx152sc4352%2F8553_04_PM/full/max/0/default.jpg
     local_image: local-media/Content/Image-Derivatives/Slideshow-2-Apple-Adobe/dx152sc4352_8553_04_SM.jpg
@@ -71,7 +63,6 @@ items:
     caption: Participants in the 1990 Adobe Photoshop Invitational.
     date: 1990
     creator: Douglas Menuez
-    collection: Douglas Menuez photography collection, 1986 - 2006
     note: Before Photoshop was launched as a product, it was difficult to predict how large the market would be for it. Events such as the Adobe Photoshop Invitational in 1990 created energy around the product and may have increased its popularity by connecting Adobe’s creative team with potential users such as artists and photographers.
     image: https://stacks.stanford.edu/image/iiif/zp922sr8114%2F8554_21_PM/full/max/0/default.jpg
     local_image: local-media/Content/Image-Derivatives/Slideshow-2-Apple-Adobe/zp922sr8114_8554_21_SM.jpg
@@ -81,7 +72,6 @@ items:
     caption: Adobe added Kanji printer products in 1988, making PostScript the first truly international standard for computer printing.
     date: 1988
     creator: Douglas Menuez
-    collection: Douglas Menuez photography collection, 1986 - 2006
     note: Adobe added Kanji printer products in 1988, making PostScript the first widely available international standard for desktop publishing.
     image: https://stacks.stanford.edu/image/iiif/cg433qx8415%2F08980_19A_PM/full/max/0/default.jpg
     local_image: local-media/Content/Image-Derivatives/Slideshow-2-Apple-Adobe/cg433qx8415_08980_19A_SM.jpg
@@ -91,7 +81,6 @@ items:
     caption: The acrobats outside of Adobe's Mountain View, California, offices.
     date: 1992
     creator: Douglas Menuez
-    collection: Douglas Menuez photography collection, 1986 - 2006
     note: Adobe released its Portable Document Format (PDF) in 1992, followed one year later by Adobe Acrobat, software based on the format that gave its users the ability to interact with Portable Digital Files, also commonly known as PDFs. This proprietary document format became the industry standard for digital documents, such that in 2008 the International Organization for Standardization released an open PDF standard.
     image: https://stacks.stanford.edu/image/iiif/vy314cc6845%2F78424_07_PM/full/max/0/default.jpg
     local_image: local-media/Content/Image-Derivatives/Slideshow-2-Apple-Adobe/vy314cc6845_78424_07_SM.jpg
@@ -99,9 +88,8 @@ items:
     url: https://purl.stanford.edu/px635rk0516
     title: Apple in Transition
     caption: Apple co-founder Steve Jobs, then co-founder and CEO of NeXT, Inc.
-    date: 1988 - 1990
+    date: c. 1988 - 1990
     creator: Douglas Menuez
-    collection: Douglas Menuez photography collection, 1986 - 2006
     note: In 1985, Steve Jobs founded NeXT after leaving Apple. NeXT was based in Redwood City, California, and focused on the development of high-end personal computers for creative work in the arts, higher education, and business.
     image: https://stacks.stanford.edu/image/iiif/px635rk0516%2FB32-F11-S4-5_PM/full/max/0/default.jpg
     local_image: local-media/Content/Image-Derivatives/Slideshow-2-Apple-Adobe/px635rk0516_B32-F11-S4-5_SM.jpg
@@ -111,7 +99,6 @@ items:
     caption: John Sculley, who joined Apple in 1983 as president and CEO.
     date: March 1989
     creator: Douglas Menuez
-    collection: Douglas Menuez photography collection, 1986 - 2006
     note: John Sculley became President and CEO of Apple Computers in 1983. He headed the company until 1993 and thus oversaw the launch of the Macintosh as well as the relationship with Adobe.
     image: https://stacks.stanford.edu/image/iiif/vh334wh6717%2F5_10_SVS_1986_97_TS11JS_SH_5_1/full/full/0/default.jpg
     local_image: local-media/Content/Image-Derivatives/Slideshow-2-Apple-Adobe/vh334wh6717_5_10_SVS_1986_97_TS11JS_SH_5_1.jpg
@@ -119,19 +106,17 @@ items:
     url: https://purl.stanford.edu/vf970zx4855
     title: The Newton
     caption: Apple Computer co-founder Steve Wozniak (left) and John Sculley (right), who joined Apple in 1983 as president and CEO.
-    date: 1990 - 1991
+    date: c. 1990 - 1991
     creator: Douglas Menuez
-    collection: Douglas Menuez photography collection, 1986 - 2006
-    note: While the Macintosh and Apple II were the flagship Apple products, Sculley also encouraged the development of new technologies. The initiative most closely associated with his leadership is the Apple Newton, a handheld computing device. In this image, he is showing the device to Apple co-founder Steve Wozniak.
+    note: While the Macintosh and Apple II were the flagship Apple products, Sculley also encouraged the development of new technologies. The initiative most closely associated with his leadership is the Apple Newton, a handheld computing device. In this image, he is showing another handheld device (a Nintendo Game Boy) to Apple co-founder Steve Wozniak.
     image: https://stacks.stanford.edu/image/iiif/vf970zx4855%2F8842_33A_PM/full/max/0/default.jpg
     local_image: local-media/Content/Image-Derivatives/Slideshow-2-Apple-Adobe/vf970zx4855_8842_33A_SM.jpg
   - key: marketing
     url: https://purl.stanford.edu/pr017df3980
     title: Marketing
     caption: A presentation during the unveiling of Apple's long-awaited, low-cost Macintosh computers.
-    date: 1990 - 1991
+    date: c. 1990 - 1991
     creator: Douglas Menuez
-    collection: Douglas Menuez photography collection, 1986 - 2006
     note: Sculley brought his marketing experience from previous positions at Pepsi to Apple. One of the priorities of Apple’s advertising under Sculley was to market lower-cost machines to families, with the goal of building Apple’s consumer base among educators, artists and other professionals more interested in higher-end personal computers.
     image: https://stacks.stanford.edu/image/iiif/pr017df3980%2F8855_9A_PM/full/max/0/default.jpg
     local_image: local-media/Content/Image-Derivatives/Slideshow-2-Apple-Adobe/pr017df3980_8855_9A_SM.jpg
@@ -141,7 +126,6 @@ items:
     caption: Newton product design meeting.
     date: March 1993
     creator: Douglas Menuez
-    collection: Douglas Menuez photography collection, 1986 - 2006
     note: >
       The Newton was a device conceived of by Michael Tchao in 1991 and released in August of 1993, shortly before Sculley would leave Apple. While not commercially successful, the Newton pointed the way forward to a new kind of computing device: the personal digital assistant, or PDA.
     image: https://stacks.stanford.edu/image/iiif/gc920nn4783%2F70153_8A_PM/full/max/0/default.jpg
@@ -152,7 +136,6 @@ items:
     caption: Preparing for a product launch. Newton support staff work late at Boston Symphony Hall sorting and making badges for the 500 international journalists, analysts and consumer electronics and computer industry insiders expected at the Newton introduction the following morning.
     date: August 1993
     creator: Douglas Menuez
-    collection: Douglas Menuez photography collection, 1986 - 2006
     note: The launch of the Newton in 1993 at the Boston Symphony Hall continued the Apple tradition of splashy product introductions established by Jobs and Sculley with the Macintosh in 1984. Doug Menuez’ images capture the last-minute preparations and stress of event marketing."
     image: https://stacks.stanford.edu/image/iiif/bf618my8546%2F82354_11_PM/full/max/0/default.jpg
     local_image: local-media/Content/Image-Derivatives/Slideshow-2-Apple-Adobe/bf618my8546_82354_11_SM.jpg
@@ -162,7 +145,6 @@ items:
     caption: Ray Riley (right) watches Scott Petry (left).
     date: August 1993
     creator: Douglas Menuez
-    collection: Douglas Menuez photography collection, 1986 - 2006
     note: Ray Riley watches while Scott Petry takes sandpaper to the rough edge of a Newton he just sawed down to fit in a display case. They were preparing a selection of prototypes for future Newton products to be shown during the next morning’s Newton. Menuez’ photographs remind us of the teamwork, coordination, and skill required to pull off such an event.
     image: https://stacks.stanford.edu/image/iiif/yf756bz3174%2F82369_18A_PM/full/max/0/default.jpg
     local_image: local-media/Content/Image-Derivatives/Slideshow-2-Apple-Adobe/yf756bz3174_82369_18A_SM.jpg
@@ -172,7 +154,6 @@ items:
     caption: The Newton product launch in Boston.  John Sculley (left) and unidentified colleague.
     date: August 1993
     creator: Douglas Menuez
-    collection: Douglas Menuez photography collection, 1986 - 2006
     note: With the commercial failure of a Newton Steve Jobs terminated it as an Apple product in 1998, shortly after he returned to head the company.
     image: https://stacks.stanford.edu/image/iiif/zv574mp4610%2F82350_17_PM/full/max/0/default.jpg
     local_image: local-media/Content/Image-Derivatives/Slideshow-2-Apple-Adobe/zv574mp4610_82350_17_SM.jpg
@@ -182,7 +163,6 @@ items:
     caption: The Macintosh on the Stanford campus, Durand Engineering Building.
     date: October 1992
     creator: Douglas Menuez
-    collection: Douglas Menuez photography collection, 1986 - 2006
     note: The combination of Apple hardware and Adobe software could be found all over the Stanford campus by the early 1990s and have thus been used on campus for more than three decades.
     image: https://stacks.stanford.edu/image/iiif/nf291dn9902%2F78439_34A_PM/full/max/0/default.jpg
     local_image: local-media/Content/Image-Derivatives/Slideshow-2-Apple-Adobe/nf291dn9902_78439_34A_SM.jpg
