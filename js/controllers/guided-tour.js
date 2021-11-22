@@ -2,9 +2,10 @@ import { Controller } from "/js/stimulus.js"
 
 export default class extends Controller {
   static values = { index: { type: Number, default: 0 }, next: { type: String, default: '' } }
-  static targets = [ "slides", "caption", "slideContainer", "guidedTourContainer", "attractPanContainer" ]
+  static targets = [ "slides", "caption", "slideContainer", "guidedTourMainContent", "attractPanContainer" ]
   static autoplayTimeout = 5 * 60 * 1000; // 5 minutes
   static autoplayIntervalTime = 1 * 60 * 1000; // 1 minute per slide in autoplay mode
+  static crossFadeTime = 1000; // 1 second
 
   connect() {
     if (window.location.hash && this.slidesTargets.findIndex(x => x.id == window.location.hash.substring(1)) > 0) {
@@ -78,14 +79,33 @@ export default class extends Controller {
     return this.indexValue == this.slidesTargets.length - 1;
   }
 
-  showGuidedTourContainer() {
-    this.guidedTourContainerTarget.hidden = false;
-    this.attractPanContainerTarget.hidden = true;
+  showGuidedTourMainContent() {
+    this.guidedTourMainContentTarget.classList.add('fx-fade-in');
+    this.guidedTourMainContentTarget.hidden = false;
+    this.attractPanContainerTarget.classList.add('fx-fade-out-partial');
+
+    window.clearTimeout(this.attractModeTransitionTimer);
+    this.attractModeTransitionTimer = window.setTimeout(() => {
+      this.attractPanContainerTarget.hidden = true;
+    }, this.constructor.crossFadeTime);
   }
 
   showAttractPanContainer() {
+    this.attractPanContainerTarget.classList.add('fx-fade-in-partial');
     this.attractPanContainerTarget.hidden = false;
-    this.guidedTourContainerTarget.hidden = true;
+    this.guidedTourMainContentTarget.classList.add('fx-fade-out');
+
+    window.clearTimeout(this.attractModeTransitionTimer);
+    this.attractModeTransitionTimer = window.setTimeout(() => {
+      this.guidedTourMainContentTarget.hidden = true;
+    }, this.constructor.crossFadeTime);
+  }
+
+  resetFxClasses() {
+    this.guidedTourMainContentTarget.classList.remove('fx-fade-in');
+    this.guidedTourMainContentTarget.classList.remove('fx-fade-out');
+    this.attractPanContainerTarget.classList.remove('fx-fade-in-partial');
+    this.attractPanContainerTarget.classList.remove('fx-fade-out-partial');
   }
 
   // @private
@@ -109,6 +129,8 @@ export default class extends Controller {
       }
     });
 
+    this.resetFxClasses();
+
     // check if we're on the initial or final step.
     // in either case show the atrract container
     // and hide the video container. otherwise,
@@ -116,7 +138,7 @@ export default class extends Controller {
     if (this.indexValue == 0 || this.ended ) {
       this.showAttractPanContainer();
     } else {
-      this.showGuidedTourContainer();
+      this.showGuidedTourMainContent();
     }
 
     const data = JSON.parse(item.querySelector("script[type='application/json']")?.textContent || null) ?? {};

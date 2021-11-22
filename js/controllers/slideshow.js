@@ -5,7 +5,7 @@ export default class extends Controller {
   static targets = ["slides", "programArea", "previewArea", "slideContainer" ]
   static autoplayTimeout = 5 * 60 * 1000; // 5 minutes
   static autoplayIntervalTime = 1 * 60 * 1000; // 1 minute per slide in autoplay mode
-  static crossFadeTime = 500; // 0.5 seconds
+  static crossFadeTime = 1000; // 1 second
 
   connect() {
     if (window.location.hash && this.slidesTargets.findIndex(x => x.id == window.location.hash.substring(1)) > 0) {
