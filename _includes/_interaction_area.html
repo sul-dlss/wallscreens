@@ -2,30 +2,17 @@
 {% assign experience = site.data.experiences[page.experience] %}
 
 <div class="experience-buttons">
-  {% if experience.type == "slideshow" %}
-    <a href="{% link _wallscreens/{{ page.wallscreen }}/{{ page.experience }}/index.html %}" class="active tall button">{{ experience.button_label }}</a>
-  {% elsif wallscreen.nav.defaults.slideshow %}
-    <a href="{% link _wallscreens/{{ page.wallscreen }}/{{ wallscreen.nav.defaults.slideshow }}/index.html %}" class="tall button">{{ site.data.experiences[wallscreen.nav.defaults.slideshow].button_label }}</a>
-  {% endif %}
-
-  {% if experience.type == "guided_tour" %}
-    <a href="{% link _wallscreens/{{ page.wallscreen }}/{{ page.experience }}/index.html %}" class="active tall button">{{ experience.button_label }}</a>
-  {% elsif wallscreen.nav.defaults.guided_tour %}
-    <a href="{% link _wallscreens/{{ page.wallscreen }}/{{ wallscreen.nav.defaults.guided_tour }}/index.html %}" class="tall button">{{ site.data.experiences[wallscreen.nav.defaults.guided_tour].button_label }}</a>
-  {% endif %}
-
-  {% if experience.type == "oral_history" %}
-    <a href="{% link _wallscreens/{{ page.wallscreen }}/{{ page.experience }}/index.html %}" class="active tall button">{{ experience.button_label }}</a>
-  {% elsif wallscreen.nav.defaults.oral_history %}
-    <a href="{% link _wallscreens/{{ page.wallscreen }}/{{ wallscreen.nav.defaults.oral_history }}/index.html %}" class="tall button">{{ site.data.experiences[wallscreen.nav.defaults.oral_history].button_label }}</a>
-  {% endif %}
+  <a href="{% link _wallscreens/{{ page.wallscreen }}/slideshows.html %}" class="tall button{% if experience.type == 'slideshow' or page.layout == 'slideshow_index' %} active{% endif %}">Slideshows</a>
+  <a href="{% link _wallscreens/{{ page.wallscreen }}/guided-tours.html %}" class="tall button{% if experience.type == 'guided_tour' or page.layout == 'guided_tour_index' %} active{% endif %}">Guided Tours</a>
+  <a href="{% link _wallscreens/{{ page.wallscreen }}/oral-histories.html %}" class="tall button{% if experience.type == 'oral_history' or page.layout == 'oral_history_index' %} active{% endif %}">Oral Histories</a>
 </div>
 
 <div class="secondary-buttons">
   {% if page.wallscreen and page.experience %}
-  <a class="tall button" href="{% link _wallscreens/{{ page.wallscreen }}/{{ page.experience }}/index.html %}"><i class="fas fa-redo"></i> <span>Start over</span></a>
-  {% else %}
-  <button class="tall"><i class="fas fa-redo"></i> <span>Start over</span></button>
+  <a class="tall button" href="{% link _wallscreens/{{ page.wallscreen }}/{{ site.experience_types[experience.type].index_page }}.html %}">
+    <i class="fas fa-redo"></i>
+    <span>Start over</span>
+  </a>
   {% endif %}
   <button class="tall more-info" data-action="more-info#show"><i class="fas fa-info-circle"></i> <span>More info</span></button>
 </div>
