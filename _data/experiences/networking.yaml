@@ -5,9 +5,9 @@ title: Computer Networking and Internet Connectivity
 subtitle: Silicon Valley Inventor Group Portraits
 date: 2018
 creator: Terry Guyer
-summary: The Silicon Valley Luminary Society, founded by Harold Hohbach in 1998, was created to commission a series of group portrait paintings, each portraying the "pioneers of Silicon Valley" in a specific area of technology. The purpose of these paintings was to inspire a new generation to follow in the footsteps of the individuals depicted in the portraits. "Computer Networking and Internet Connectivity Pioneers of Silicon Valley," painted by Terry Guyer, is the seventh painting in the series. This group portrait captures five individuals whose work on network technologies made office connectivity and the Internet possible. Don Nielsen, Vint Cerf, Sandy Lerner, Robert Metcalfe stand together in an idealized scene that also depicts artifacts of network technology, as well as a sign for Rossotti's Alpine Inn in Portola Valley, California, a popular beer garden where the first internet transmission took place.
+summary: The Silicon Valley Luminary Society, founded by Harold Hohbach in 1998, was created to commission a series of group portrait paintings, each portraying the "pioneers of Silicon Valley" in a specific area of technology. The purpose of these paintings was to inspire a new generation to follow in the footsteps of the individuals depicted in the portraits. "Computer Networking and Internet Connectivity Pioneers of Silicon Valley," painted by Terry Guyer, is the seventh painting in the series.
 short_summary: |
-  "Computer Networking and Internet Connectivity Pioneers of Silicon Valley," painted by Terry Guyer, is the seventh painting in the series. This group portrait captures five individuals whose work on network technologies made office connectivity and the Internet possible. Don Nielsen, Vint Cerf, Sandy Lerner, Robert Metcalfe stand together in an idealized scene that also depicts artifacts of network technology, as well as a sign for Rossotti's Alpine Inn in Portola Valley, California, a popular beer garden where the first internet transmission took place.
+  The Silicon Valley Luminary Society, founded by Harold Hohbach in 1998, was created to commission a series of group portrait paintings, each portraying the "pioneers of Silicon Valley" in a specific area of technology. The purpose of these paintings was to inspire a new generation to follow in the footsteps of the individuals depicted in the portraits. "Computer Networking and Internet Connectivity Pioneers of Silicon Valley," painted by Terry Guyer, is the seventh painting in the series.
 
 more_info:
   - type: Timeline
@@ -27,6 +27,11 @@ viewport:
 
 items:
   - caption: Networking pioneers created the technologies that made office connectivity and the World Wide Web possible.  The individuals depicted in "Computer Networking and Internet Connectivity Pioneers of Silicon Valley" all invented devices or created protocols that have had a significant impact on all forms of computing in our homes and offices.
+  - caption: This group portrait captures five individuals whose work on network technologies made office connectivity and the Internet possible. Don Nielsen, Vint Cerf, Sandy Lerner, Robert Metcalfe, and Larry Roberts stand together in an idealized scene that also depicts artifacts of network technology, as well as a sign for Rossotti's Alpine Inn in Portola Valley, California, a popular beer garden where the first internet transmission took place.
+    viewport:
+      zoom: 2.4
+      x: 6700
+      y: 2083
   - key: don-nielsen
     bio:
       title: Don Nielsen
