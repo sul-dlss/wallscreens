@@ -16,7 +16,10 @@
       <p class="experience-summary">{{ experience.summary }}</p>
     </div>
     {% include _nav_first_card.html %}
-    {% include _attract_grid.html %}
+    <template>
+      {% assign attract_items = experience.items %}
+      {% include _attract_grid.html %}
+    </template>
   </div>
 
   <div class="card" data-slideshow-target="slideContainer" hidden>
