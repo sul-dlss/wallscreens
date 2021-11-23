@@ -18,8 +18,10 @@ more_info:
 
 image: https://stacks.stanford.edu/image/iiif/jg905yx8933%2F003_panther_00005_FX/info.json
 local_image: local-media/Content/Image-Derivatives/Guided-Tour-2-Screen-11-Black-Community-Survival-Conference/jg905yx8933_full.jpg
-# Needed so panning attract mode will work without a local image.
-stacks_image: https://stacks.stanford.edu/image/iiif/jg905yx8933%2F003_panther_00005_FX/full/max/0/default.jpg
+
+attract_image:
+  image: https://stacks.stanford.edu/image/iiif/jg905yx8933%2F003_panther_00005_FX/full/max/0/default.jpg
+  local_image: local-media/Content/Image-Derivatives/Guided-Tour-2-Screen-11-Black-Community-Survival-Conference/jg905yx8933_attract.jpg
 
 viewport:
   zoom: 1

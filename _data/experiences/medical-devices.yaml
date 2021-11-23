@@ -18,8 +18,10 @@ more_info:
 
 image: https://stacks.stanford.edu/image/iiif/xh842zs4872%2Fxh842zs4872_0001/info.json
 local_image: local-media/Content/Image-Derivatives/Guided-Tour-1-Medical-Devices/xh842zs4872_full.jpg
-# Needed so panning attract mode will work without a local image.
-stacks_image: https://stacks.stanford.edu/image/iiif/xh842zs4872%2Fxh842zs4872_0001/290,290,12000,8000/max/0/default.jpg
+
+attract_image:
+  image: https://stacks.stanford.edu/image/iiif/xh842zs4872%2Fxh842zs4872_0001/290,290,12000,8000/max/0/default.jpg
+  local_image: local-media/Content/Image-Derivatives/Guided-Tour-1-Medical-Devices/xh842zs4872_attract.jpg
 
 viewport:
   zoom: 1

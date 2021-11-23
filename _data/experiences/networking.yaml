@@ -19,8 +19,10 @@ more_info:
 
 image: https://stacks.stanford.edu/image/iiif/gb738dt2052%2Fgb738dt2052_0001/info.json
 local_image: local-media/Content/Image-Derivatives/Guided-Tour-2-Computer-Networking/gb738dt2052_full.jpg
-# Needed so panning attract mode will work without a local image.
-stacks_image: https://stacks.stanford.edu/image/iiif/gb738dt2052/gb738dt2052_0001/290,290,12000,8000/max/0/default.jpg
+
+attract_image:
+  image: https://stacks.stanford.edu/image/iiif/gb738dt2052/gb738dt2052_0001/290,290,12000,8000/max/0/default.jpg
+  local_image: local-media/Content/Image-Derivatives/Guided-Tour-2-Computer-Networking/gb738dt2052_attract.jpg
 
 viewport:
   zoom: 1
