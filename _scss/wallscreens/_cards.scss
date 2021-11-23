@@ -87,20 +87,20 @@
 
 .dig-deeper-link {
   display: block;
-  // width: 50%;
-  // display: flex;
-  // gap: 2rem;
   font-size: 1.25rem;
   line-height: 1.5;
 
   .item-url {
     align-items: flex-start;
-    width: 20ch;
     flex-shrink: 0;
     margin: 0;
   }
 
-  span {
+  .link-type {
+    margin-top: -0.3em;
+  }
+
+  .link-text {
     display: block;
     margin-top: 1em;
   }
