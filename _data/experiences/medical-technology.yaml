@@ -1,0 +1,84 @@
+key: medical-technology
+title: "Medicine and Innovation: Oral Histories and Archive of Medical Technology"
+subtitle: "Excerpts from <i>Medicine and Innovation: Oral Histories and Archive of Medical Technology</i>"
+date: 2019 - 2021
+creator: Henry Lowood & Paul Yock
+extent: 10 interviews
+duration: 11 minutes
+type: oral_history
+# file:
+local_file: local-media/20211118_2700x1800_Medical-Technology_25mbps_final_v1.3.mp4
+button_label: Medical Technology
+summary: The Medicine and Innovation collection of oral history interviews presents the history of medical device technology, with a focus on inventors, entrepreneurs and investors in Silicon Valley. While medical technology is perhaps not as frequently associated with this region as biotechnology, it is nevertheless an area in which Stanford University and companies located in the Valley have played a leading role. In collaboration with the Stanford Byers Center for Biodesign, the Silicon Valley Archives is producing these interviews to provide the perspectives and stories of those who built an industry that today is represented by hundreds of companies in Northern California.
+# more_info:
+#   - type:
+#     text:
+#     url:
+#   - type:
+#     text:
+#     url:
+#   - type:
+#     text:
+#     url:
+# attract_images:
+#   - images/wallscreens/silicon-valley/medical-technology/attract-images/medical-technology-01.png
+#   - images/wallscreens/silicon-valley/medical-technology/attract-images/medical-technology-02.png
+#   - images/wallscreens/silicon-valley/medical-technology/attract-images/medical-technology-03.png
+#   - images/wallscreens/silicon-valley/medical-technology/attract-images/medical-technology-04.png
+#   - images/wallscreens/silicon-valley/medical-technology/attract-images/medical-technology-05.png
+#   - images/wallscreens/silicon-valley/medical-technology/attract-images/medical-technology-06.png
+#   - images/wallscreens/silicon-valley/medical-technology/attract-images/medical-technology-07.png
+#   - images/wallscreens/silicon-valley/medical-technology/attract-images/medical-technology-08.png
+#   - images/wallscreens/silicon-valley/medical-technology/attract-images/medical-technology-09.png
+items:
+  - key: title-1
+    title: Getting Started
+    theme: Getting Started
+    timestamp: 0
+    class: hidden-theme-title
+  - key: john-simpson
+    title: From interview with John Simpson, October 16, 2019.
+    theme: Getting Started
+    timestamp: 5
+  - key: thomas-j-fogarty
+    title: From interview with Thomas J. Fogarty, April 4, 2019.
+    theme: Getting Started
+    timestamp: 56
+  - key: lisa-earnhardt
+    title: From interview with Lisa Earnhardt, October 8, 2020.
+    theme: Getting Started
+    timestamp: 125
+  - key: title-2
+    title: A Challenging Problem
+    theme: A Challenging Problem
+    timestamp: 185
+    class: hidden-theme-title
+  - key: fred-khosravi
+    title: From interview with Fred Khosravi, May 21, 2021.
+    theme: A Challenging Problem
+    timestamp: 190
+  - key: ginger-l-graham
+    title: From interview with Ginger L. Graham, January 27, 2020.
+    theme: A Challenging Problem
+    timestamp: 273
+  - key: mir-imran
+    title: From interview with Mir Imran, March 30, 2021.
+    theme: A Challenging Problem
+    timestamp: 372
+  - key: title-3
+    title: The Impact on Medical Care
+    theme: The Impact on Medical Care
+    timestamp: 455
+    class: hidden-theme-title
+  - key: ginger-l-graham-2
+    title: From interview with Ginger L. Graham, January 27, 2020.
+    theme: The Impact on Medical Care
+    timestamp: 461
+  - key: lisa-earnhardt-2
+    title: From interview with Lisa Earnhardt, October 8, 2020.
+    theme: The Impact on Medical Care
+    timestamp: 505
+  - key: fred-khosravi-2
+    title: From interview with Fred Khosravi, May 21, 2021.
+    theme: The Impact on Medical Care
+    timestamp: 583
