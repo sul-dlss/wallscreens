@@ -19,5 +19,9 @@
     {% endfor %}
     </ul>
     <button class="close" data-action="more-info#hide">Close</button>
+    <div class="debug-info">
+      <span class="version">{{ site.git_info }}</span>
+      <span class="build-date">{{ site.time | date: "%Y-%m-%d" }}</span>
+    </div>
   </div>
 </div>
