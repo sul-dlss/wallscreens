@@ -1,0 +1,20 @@
+---
+title: Slideshows
+subtitle: Images From Our Collections
+layout: experience_index
+experience_type: slideshow
+---
+<main class="content-area">
+  <div class="program-content">
+    {% for experience in site.data.wallscreens[page.wallscreen].experiences %}
+      {% if site.data.experiences[experience.key].type == layout.experience_type %}
+        {% assign slideshow_images = slideshow_images | concat: site.data.experiences[experience.key].items %}
+      {% endif %}
+    {% endfor %}
+    {% for image_key in page.attract_images %}
+      {% assign target = slideshow_images | where: "key", image_key %}
+      {% assign attract_items = attract_items | concat: target %}
+    {% endfor %}
+    {% include _attract_grid.html %}
+  </div>
+</main>
