@@ -9,13 +9,15 @@
     <title>{{ wallscreen.title }} • {{ layout.title }}</title>
     <meta name="description" content="{{ layout.subtitle }}">
     <link rel="icon" href="{% link images/favicon.ico %}">
+    <script src="{% link js/qrcode.min.js %}"></script>
     <script type="module" src="{% link js/experiences.js %}"></script>
+    <script src="{% link js/application.js %}"></script>
     <link rel="stylesheet" href="{% link css/wallscreen.scss %}">
     {% include _analytics.html %}
   </head>
 
   <body>
-    <div class="wallscreen experience-index">
+    <div class="wallscreen experience-index" data-controller="more-info">
       {% include _header.html %}
 
       {{ content }}
