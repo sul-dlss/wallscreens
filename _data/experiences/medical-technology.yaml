@@ -20,16 +20,16 @@ summary: The Medicine and Innovation collection of oral history interviews prese
 #   - type:
 #     text:
 #     url:
-# attract_images:
-#   - images/wallscreens/silicon-valley/medical-technology/attract-images/medical-technology-01.png
-#   - images/wallscreens/silicon-valley/medical-technology/attract-images/medical-technology-02.png
-#   - images/wallscreens/silicon-valley/medical-technology/attract-images/medical-technology-03.png
-#   - images/wallscreens/silicon-valley/medical-technology/attract-images/medical-technology-04.png
-#   - images/wallscreens/silicon-valley/medical-technology/attract-images/medical-technology-05.png
-#   - images/wallscreens/silicon-valley/medical-technology/attract-images/medical-technology-06.png
-#   - images/wallscreens/silicon-valley/medical-technology/attract-images/medical-technology-07.png
-#   - images/wallscreens/silicon-valley/medical-technology/attract-images/medical-technology-08.png
-#   - images/wallscreens/silicon-valley/medical-technology/attract-images/medical-technology-09.png
+attract_images:
+  - images/wallscreens/silicon-valley/medical-technology/attract-images/medical-technology-01.png
+  - images/wallscreens/silicon-valley/medical-technology/attract-images/medical-technology-02.png
+  - images/wallscreens/silicon-valley/medical-technology/attract-images/medical-technology-03.png
+  - images/wallscreens/silicon-valley/medical-technology/attract-images/medical-technology-04.png
+  - images/wallscreens/silicon-valley/medical-technology/attract-images/medical-technology-05.png
+  - images/wallscreens/silicon-valley/medical-technology/attract-images/medical-technology-06.png
+  - images/wallscreens/silicon-valley/medical-technology/attract-images/medical-technology-07.png
+  - images/wallscreens/silicon-valley/medical-technology/attract-images/medical-technology-08.png
+  - images/wallscreens/silicon-valley/medical-technology/attract-images/medical-technology-09.png
 items:
   - key: title-1
     title: Getting Started
