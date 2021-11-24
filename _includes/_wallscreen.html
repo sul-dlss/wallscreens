@@ -6,6 +6,13 @@
 </header>
 
 <main>
+  <h3>Experience Types</h3>
+  <ul class="experience-index-list">
+    <li><a href="{% link _wallscreens/{{ wallscreen.key }}/slideshows.html %}">Slideshows</a></li>
+    <li><a href="{% link _wallscreens/{{ wallscreen.key }}/guided-tours.html %}">Guided Tours</a></li>
+    <li><a href="{% link _wallscreens/{{ wallscreen.key }}/oral-histories.html %}">Oral Histories</a></li>
+  </ul>
+  <h3>Experiences</h3>
   <ul class="experiences-list">
     {% for exp in wallscreen.experiences %}
     {% assign experience = site.data.experiences[exp.key] %}
