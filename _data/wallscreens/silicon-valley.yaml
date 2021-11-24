@@ -13,11 +13,11 @@ experiences:
     next: networking
   - key: networking
     # next: african-american-histories
-    next: video-arcades
+    next: medical-technology
   # - key: african-american-histories
-  #   next: medicine-and-innovation
-  # - key: medicine-and-innovation
-  #   next: video-arcades
+  #   next: medical-technology
+  - key: medical-technology
+    next: video-arcades
 nav:
   defaults:
     slideshow: video-arcades
