@@ -1,0 +1,13 @@
+---
+title: Oral Histories
+subtitle: Interview Excerpts From Our Collections
+layout: experience_index
+experience_type: oral_history
+---
+<main class="content-area">
+  <div class="attract-mode-grid">
+    {% for image in page.attract_images limit: 9 %}
+      <div class="attract-image" style="background-image: url({% link {{image}} %})"></div>
+    {% endfor %}
+  </div>
+</main>

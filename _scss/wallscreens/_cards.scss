@@ -57,6 +57,14 @@
   margin-top: 1.25em;
 }
 
+/* Experience index cards */
+.experience-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
 /* Start, previous, and next buttons */
 .card-nav {
   display: flex;

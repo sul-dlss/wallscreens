@@ -1,0 +1,14 @@
+---
+title: Guided Tours
+subtitle: Explore Works From Our Collections
+layout: experience_index
+experience_type: guided_tour
+---
+
+{% assign experience = site.data.experiences[page.attract_experience] %}
+
+<main class="content-area">
+  <div class="attract-mode-pan">
+    <div class="attract-image" style="background-image: url({% file_or_link {{experience.local_image}} {{experience.stacks_image}} %})"></div>
+  </div>
+</main>

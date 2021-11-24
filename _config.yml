@@ -44,14 +44,17 @@ defaults:
 
 experience_types:
   guided_tour:
-    items_label: "stops"
-    explore_label: "guided tours"
+    items_label: stops
+    explore_label: guided tours
+    index_page: guided-tours
   oral_history:
-    items_label: "clips"
-    explore_label: "oral histories"
+    items_label: clips
+    explore_label: oral histories
+    index_page: oral-histories
   slideshow:
-    items_label: "images"
-    explore_label: "slideshows"
+    items_label: images
+    explore_label: slideshows
+    index_page: slideshows
 
 # Exclude from processing.
 # The following items will not be processed, by default.
