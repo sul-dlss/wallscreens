@@ -17,7 +17,11 @@
   </head>
 
   <body>
-    <div class="wallscreen experience-index" data-controller="more-info">
+    <div class="wallscreen experience-index"
+      data-controller="attract-mode more-info"
+      data-attract-mode-next-value="{% link _wallscreens/{{ page.wallscreen }}/{{ site.experience_types[layout.next_type].index_page }}.html %}"
+      data-action="click@document->attract-mode#resetTimer">
+      
       {% include _header.html %}
 
       {{ content }}
