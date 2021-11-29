@@ -30,20 +30,14 @@
         <div class="card">
           <div class="card-content experience-start">
             <h2 class="experience-title">{{ layout.title }}</h2>
-            <h3 class="experience-subtitle">{{ layout.subtitle }}</h3>      
+            <h3 class="experience-subtitle">{{ layout.subtitle }}</h3>
             <hr/>
             <nav class="experience-nav">
             {% for experience in wallscreen.experiences %}
             {% if site.data.experiences[experience.key].type == layout.experience_type %}
-              <a href="{% link _wallscreens/{{ wallscreen.key }}/{{ experience.key }}/index.html %}" class="tall button start-button">
-                <div class="button-content">
-                  <div class="button-labels">
-                    <span class="begin-experience">{{ site.data.experiences[experience.key].button_label }}</span>
-                  </div>
-                  <div class="button-icon">
-                    <i class="fa-solid fas fa-hand-pointer"></i>
-                  </div>
-                </div>
+              <a href="{% link _wallscreens/{{ wallscreen.key }}/{{ experience.key }}/index.html %}" class="tall button select-button">
+                <span class="select-experience">{{ site.data.experiences[experience.key].button_label }}</span>
+                <i class="fas fa-arrow-alt-circle-right"></i>
               </a>
             {% endif %}
             {% endfor %}
@@ -51,11 +45,11 @@
           </div>
         </div>
       </aside>
-      
+
       <footer class="interaction-area">
         {% include _interaction_area.html %}
       </footer>
-      
+
       {% include _modal.html %}
     </div>
   </body>
