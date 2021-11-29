@@ -4,13 +4,9 @@ subtitle: Winter / Spring 2022
 location: Hohbach Hall
 experiences:
   - key: labor
-    next: richard-weiland
   - key: richard-weiland
-    next: labor
   - key: ai-yamamoto-album
-    next: survival-conference
   - key: survival-conference
-    next: ai-yamamoto-album
 nav:
   defaults:
     slideshow: labor

@@ -4,20 +4,11 @@ subtitle: Winter/Spring 2022
 location: Hohbach Hall
 experiences:
   - key: video-arcades
-    next: medical-devices
   - key: medical-devices
-    next: silicon-genesis
   - key: silicon-genesis
-    next: adobe-and-apple
   - key: adobe-and-apple
-    next: networking
   - key: networking
-    # next: african-american-histories
-    next: medical-technology
-  # - key: african-american-histories
-  #   next: medical-technology
   - key: medical-technology
-    next: video-arcades
 nav:
   defaults:
     slideshow: video-arcades
