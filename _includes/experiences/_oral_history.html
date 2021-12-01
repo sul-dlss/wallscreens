@@ -39,10 +39,14 @@
           <h3 class="theme-name">{{ theme.name }}</h3>
           <ul class="theme-chapter-list">
             {% for item in theme.items %}
-              <li id="{{ item.key }}" class="chapter {{ item.class }}" data-timestamp="{{ item.timestamp }}" data-oral-history-target="steps">
-                <img class="chapter-thumbnail" src="{% file_or_link images/wallscreens/{{page.wallscreen}}/{{page.experience}}/{{item.key}}.png https://via.placeholder.com/200x200 %}" />
+              {% if item.title == item.theme %}
+              <li id="{{ item.key }}" data-timestamp="{{ item.timestamp }}" data-oral-history-target="steps" hidden></li>
+              {% else %}
+              <li id="{{ item.key }}" class="chapter" data-timestamp="{{ item.timestamp }}" data-oral-history-target="steps">
+                <img class="chapter-thumbnail" src="{% file_or_link {{item.thumbnail}} https://via.placeholder.com/200x200 %}" />
                 <h4 class="chapter-title">{{ item.title }}</h4>
               </li>
+              {% endif %}
             {% endfor %}
           </ul>
         </div>

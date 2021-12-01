@@ -36,53 +36,57 @@ items:
     title: What drew you to Silicon Valley?
     theme: What drew you to Silicon Valley?
     timestamp: 0
-    class: hidden-theme-title
   - key: don-valentine
     title: From Interview with Don Valentine, April 21, 2004
     theme: What drew you to Silicon Valley?
-    thumbnail: https://via.placeholder.com/100x55
     timestamp: 5
+    thumbnail: images/wallscreens/silicon-valley/silicon-genesis/don-valentine.png
   - key: jerry-sanders
     title: From Interview with Jerry Sanders, October 18, 2002
     theme: What drew you to Silicon Valley?
     timestamp: 129
+    thumbnail: images/wallscreens/silicon-valley/silicon-genesis/jerry-sanders.png
   - key: geri-hadley
     title: From Interview with Geri Hadley, October 22, 2019
     theme: What drew you to Silicon Valley?
     timestamp: 194
+    thumbnail: images/wallscreens/silicon-valley/silicon-genesis/geri-hadley.png
   - key: title-2
     title: Why has Silicon Valley been a great place to start a company?
     theme: Why has Silicon Valley been a great place to start a company?
     timestamp: 246
-    class: hidden-theme-title
   - key: albert-yu
     title: From interview with Albert Yu, September 15, 2005
     theme: Why has Silicon Valley been a great place to start a company?
-    thumbnail: https://via.placeholder.com/100x55
     timestamp: 252
+    thumbnail: images/wallscreens/silicon-valley/silicon-genesis/albert-yu.png
   - key: jen-hsun-huang
     title: From interview with Jen-Hsun Huang, August 7, 2010
     theme: Why has Silicon Valley been a great place to start a company?
     timestamp: 319
+    thumbnail: images/wallscreens/silicon-valley/silicon-genesis/jen-hsun-huang.png
   - key: don-valentine-2
     title: From Interview with Don Valentine, April 21, 2004
     theme: Why has Silicon Valley been a great place to start a company?
     timestamp: 408
+    thumbnail: images/wallscreens/silicon-valley/silicon-genesis/don-valentine.png
   - key: title-3
     title: What does it take to succeed in Silicon Valley?
     theme: What does it take to succeed in Silicon Valley?
     timestamp: 497
-    class: hidden-theme-title
   - key: frederico-faggin
     title: From interview with Frederico Faggin, March 3, 1995
     theme: What does it take to succeed in Silicon Valley?
     thumbnail: https://via.placeholder.com/100x55
     timestamp: 502
+    thumbnail: images/wallscreens/silicon-valley/silicon-genesis/frederico-faggin.png
   - key: geri-hadley-2
     title: From Interview with Geri Hadley, October 22, 2019
     theme: What does it take to succeed in Silicon Valley?
     timestamp: 564
+    thumbnail: images/wallscreens/silicon-valley/silicon-genesis/geri-hadley.png
   - key: arthur-rock
     title: From interview with Arthur Rock, November 12, 2002
     theme: What does it take to succeed in Silicon Valley?
     timestamp: 623
+    thumbnail: images/wallscreens/silicon-valley/silicon-genesis/arthur-rock.png
