@@ -21,15 +21,15 @@ summary: The Medicine and Innovation collection of oral history interviews prese
 #     text:
 #     url:
 attract_images:
-  - images/wallscreens/silicon-valley/medical-technology/attract-images/medical-technology-01.png
-  - images/wallscreens/silicon-valley/medical-technology/attract-images/medical-technology-02.png
-  - images/wallscreens/silicon-valley/medical-technology/attract-images/medical-technology-03.png
-  - images/wallscreens/silicon-valley/medical-technology/attract-images/medical-technology-04.png
-  - images/wallscreens/silicon-valley/medical-technology/attract-images/medical-technology-05.png
-  - images/wallscreens/silicon-valley/medical-technology/attract-images/medical-technology-06.png
-  - images/wallscreens/silicon-valley/medical-technology/attract-images/medical-technology-07.png
-  - images/wallscreens/silicon-valley/medical-technology/attract-images/medical-technology-08.png
-  - images/wallscreens/silicon-valley/medical-technology/attract-images/medical-technology-09.png
+  - images/experiences/medical-technology/attract-images/medical-technology-01.png
+  - images/experiences/medical-technology/attract-images/medical-technology-02.png
+  - images/experiences/medical-technology/attract-images/medical-technology-03.png
+  - images/experiences/medical-technology/attract-images/medical-technology-04.png
+  - images/experiences/medical-technology/attract-images/medical-technology-05.png
+  - images/experiences/medical-technology/attract-images/medical-technology-06.png
+  - images/experiences/medical-technology/attract-images/medical-technology-07.png
+  - images/experiences/medical-technology/attract-images/medical-technology-08.png
+  - images/experiences/medical-technology/attract-images/medical-technology-09.png
 items:
   - key: title-1
     title: Getting Started
@@ -39,17 +39,17 @@ items:
     title: From interview with John Simpson, October 16, 2019
     theme: Getting Started
     timestamp: 5
-    thumbnail: images/wallscreens/silicon-valley/medical-technology/john-simpson.png
+    thumbnail: images/experiences/medical-technology/john-simpson.png
   - key: thomas-j-fogarty
     title: From interview with Thomas J. Fogarty, April 4, 2019
     theme: Getting Started
     timestamp: 56
-    thumbnail: images/wallscreens/silicon-valley/medical-technology/thomas-j-fogarty.png
+    thumbnail: images/experiences/medical-technology/thomas-j-fogarty.png
   - key: lisa-earnhardt
     title: From interview with Lisa Earnhardt, October 8, 2020
     theme: Getting Started
     timestamp: 125
-    thumbnail: images/wallscreens/silicon-valley/medical-technology/lisa-earnhardt.png
+    thumbnail: images/experiences/medical-technology/lisa-earnhardt.png
   - key: title-2
     title: A Challenging Problem
     theme: A Challenging Problem
@@ -58,17 +58,17 @@ items:
     title: From interview with Fred Khosravi, May 21, 2021
     theme: A Challenging Problem
     timestamp: 190
-    thumbnail: images/wallscreens/silicon-valley/medical-technology/fred-khosravi.png
+    thumbnail: images/experiences/medical-technology/fred-khosravi.png
   - key: ginger-l-graham
     title: From interview with Ginger L. Graham, January 27, 2020
     theme: A Challenging Problem
     timestamp: 273
-    thumbnail: images/wallscreens/silicon-valley/medical-technology/ginger-l-graham.png
+    thumbnail: images/experiences/medical-technology/ginger-l-graham.png
   - key: mir-imran
     title: From interview with Mir Imran, March 30, 2021
     theme: A Challenging Problem
     timestamp: 372
-    thumbnail: images/wallscreens/silicon-valley/medical-technology/mir-imran.png
+    thumbnail: images/experiences/medical-technology/mir-imran.png
   - key: title-3
     title: The Impact on Medical Care
     theme: The Impact on Medical Care
@@ -77,14 +77,14 @@ items:
     title: From interview with Ginger L. Graham, January 27, 2020
     theme: The Impact on Medical Care
     timestamp: 461
-    thumbnail: images/wallscreens/silicon-valley/medical-technology/ginger-l-graham.png
+    thumbnail: images/experiences/medical-technology/ginger-l-graham.png
   - key: lisa-earnhardt-2
     title: From interview with Lisa Earnhardt, October 8, 2020
     theme: The Impact on Medical Care
     timestamp: 505
-    thumbnail: images/wallscreens/silicon-valley/medical-technology/lisa-earnhardt.png
+    thumbnail: images/experiences/medical-technology/lisa-earnhardt.png
   - key: fred-khosravi-2
     title: From interview with Fred Khosravi, May 21, 2021
     theme: The Impact on Medical Care
     timestamp: 583
-    thumbnail: images/wallscreens/silicon-valley/medical-technology/fred-khosravi.png
+    thumbnail: images/experiences/medical-technology/fred-khosravi.png

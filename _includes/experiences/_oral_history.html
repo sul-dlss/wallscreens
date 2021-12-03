@@ -11,7 +11,7 @@
   </div>
   <div class="attract-mode-grid" data-oral-history-target="attractGridContainer">
     {% for image in experience.attract_images limit: 9 %}
-      <div class="attract-image" style="background-image: url({% link {{image}} %})"></div>
+      <div class="attract-image" style="background-image: url({% file_or_link {{image}} https://via.placeholder.com/800x533 %})"></div>
     {% endfor %}
   </div>
 </main>

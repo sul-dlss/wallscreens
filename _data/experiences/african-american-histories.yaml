@@ -20,16 +20,16 @@ more_info:
     text: "Silicon Genesis: Oral Histories of Semiconductor Technology"
     url: https://exhibits.stanford.edu/silicongenesis
 attract_images:
-  - images/wallscreens/we-see-you/african-american-histories/attract-images/african-american-histories-01.png
-  - images/wallscreens/we-see-you/african-american-histories/attract-images/african-american-histories-02.png
-  - images/wallscreens/we-see-you/african-american-histories/attract-images/african-american-histories-03.png
-  - images/wallscreens/we-see-you/african-american-histories/attract-images/african-american-histories-04.png
-  - images/wallscreens/we-see-you/african-american-histories/attract-images/african-american-histories-05.png
-  - images/wallscreens/we-see-you/african-american-histories/attract-images/african-american-histories-06.png
-  - images/wallscreens/we-see-you/african-american-histories/attract-images/african-american-histories-07.png
-  - images/wallscreens/we-see-you/african-american-histories/attract-images/african-american-histories-08.png
-  - images/wallscreens/we-see-you/african-american-histories/attract-images/african-american-histories-09.png
-  - images/wallscreens/we-see-you/african-american-histories/attract-images/african-american-histories-10.png
+  - images/experiences/african-american-histories/attract-images/african-american-histories-01.png
+  - images/experiences/african-american-histories/attract-images/african-american-histories-02.png
+  - images/experiences/african-american-histories/attract-images/african-american-histories-03.png
+  - images/experiences/african-american-histories/attract-images/african-american-histories-04.png
+  - images/experiences/african-american-histories/attract-images/african-american-histories-05.png
+  - images/experiences/african-american-histories/attract-images/african-american-histories-06.png
+  - images/experiences/african-american-histories/attract-images/african-american-histories-07.png
+  - images/experiences/african-american-histories/attract-images/african-american-histories-08.png
+  - images/experiences/african-american-histories/attract-images/african-american-histories-09.png
+  - images/experiences/african-american-histories/attract-images/african-american-histories-10.png
 items:
   - key: title-1
     title: Profession
@@ -39,22 +39,22 @@ items:
     title: From interview with Peggy Forbes, July 20, 2021.
     theme: Profession
     timestamp: 5
-    thumbnail: images/wallscreens/we-see-you/african-american-histories/peggy-forbes.png
+    thumbnail: images/experiences/african-american-histories/peggy-forbes.png
   - key: marc-ramsey
     title: From interview with Marc Ramsey, April 23, 2021.
     theme: Profession
     timestamp: 48
-    thumbnail: images/wallscreens/we-see-you/african-american-histories/marc-ramsey.png
+    thumbnail: images/experiences/african-american-histories/marc-ramsey.png
   - key: henry-bremond
     title: From interview with Henry Bremond, September 3, 2021.
     theme: Profession
     timestamp: 155
-    thumbnail: images/wallscreens/we-see-you/african-american-histories/henry-bremond.png
+    thumbnail: images/experiences/african-american-histories/henry-bremond.png
   - key: max-pearl
     title: From interview with Max Pearl, August 11, 2020.
     theme: Profession
     timestamp: 274
-    thumbnail: images/wallscreens/we-see-you/african-american-histories/max-pearl.png
+    thumbnail: images/experiences/african-american-histories/max-pearl.png
   - key: title-2
     title: Struggles
     theme: Struggles
@@ -63,22 +63,22 @@ items:
     title: From interview with Peggy Forbes, July 20, 2021.
     theme: Struggles
     timestamp: 343
-    thumbnail: images/wallscreens/we-see-you/african-american-histories/peggy-forbes.png
+    thumbnail: images/experiences/african-american-histories/peggy-forbes.png
   - key: kathy-and-al-cotton
     title: From interview with Kathy and Al Cotton, May 13, 2021.
     theme: Struggles
     timestamp: 411
-    thumbnail: images/wallscreens/we-see-you/african-american-histories/kathy-and-al-cotton.png
+    thumbnail: images/experiences/african-american-histories/kathy-and-al-cotton.png
   - key: pamela-isom
     title: From interview with Pamela Isom, March 16, 2021.
     theme: Struggles
     timestamp: 459
-    thumbnail: images/wallscreens/we-see-you/african-american-histories/pamela-isom.png
+    thumbnail: images/experiences/african-american-histories/pamela-isom.png
   - key: max-pearl-2
     title: From interview with Max Pearl, August 11, 2020.
     theme: Struggles
     timestamp: 540
-    thumbnail: images/wallscreens/we-see-you/african-american-histories/max-pearl.png
+    thumbnail: images/experiences/african-american-histories/max-pearl.png
   - key: title-3
     title: Lessons Learned
     theme: Lessons Learned
@@ -87,14 +87,14 @@ items:
     title: From interview with Kathy Cotton, March 12, 2021.
     theme: Lessons Learned
     timestamp: 615
-    thumbnail: images/wallscreens/we-see-you/african-american-histories/kathy-cotton.png
+    thumbnail: images/experiences/african-american-histories/kathy-cotton.png
   - key: peggy-forbes-3
     title: From interview with Peggy Forbes, July 20, 2021.
     theme: Lessons Learned
     timestamp: 684
-    thumbnail: images/wallscreens/we-see-you/african-american-histories/peggy-forbes.png
+    thumbnail: images/experiences/african-american-histories/peggy-forbes.png
   - key: max-pearl-3
     title: From interview with Max Pearl, August 11, 2020.
     theme: Lessons Learned
     timestamp: 727
-    thumbnail: images/wallscreens/we-see-you/african-american-histories/max-pearl.png
+    thumbnail: images/experiences/african-american-histories/max-pearl.png
