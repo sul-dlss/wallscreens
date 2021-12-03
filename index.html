@@ -1,16 +1,18 @@
 ---
-layout: home
+layout: backend
 ---
+
+<!-- header -->
 <header>
   <h1>Wallscreens</h1>
   <h2>At the Stanford Libraries</h2>
 </header>
 
+<!-- main content -->
 <main>
   {% for location in site.data.locations %}
     <h3>{{ location.title }}</h3>
     <p>{{ location.description }}</p>
-
     {% assign wallscreens = site.data.wallscreens | where: "location", location.title %}
     <ul class="wallscreens-list">
       {% for wallscreen in wallscreens %}
@@ -23,8 +25,3 @@ layout: home
     </ul>
   {% endfor %}
 </main>
-
-<footer>
-  <span class="version">{{ site.git_info }}</span>
-  <span class="build-date">{{ site.time | date: "%Y-%m-%d" }}</span>
-</footer>
