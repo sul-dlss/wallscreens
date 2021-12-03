@@ -1,6 +1,3 @@
-{% assign wallscreen = site.data.wallscreens[page.wallscreen] %}
-{% assign experience = site.data.experiences[page.experience] %}
-
 <div class="experience-buttons">
   <a href="{% link _wallscreens/{{ page.wallscreen }}/slideshows.html %}" class="tall button{% if experience.type == 'slideshow' or page.layout == 'slideshow_index' %} active{% endif %}">Slideshows</a>
   <a href="{% link _wallscreens/{{ page.wallscreen }}/guided-tours.html %}" class="tall button{% if experience.type == 'guided_tour' or page.layout == 'guided_tour_index' %} active{% endif %}">Guided Tours</a>

@@ -4,6 +4,7 @@ stylesheet: css/wallscreen.scss
 ---
 
 {% assign wallscreen = site.data.wallscreens[page.wallscreen] %}
+{% assign experience = site.data.experiences[page.experience] %}
 
 <div class="wallscreen" data-controller="more-info{% if layout.controller %} {{ layout.controller }}{% endif %}"
   {% case layout.controller %}
