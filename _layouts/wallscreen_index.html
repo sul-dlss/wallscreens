@@ -1,10 +1,16 @@
+---
+layout: backend
+---
+
 {% assign wallscreen = site.data.wallscreens[page.wallscreen] %}
 
+<!-- header -->
 <header>
   <h1>{{ wallscreen.title }}</h1>
   <h2>{{ wallscreen.subtitle }}</h2>
 </header>
 
+<!-- main content -->
 <main>
   <h3>Experience Types</h3>
   <ul class="experience-index-list">
@@ -33,8 +39,3 @@
     {% endfor %}
   </ul>
 </main>
-
-<footer>
-  <span class="version">{{ site.git_info }}</span>
-  <span class="build-date">{{ site.time | date: "%Y-%m-%d" }}</span>
-</footer>
