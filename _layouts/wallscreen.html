@@ -1,50 +1,29 @@
+---
+layout: base
+stylesheet: css/wallscreen.scss
+---
+
 {% assign wallscreen = site.data.wallscreens[page.wallscreen] %}
-{% assign experience = site.data.experiences[page.experience] %}
-<!doctype html>
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<div class="wallscreen" data-controller="more-info{% if layout.controller %} {{ layout.controller }}{% endif %}"
+  {% case layout.controller %}
+    {% when 'oral-history' %}
+    data-action="more-info:show->oral-history#pause more-info:hide->oral-history#unpause more-info:show->oral-history#resetAutoplayTimer more-info:hide->oral-history#resetAutoplayTimer"
+    {% else %}
+    data-action="click@document->{{ layout.controller }}#resetAutoplayTimer"
+  {% endcase %}>
 
-    <title>{{ page.title }}</title>
-    <meta name="description" content="{{ page.description }}">
-    <meta name="author" content="Gary Geisler">
+  <!-- header -->
+  {% include _header.html %}
 
-    <link rel="icon" href="{% link images/favicon.ico %}">
-    <script src="{% link js/qrcode.min.js %}"></script>
-    <script type="module" src="{% link js/experiences.js %}"></script>
-    <script src="{% link js/openseadragon.js %}"></script>
-    <script src="{% link js/application.js %}"></script>
+  <!-- main content -->
+  {{ content }}
 
-    <link rel="stylesheet" href="{% link css/wallscreen.scss %}">
-    {% if page.extra_css %}
-      <link rel="stylesheet" href="{% link css/{{ page.extra_css }}.scss %}">
-    {% endif %}
-    {% include _analytics.html %}
-  </head>
-
-  <body>
-    {% for other_experience in wallscreen.experiences %}
-      {% if other_experience.key == page.experience %}
-        {% assign next_index = forloop.index0 | plus: 1 %}
-        {% assign next_experience = wallscreen.experiences[next_index] %}
-        {% break %}
-      {% endif %}
-    {% endfor %}
-
-    <div class="wallscreen {{ page.controller }} {{ page.experience }}"
-      {% if page.controller %}
-      data-controller="{{ page.controller }} more-info"
-      data-{{page.controller}}-next-value="{% link _wallscreens/{{ page.wallscreen }}/{{ site.experience_types[experience.type].index_page }}.html %}"
-      {% case page.controller %}
-        {% when 'oral-history' %}
-        data-action="more-info:show->oral-history#pause more-info:hide->oral-history#unpause more-info:show->oral-history#resetAutoplayTimer more-info:hide->oral-history#resetAutoplayTimer"
-        {% else %}
-        data-action="click@document->{{ page.controller }}#resetAutoplayTimer"
-      {% endcase %}
-      {% endif %}>
-      {{ content }}
-    </div>
-  </body>
-</html>
+  <!-- footer -->
+  <footer class="interaction-area">
+    {% include _interaction_area.html %}
+  </footer>
+  
+  <!-- modal -->
+  {% include _modal.html %}
+</div>

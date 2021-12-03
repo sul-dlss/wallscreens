@@ -1,0 +1,23 @@
+<html lang="en">
+  <head>
+
+    <!-- metadata -->
+    <title>{{ page.title }}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- styles -->
+    <link rel="icon" href="{% link images/favicon.ico %}">
+    <link rel="stylesheet" href="{% link {{ layout.stylesheet }} %}">
+    
+    <!-- scripts -->
+    <script src="{% link js/qrcode.min.js %}"></script>
+    <script type="module" src="{% link js/experiences.js %}"></script>
+    <script src="{% link js/openseadragon.js %}"></script>
+    <script src="{% link js/application.js %}"></script>
+    {% include _analytics.html %}
+  </head>
+  <body class="{{ page.layout }}">
+    {{ content }}
+  </body>
+</html>

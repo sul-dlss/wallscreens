@@ -1,24 +1,17 @@
-<!doctype html>
+---
+layout: base
+stylesheet: css/index.scss
+---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- navigation -->
+<div id="topnav">
+  <a href="https://library.stanford.edu/"><img height="25" class="header-logo" src="{% link images/SUL-logo-whitetext.svg %}" /></a>
+</div>
 
-    <title>DLSS Access Team - Wallscreen layout testing</title>
-    <meta name="description" content="DLSS Access Team - Wallscreen layout testing">
-    <meta name="author" content="Gary Geisler">
+{{ content }}
 
-    <link rel="icon" href="{% link images/favicon.ico %}">
-
-    <link rel="stylesheet" href="{% link css/index.scss %}">
-    {% include _analytics.html %}
-  </head>
-  <body>
-    <div id="topnav">
-      <a href="https://library.stanford.edu/"><img height="25" class="header-logo" src="{% link images/SUL-logo-whitetext.svg %}" /></a>
-    </div>
-
-    {{ content }}
-  </body>
-</html>
+<!-- footer -->
+<footer>
+  <span class="version">{{ site.git_info }}</span>
+  <span class="build-date">{{ site.time | date: "%Y-%m-%d" }}</span>
+</footer>
