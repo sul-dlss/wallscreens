@@ -8,10 +8,10 @@ RuboCop::RakeTask.new(:rubocop)
 desc 'Build site and run html-proofer'
 task :html_proofer do
   sh 'bundle exec jekyll build'
-  options = { alt_ignore: [/.*/],
-              assume_extension: true,
+  options = { assume_extension: true,
               check_html: true,
               disable_external: true,
+              empty_alt_ignore: true,
               report_invalid_tags: true }
   HTMLProofer.check_directory('./_site', options).run
 end
