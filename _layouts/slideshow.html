@@ -1,14 +1,23 @@
-{% assign wallscreen = site.data.wallscreens[page.wallscreen] %}
-{% assign experience = site.data.experiences[page.experience] %}
+---
+layout: wallscreen
+experience_type: slideshow
+items_label: images
+explore_label: slideshows
+index_page: slideshows
+controller: slideshow
+---
 
-{% include _header.html %}
+{% assign experience = site.data.experiences[page.experience] %}
 
 <main class="content-area">
   <div class="program-content" data-slideshow-target="programArea"></div>
   <div class="preview-content" data-slideshow-target="previewArea"></div>
 </main>
 
+<!-- card area -->
 <aside class="card-area">
+
+  <!-- first card -->
   <div class="card" data-slideshow-target="slides">
     <div class="card-content experience-start">
       {% include _experience_title.html %}
@@ -16,12 +25,15 @@
       <p class="experience-summary">{{ experience.summary }}</p>
     </div>
     {% include _nav_first_card.html %}
+
+    <!-- attractor -->
     <template>
       {% assign attract_items = experience.items %}
       {% include _attract_grid.html %}
     </template>
   </div>
 
+  <!-- middle cards -->
   <div class="card" data-slideshow-target="slideContainer" hidden>
     <div class="card-content">
       {% include _experience_title.html %}
@@ -29,7 +41,6 @@
       {% for item in experience.items %}
         <link rel="preload" href="{% file_or_link {{item.local_image}} {{item.image}} %}" as="image">
         <div id="{{ item.title | slugify }}" data-image-url="{% file_or_link {{item.local_image}} {{item.image}} %}" data-slideshow-target="slides">
-
           <h3 class="item-title">{{ item.title }}</h3>
           <div class="item-attribution">
             {% if item.date %}
@@ -42,18 +53,16 @@
               <span class="item-creator">{{ item.creator }}</span>
             {% endif %}
           </div>
-          <!-- <div class="item-collection">{{ item.collection }}</div> -->
           <hr class="small"/>
-
           <p class="item-caption">{{ item.caption }}</p>
           <p class="item-note">{{ item.note }}</p>
         </div>
       {% endfor %}
     </div>
-
     {% include _nav_card.html %}
   </div>
 
+  <!-- last card -->
   <div id="last" class="card last-card" data-slideshow-target="slides" hidden>
     <div class="card-content">
       {% include _experience_title.html %}
@@ -66,9 +75,3 @@
     </template>
   </div>
 </aside>
-
-<footer class="interaction-area">
-  {% include _interaction_area.html %}
-</footer>
-
-{% include _modal.html %}

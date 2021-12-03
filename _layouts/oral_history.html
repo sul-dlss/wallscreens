@@ -1,7 +1,13 @@
-{% assign wallscreen = site.data.wallscreens[page.wallscreen] %}
-{% assign experience = site.data.experiences[page.experience] %}
+---
+layout: wallscreen
+experience_type: oral_history
+items_label: clips
+explore_label: oral histories
+index_page: oral-histories
+controller: oral-history
+---
 
-{% include _header.html %}
+{% assign experience = site.data.experiences[page.experience] %}
 
 <main class="content-area">
   <div data-oral-history-target="videoContainer" hidden>
@@ -9,6 +15,8 @@
       <source src="{% file_or_link {{experience.local_file}} {{experience.file}} %}" type="video/mp4">
     </video>
   </div>
+
+  <!-- attractor -->
   <div class="attract-mode-grid" data-oral-history-target="attractGridContainer">
     {% for image in experience.attract_images limit: 9 %}
       <div class="attract-image" style="background-image: url({% file_or_link {{image}} https://via.placeholder.com/800x533 %})"></div>
@@ -16,22 +24,23 @@
   </div>
 </main>
 
+<!-- card area -->
 <aside class="card-area">
+
+  <!-- first card -->
   <div class="card" data-oral-history-target="steps">
     <div class="card-content experience-start">
       {% include _experience_title.html %}
-      <!-- {% include _experience_attribution.html %} -->
       <hr/>
-
       <p class="experience-summary">{{ experience.summary}}</p>
     </div>
     {% include _nav_first_card.html %}
   </div>
 
+  <!-- middle card -->
   <div class="card" data-oral-history-target="chapterContainer" hidden>
     <div class="card-content">
       {% include _experience_title.html %}
-      <!-- {% include _experience_attribution.html %} -->
       <hr/>
       {% assign themes = experience.items | group_by:"theme" %}
       {% for theme in themes %}
@@ -52,23 +61,16 @@
         </div>
       {% endfor %}
     </div>
-
     {% include _nav_card.html %}
   </div>
 
+  <!-- last card -->
   <div id="last" class="card last-card" data-oral-history-target="steps" hidden>
     <div class="card-content">
       {% include _experience_title.html %}
-      <!-- {% include _experience_attribution.html %} -->
       <hr/>
       {% include _dig_deeper.html %}
     </div>
     {% include _nav_last_card.html %}
   </div>
 </aside>
-
-<footer class="interaction-area">
-  {% include _interaction_area.html %}
-</footer>
-
-{% include _modal.html %}
