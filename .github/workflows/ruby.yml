@@ -26,5 +26,5 @@ jobs:
       run: |
         bundle config path vendor/bundle
         bundle install
-    - name: Run Rubocop
-      run: bundle exec rubocop
+    - name: Run CI
+      run: bundle exec rake ci
