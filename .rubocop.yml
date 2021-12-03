@@ -1,0 +1,6 @@
+AllCops:
+  NewCops: enable
+  Exclude:
+    - '_site/*'
+    - 'Rakefile'
+    - vendor/bundle/**/*
