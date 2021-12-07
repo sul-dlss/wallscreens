@@ -1,6 +1,6 @@
 key: african-american-histories
 title: African American Histories in Silicon Valley
-subtitle: "Excerpts from the collection: African American Histories in Silicon Valley, 2019 – 2021."
+subtitle: "Excerpts from the collection: <i>African American Histories in Silicon Valley, 2019 – 2021</i>"
 date: 2019-2021
 creator: Henry Lowood
 extent: 8 interviews
@@ -14,7 +14,7 @@ more_info:
     text: African American Histories in Silicon Valley
     url: https://searchworks.stanford.edu/view/13768700
   - type: Silicon Valley Archives
-    text: The main webpage for the Silicon Valley Archives. 
+    text: The main webpage for the Silicon Valley Archives.
     url: https://library.stanford.edu/projects/silicon-valley-archives
   - type: Digital exhibit
     text: "Silicon Genesis: Oral Histories of Semiconductor Technology"
@@ -36,22 +36,22 @@ items:
     theme: Profession
     timestamp: 0
   - key: peggy-forbes
-    title: From interview with Peggy Forbes, July 20, 2021.
+    title: From interview with Peggy Forbes, July 20, 2021
     theme: Profession
     timestamp: 5
     thumbnail: images/experiences/african-american-histories/peggy-forbes.png
   - key: marc-ramsey
-    title: From interview with Marc Ramsey, April 23, 2021.
+    title: From interview with Marc Ramsey, April 23, 2021
     theme: Profession
     timestamp: 48
     thumbnail: images/experiences/african-american-histories/marc-ramsey.png
   - key: henry-bremond
-    title: From interview with Henry Bremond, September 3, 2021.
+    title: From interview with Henry Bremond, September 3, 2021
     theme: Profession
     timestamp: 155
     thumbnail: images/experiences/african-american-histories/henry-bremond.png
   - key: max-pearl
-    title: From interview with Max Pearl, August 11, 2020.
+    title: From interview with Max Pearl, August 11, 2020
     theme: Profession
     timestamp: 274
     thumbnail: images/experiences/african-american-histories/max-pearl.png
@@ -60,22 +60,22 @@ items:
     theme: Struggles
     timestamp: 337
   - key: peggy-forbes-2
-    title: From interview with Peggy Forbes, July 20, 2021.
+    title: From interview with Peggy Forbes, July 20, 2021
     theme: Struggles
     timestamp: 343
     thumbnail: images/experiences/african-american-histories/peggy-forbes.png
   - key: kathy-and-al-cotton
-    title: From interview with Kathy and Al Cotton, May 13, 2021.
+    title: From interview with Kathy and Al Cotton, May 13, 2021
     theme: Struggles
     timestamp: 411
     thumbnail: images/experiences/african-american-histories/kathy-and-al-cotton.png
   - key: pamela-isom
-    title: From interview with Pamela Isom, March 16, 2021.
+    title: From interview with Pamela Isom, March 16, 2021
     theme: Struggles
     timestamp: 459
     thumbnail: images/experiences/african-american-histories/pamela-isom.png
   - key: max-pearl-2
-    title: From interview with Max Pearl, August 11, 2020.
+    title: From interview with Max Pearl, August 11, 2020
     theme: Struggles
     timestamp: 540
     thumbnail: images/experiences/african-american-histories/max-pearl.png
@@ -84,17 +84,17 @@ items:
     theme: Lessons Learned
     timestamp: 609
   - key: kathy-cotton
-    title: From interview with Kathy Cotton, March 12, 2021.
+    title: From interview with Kathy Cotton, March 12, 2021
     theme: Lessons Learned
     timestamp: 615
     thumbnail: images/experiences/african-american-histories/kathy-cotton.png
   - key: peggy-forbes-3
-    title: From interview with Peggy Forbes, July 20, 2021.
+    title: From interview with Peggy Forbes, July 20, 2021
     theme: Lessons Learned
     timestamp: 684
     thumbnail: images/experiences/african-american-histories/peggy-forbes.png
   - key: max-pearl-3
-    title: From interview with Max Pearl, August 11, 2020.
+    title: From interview with Max Pearl, August 11, 2020
     theme: Lessons Learned
     timestamp: 727
     thumbnail: images/experiences/african-american-histories/max-pearl.png
