@@ -3,7 +3,7 @@ import { Controller } from '/js/stimulus.js';
 export default class extends Controller {
   static values = { index: { type: Number, default: 0 }, next: { type: String, default: '' } };
 
-  static targets = ['slides', 'caption', 'slideContainer', 'guidedTourMainContent', 'attractPanContainer'];
+  static targets = ['slides', 'caption', 'slideContainer', 'guidedTourMainContent', 'attractPanContainer', 'autoplayButton'];
 
   static autoplayTimeout = 5 * 60 * 1000; // 5 minutes
 
@@ -31,11 +31,9 @@ export default class extends Controller {
   // enter the auto-play mode where we cycle to the end of the tour and then go back to the
   // intro slide
   autoplay() {
-    if (this.autoplayInterval) window.clearInterval(this.autoplayInterval);
+    if (this.autoplaying) window.clearInterval(this.autoplayInterval);
 
-    gtag('event', 'idle', {
-      index: this.indexValue,
-    });
+    this.autoplayButtonTarget.classList.add('active');
 
     this.autoplayInterval = window.setInterval(() => {
       if (this.indexValue == 0) return this.nextValue && (window.location = this.nextValue);
@@ -44,14 +42,25 @@ export default class extends Controller {
     }, this.constructor.autoplayIntervalTime);
   }
 
+  // pause the autoplay mode, but make sure it can restart after timer elapses
+  pauseAutoplay() {
+    window.clearInterval(this.autoplayInterval);
+    this.autoplayInterval = null;
+    this.autoplayButtonTarget.classList.remove('active');
+    this.resetAutoplayTimer();
+  }
+
   // (re)set a timer for entering the autoplay after an idle timeout
   resetAutoplayTimer() {
-    if (this.autoplayInterval) window.clearInterval(this.autoplayInterval);
+    if (this.autoplaying) window.clearInterval(this.autoplayInterval);
     if (this.autoplayTimer) window.clearTimeout(this.autoplayTimer);
 
     if (this.indexValue == 0 && !this.nextValue) return;
 
-    this.autoplayTimer = window.setTimeout(() => this.autoplay(), this.constructor.autoplayTimeout);
+    this.autoplayTimer = window.setTimeout(() => {
+      gtag('event', 'idle', { index: this.indexValue });
+      this.autoplay();
+    }, this.constructor.autoplayTimeout);
   }
 
   // start the tour by going to the first stop
@@ -69,18 +78,34 @@ export default class extends Controller {
   next() {
     this.indexValue = Math.min(this.indexValue + 1, this.slidesTargets.length - 1);
     gtag('event', 'next', { index: this.indexValue });
-    this.resetAutoplayTimer();
+    this.pauseAutoplay();
   }
 
   // paginate to the previous slide, or the intro card
   previous() {
     this.indexValue = Math.max(this.indexValue - 1, 0);
     gtag('event', 'previous', { index: this.indexValue });
-    this.resetAutoplayTimer();
+    this.pauseAutoplay();
   }
 
   get ended() {
     return this.indexValue == this.slidesTargets.length - 1;
+  }
+
+  get autoplaying() {
+    return this.autoplayInterval != null;
+  }
+
+  // start or stop autoplay when the user clicks the autoplay button
+  toggleAutoplay() {
+    if (this.autoplaying) {
+      gtag('event', 'pause-autoplay');
+      this.pauseAutoplay();
+    }
+    else {
+      gtag('event', 'start-autoplay');
+      this.autoplay();
+    }
   }
 
   showGuidedTourMainContent() {
@@ -145,7 +170,7 @@ export default class extends Controller {
       this.showGuidedTourMainContent();
     }
 
-    const data = JSON.parse(item.querySelector("script[type='application/json']")?.textContent || null) ?? {};
+    const data = JSON.parse(item.querySelector('script[type="application/json"]')?.textContent || null) ?? {};
 
     if (data.viewport) {
       window.viewer.viewport.panTo(window.viewer.viewport.imageToViewportCoordinates(data.viewport.x, data.viewport.y));
