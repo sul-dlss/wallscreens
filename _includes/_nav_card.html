@@ -1,4 +1,19 @@
-<nav class="card-nav" data-{{ layout.controller }}-target="nav">
-  <button class="button" data-action="{{ layout.controller }}#previous"><i class="fas fa-arrow-alt-circle-left"></i> <span>Previous</span></button>
-  <button class="button" data-action="{{ layout.controller }}#next"><span>Next</span> <i class="fas fa-arrow-alt-circle-right"></i></button>
+<nav class="card-nav">
+  <button class="button" data-action="{{ layout.controller }}#previous">
+    <i class="fas fa-arrow-alt-circle-left"></i>
+    <span>Previous</span>
+  </button>
+  {% if layout.autoplay %}
+  <button class="button autoplay" data-action="{{ layout.controller }}#toggleAutoplay" data-{{ layout.controller }}-target="autoplayButton">
+    <i class="fas fa-play"></i>
+    <i class="fas fa-pause"></i>
+    <svg class="progress-ring" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="45"></circle>
+    </svg>
+  </button>
+  {% endif %}
+  <button class="button" data-action="{{ layout.controller }}#next">
+    <span>Next</span>
+    <i class="fas fa-arrow-alt-circle-right"></i>
+  </button>
 </nav>
