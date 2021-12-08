@@ -37,6 +37,10 @@ gem 'webrick', '~> 1.7'
 
 gem 'sass-embedded'
 
-gem 'html-proofer'
 gem 'rake'
-gem 'rubocop', require: false
+
+group :development, :test do
+  gem 'html-proofer'
+  gem 'rspec'
+  gem 'rubocop', require: false
+end
