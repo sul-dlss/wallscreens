@@ -2,8 +2,10 @@
 
 require 'html-proofer'
 require 'rubocop/rake_task'
+require 'rspec/core/rake_task'
 
 RuboCop::RakeTask.new(:rubocop)
+RSpec::Core::RakeTask.new(:rspec)
 
 desc 'Build site and run html-proofer'
 task :html_proofer do
@@ -20,4 +22,5 @@ desc 'Run the full set of CI tasks'
 task :ci do
   Rake::Task['rubocop'].invoke
   Rake::Task['html_proofer'].invoke
+  Rake::Task['rspec'].invoke
 end
