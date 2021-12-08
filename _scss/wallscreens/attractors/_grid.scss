@@ -10,57 +10,76 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    opacity: 0.1;
+    opacity: 0.3;
+    animation-name: reveal;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 
     &:nth-child(1) {
-      animation: reveal 5s ease-in-out infinite alternate;
+      animation-duration: 5s;
       animation-delay: 14s;
     }
 
     &:nth-child(2) {
-      animation: reveal 13s ease-in-out infinite alternate;
+      animation-duration: 13s;
       animation-delay: 6s;
     }
 
     &:nth-child(3) {
-      animation: reveal 8s ease-in-out infinite alternate;
+      animation-duration: 8s;
       animation-delay: 4s;
     }
 
     &:nth-child(4) {
-      animation: reveal 12s ease-in-out infinite alternate;
+      animation-duration: 12s;
       animation-delay: 17s;
     }
 
     &:nth-child(5) {
-      animation: reveal 6s ease-in-out infinite alternate;
+      animation-duration: 6s;
       animation-delay: 0s;
     }
 
     &:nth-child(6) {
-      animation: reveal 15s ease-in-out infinite alternate;
+      animation-duration: 15s;
       animation-delay: 3s;
     }
 
     &:nth-child(7) {
-      animation: reveal 5s ease-in-out infinite alternate;
+      animation-duration: 5s;
       animation-delay: 8s;
     }
 
     &:nth-child(8) {
-      animation: reveal 5s ease-in-out infinite alternate;
+      animation-duration: 5s;
       animation-delay: 18s;
     }
 
     &:nth-child(9) {
-      animation: reveal 5s ease-in-out infinite alternate;
+      animation-duration: 5s;
       animation-delay: 11s;
     }
   }
 }
 
+// darker attractor animation on experience index pages
+.experience-index .attract-mode-grid .attract-image {
+  opacity: 0.1;
+  animation-name: reveal-dark;
+}
 
 @keyframes reveal {
+  0% {
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes reveal-dark {
   0% {
     opacity: 0.1;
   }
