@@ -67,6 +67,7 @@ export default class extends Controller {
   start() {
     this.indexValue = 1;
     gtag('event', 'start-tour');
+    this.autoplay();
   }
 
   // reset the slideshow back to the intro card
