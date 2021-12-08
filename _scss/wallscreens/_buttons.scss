@@ -214,7 +214,7 @@ button, .button {
 
     // animation time should match configured autoplayInterval in controller
     .progress-ring circle {
-      animation: ringFill 60s linear infinite;
+      animation: ringFill 15s linear infinite;
     }
   }
 }

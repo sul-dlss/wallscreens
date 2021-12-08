@@ -7,8 +7,8 @@ export default class extends Controller {
 
   static autoplayTimeout = 5 * 60 * 1000; // 5 minutes
 
-  static autoplayIntervalTime = 1 * 60 * 1000; // 1 minute per slide in autoplay mode
-
+  static autoplayIntervalTime = 15 * 1000; // 15 seconds per slide in autoplay mode
+  
   static crossFadeTime = 1000; // 1 second
 
   connect() {
