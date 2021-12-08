@@ -43,11 +43,12 @@
   }
 
   .chapter-title {
-    font-size: 1.25rem;
-    line-height: 1.3;
     flex: auto;
+    font-size: 1.25rem;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 1.3;
     margin: 0;
-    font-weight: normal;
   }
 
   p.experience-subtitle {
