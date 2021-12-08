@@ -69,11 +69,6 @@ export default class extends Controller {
     this.autoplay();
   }
 
-  // reset the slideshow back to the intro card
-  reset() {
-    this.indexValue = 0;
-  }
-
   // paginate to the next slide, or the end card
   next() {
     this.indexValue = Math.min(this.indexValue + 1, this.slidesTargets.length - 1);
