@@ -82,7 +82,7 @@ export default class extends Controller {
   showGuidedTourMainContent() {
     this.guidedTourMainContentTarget.classList.add('fx-fade-in');
     this.guidedTourMainContentTarget.hidden = false;
-    this.attractPanContainerTarget.classList.add('fx-fade-out-partial');
+    this.attractPanContainerTarget.classList.add('fx-fade-out');
 
     window.clearTimeout(this.attractModeTransitionTimer);
     this.attractModeTransitionTimer = window.setTimeout(() => {
@@ -91,7 +91,7 @@ export default class extends Controller {
   }
 
   showAttractPanContainer() {
-    this.attractPanContainerTarget.classList.add('fx-fade-in-partial');
+    this.attractPanContainerTarget.classList.add('fx-fade-in');
     this.attractPanContainerTarget.hidden = false;
     this.guidedTourMainContentTarget.classList.add('fx-fade-out');
 
@@ -104,8 +104,8 @@ export default class extends Controller {
   resetFxClasses() {
     this.guidedTourMainContentTarget.classList.remove('fx-fade-in');
     this.guidedTourMainContentTarget.classList.remove('fx-fade-out');
-    this.attractPanContainerTarget.classList.remove('fx-fade-in-partial');
-    this.attractPanContainerTarget.classList.remove('fx-fade-out-partial');
+    this.attractPanContainerTarget.classList.remove('fx-fade-in');
+    this.attractPanContainerTarget.classList.remove('fx-fade-out');
   }
 
   // @private

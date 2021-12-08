@@ -6,9 +6,13 @@
   background-repeat: no-repeat;
   background-size: 120%;
   height: 60vh;
-  opacity: 0.7;
   overflow: hidden;
   width: 51vw;
+}
+
+// darker attractor image on experience index pages
+.experience-index .attract-mode-pan .attract-image {
+  opacity: 0.7;
 }
 
 @keyframes panImage {
