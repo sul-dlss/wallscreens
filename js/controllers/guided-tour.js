@@ -52,7 +52,6 @@ export default class extends Controller {
 
   // (re)set a timer for entering the autoplay after an idle timeout
   resetAutoplayTimer() {
-    if (this.autoplaying) window.clearInterval(this.autoplayInterval);
     if (this.autoplayTimer) window.clearTimeout(this.autoplayTimer);
 
     if (this.indexValue == 0 && !this.nextValue) return;
