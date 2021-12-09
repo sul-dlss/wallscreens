@@ -17,11 +17,8 @@ controller: oral-history
   </div>
 
   <!-- attractor -->
-  <div class="attract-mode-grid" data-oral-history-target="attractGridContainer">
-    {% for image in experience.attract_images limit: 9 %}
-      <div class="attract-image" style="background-image: url({% file_or_link {{image}} https://via.placeholder.com/800x533 %})"></div>
-    {% endfor %}
-  </div>
+  {% assign attract_images = experience.attract_images %}
+  {% include _attract_grid.html %}
 </main>
 
 <!-- card area -->

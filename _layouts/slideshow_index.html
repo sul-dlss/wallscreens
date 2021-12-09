@@ -16,6 +16,7 @@ next_type: guided-tours
       {% assign target = slideshow_images | where: "key", image_key %}
       {% assign attract_items = attract_items | concat: target %}
     {% endfor %}
+    {% assign attract_images = attract_items | map: "local_image" %}
     {% include _attract_grid.html %}
   </div>
 </main>
