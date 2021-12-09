@@ -14,6 +14,16 @@ more_info:
   - type: Film
     text: "Yes I AM: The Ric Weiland Story, a film by Aaron Bear"
     url: https://www.ricweiland.com
+attract_images:
+  - ric-weiland
+  - development
+  - commencement
+  - diary-3
+  - license-plate
+  - microsoft
+  - personal-notes-2
+  - albuquerque
+  - weiland-gates
 items:
   - key: ric-weiland
     title: Ric Weiland
