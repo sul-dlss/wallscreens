@@ -32,6 +32,6 @@ jobs:
         node-version: '16.x'
         cache: 'yarn'
     - name: Install JavaScript dependencies
-      run: yarn install --frozen-lockfile
+      run: yarn install
     - name: Run CI
       run: bundle exec rake ci
