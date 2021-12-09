@@ -26,5 +26,12 @@ jobs:
       run: |
         bundle config path vendor/bundle
         bundle install
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16.x'
+        cache: 'yarn'
+    - name: Install JavaScript dependencies
+      run: yarn install
     - name: Run CI
       run: bundle exec rake ci

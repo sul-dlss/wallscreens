@@ -4,6 +4,8 @@ _site
 .jekyll-metadata
 .byebug_history
 vendor
+node_modules
+yarn-error.log
 spec/dest/*
 
 # non-public content from google drive, etc.

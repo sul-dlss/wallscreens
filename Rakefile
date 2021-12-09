@@ -18,9 +18,15 @@ task :html_proofer do
   HTMLProofer.check_directory('./_site', options).run
 end
 
+desc 'Run Jest JavaScript tests'
+task :jest do
+  sh 'yarn run jest'
+end
+
 desc 'Run the full set of CI tasks'
 task :ci do
-  Rake::Task['rubocop'].invoke
-  Rake::Task['html_proofer'].invoke
-  Rake::Task['rspec'].invoke
+  Rake::Task[:rubocop].invoke
+  Rake::Task[:html_proofer].invoke
+  Rake::Task[:rspec].invoke
+  Rake::Task[:jest].invoke
 end
