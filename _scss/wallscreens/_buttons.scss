@@ -169,7 +169,7 @@ button, .button {
   padding: 0;
   justify-content: center;
   position: relative;
-  min-width: 2.75rem; // chrome ignores aspect-ratio here for some reason
+  min-width: 3.09375rem; // chrome ignores aspect-ratio here for some reason
 
   // by default, hide pause icon/progress indicator
   .fa-pause,
