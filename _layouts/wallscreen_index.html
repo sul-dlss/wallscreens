@@ -23,9 +23,9 @@ layout: backend
     {% for exp in wallscreen.experiences %}
     {% assign experience = site.data.experiences[exp.key] %}
     <li>
-        {% if experience.local_image %}
+        {% if experience.type == "guided_tour" %}
         {% assign preview_img = experience.local_image %}
-        {% elsif experience.attract_images %}
+        {% elsif experience.type == "oral_history" %}
         {% assign preview_img = experience.attract_images.first %}
         {% else %}
         {% assign preview_img = experience.items.first.local_image %}

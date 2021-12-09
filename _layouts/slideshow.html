@@ -28,7 +28,11 @@ controller: slideshow
 
     <!-- attractor -->
     <template>
-      {% assign attract_items = experience.items %}
+      {% for image_key in experience.attract_images %}
+        {% assign target = experience.items | where: "key", image_key %}
+        {% assign attract_items = attract_items | concat: target %}
+      {% endfor %}
+      {% assign attract_images = attract_items | map: "local_image" %}
       {% include _attract_grid.html %}
     </template>
   </div>

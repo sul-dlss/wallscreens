@@ -1,5 +1,5 @@
-<div class="attract-mode-grid">
-  {% for item in attract_items limit: 9 %}
-    <div class="attract-image" style="background-image: url({% file_or_link {{item.local_image}} {{item.image}} %})"></div>
+<div class="attract-mode-grid" data-{{ layout.controller }}-target="attractGridContainer">
+  {% for image in attract_images limit: 9 %}
+    <div class="attract-image" style="background-image: url({% file_or_link {{image}} https://via.placeholder.com/800x533 %})"></div>
   {% endfor %}
 </div>
