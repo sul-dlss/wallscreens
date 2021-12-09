@@ -87,19 +87,11 @@ button, .button {
   }
 }
 
-.button.select-button {
-  margin-bottom: 0.5em;
-
-  .fa-arrow-alt-circle-right {
-    padding-bottom: 0.25em;
-  }
-}
-
 .button.select-button, .button.start-button {
   border-radius: 1rem;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   padding: 0.75em 1.75em 0.5em 2.25em;
-
+  
   .select-experience, .begin-experience {
     color: $su-color-cardinal-red-dark;
     font-size: 1.25rem;
@@ -107,6 +99,25 @@ button, .button {
     padding-bottom: 0.25em;
     text-shadow: 0 3px 0 rgba(255, 255, 255, 0.4);
     text-transform: uppercase;
+  }
+}
+
+.button.select-button {
+  border-radius: 0.33rem;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+  margin-bottom: 0.5em;
+  padding: 0.75em 1.75em 0.5em 2em;
+
+  .select-experience {
+    font-family: 'Rajdhani', 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+    padding-bottom: 0;
+    text-transform: none;
+  }
+
+  .fa-arrow-alt-circle-right {
+    font-size: 1.4rem;
+    margin-left: 0.25rem;
   }
 }
 
