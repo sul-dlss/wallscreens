@@ -1,6 +1,8 @@
 // Setup MutationObserver shim since jsdom doesn't
 // support it out of the box.
 
+import '@testing-library/jest-dom'
+
 const fs = require("fs");
 const path = require("path");
 

@@ -1,6 +1,7 @@
 {
   "devDependencies": {
     "@babel/preset-env": "^7.16.4",
+    "@testing-library/jest-dom": "^5.16.1",
     "babel-jest": "^27.4.2",
     "core-js": "^3.19.3",
     "jest": "^27.4.3",
@@ -8,18 +9,23 @@
     "regenerator-runtime": "^0.13.9"
   },
   "jest": {
-    "testEnvironment": "jsdom",
-    "roots": ["<rootDir>/spec"],
-    "setupFiles" : [
-      "core-js/stable",
-      "regenerator-runtime/runtime"
+    "moduleDirectories": [
+      "node_modules",
+      "<rootDir>"
     ],
     "moduleNameMapper": {
       "^/js/(.*)$": "<rootDir>/js/$1"
     },
-    "moduleDirectories": [
-      "node_modules",
-      "<rootDir>"
-    ]
+    "roots": [
+      "<rootDir>/spec"
+    ],
+    "setupFiles": [
+      "core-js/stable",
+      "regenerator-runtime/runtime"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/spec/javascript/setup.js"
+    ],
+    "testEnvironment": "jsdom"
   }
 }

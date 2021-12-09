@@ -3,7 +3,7 @@ name: CI
 
 on:
   push:
-    branches: [ 277-js-testing ]
+    branches: [ main ]
   pull_request:
     branches: [ main ]
 
