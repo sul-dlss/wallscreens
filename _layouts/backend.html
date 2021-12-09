@@ -1,0 +1,17 @@
+---
+layout: base
+stylesheet: css/index.scss
+---
+
+<!-- navigation -->
+<div id="topnav">
+  <a href="https://library.stanford.edu/"><img height="25" class="header-logo" src="{% link images/SUL-logo-whitetext.svg %}" /></a>
+</div>
+
+{{ content }}
+
+<!-- footer -->
+<footer>
+  <span class="version">{{ site.git_info }}</span>
+  <span class="build-date">{{ site.time | date: "%Y-%m-%d" }}</span>
+</footer>

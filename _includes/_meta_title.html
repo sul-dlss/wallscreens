@@ -1,0 +1,12 @@
+{% assign wallscreen = site.data.wallscreens[page.wallscreen] %}
+{% assign experience = site.data.experiences[page.experience] %}
+
+{% if experience.title %}
+<title>{{ experience.title }} • {{ wallscreen.title }}</title>
+{% elsif layout.title %}
+<title>{{ layout.title }} • {{ wallscreen.title }}</title>
+{% elsif wallscreen.title %}
+<title>{{ wallscreen.title }}</title>
+{% else %}
+<title>{{ page.title }}</title>
+{% endif %}

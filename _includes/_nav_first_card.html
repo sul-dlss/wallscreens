@@ -1,13 +1,13 @@
-<nav class="card-nav" data-{{ page.controller }}-target="nav">
+<nav class="card-nav" data-{{ layout.controller }}-target="nav">
     <div class="start-button-container">
-      <button class="tall button start-button" data-action="{{ page.controller }}#start">
+      <button class="tall button start-button" data-action="{{ layout.controller }}#start">
         <div class="button-content">
           <div class="button-labels">
             <span class="begin-experience">Touch to begin</span>
             {% if experience.duration %}
             <span class="experience-duration">{{ experience.duration }}</span>
             {% else %}
-            <span class="experience-duration">{{ experience.items|size }} {{ site.experience_types[experience.type].items_label }}</span>
+            <span class="experience-duration">{{ experience.items|size }} {{ layout.items_label }}</span>
             {% endif %}
           </div>
           <div class="button-icon">

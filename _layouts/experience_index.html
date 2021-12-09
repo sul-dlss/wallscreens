@@ -1,57 +1,47 @@
+---
+layout: base
+stylesheet: css/wallscreen.scss
+---
+
 {% assign wallscreen = site.data.wallscreens[page.wallscreen] %}
-<!doctype html>
 
-<html lang="en">
+<div class="wallscreen experience-index"
+  data-controller="attract-mode more-info"
+  data-attract-mode-next-value="{% link _wallscreens/{{ page.wallscreen }}/{{ layout.next_type }}.html %}"
+  data-action="click@document->attract-mode#resetTimer">
+  
+  <!-- header -->
+  {% include _header.html %}
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ wallscreen.title }} • {{ layout.title }}</title>
-    <meta name="description" content="{{ layout.subtitle }}">
-    <link rel="icon" href="{% link images/favicon.ico %}">
-    <script src="{% link js/qrcode.min.js %}"></script>
-    <script type="module" src="{% link js/experiences.js %}"></script>
-    <script src="{% link js/application.js %}"></script>
-    <link rel="stylesheet" href="{% link css/wallscreen.scss %}">
-    {% include _analytics.html %}
-  </head>
+  <!-- main content -->
+  {{ content }}
 
-  <body>
-    <div class="wallscreen experience-index"
-      data-controller="attract-mode more-info"
-      data-attract-mode-next-value="{% link _wallscreens/{{ page.wallscreen }}/{{ site.experience_types[layout.next_type].index_page }}.html %}"
-      data-action="click@document->attract-mode#resetTimer">
-      
-      {% include _header.html %}
-
-      {{ content }}
-
-      <aside class="card-area">
-        <div class="card">
-          <div class="card-content experience-start">
-            <h2 class="experience-title">{{ layout.title }}</h2>
-            <h3 class="experience-subtitle">{{ layout.subtitle }}</h3>
-            <hr/>
-            <nav class="experience-nav">
-            {% for experience in wallscreen.experiences %}
-            {% if site.data.experiences[experience.key].type == layout.experience_type %}
-              <a href="{% link _wallscreens/{{ wallscreen.key }}/{{ experience.key }}/index.html %}" class="tall button select-button">
-                <span class="select-experience">{{ site.data.experiences[experience.key].button_label }}</span>
-                <i class="fas fa-arrow-alt-circle-right"></i>
-              </a>
-            {% endif %}
-            {% endfor %}
-            </nav>
-          </div>
-        </div>
-      </aside>
-
-      <footer class="interaction-area">
-        {% include _interaction_area.html %}
-      </footer>
-
-      {% include _modal.html %}
+  <!-- card area -->
+  <aside class="card-area">
+    <div class="card">
+      <div class="card-content experience-start">
+        <h2 class="experience-title">{{ layout.title }}</h2>
+        <h3 class="experience-subtitle">{{ layout.subtitle }}</h3>
+        <hr/>
+        <nav class="experience-nav">
+        {% for experience in wallscreen.experiences %}
+        {% if site.data.experiences[experience.key].type == layout.experience_type %}
+          <a href="{% link _wallscreens/{{ wallscreen.key }}/{{ experience.key }}/index.html %}" class="tall button select-button">
+            <span class="select-experience">{{ site.data.experiences[experience.key].button_label }}</span>
+            <i class="fas fa-arrow-alt-circle-right"></i>
+          </a>
+        {% endif %}
+        {% endfor %}
+        </nav>
+      </div>
     </div>
-  </body>
+  </aside>
 
-</html>
+  <!-- footer -->
+  <footer class="interaction-area">
+    {% include _interaction_area.html %}
+  </footer>
+
+  <!-- modal -->
+  {% include _modal.html %}
+</div>

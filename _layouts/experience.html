@@ -1,0 +1,34 @@
+---
+layout: base
+stylesheet: css/wallscreen.scss
+---
+
+{% assign wallscreen = site.data.wallscreens[page.wallscreen] %}
+{% assign experience = site.data.experiences[page.experience] %}
+
+<div class="wallscreen"
+  {% if layout.controller %}
+  data-controller="{{ layout.controller }} more-info"
+  data-{{ layout.controller }}-next-value="{% link _wallscreens/{{ page.wallscreen }}/{{ layout.index_page }}.html %}"
+  {% case layout.controller %}
+    {% when 'oral-history' %}
+    data-action="more-info:show->oral-history#pause more-info:hide->oral-history#unpause more-info:show->oral-history#resetAutoplayTimer more-info:hide->oral-history#resetAutoplayTimer"
+    {% else %}
+    data-action="click@document->{{ layout.controller }}#resetAutoplayTimer"
+  {% endcase %}
+  {% endif %}>
+
+  <!-- header -->
+  {% include _header.html %}
+
+  <!-- main content -->
+  {{ content }}
+
+  <!-- footer -->
+  <footer class="interaction-area">
+    {% include _interaction_area.html %}
+  </footer>
+  
+  <!-- modal -->
+  {% include _modal.html %}
+</div>

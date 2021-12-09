@@ -1,7 +1,13 @@
-{% assign wallscreen = site.data.wallscreens[page.wallscreen] %}
-{% assign experience = site.data.experiences[page.experience] %}
+---
+layout: experience
+experience_type: guided_tour
+items_label: stops
+explore_label: guided tours
+index_page: guided-tours
+controller: guided-tour
+---
 
-{% include _header.html %}
+{% assign experience = site.data.experiences[page.experience] %}
 
 <main class="content-area">
   <div class="guided-tour-main-content" data-guided-tour-target="guidedTourMainContent" hidden>
@@ -29,12 +35,17 @@
     </script>
     <div class="caption" data-guided-tour-target="caption"></div>
   </div>
+
+  <!-- attractor -->
   <div class="attract-mode-pan" data-guided-tour-target="attractPanContainer">
     <div class="attract-image" style="background-image: url({% file_or_link {{experience.attract_image.local_image}} {{experience.attract_image.image}} %})"></div>
   </div>
 </main>
 
+<!-- card area -->
 <aside class="card-area">
+
+  <!-- first card -->
   <div class="card" data-guided-tour-target="slides">
     <div class="card-content experience-start">
       {% include _experience_title.html %}
@@ -45,6 +56,7 @@
     {% include _nav_first_card.html %}
   </div>
 
+  <!-- middle cards -->
   <div class="card" data-guided-tour-target="slideContainer" hidden>
     <div class="card-content">
       {% include _experience_title.html %}
@@ -71,10 +83,10 @@
         {% endfor %}
       </div>
     </div>
-
     {% include _nav_card.html %}
   </div>
 
+  <!-- last card -->
   <div id="last" class="card last-card" data-guided-tour-target="slides" hidden>
     <div class="card-content">
       {% include _experience_title.html %}
@@ -85,9 +97,3 @@
     {% include _nav_last_card.html %}
   </div>
 </aside>
-
-<footer class="interaction-area">
-  {% include _interaction_area.html %}
-</footer>
-
-{% include _modal.html %}
