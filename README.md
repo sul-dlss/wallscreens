@@ -26,6 +26,10 @@ $ bundle exec jekyll build
 this will generate HTML in a directory called `_site/`.
 
 ### Testing, Linting, CI
+The JavaScript tests rely on modules installed via yarn. To install these dependencies run the following before running the test suite:
+```
+$ yarn install
+```
 There is a rake task (in `Rakefile`) to run the entire testing/linting suite:
 ```
 $ bundle exec rake ci
