@@ -17,7 +17,7 @@ pre {
 
 .wallscreen {
   color: $su-color-black;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 
   /* For testing purposes, enable the "wallscreen" to be any size,
      but keep the height and width proportional */
@@ -78,7 +78,9 @@ pre {
 
 .title-area h1 {
   color: $su-color-white;
-  font-size: 4rem;
+  font-family: 'Rajdhani', 'Open Sans', sans-serif;
+  font-size: 4.25rem;
+  font-weight: 500;
   line-height: 1.25;
 }
 

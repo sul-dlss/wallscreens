@@ -19,20 +19,24 @@
 }
 
 .experience-title {
-  font-size: 2rem;
+  font-family: 'Rajdhani', 'Open Sans', sans-serif;
+  font-size: 2.25rem;
   color: var(--color-primary-dark);
   font-weight: 600;
+  line-height: 1.1;
 }
 
 .experience-subtitle {
-  font-size: 1.75rem;
+  color: $su-color-stone-dark;
+  font-size: 1.66rem;
   font-weight: 600;
+  line-height: 1.4;
   margin-top: 0.2em;
 }
 
 .experience-summary {
-  font-size: 1.25rem;
-  line-height: 1.5;
+  font-size: 1.188rem;
+  line-height: 1.6;
 }
 
 .experience-attribution {
@@ -53,7 +57,7 @@
   color: var(--color-primary);
   font-weight: 600;
   gap: 1.5rem;
-  line-height: 1.5;
+  line-height: 1.4;
   margin-top: 1.25em;
 }
 
@@ -63,6 +67,15 @@
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  margin-top: 1em;
+}
+
+.experience-index .experience-title {
+  font-size: 2.5rem;
+}
+
+.experience-index .experience-subtitle {
+  font-size: 1.75rem;
 }
 
 /* Start, previous, and next buttons */
@@ -75,8 +88,9 @@
 /* Last Card */
 .last-card {
   .dig-deeper {
+    color: $su-color-black-90;
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 1.375rem;
     line-height: 1.5;
     text-transform: uppercase;
   }
@@ -110,12 +124,14 @@
 
   .link-text {
     display: block;
+    font-size: 1.188rem;
     margin-top: 1em;
   }
 }
 
 // "explore other..." text
 .card-footer h3 {
+  color: $su-color-black-90;
   margin-bottom: 1.5em;
   overflow: hidden;
   text-align: center;
@@ -139,7 +155,7 @@
     background-color: $su-color-black-20;
     content: "";
     display: inline-block;
-    height: 1px;
+    height: 2px;
     position: relative;
     vertical-align: middle;
     width: 50%;
