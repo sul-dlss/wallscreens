@@ -1,5 +1,5 @@
 {%- capture other_experience_buttons %}
-  {%- for wallscreen_experience in wallscreen.experiences %}
+  {%- for wallscreen_experience in site.data.wallscreens[page.wallscreen].experiences %}
     {%- assign other_experience = site.data.experiences[wallscreen_experience.key] -%}
     {%- if other_experience.type == experience.type and other_experience.key != page.experience %}
         <a href="{% link _wallscreens/{{ page.wallscreen }}/{{ other_experience.key }}/index.html %}" class="button">{{ other_experience.button_label }}</a>
