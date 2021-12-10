@@ -31,10 +31,10 @@ layout: backend
         {% assign preview_img = experience.items.first.local_image %}
         {% endif %}
         <a href="{% link _wallscreens/{{ wallscreen.key }}/{{ experience.key }}/index.html %}">
-          <img src="{% file_or_link {{preview_img}} https://via.placeholder.com/400x225 %}"/></a>
-          <h4><a href="{% link _wallscreens/{{ wallscreen.key }}/{{ experience.key }}/index.html %}">{{ experience.title }}</a></h4>
-          <span>{{ experience.subtitle }}</span>
+          <img src="{% file_or_link {{preview_img}} https://via.placeholder.com/400x225 %}"/>
         </a>
+        <h4><a href="{% link _wallscreens/{{ wallscreen.key }}/{{ experience.key }}/index.html %}">{{ experience.title }}</a></h4>
+        <span>{{ experience.subtitle }}</span>
       </li>
     {% endfor %}
   </ul>
