@@ -175,3 +175,12 @@ button, .button {
 		box-shadow: 0 0 0 0 rgba(130, 0, 0, 0);
 	}
 }
+
+.last-card .button {
+  color: $su-color-cardinal-red-dark;
+  font-family: 'Rajdhani', 'Open Sans', sans-serif;
+  font-size: 1.33rem;
+  font-weight: 600;
+  padding: 0.75em 1em;
+  text-align: center;
+}
