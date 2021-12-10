@@ -54,6 +54,12 @@ We use [rspec](https://rspec.info/) to test Ruby code in the project. There is a
 $ bundle exec rake rspec
 ```
 
+#### JavaScript linting
+We use [eslint](https://eslint.org/) to lint JavaScript code in the project. There is a Rake task included in `Rakefile` to run eslint on the project:
+```
+$ bundle exec rake eslint
+```
+
 #### JavaScript testing
 We use [jest](https://jestjs.io/) to test Stimulus.js code in the project. There is a Rake task included in `Rakefile` to run the specs defined in `/spec/javascript`:
 ```
