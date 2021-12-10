@@ -8,7 +8,7 @@ export default class extends Controller {
   static autoplayTimeout = 5 * 60 * 1000; // 5 minutes
 
   static autoplayIntervalTime = 15 * 1000; // 15 seconds per slide in autoplay mode
-  
+
   static crossFadeTime = 1000; // 1 second
 
   connect() {
@@ -73,7 +73,7 @@ export default class extends Controller {
     // restart autoplay interval if playing
     if (this.autoplaying) {
       this.pauseAutoplay();
-      window.setTimeout(() => this.autoplay(), 1);  
+      window.setTimeout(() => this.autoplay(), 1);
     }
   }
 
@@ -85,7 +85,7 @@ export default class extends Controller {
     // restart autoplay interval if playing
     if (this.autoplaying) {
       this.pauseAutoplay();
-      window.setTimeout(() => this.autoplay(), 1);  
+      window.setTimeout(() => this.autoplay(), 1);
     }
   }
 
@@ -102,8 +102,7 @@ export default class extends Controller {
     if (this.autoplaying) {
       gtag('event', 'pause-autoplay');
       this.pauseAutoplay();
-    }
-    else {
+    } else {
       gtag('event', 'start-autoplay');
       this.autoplay();
     }

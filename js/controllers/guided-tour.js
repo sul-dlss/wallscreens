@@ -6,7 +6,7 @@ export default class extends Controller {
   static targets = ['slides', 'caption', 'slideContainer', 'guidedTourMainContent', 'attractPanContainer', 'autoplayButton'];
 
   static autoplayTimeout = 5 * 60 * 1000; // 5 minutes
-  
+
   static autoplayIntervalTime = 15 * 1000; // 15 seconds per stop in autoplay mode
 
   static crossFadeTime = 1000; // 1 second
@@ -77,7 +77,7 @@ export default class extends Controller {
     // restart autoplay interval if playing
     if (this.autoplaying) {
       this.pauseAutoplay();
-      window.setTimeout(() => this.autoplay(), 1);  
+      window.setTimeout(() => this.autoplay(), 1);
     }
   }
 
@@ -89,7 +89,7 @@ export default class extends Controller {
     // restart autoplay interval if playing
     if (this.autoplaying) {
       this.pauseAutoplay();
-      window.setTimeout(() => this.autoplay(), 1);  
+      window.setTimeout(() => this.autoplay(), 1);
     }
   }
 
@@ -106,8 +106,7 @@ export default class extends Controller {
     if (this.autoplaying) {
       gtag('event', 'pause-autoplay');
       this.pauseAutoplay();
-    }
-    else {
+    } else {
       gtag('event', 'start-autoplay');
       this.autoplay();
     }
