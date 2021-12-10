@@ -1,13 +1,15 @@
-import { Controller } from "/js/stimulus.js"
+import { Controller } from '/js/stimulus.js';
 
 export default class extends Controller {
-  static values = { index: { type: Number, default: 0 }, start: { type: Number, default: 0}, next: { type: String, default: '' } }
-  static targets = [ "chapterContainer", "steps", "video", "videoContainer", "attractGridContainer" ]
+  static values = { index: { type: Number, default: 0 }, start: { type: Number, default: 0 }, next: { type: String, default: '' } };
+
+  static targets = ['chapterContainer', 'steps', 'video', 'videoContainer', 'attractGridContainer'];
+
   static autoplayTimeout = 5 * 60 * 1000; // 5 minutes
 
   connect() {
-    if (window.location.hash && this.stepsTargets.findIndex(x => x.id == window.location.hash.substring(1)) > 0) {
-      this.indexValue = this.stepsTargets.findIndex(x => x.id == window.location.hash.substring(1));
+    if (window.location.hash && this.stepsTargets.findIndex((x) => x.id == window.location.hash.substring(1)) > 0) {
+      this.indexValue = this.stepsTargets.findIndex((x) => x.id == window.location.hash.substring(1));
       this.startValue = this.getItem().dataset?.timestamp;
     }
 
@@ -32,17 +34,16 @@ export default class extends Controller {
 
   // listen to ontimeupdate to update the current index as needed
   registerPlayerHooks() {
-    const timestamps = this.stepsTargets.map((item, index, arr) => ({'start': parseInt(item.dataset.timestamp,10), 'end': parseInt(arr[index+1]?.dataset?.timestamp, 10) || Infinity
-    }))
+    const timestamps = this.stepsTargets.map((item, index, arr) => ({ start: parseInt(item.dataset.timestamp, 10), end: parseInt(arr[index + 1]?.dataset?.timestamp, 10) || Infinity }));
 
     this.videoTarget.ontimeupdate = (event) => {
-      if (this.videoTarget.paused) return
+      if (this.videoTarget.paused) return;
 
-      const index = timestamps.findIndex((timestamp)=>(Number.isFinite(timestamp.start) && timestamp.start < event.target.currentTime && timestamp.end > event.target.currentTime));
+      const index = timestamps.findIndex((timestamp) => (Number.isFinite(timestamp.start) && timestamp.start < event.target.currentTime && timestamp.end > event.target.currentTime));
       if (index >= 0 && this.indexValue != index) this.indexValue = index;
     };
 
-    this.videoTarget.addEventListener('loadedmetadata', () => { if (this.startValue > 0) this.videoTarget.currentTime = this.startValue }, false)
+    this.videoTarget.addEventListener('loadedmetadata', () => { if (this.startValue > 0) this.videoTarget.currentTime = this.startValue; }, false);
 
     this.videoTarget.addEventListener('ended', () => this.end());
   }
@@ -134,7 +135,7 @@ export default class extends Controller {
   indexValueChanged() {
     const item = this.getItem();
 
-    if (item.id) history.replaceState({}, '', '#' + item.id);
+    if (item.id) history.replaceState({}, '', `#${item.id}`);
 
     // reset the autoplay timer
     this.resetAutoplayTimer();
@@ -143,32 +144,32 @@ export default class extends Controller {
     // in either case show the atrract grid container
     // and hide the video container. otherwise,
     // ensure the video container is visible
-    if (this.indexValue == 0 || this.ended ) {
+    if (this.indexValue == 0 || this.ended) {
       this.showAttractGridContainer();
     } else {
       this.showVideoContainer();
     }
 
     // hide/dehighlight all the other steps/chapters
-    this.stepsTargets.forEach(x => {
+    this.stepsTargets.forEach((x) => {
       if (x == item) return;
 
-      if (x.classList.contains('chapter'))  {
-        x.classList.remove('current')
+      if (x.classList.contains('chapter')) {
+        x.classList.remove('current');
       } else {
         x.hidden = true;
       }
-    })
+    });
 
     // reveal/highlight the current step/chapter
-    if (item.classList.contains('chapter')){
-      item.classList.add('current')
+    if (item.classList.contains('chapter')) {
+      item.classList.add('current');
     } else {
       item.hidden = false;
     }
 
     // reveal the containers (e.g. themes) in this item's hierarchy
-    this.chapterContainerTargets.forEach(container => {
+    this.chapterContainerTargets.forEach((container) => {
       if (container.contains(item)) {
         container.hidden = false;
       } else {

@@ -1,15 +1,19 @@
-import { Controller } from "/js/stimulus.js"
+import { Controller } from '/js/stimulus.js';
 
 export default class extends Controller {
-  static values = { index: { type: Number, default: 0 }, next: { type: String, default: '' } }
-  static targets = [ "slides", "caption", "slideContainer", "guidedTourMainContent", "attractPanContainer" ]
+  static values = { index: { type: Number, default: 0 }, next: { type: String, default: '' } };
+
+  static targets = ['slides', 'caption', 'slideContainer', 'guidedTourMainContent', 'attractPanContainer'];
+
   static autoplayTimeout = 5 * 60 * 1000; // 5 minutes
+
   static autoplayIntervalTime = 1 * 60 * 1000; // 1 minute per slide in autoplay mode
+
   static crossFadeTime = 1000; // 1 second
 
   connect() {
-    if (window.location.hash && this.slidesTargets.findIndex(x => x.id == window.location.hash.substring(1)) > 0) {
-      this.indexValue = this.slidesTargets.findIndex(x => x.id == window.location.hash.substring(1));
+    if (window.location.hash && this.slidesTargets.findIndex((x) => x.id == window.location.hash.substring(1)) > 0) {
+      this.indexValue = this.slidesTargets.findIndex((x) => x.id == window.location.hash.substring(1));
 
       window.viewer.addOnceHandler('open', () => {
         this.indexValueChanged();
@@ -30,13 +34,13 @@ export default class extends Controller {
     if (this.autoplayInterval) window.clearInterval(this.autoplayInterval);
 
     gtag('event', 'idle', {
-      index: this.indexValue
+      index: this.indexValue,
     });
 
     this.autoplayInterval = window.setInterval(() => {
       if (this.indexValue == 0) return this.nextValue && (window.location = this.nextValue);
       if (this.ended) return this.indexValue = 0;
-      this.indexValue = this.indexValue + 1
+      this.indexValue += 1;
     }, this.constructor.autoplayIntervalTime);
   }
 
@@ -116,12 +120,12 @@ export default class extends Controller {
 
   indexValueChanged() {
     const item = this.getItem();
-    if (item.id) history.replaceState({}, '', '#' + item.id);
+    if (item.id) history.replaceState({}, '', `#${item.id}`);
 
-    this.slidesTargets.forEach(x => x.hidden = true);
+    this.slidesTargets.forEach((x) => x.hidden = true);
     item.hidden = false;
 
-    this.slideContainerTargets.forEach(container => {
+    this.slideContainerTargets.forEach((container) => {
       if (container.contains(item)) {
         container.hidden = false;
       } else {
@@ -135,7 +139,7 @@ export default class extends Controller {
     // in either case show the atrract container
     // and hide the video container. otherwise,
     // ensure the video container is visible
-    if (this.indexValue == 0 || this.ended ) {
+    if (this.indexValue == 0 || this.ended) {
       this.showAttractPanContainer();
     } else {
       this.showGuidedTourMainContent();

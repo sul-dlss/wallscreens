@@ -1,15 +1,19 @@
-import { Controller } from "/js/stimulus.js"
+import { Controller } from '/js/stimulus.js';
 
 export default class extends Controller {
-  static values = { index: { type: Number, default: 0 }, next: { type: String, default: '' } }
-  static targets = ["slides", "programArea", "previewArea", "slideContainer" ]
+  static values = { index: { type: Number, default: 0 }, next: { type: String, default: '' } };
+
+  static targets = ['slides', 'programArea', 'previewArea', 'slideContainer'];
+
   static autoplayTimeout = 5 * 60 * 1000; // 5 minutes
+
   static autoplayIntervalTime = 1 * 60 * 1000; // 1 minute per slide in autoplay mode
+
   static crossFadeTime = 1000; // 1 second
 
   connect() {
-    if (window.location.hash && this.slidesTargets.findIndex(x => x.id == window.location.hash.substring(1)) > 0) {
-      this.indexValue = this.slidesTargets.findIndex(x => x.id == window.location.hash.substring(1));
+    if (window.location.hash && this.slidesTargets.findIndex((x) => x.id == window.location.hash.substring(1)) > 0) {
+      this.indexValue = this.slidesTargets.findIndex((x) => x.id == window.location.hash.substring(1));
     }
 
     this.resetAutoplayTimer();
@@ -30,7 +34,7 @@ export default class extends Controller {
     this.autoplayInterval = window.setInterval(() => {
       if (this.indexValue == 0) return this.nextValue && (window.location = this.nextValue);
       if (this.ended) return this.indexValue = 0;
-      this.indexValue = this.indexValue + 1
+      this.indexValue += 1;
     }, this.constructor.autoplayIntervalTime);
   }
 
@@ -82,21 +86,19 @@ export default class extends Controller {
   getSlide(item) {
     if (item.querySelector('template')) {
       return item.querySelector('template').content.cloneNode(true);
-    } else {
-      const slide = document.createElement('div');
-      slide.classList.add('slide');
-      slide.style['background-image'] = "url(" + item.dataset.imageUrl + ")";
-      return slide;
     }
+    const slide = document.createElement('div');
+    slide.classList.add('slide');
+    slide.style['background-image'] = `url(${item.dataset.imageUrl})`;
+    return slide;
   }
 
   // make the current item visible
   indexValueChanged() {
     const item = this.getItem();
-    if (item.id) history.replaceState({}, '', '#' + item.id);
+    if (item.id) history.replaceState({}, '', `#${item.id}`);
 
-
-    this.previewAreaTarget.innerHTML = "";
+    this.previewAreaTarget.innerHTML = '';
     this.previewAreaTarget.appendChild(this.getSlide(item));
 
     this.previewAreaTarget.classList.add('fx-fade-in');
@@ -110,14 +112,14 @@ export default class extends Controller {
       this.programAreaTarget.innerHTML = this.previewAreaTarget.innerHTML;
 
       this.previewAreaTarget.hidden = true;
-      this.previewAreaTarget.innerHTML = "";
+      this.previewAreaTarget.innerHTML = '';
       this.previewAreaTarget.classList.remove('fx-fade-in');
     }, this.constructor.crossFadeTime);
 
-    this.slidesTargets.forEach(x => x.hidden = true);
+    this.slidesTargets.forEach((x) => x.hidden = true);
     item.hidden = false;
 
-    this.slideContainerTargets.forEach(container => {
+    this.slideContainerTargets.forEach((container) => {
       if (container.contains(item)) {
         container.hidden = false;
       } else {
