@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'spec_helper'
-
 RSpec.describe 'file_or_link' do
   let(:site) { make_site }
   let(:page) { make_page }
