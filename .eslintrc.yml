@@ -1,0 +1,18 @@
+env:
+  browser: true
+  es2021: true
+extends:
+  - standard
+globals:
+  gtag: true
+  Stimulus: true
+  QRCode: true
+parser: '@babel/eslint-parser'
+parserOptions:
+  ecmaVersion: 12
+  sourceType: module
+rules:
+  eqeqeq: warn
+  import/no-absolute-path: warn
+  no-return-assign: warn
+  node/handle-callback-err: warn
