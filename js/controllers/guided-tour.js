@@ -73,12 +73,24 @@ export default class extends Controller {
   next() {
     this.indexValue = Math.min(this.indexValue + 1, this.slidesTargets.length - 1);
     gtag('event', 'next', { index: this.indexValue });
+
+    // restart autoplay interval if playing
+    if (this.autoplaying) {
+      this.pauseAutoplay();
+      window.setTimeout(() => this.autoplay(), 1);  
+    }
   }
 
   // paginate to the previous slide, or the intro card
   previous() {
     this.indexValue = Math.max(this.indexValue - 1, 0);
     gtag('event', 'previous', { index: this.indexValue });
+
+    // restart autoplay interval if playing
+    if (this.autoplaying) {
+      this.pauseAutoplay();
+      window.setTimeout(() => this.autoplay(), 1);  
+    }
   }
 
   get ended() {
