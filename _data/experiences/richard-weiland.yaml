@@ -146,7 +146,7 @@ items:
     image: https://stacks.stanford.edu/image/iiif/bc911qv7911%2Fbc911qv7911/full/max/0/default.jpg
     local_image: local-media/Content/Image-Derivatives/Slideshow-2-Screen-11-Richard-Weiland/bc911qv7911.jpg
   - key: personal-notes-2
-    title:
+    title: Halloween
     caption:
     date: 1996
     creator: Richard William Weiland
