@@ -8,7 +8,16 @@ more_info:
   - type: Collection
     text: Ira Nowinski photograph collection, ca. 1965-2016
     url: https://searchworks.stanford.edu/view/4712540
-
+attract_images:
+  - asteroids-1
+  - berkeley-2
+  - sf-arcade-2
+  - broadway-arcade
+  - sf-arcade-1
+  - santa-cruz-1
+  - san-mateo-3
+  - asteroids-4
+  - pier-39-3
 items:
   - key: sf-arcade-1
     title: 1st Street Arcade San Francisco
