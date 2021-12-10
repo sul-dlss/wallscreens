@@ -11,6 +11,16 @@ more_info:
   - type: Digital Exhibit
     text: Douglas Menuez Photography Collection
     url: https://exhibits.stanford.edu/menuez
+attract_images:
+  - a-business-partnership
+  - adobe-design
+  - marketing
+  - the-boston-launch
+  - apple-in-transition
+  - the-newton
+  - warnock-and-geschke
+  - kanji-printer-products
+  - adobe
 items:
   - key: adobe
     url: https://purl.stanford.edu/kq505ns0185

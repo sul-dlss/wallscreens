@@ -14,6 +14,16 @@ more_info:
   - type: Website
     text: "David Bacon: Stories, Photographs"
     url: http://dbacon.igc.org/
+attract_images:
+  - workers-assemble-2
+  - farm-workers
+  - workers-assemble-7
+  - gonzalez
+  - housekeeper
+  - united-farm-workers
+  - workers-assemble-6
+  - homeless-couple
+  - building-trades
 items:
   - key: workers-assemble
     title: Workers assemble Toyota Corollas at the New United Motor Manufacturing plant
