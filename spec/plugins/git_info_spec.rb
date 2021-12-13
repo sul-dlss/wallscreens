@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'spec_helper'
-
 RSpec.describe 'git_info' do
   let(:site) { make_site }
   before { site.process }
