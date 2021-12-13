@@ -2,7 +2,10 @@ import { Application } from "js/stimulus.js";
 import MoreInfoModal from "js/controllers/more-info.js"
 
 describe("MoreInfoModal", () => {
+  let application
+  let hide_button
   let modal
+  let show_button
 
   beforeEach(() => {
     window.gtag = function() {};
@@ -12,29 +15,40 @@ describe("MoreInfoModal", () => {
       <div id="modal" data-more-info-target="modal" hidden></div>
     </div>`;
 
-    const application = Application.start();
+    application = Application.start();
     application.register("more-info", MoreInfoModal);
     modal = document.getElementById("modal");
+    hide_button = document.getElementById("hide_button");
+    show_button = document.getElementById("show_button");
   });
 
   describe("#hide", () => {
     it("hides the modal", () => {
-      const button = document.getElementById("hide_button");
-
       modal.hidden = false;
-      button.click();
-
+      hide_button.click();
       expect(modal).not.toBeVisible();
+    });
+
+    it("clears the existing timeout", () => {
+      jest.spyOn(window, 'clearTimeout');
+      show_button.click();
+      hide_button.click();
+      expect(window.clearTimeout).toHaveBeenCalled();
     });
   });
 
   describe("#show", () => {
     it("shows the modal", () => {
-      const button = document.getElementById("show_button");
-
-      button.click();
-
+      show_button.click();
       expect(modal).toBeVisible();
+    });
+
+    it("hides the modal when the timeout expires", () => {
+      jest.useFakeTimers();
+      show_button.click();
+      jest.runOnlyPendingTimers();
+      expect(modal).not.toBeVisible();
+      jest.useRealTimers();
     });
   });
 });
