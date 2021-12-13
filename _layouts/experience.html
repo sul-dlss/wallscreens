@@ -14,7 +14,7 @@ stylesheet: css/wallscreen.scss
     {% when 'oral-history' %}
     data-action="more-info:show->oral-history#pause more-info:hide->oral-history#unpause more-info:show->oral-history#resetAutoplayTimer more-info:hide->oral-history#resetAutoplayTimer"
     {% else %}
-    data-action="click@document->{{ layout.controller }}#resetAutoplayTimer"
+    data-action="more-info:show->{{ layout.controller }}#pauseAutoplay click@document->{{ layout.controller }}#resetAutoplayTimer"
   {% endcase %}
   {% endif %}>
 

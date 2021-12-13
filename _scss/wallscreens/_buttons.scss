@@ -6,6 +6,7 @@ $btn-active-box-shadow: inset 0px 0px 6px 1px rgba(130,0,0,0.2) !default;
 $btn-padding: .75em;
 $btn-padding-lg: 1.25em;
 $btn-font-family: "Open Sans", sans-sans-serif;
+$btn-circumference: 45 * 2 * 3.141592653589793;   // = 2 * pi * r; for autoplay
 
 button, .button {
   font-size: 1.125rem;  // 16px; change this to rescale the button
@@ -162,6 +163,62 @@ button, .button {
   }
 }
 
+.autoplay.button {
+  border-radius: 100%;
+  aspect-ratio: 1;
+  padding: 0;
+  justify-content: center;
+  position: relative;
+  min-width: 3.09375rem; // chrome ignores aspect-ratio here for some reason
+
+  // by default, hide pause icon/progress indicator
+  .fa-pause,
+  .progress-ring {
+    display: none;
+  }
+
+  // radial progress indicator (embedded svg); inspired by
+  // https://css-tricks.com/building-progress-ring-quickly/
+  .progress-ring {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    circle {
+      fill: transparent;
+      stroke: var(--color-primary);
+      stroke-width: 10;   // 2 * (cx - r)
+      stroke-dasharray: $btn-circumference $btn-circumference;
+      transform: rotate(-90deg);  // "right" is 0deg for svg; we want "up"
+      transform-origin: 50% 50%;
+    }
+  }
+
+  // controller applies this class when autoplay is active
+  &.active {
+    // revert normal button active styling
+    background-color: var(--color-secondary);
+    box-shadow: $btn-box-shadow;
+
+    // hide play icon and show pause icon/progress indicator
+    .fa-play {
+      display: none;
+    }
+
+    .fa-pause,
+    .progress-ring {
+      display: block;
+    }
+
+    // animation time should match configured autoplayInterval in controller
+    .progress-ring circle {
+      animation: ringFill 15s linear infinite;
+    }
+  }
+}
+
 @keyframes slowPulse {
 	0% {
 		box-shadow: 0 0 0 0 rgba(130, 0, 0, 0.5);
@@ -183,4 +240,14 @@ button, .button {
   font-weight: 600;
   padding: 0.75em 1em;
   text-align: center;
+}
+
+@keyframes ringFill {
+  0% {
+    stroke-dashoffset: $btn-circumference;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
 }
