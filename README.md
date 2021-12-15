@@ -4,7 +4,8 @@
 [![Jekyll](https://img.shields.io/badge/powered_by-jekyll-blue.svg)](http://jekyllrb.com/)
 [![License](https://img.shields.io/badge/license-apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-curated experiences for touch-screen installations on the stanford campus.
+<p align="center">curated experiences for touch-screen installations on the stanford campus.</p>
+<img src="preview.png" align="center" alt="bay area video arcades slideshow preview">
 
 ## local development
 wallscreens uses the [jekyll](http://jekyllrb.com/) static site generator, which [requires ruby](http://jekyllrb.com/docs/#prerequisites).
@@ -90,14 +91,18 @@ each wallscreen can host several experiences, and experiences can be shared acro
 
 the content used in the wallscreens and experiences is stored as YAML files in the `_data/` directory. text content and media links supplied by curators are defined for each experience.
 
-the layout of experience pages is defined by the HTML templates in the `_includes/` directory. these templates have access to the "global" data in the `_data/` folder via `site.wallscreens`.
+the layout of experience pages is defined by the HTML templates in the `_layouts/` directory. these templates have access to the "global" data in the `_data/` folder via `site.wallscreens` and `site.experiences`. reusable HTML components are defined in the `_includes/` folder.
 
 ### thumbnails
 thumbnails are displayed in the card/slide area of guided tour and oral history experiences. these images should be included in the code repository for the project and meet the following naming conventions and specifications:
 
-- thumbnail location: `images/wallscreens/{WALLSCREEN NAME}/{EXPERIENCE_NAME}/{SLIDE_KEY OR CLIP_KEY}.png`
+- thumbnail location: `images/experiences/{EXPERIENCE_KEY}/{SLIDE_KEY OR CLIP_KEY}.png`
 - square aspect ratio, 200x200
 
+slideshow and oral history experiences also use special thumbnails to populate a grid of images shown on their "attract mode" screen (see below). these images follow a similar naming convention and specification:
+
+- attract image location: `images/experiences/{EXPERIENCE_KEY}/attract-images/{NAME}.png`
+- rectangular aspect ratio, 800x533
 ### local media
 media referenced in wallscreens can be checked-in to the git repository if rights statements permit it. otherwise, files should be downloaded and stored in the `local-media/` directory so that they can be referenced during the jekyll build process.
 
@@ -106,6 +111,25 @@ when adding media to an experience, you can use the custom `file_or_link` liquid
 <img src="{% file_or_link {{local_file}} {{image_url}} %}">
 ```
 note the lack of whitespace around interpolated values (`{{local_file}}`); this is necessary for the tag to parse correctly. when the path pointed to by `local_file` can't be found or wasn't supplied, jekyll will issue a warning when building and use the value of `image_url` instead.
+
+you may find it useful to use a placeholder image service for `image_url` when no suitable image is available or the image hasn't yet been created — for example, https://via.placeholder.com/800x533 will resolve to a blank 800x533 PNG image.
+
+### index pages
+experiences are grouped by type and accessible through ["index pages"](https://github.com/sul-dlss/wallscreens/blob/main/_wallscreens/silicon-valley/slideshows.html) on each wallscreen. these pages use the special "index page" layouts like `slideshow_index`, which show a variety of content from all experiences of the same type on a single screen. the YAML front matter for the index page controls which experience content will be displayed in the "attract mode" animation for that page:
+```yaml
+layout: slideshow_index
+wallscreen: silicon-valley
+attract_images:
+  - launching-the-newton
+  - sf-arcade-1
+  - the-newton
+  - asteroids-1
+  - adobe
+  - san-mateo-3
+  - desktop-publishing
+  - pier-39-3
+  - acrobat-and-pdf
+```
 
 ## interactivity
 wallscreens are designed to rotate through content continuously, in order to prevent screen burn-in and showcase the available experiences.
@@ -119,9 +143,16 @@ for testing and local development, this value can be edited (in, for example, `j
 ```
 after autoplay takes effect, the experience will spend some time on each slide before moving to the next. this value can also be edited:
 ```js
-  static autoplayIntervalTime = 1 * 60 * 1000; // 1 minute per slide in autoplay mode
+  static autoplayIntervalTime = 15 * 1000; // 15 seconds per slide/stop in autoplay mode
+```
+when changing the `autoplayIntervalTime`, be sure to also update the animation timing value for the autoplay play/pause button in `_scss/wallscreens/_buttons.scss`:
+```scss
+    // animation time should match configured autoplayInterval in controller
+    .progress-ring circle {
+      animation: ringFill 15s linear infinite;
+    }
 ```
 ### attract mode
-if an experience remains unattended for `autoplayTimeout` after it has completed, it will eventually return to its initial state. once it remains in this state for the duration of another `autoplayTimeout`, it will enter ["attract mode"](https://en.wiktionary.org/wiki/attract_mode), which cycles between a preview of each experience on the wallscreen.
+if an experience remains unattended, autoplay will eventually return it to its initial slide/stop. once it remains in this state for the duration of another `autoplayIntervalTime`, it will return to the "index page" for its type (see above) and enter ["attract mode"](https://en.wiktionary.org/wiki/attract_mode), which cycles between the index pages for that wallscreen.
 
-this behavior is incorporated into the `autoplay()` method of each experience controller.
+this behavior is shared between the `autoplay()` method of each experience controller and the attract mode controller itself (see `js/controllers/attract-mode.js`).
