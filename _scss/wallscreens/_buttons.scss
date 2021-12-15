@@ -24,12 +24,14 @@ button, .button {
   padding: $btn-padding $btn-padding-lg;
   text-decoration: none;
 
-  &:hover {
-    color: $su-color-black-true;
-  }
+  @media (hover: hover) {
+    &:hover {
+      color: $su-color-black-true;
+    }
 
-  &:focus {
-    box-shadow: $btn-focus-box-shadow;
+    &:focus {
+      box-shadow: $btn-focus-box-shadow;
+    }
   }
 
   &:active {
