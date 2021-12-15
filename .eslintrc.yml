@@ -12,13 +12,9 @@ parserOptions:
   ecmaVersion: 12
   sourceType: module
 rules:
-  class-methods-use-this: warn
-  consistent-return: warn
-  eqeqeq: warn
   import/extensions: warn
   import/no-absolute-path: warn
   import/no-unresolved: warn
-  max-len: warn
-  no-param-reassign: warn
-  no-restricted-globals: warn
-  no-return-assign: warn
+  no-return-assign:
+    - error
+    - except-parens

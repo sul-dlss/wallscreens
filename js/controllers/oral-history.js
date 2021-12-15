@@ -1,15 +1,19 @@
 import { Controller } from '/js/stimulus.js';
 
 export default class extends Controller {
-  static values = { index: { type: Number, default: 0 }, start: { type: Number, default: 0 }, next: { type: String, default: '' } };
+  static values = {
+    index: { type: Number, default: 0 },
+    start: { type: Number, default: 0 },
+    next: { type: String, default: '' },
+  };
 
   static targets = ['chapterContainer', 'steps', 'video', 'videoContainer', 'attractGridContainer'];
 
   static autoplayTimeout = 5 * 60 * 1000; // 5 minutes
 
   connect() {
-    if (window.location.hash && this.stepsTargets.findIndex((x) => x.id == window.location.hash.substring(1)) > 0) {
-      this.indexValue = this.stepsTargets.findIndex((x) => x.id == window.location.hash.substring(1));
+    if (window.location.hash && this.currentSlideIndex() > 0) {
+      this.indexValue = this.currentSlideIndex();
       this.startValue = this.getItem().dataset?.timestamp;
     }
 
@@ -21,29 +25,45 @@ export default class extends Controller {
     if (this.autoplayTimer) window.clearTimeout(this.autoplayTimer);
   }
 
+  currentSlideIndex() {
+    this.stepsTargets.findIndex((x) => x.id === window.location.hash.substring(1));
+  }
+
   // enter the auto-play mode where we go back to the intro slide, and then
   // move to the initial slide of other experiences
   autoplay() {
     if (this.autoplayTimer) window.clearTimeout(this.autoplayTimer);
 
     this.autoplayTimer = window.setTimeout(() => {
-      if (this.indexValue == 0) return this.nextValue && (window.location = this.nextValue);
-      if (this.ended) return this.indexValue = 0;
+      if (this.indexValue === 0) return this.nextValue && (window.location = this.nextValue);
+      if (this.ended) return (this.indexValue = 0);
+      return false;
     }, this.constructor.autoplayTimeout);
   }
 
   // listen to ontimeupdate to update the current index as needed
   registerPlayerHooks() {
-    const timestamps = this.stepsTargets.map((item, index, arr) => ({ start: parseInt(item.dataset.timestamp, 10), end: parseInt(arr[index + 1]?.dataset?.timestamp, 10) || Infinity }));
+    const timestamps = this.stepsTargets.map((item, index, arr) => (
+      {
+        start: parseInt(item.dataset.timestamp, 10),
+        end: parseInt(arr[index + 1]?.dataset?.timestamp, 10) || Infinity,
+      }
+    ));
 
     this.videoTarget.ontimeupdate = (event) => {
       if (this.videoTarget.paused) return;
 
-      const index = timestamps.findIndex((timestamp) => (Number.isFinite(timestamp.start) && timestamp.start < event.target.currentTime && timestamp.end > event.target.currentTime));
-      if (index >= 0 && this.indexValue != index) this.indexValue = index;
+      const index = timestamps.findIndex((timestamp) => (
+        Number.isFinite(timestamp.start)
+          && timestamp.start < event.target.currentTime
+          && timestamp.end > event.target.currentTime
+      ));
+      if (index >= 0 && this.indexValue !== index) this.indexValue = index;
     };
 
-    this.videoTarget.addEventListener('loadedmetadata', () => { if (this.startValue > 0) this.videoTarget.currentTime = this.startValue; }, false);
+    this.videoTarget.addEventListener('loadedmetadata', () => {
+      if (this.startValue > 0) this.videoTarget.currentTime = this.startValue;
+    }, false);
 
     this.videoTarget.addEventListener('ended', () => this.end());
   }
@@ -76,14 +96,14 @@ export default class extends Controller {
   // this.videoTarget.ended may be false even though the experience is over,
   // possibly because the video is still buffering
   get ended() {
-    return this.indexValue == this.stepsTargets.length - 1;
+    return this.indexValue === this.stepsTargets.length - 1;
   }
 
   // (re)set a timer for entering the autoplay after an idle timeout
   resetAutoplayTimer() {
     if (this.autoplayTimer) window.clearTimeout(this.autoplayTimer);
 
-    if (this.indexValue == 0 && !this.nextValue) return;
+    if (this.indexValue === 0 && !this.nextValue) return;
 
     this.autoplayTimer = window.setTimeout(() => this.autoplay(), this.constructor.autoplayTimeout);
   }
@@ -135,7 +155,7 @@ export default class extends Controller {
   indexValueChanged() {
     const item = this.getItem();
 
-    if (item.id) history.replaceState({}, '', `#${item.id}`);
+    if (item.id) window.history.replaceState({}, '', `#${item.id}`);
 
     // reset the autoplay timer
     this.resetAutoplayTimer();
@@ -144,7 +164,7 @@ export default class extends Controller {
     // in either case show the atrract grid container
     // and hide the video container. otherwise,
     // ensure the video container is visible
-    if (this.indexValue == 0 || this.ended) {
+    if (this.indexValue === 0 || this.ended) {
       this.showAttractGridContainer();
     } else {
       this.showVideoContainer();
@@ -152,12 +172,13 @@ export default class extends Controller {
 
     // hide/dehighlight all the other steps/chapters
     this.stepsTargets.forEach((x) => {
-      if (x == item) return;
+      const target = x;
+      if (target === item) return;
 
-      if (x.classList.contains('chapter')) {
-        x.classList.remove('current');
+      if (target.classList.contains('chapter')) {
+        target.classList.remove('current');
       } else {
-        x.hidden = true;
+        target.hidden = true;
       }
     });
 
@@ -169,7 +190,8 @@ export default class extends Controller {
     }
 
     // reveal the containers (e.g. themes) in this item's hierarchy
-    this.chapterContainerTargets.forEach((container) => {
+    this.chapterContainerTargets.forEach((x) => {
+      const container = x;
       if (container.contains(item)) {
         container.hidden = false;
       } else {

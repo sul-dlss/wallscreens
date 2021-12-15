@@ -5,9 +5,6 @@ export default class extends Controller {
 
   static targets = ['modal'];
 
-  connect() {
-  }
-
   disconnect() {
     if (this.autohideCallback) window.clearTimeout(this.autohideCallback);
   }
