@@ -25,7 +25,7 @@ export default class extends Controller {
   }
 
   currentSlideIndex() {
-    this.slidesTargets.findIndex((x) => x.id === window.location.hash.substring(1));
+    return this.slidesTargets.findIndex((x) => x.id === window.location.hash.substring(1));
   }
 
   // enter the auto-play mode where we cycle to the end of the slideshow and then go back to the

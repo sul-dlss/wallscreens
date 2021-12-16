@@ -26,7 +26,7 @@ export default class extends Controller {
   }
 
   currentSlideIndex() {
-    this.stepsTargets.findIndex((x) => x.id === window.location.hash.substring(1));
+    return this.stepsTargets.findIndex((x) => x.id === window.location.hash.substring(1));
   }
 
   // enter the auto-play mode where we go back to the intro slide, and then
