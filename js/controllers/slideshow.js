@@ -1,4 +1,4 @@
-import { Controller } from '/js/stimulus.js';
+import { Controller } from '../stimulus.js';
 
 export default class extends Controller {
   static values = { index: { type: Number, default: 0 }, next: { type: String, default: '' } };

@@ -1,9 +1,9 @@
-import { Application } from '/js/stimulus.js';
-import GuidedTourExperience from '/js/controllers/guided-tour.js';
-import OralHistoryExperience from '/js/controllers/oral-history.js';
-import SlideshowExperience from '/js/controllers/slideshow.js';
-import MoreInfoModal from '/js/controllers/more-info.js';
-import AttractMode from '/js/controllers/attract-mode.js';
+import { Application } from './stimulus.js';
+import GuidedTourExperience from './controllers/guided-tour.js';
+import OralHistoryExperience from './controllers/oral-history.js';
+import SlideshowExperience from './controllers/slideshow.js';
+import MoreInfoModal from './controllers/more-info.js';
+import AttractMode from './controllers/attract-mode.js';
 
 window.Stimulus = Application.start();
 
