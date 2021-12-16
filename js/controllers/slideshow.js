@@ -1,4 +1,4 @@
-import { Controller } from '/js/stimulus.js';
+import { Controller } from '../stimulus.js';
 
 export default class extends Controller {
   static values = { index: { type: Number, default: 0 }, next: { type: String, default: '' } };
@@ -12,8 +12,8 @@ export default class extends Controller {
   static crossFadeTime = 1000; // 1 second
 
   connect() {
-    if (window.location.hash && this.slidesTargets.findIndex((x) => x.id == window.location.hash.substring(1)) > 0) {
-      this.indexValue = this.slidesTargets.findIndex((x) => x.id == window.location.hash.substring(1));
+    if (window.location.hash && this.currentSlideIndex() > 0) {
+      this.indexValue = this.currentSlideIndex();
     }
 
     this.resetAutoplayTimer();
@@ -24,6 +24,10 @@ export default class extends Controller {
     if (this.autoplayTimer) window.clearTimeout(this.autoplayTimer);
   }
 
+  currentSlideIndex() {
+    return this.slidesTargets.findIndex((x) => x.id === window.location.hash.substring(1));
+  }
+
   // enter the auto-play mode where we cycle to the end of the slideshow and then go back to the
   // intro slide
   autoplay() {
@@ -32,9 +36,9 @@ export default class extends Controller {
     this.autoplayButtonTarget.classList.add('active');
 
     this.autoplayInterval = window.setInterval(() => {
-      if (this.indexValue == 0) return this.nextValue && (window.location = this.nextValue);
-      if (this.ended) return this.indexValue = 0;
-      this.indexValue += 1;
+      if (this.indexValue === 0) return this.nextValue && (window.location = this.nextValue);
+      if (this.ended) return (this.indexValue = 0);
+      return (this.indexValue += 1);
     }, this.constructor.autoplayIntervalTime);
   }
 
@@ -50,7 +54,7 @@ export default class extends Controller {
   resetAutoplayTimer() {
     if (this.autoplayTimer) window.clearTimeout(this.autoplayTimer);
 
-    if (this.indexValue == 0 && !this.nextValue) return;
+    if (this.indexValue === 0 && !this.nextValue) return;
 
     this.autoplayTimer = window.setTimeout(() => {
       gtag('event', 'idle', { index: this.indexValue });
@@ -90,7 +94,7 @@ export default class extends Controller {
   }
 
   get ended() {
-    return this.indexValue == this.slidesTargets.length - 1;
+    return this.indexValue === this.slidesTargets.length - 1;
   }
 
   get autoplaying() {
@@ -114,7 +118,8 @@ export default class extends Controller {
     return this.slidesTargets[this.indexValue];
   }
 
-  getSlide(item) {
+  getSlide() {
+    const item = this.getItem();
     if (item.querySelector('template')) {
       return item.querySelector('template').content.cloneNode(true);
     }
@@ -127,10 +132,10 @@ export default class extends Controller {
   // make the current item visible
   indexValueChanged() {
     const item = this.getItem();
-    if (item.id) history.replaceState({}, '', `#${item.id}`);
+    if (item.id) window.history.replaceState({}, '', `#${item.id}`);
 
     this.previewAreaTarget.innerHTML = '';
-    this.previewAreaTarget.appendChild(this.getSlide(item));
+    this.previewAreaTarget.appendChild(this.getSlide());
 
     this.previewAreaTarget.classList.add('fx-fade-in');
     this.previewAreaTarget.hidden = false;
@@ -147,10 +152,14 @@ export default class extends Controller {
       this.previewAreaTarget.classList.remove('fx-fade-in');
     }, this.constructor.crossFadeTime);
 
-    this.slidesTargets.forEach((x) => x.hidden = true);
+    this.slidesTargets.forEach((x) => {
+      const target = x;
+      target.hidden = true;
+    });
     item.hidden = false;
 
-    this.slideContainerTargets.forEach((container) => {
+    this.slideContainerTargets.forEach((x) => {
+      const container = x;
       if (container.contains(item)) {
         container.hidden = false;
       } else {

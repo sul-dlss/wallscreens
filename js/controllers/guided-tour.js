@@ -1,4 +1,4 @@
-import { Controller } from '/js/stimulus.js';
+import { Controller } from '../stimulus.js';
 
 export default class extends Controller {
   static values = { index: { type: Number, default: 0 }, next: { type: String, default: '' } };
@@ -12,8 +12,8 @@ export default class extends Controller {
   static crossFadeTime = 1000; // 1 second
 
   connect() {
-    if (window.location.hash && this.slidesTargets.findIndex((x) => x.id == window.location.hash.substring(1)) > 0) {
-      this.indexValue = this.slidesTargets.findIndex((x) => x.id == window.location.hash.substring(1));
+    if (window.location.hash && this.currentSlideIndex() > 0) {
+      this.indexValue = this.currentSlideIndex();
 
       window.viewer.addOnceHandler('open', () => {
         this.indexValueChanged();
@@ -28,6 +28,10 @@ export default class extends Controller {
     if (this.autoplayTimer) window.clearTimeout(this.autoplayTimer);
   }
 
+  currentSlideIndex() {
+    return this.slidesTargets.findIndex((x) => x.id === window.location.hash.substring(1));
+  }
+
   // enter the auto-play mode where we cycle to the end of the tour and then go back to the
   // intro slide
   autoplay() {
@@ -36,9 +40,9 @@ export default class extends Controller {
     this.autoplayButtonTarget.classList.add('active');
 
     this.autoplayInterval = window.setInterval(() => {
-      if (this.indexValue == 0) return this.nextValue && (window.location = this.nextValue);
-      if (this.ended) return this.indexValue = 0;
-      this.indexValue += 1;
+      if (this.indexValue === 0) return this.nextValue && (window.location = this.nextValue);
+      if (this.ended) return (this.indexValue = 0);
+      return (this.indexValue += 1);
     }, this.constructor.autoplayIntervalTime);
   }
 
@@ -54,7 +58,7 @@ export default class extends Controller {
   resetAutoplayTimer() {
     if (this.autoplayTimer) window.clearTimeout(this.autoplayTimer);
 
-    if (this.indexValue == 0 && !this.nextValue) return;
+    if (this.indexValue === 0 && !this.nextValue) return;
 
     this.autoplayTimer = window.setTimeout(() => {
       gtag('event', 'idle', { index: this.indexValue });
@@ -94,7 +98,7 @@ export default class extends Controller {
   }
 
   get ended() {
-    return this.indexValue == this.slidesTargets.length - 1;
+    return this.indexValue === this.slidesTargets.length - 1;
   }
 
   get autoplaying() {
@@ -149,12 +153,16 @@ export default class extends Controller {
 
   indexValueChanged() {
     const item = this.getItem();
-    if (item.id) history.replaceState({}, '', `#${item.id}`);
+    if (item.id) window.history.replaceState({}, '', `#${item.id}`);
 
-    this.slidesTargets.forEach((x) => x.hidden = true);
+    this.slidesTargets.forEach((x) => {
+      const target = x;
+      target.hidden = true;
+    });
     item.hidden = false;
 
-    this.slideContainerTargets.forEach((container) => {
+    this.slideContainerTargets.forEach((x) => {
+      const container = x;
       if (container.contains(item)) {
         container.hidden = false;
       } else {
@@ -168,7 +176,7 @@ export default class extends Controller {
     // in either case show the atrract container
     // and hide the video container. otherwise,
     // ensure the video container is visible
-    if (this.indexValue == 0 || this.ended) {
+    if (this.indexValue === 0 || this.ended) {
       this.showAttractPanContainer();
     } else {
       this.showGuidedTourMainContent();
@@ -177,7 +185,9 @@ export default class extends Controller {
     const data = JSON.parse(item.querySelector('script[type="application/json"]')?.textContent || null) ?? {};
 
     if (data.viewport) {
-      window.viewer.viewport.panTo(window.viewer.viewport.imageToViewportCoordinates(data.viewport.x, data.viewport.y));
+      window.viewer.viewport.panTo(
+        window.viewer.viewport.imageToViewportCoordinates(data.viewport.x, data.viewport.y),
+      );
       window.viewer.viewport.zoomTo(data.viewport.zoom);
     } else {
       window.viewer.viewport.goHome();

@@ -1,4 +1,4 @@
-import { Controller } from '/js/stimulus.js';
+import { Controller } from '../stimulus.js';
 
 export default class extends Controller {
   static values = { next: { type: String, default: '' } };

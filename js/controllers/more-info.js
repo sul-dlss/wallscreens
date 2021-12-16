@@ -1,12 +1,9 @@
-import { Controller } from '/js/stimulus.js';
+import { Controller } from '../stimulus.js';
 
 export default class extends Controller {
   static timeout = 15 * 60 * 1000; // 15 minutes
 
   static targets = ['modal'];
-
-  connect() {
-  }
 
   disconnect() {
     if (this.autohideCallback) window.clearTimeout(this.autohideCallback);
