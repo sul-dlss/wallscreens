@@ -24,6 +24,7 @@ describe("attract mode controller", () => {
 
     it("navigates to the next location when the timer elapses", () => {
         // mock window.location.assign to test for navigating away
+        const savedLocation = window.location;
         let assignMock = jest.fn();
         delete window.location;
         window.location = { assign: assignMock };
@@ -33,13 +34,14 @@ describe("attract mode controller", () => {
         expect(assignMock).toHaveBeenCalledWith("http://example.com/");
 
         // restore functionality
-        assignMock.mockClear();
+        window.location = savedLocation;
     });
 
     // FIXME state is still being shared here...it thinks that location.assign
     // is being called twice in this test
     xit("cancels the timer if the component is disconnected", () => {
         // mock window.location.assign to test for navigating away
+        const savedLocation = window.location;
         let assignMock = jest.fn();
         delete window.location;
         window.location = { assign: assignMock };
@@ -50,6 +52,6 @@ describe("attract mode controller", () => {
         expect(assignMock).not.toHaveBeenCalled();
 
         // restore functionality
-        assignMock.mockClear();
+        window.location = savedLocation;
     })
 })
