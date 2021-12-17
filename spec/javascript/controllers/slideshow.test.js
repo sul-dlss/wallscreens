@@ -7,8 +7,10 @@ import { waitFor } from '@testing-library/dom/dist/@testing-library/dom.umd.js'
 describe("SlideshowExperience", () => {
   let start_button
   let autoplay_button
+  let next_button
   let first_card
   let slide_one
+  let slide_two
 
   beforeEach(() => {
     window.gtag = function() {};
@@ -44,13 +46,14 @@ describe("SlideshowExperience", () => {
     application.register("slideshow", SlideshowExperience);
     start_button = document.getElementById("start-button");
     autoplay_button = document.getElementById("autoplay-button");
+    next_button = document.getElementById("next-button");
     first_card = document.getElementById("first");
     slide_one = document.getElementById("slide-one");
+    slide_two = document.getElementById("slide-two");
   });
 
-
   describe("#connect", () => {
-    it("starts in a reasonable state", (done) => {
+    it("stays on the first card", (done) => {
       setTimeout(() => {
         try {
           expect(first_card).toBeVisible();
@@ -61,12 +64,24 @@ describe("SlideshowExperience", () => {
         }
       });
     });
+  });
 
-    it("starts the slideshow", async () => {
+  describe("#start", () => {
+    it("advances to the first slide", async () => {
       start_button.click();
       await waitFor(() => expect(first_card).not.toBeVisible());
       await waitFor(() => expect(slide_one).toBeVisible());
     });
   });
 
+  // TODO: There's some kind of interaction going on between tests.
+  // Cleanup needed?
+  describe("#next", () => {
+    it("advances to the second slide", async () => {
+      start_button.click();
+      next_button.click();
+      await waitFor(() => expect(slide_one).not.toBeVisible());
+      await waitFor(() => expect(slide_two).toBeVisible());
+    });
+  });
 });
