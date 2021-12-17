@@ -2,7 +2,6 @@ import { Application } from "js/stimulus.js";
 import MoreInfoModal from "js/controllers/more-info.js"
 
 describe("MoreInfoModal", () => {
-  let application
   let hide_button
   let modal
   let show_button
@@ -15,7 +14,7 @@ describe("MoreInfoModal", () => {
       <div id="modal" data-more-info-target="modal" hidden></div>
     </div>`;
 
-    application = Application.start();
+    const application = Application.start();
     application.register("more-info", MoreInfoModal);
     modal = document.getElementById("modal");
     hide_button = document.getElementById("hide_button");
