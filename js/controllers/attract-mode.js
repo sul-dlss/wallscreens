@@ -21,7 +21,7 @@ export default class extends Controller {
 
     this.timer = window.setTimeout(() => {
       // go to the configured next page
-      window.location.href = this.nextValue;
+      window.location.assign(this.nextValue);
     }, this.constructor.timeout);
   }
 }
