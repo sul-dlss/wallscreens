@@ -166,6 +166,5 @@ export default class extends Controller {
         container.hidden = true;
       }
     });
-    console.log(document.body.outerHTML);
   }
 }
