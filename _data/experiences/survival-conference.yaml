@@ -27,7 +27,7 @@ viewport:
   zoom: 1
 
 items:
-  - caption: As Fitch notes, "I worked for two intense years as the volunteer photographer for Dr. King and the SCLC, crisscrossing "Black Belt" states to document his people-to-people speaking tours promoting get-out-the-vote campaigns."
+  - caption: In 1972, Black Panther Party leaders added free health care for “all Black and oppressed people” to the Ten-Point Program. That same year, in March, the Black Panther Party held the Black Community Survival Conference in Oakland, California.
   - key: slide-1
     caption: Huey Newton and Bobby Seale formed the Black Panther Party in Oakland, California, in 1966. The Black Panther Party was a revolutionary Black nationalist organization that instituted a variety of community social programs designed to alleviate poverty, combat police brutality, and improve health in Black communities. Bob Fitch captured the Black Panther Party's Black Community Survival Conference at Greenman Field in Oakland, California.
     viewport:
@@ -35,7 +35,7 @@ items:
       x: 950
       y: 700
   - key: slide-2
-    caption: In 1972, Black Panther Party leaders formally added free health care for "all Black and oppressed people" to the "Ten-Point Program," the BlackPanther Party’s doctrine written by Heuy Newton and Bobby Seale. That same year, in March, the Black Panther Party held the Black Community Survival Conference.
+    caption: As Fitch notes, "I worked for two intense years as the volunteer photographer for Dr. King and the SCLC, crisscrossing "Black Belt" states to document his people-to-people speaking tours promoting get-out-the-vote campaigns."
     viewport:
       zoom: 3
       x: 1000

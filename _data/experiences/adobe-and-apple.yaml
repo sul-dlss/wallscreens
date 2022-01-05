@@ -25,10 +25,10 @@ items:
   - key: adobe
     url: https://purl.stanford.edu/kq505ns0185
     title: Adobe
-    caption: Adobe co-founder Chuck Geschke (left), Apple co-founder and Steve Jobs (center) and Adobe co-founder John Warnock.
+    caption: Adobe co-founders Chuck Geschke (left) and John Warnock (right), speaking with Apple co-founder Steve Jobs.
     date: July 1990
     creator: Douglas Menuez
-    note: Apple and Adobe are both among the Valley’s most visible success stories in the area of desktop computing. The histories of these two companies were closely linked during the 1980s, beginning with Steve Jobs attempt to acquire Adobe in the early 1980s, which resulted in his acquisition of a significant portion of the stock issued by the company. After Jobs left Apple, the launch of Adobe Illustrator for the Apple Macintosh in early 1987, followed in 1990 by the release of Adobe Photoshop, also for the Macintosh, proved beneficial for both companies.
+    note: Apple and Adobe are among the Valley’s most visible success stories in the area of desktop computing. These two companies were closely linked during the 1980s, beginning with Steve Jobs attempt to acquire Adobe in the early 1980s, which resulted in his acquisition of a significant portion of the stock issued by the company. After Jobs left Apple, the launch of Adobe Illustrator for the Apple Macintosh in early 1987, followed in 1990 by the release of Adobe Photoshop, also for the Macintosh, proved beneficial for both companies.
     image: https://stacks.stanford.edu/image/iiif/kq505ns0185%2F8478_03_PM/full/max/0/default.jpg
     local_image: local-media/Content/Image-Derivatives/Slideshow-2-Apple-Adobe/kq505ns0185_8478_03_SM.jpg
   - key: warnock-and-geschke
@@ -37,7 +37,7 @@ items:
     caption: Adobe co-founders John Warnock (left) and Chuck Geschke.
     date: 1989
     creator: Douglas Menuez
-    note: John Warnock and Chuck Geschke co-founded Adobe in 1982 after leaving Xerox PARC to develop PostScript, a page description language that could be applied to desktop printing and publication. Adobe, which like other Silicon Valley started in a garage (Warnock’s), derives its name from the creek behind Warnock’s home in Los Altos, California
+    note: John Warnock and Chuck Geschke co-founded Adobe in 1982 after leaving Xerox PARC to develop PostScript, a page description language that could be applied to desktop printing and publication. Adobe, which like other Silicon Valley started in a garage (Warnock’s), derives its name from the creek behind Warnock’s home in Los Altos, California.
     image: https://stacks.stanford.edu/image/iiif/hf643vn5802%2F11577_29_PM/full/max/0/default.jpg
     local_image: local-media/Content/Image-Derivatives/Slideshow-2-Apple-Adobe/hf643vn5802_11577_29_SM.jpg
   - key: desktop-publishing
