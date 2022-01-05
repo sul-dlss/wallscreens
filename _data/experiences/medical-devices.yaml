@@ -6,7 +6,7 @@ subtitle: Silicon Valley Inventor Group Portraits
 date: 2011
 creator: Terry Guyer
 summary: Harold Hohbach commissioned artist Terry Guyer to create eight museum-quality portraits, by time period and industry, portraying Silicon Valley inventors and pioneers. The goal of the commission was to inspire the next generation of young people to follow in the footsteps of the pioneers portrayed in the portraits.
-short_summary: “Medical Devices” was the sixth painting in the Silicon Valley Inventor Group Portrait series and captures five inventors that changed the face of medicine. Thoms S. Fogarty, Rodney Perkins, John Simpson, Paul Yock, and Mir Imran stand together in an operating room holding the devices they created.
+short_summary: “Medical Devices” was the sixth painting in the Silicon Valley Inventor Group Portrait series and captures five inventors that changed the face of medicine. Thomas J. Fogarty, Rodney Perkins, John Simpson, Paul Yock, and Mir Imran stand together in an operating room holding the devices they created.
 
 more_info:
   - type: Website
@@ -28,12 +28,12 @@ viewport:
 
 items:
   - caption: The medical device industry is one of the pillars of Silicon Valley. The individuals depicted in this artwork shaped the world we now live in by creating medical devices that positively impacted patient outcomes.
-  - key: thomas-s-fogarty
+  - key: thomas-j-fogarty
     bio:
-      title: Thomas S. Fogarty
+      title: Thomas J. Fogarty
       description: Inventor of the embolectomy catheter.
       url: https://en.wikipedia.org/wiki/Thomas_J._Fogarty
-    caption: Thomas S. Fogarty invented the embolectomy catheter and helped create more than 30 companies. Fogarty developed the embolectomy catheter in his attic using techniques he learned while fishing as a child and, in doing so, greatly reduced patient risk due to complications when treating blood clots. The embolectomy catheter remains one of the most common catheter used to remove blood clots.
+    caption: Thomas J. Fogarty invented the embolectomy catheter and helped launch more than 30 companies. The catheter is pictured here in his hands. He developed it in his attic using techniques he learned while fly fishing as a child. The embolectomy catheter remains one of the most common catheters used to remove blood clots today.
     viewport:
       zoom: 3.75
       x: 1619
@@ -43,7 +43,7 @@ items:
       title: Rodney Perkins
       description: Stanford professor and founder of over thirty medical device companies.
       url: https://en.wikipedia.org/wiki/Rodney_Perkins
-    caption: Rodney Perkins developed a love for science and technology when he was eight years old after purchasing a pet alligator from an advertisement in a comic book. Dr. Perkins, while attending medical school at Indiana University, created the disc oxygenator and, from there became a serial entrepreneur and medical device innovator. Over the course of his career, Dr. Perkins launched over 30 successful companies including medical device titans Collagen, Laserscope, and ReSound.
+    caption: Rodney Perkins developed a love for science and technology after ordering an alligator from a comic book when he was eight years old. While attending medical school, Dr. Perkins invented the disc oxygenator which set him on the path of becoming a medical device inventor. Over the course of his career, Dr. Perkins has helped found medical device titans Collagen, Laserscope, and ReSound.
     viewport:
       zoom: 4
       x: 3849
@@ -53,7 +53,7 @@ items:
       title: John Simpson
       description: Inventor of the over-the-wire (OTW) balloon catheter.
       url: https://www.massdevice.com/endurance-criticism-legendary-career-dr-john-simpson/
-    caption: After visiting the inventor of coronary angioplasty, Andreas Gruentzig, in Switzerland, John Simpson received a box of balloon catheters. Parts were missing from his order and so, in his Menlo Park kitchen, Dr. Simpson jerry-rigged a new device that he called “the over-the-wire balloon catheter.” This device changed the practice of cardiology. He also founded numerous companies including Advanced Cardiovascular Instruments and Devices for Vascular Intervention.
+    caption: John Simpson is the inventor of the over-the-wire balloon catheter, which he is pictured here holding. Dr. Simpson created this catheter after visiting Andreas Gruentzig and ordering a box of standard balloon catheters. When the box arrived at his Menlo Park home, pieces were missing. Dr. Simpson jerry-rigged a new device that he named the over-the-wire balloon catheter. He has founded numerous companies including Advanced Cardiovascular Instruments and Devices for Vascular Intervention.
     viewport:
       zoom: 4
       x: 6140
@@ -63,7 +63,7 @@ items:
       title: Paul Yock
       description: Inventor of Rapid Exchange angioplasty and intravascular ultrasound imaging.
       url: https://biox.sites.stanford.edu/highlight/paul-yock-wins-national-academy-engineerings-gordon-prize
-    caption: Paul Yock began his career as a cardiologist at the University of California, San Francisco before coming to Stanford in 1994. Dr. Yock is best known for his work in inventing, developing, and testing new devices, which has led to techniques such as Rapid Exchange angioplasty and stenting, as well as intravascular ultrasound imaging. He established the Stanford Center for Research and in Cardiovascular Interventions as a laboratory for analysis of intravascular ultrasound clinical studies and was founding co-chair of Stanford's Department of Bioengineering, as well as founder and director of the Stanford Byers Center for Biodesign.
+    caption: Paul Yock began his career as a cardiologist at the University of California, San Francisco before coming to Stanford in 1994. Dr. Yock is best known for his work in inventing, developing, and testing new devices, which has led to techniques such as Rapid Exchange angioplasty and stenting. He established the Stanford Center for Research in Cardiovascular Interventions as a laboratory for analysis of intravascular ultrasound clinical studies and was founding co-chair of Stanford's Department of Bioengineering, as well as founder and director of the Stanford Byers Center for Biodesign.
     viewport:
       zoom: 4
       x: 8740
@@ -73,7 +73,7 @@ items:
       title: Mir Imran
       description: Inventor of the implantable cardioverter-defibrillator.
       url: https://en.wikipedia.org/wiki/Mir_Imran
-    caption: Mir Imran emigrated to the United States from India to attend Rutgers University, where obstained degrees in electrical engineering and biomedical engineering, followed by Medical School. While a student, he took a summer job that led to developing a device for children with cerebral palsy that enabled them to speak using the muscles in their neck. He followed this experience with work at Intec Systems that led to the invention of the implantable cardioverter-defibrillator (ICD).  As an entrepreneur, he particpated in the founding of 23 companies out of his incubator, InCube.
+    caption: Mir Imran emigrated to the United States from India to attend Rutgers University, where he obtained degrees in electrical engineering and biomedical engineering. While a student, he took a summer job that led to developing a device for children with cerebral palsy that enabled them to speak using the muscles in their neck. He followed this experience with work at Intec Systems that led to the invention of the implantable cardioverter-defibrillator (ICD). As an entrepreneur, he participated in the founding of 23 companies out of his incubator, InCube.
     viewport:
       zoom: 4.2
       x: 10450
