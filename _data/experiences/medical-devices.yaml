@@ -6,7 +6,7 @@ subtitle: Silicon Valley Inventor Group Portraits
 date: 2011
 creator: Terry Guyer
 summary: Harold Hohbach commissioned artist Terry Guyer to create eight museum-quality portraits, by time period and industry, portraying Silicon Valley inventors and pioneers. The goal of the commission was to inspire the next generation of young people to follow in the footsteps of the pioneers portrayed in the portraits.
-short_summary: “Medical Devices” was the sixth painting in the Silicon Valley Inventor Group Portrait series and captures five inventors that changed the face of medicine. Thoms S. Fogarty, Rodney Perkins, John Simpson, Paul Yock, and Mir Imran stand together in an operating room holding the devices they created.
+short_summary: “Medical Devices” was the sixth painting in the Silicon Valley Inventor Group Portrait series and captures five inventors that changed the face of medicine. Thomas J. Fogarty, Rodney Perkins, John Simpson, Paul Yock, and Mir Imran stand together in an operating room holding the devices they created.
 
 more_info:
   - type: Website
@@ -28,12 +28,12 @@ viewport:
 
 items:
   - caption: The medical device industry is one of the pillars of Silicon Valley. The individuals depicted in this artwork shaped the world we now live in by creating medical devices that positively impacted patient outcomes.
-  - key: thomas-s-fogarty
+  - key: thomas-j-fogarty
     bio:
-      title: Thomas S. Fogarty
+      title: Thomas J. Fogarty
       description: Inventor of the embolectomy catheter.
       url: https://en.wikipedia.org/wiki/Thomas_J._Fogarty
-    caption: Thomas S. Fogarty invented the embolectomy catheter and helped create more than 30 companies. Fogarty developed the embolectomy catheter in his attic using techniques he learned while fishing as a child and, in doing so, greatly reduced patient risk due to complications when treating blood clots. The embolectomy catheter remains one of the most common catheter used to remove blood clots.
+    caption: Thomas J. Fogarty invented the embolectomy catheter and helped create more than 30 companies. Fogarty developed the embolectomy catheter in his attic using techniques he learned while fishing as a child and, in doing so, greatly reduced patient risk due to complications when treating blood clots. The embolectomy catheter remains one of the most common catheter used to remove blood clots.
     viewport:
       zoom: 3.75
       x: 1619
