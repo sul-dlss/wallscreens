@@ -29,6 +29,6 @@ RSpec.configure do |_config|
 
   def make_context(registers = {}, environments = {})
     Liquid::Context.new(environments, {},
-                        { site: site, page: page }.merge(registers))
+                        { site:, page: }.merge(registers))
   end
 end
